@@ -5,7 +5,7 @@
 
 AtomForge is a comprehensive Domain-Specific Language (DSL) framework designed for modeling and manipulating inorganic crystalline materials. It provides a unified, modular approach to materials science workflows, from basic crystal structures to complex defect modeling and AI-integrated materials discovery.
 
-## 🌟 Key Features
+## Key Features
 
 - **Universal Materials Modeling**: Support for all inorganic repetitive structures (crystals, surfaces, interfaces, defects, amorphous regions, nanostructures)
 - **Revolutionary Patching System**: Path-based addressing and version control for structure modifications
@@ -15,7 +15,7 @@ AtomForge is a comprehensive Domain-Specific Language (DSL) framework designed f
 - **Comprehensive Validation**: Multi-level validation with configurable tolerance and error handling
 - **Provenance Tracking**: Full reproducibility and metadata management
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 AtomForge/
@@ -37,7 +37,7 @@ AtomForge/
 └── docs/                        # Documentation
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -102,7 +102,7 @@ vasp_compiler = AtomForgeCompiler(output_format="vasp")
 vasp_output = vasp_compiler.compile(silicon_code)
 ```
 
-## 📚 Language Features
+## Language Features
 
 ### Core Syntax
 
@@ -162,7 +162,7 @@ atom_spec "material_name" {
 - **Benchmarking**: Multi-modal understanding and validation
 - **Patching**: Revolutionary path-based structure modification
 
-## 🔧 Development
+## Development
 
 ### Running Tests
 
@@ -184,14 +184,14 @@ cp atomforge_materials/minimal_silicon.atomforge atomforge_materials/my_material
 # Edit the file with your material specifications
 ```
 
-## 📖 Documentation
+## Documentation
 
 - **Grammar Specification**: `atomforge/atomforge_v2.1.ebnf`
 - **Schema Definition**: `atomforge/atomforge_crystal_schema.json`
 - **Legacy Documentation**: `atomforge_mvp/AtomForge.pdf`
 - **Converter Guide**: `atomforge_mvp/src/converters/AtomForge_Converter.md`
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -199,17 +199,17 @@ cp atomforge_materials/minimal_silicon.atomforge atomforge_materials/my_material
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built on the core DSL framework for extensible domain-specific languages
 - Integrates with pymatgen for materials science format support
 - Supports materials from various databases (Materials Project, ICSD, COD)
 
-## 🔗 Related Projects
+## Related Projects
 
 - **Core DSL Framework**: Modular framework for building domain-specific languages
 - **Materials Project**: Database integration for materials discovery
