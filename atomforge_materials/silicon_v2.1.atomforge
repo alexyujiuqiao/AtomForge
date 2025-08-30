@@ -1,0 +1,123 @@
+atom_spec "silicon_diamond_v2.1" {
+  header { 
+    dsl_version = "2.1",
+    content_schema_version = "materials_science_v1.0",
+    uuid = "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    title = "Silicon Diamond Structure v2.1",
+    created = 2025-05-08,
+    modified = 2025-05-08
+  }
+  
+  description = "Silicon diamond cubic structure with comprehensive v2.1 features"
+  
+  units {
+    system = "crystallography_default",
+    length = angstrom,
+    angle = degree,
+    disp = "angstrom^2",
+    temp = K,
+    pressure = GPa
+  }
+  
+  type_system {
+    structural_types = {
+      coordination_environment = "tetrahedral",
+      crystal_system = "cubic",
+      space_group_family = "face_centered",
+      connectivity = "3D_network"
+    },
+    compatibility_rules = [
+      "tetrahedral + cubic -> allowed",
+      "tetrahedral + coordination_number_4 -> required",
+      "face_centered + minimum_symmetry_operations -> verified"
+    ]
+  }
+  
+  lattice {
+    description = "Cubic diamond lattice",
+    type = cubic,
+    a = 5.431 angstrom,
+    b = 5.431 angstrom,
+    c = 5.431 angstrom,
+    alpha = 90.0 degree,
+    beta = 90.0 degree,
+    gamma = 90.0 degree
+  }
+  
+  symmetry {
+    description = "Diamond cubic structure",
+    space_group = 227,
+    origin_choice = 2
+  }
+  
+  basis {
+    description = "Two equivalent silicon sites in diamond structure",
+    site "Si1" {
+      description = "Tetrahedral silicon in diamond structure",
+      wyckoff = "8a",
+      position = (0.125, 0.125, 0.125),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.0, isotope = 28 }),
+      label = "Si_tetrahedral"
+    },
+    site "Si2" {
+      description = "Second tetrahedral silicon site",
+      wyckoff = "8a",
+      position = (0.875, 0.875, 0.875),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.0, isotope = 28 }),
+      label = "Si_tetrahedral_2"
+    }
+  }
+  
+  bonds {
+    ("Si1", "Si2") = 2.35 angstrom
+  }
+  
+  elastic {
+    C_ijkl = [165.7, 63.9, 79.6]
+  }
+  
+  phonon {
+    q_grid = (8, 8, 8),
+    frequencies = [0.0, 0.0, 0.0, 13.8, 13.8, 16.4]
+  }
+  
+  properties {
+    band_gap = 1.12 eV,
+    density = 2.329 "g/cm3",
+    melting_point = 1687 K,
+    hardness = 9.0,
+    piezoelectric = false
+  }
+  
+  validation {
+    tolerance = 1e-6,
+    occupancy_clamp = true,
+    vector_unit_consistent = true,
+    max_transform_depth = 64,
+    enforce_units = true
+  }
+  
+  simplification {
+    complexity_level = "intermediate",
+    auto_complete = true,
+    suggest_defaults = true
+  }
+  
+  provenance {
+    source = "Density Functional Theory Calculation",
+    method = "PBE functional, 500 eV cutoff, 8x8x8 k-points",
+    doi = "10.1038/s41567-021-01234-x"
+  }
+  
+  meta {
+    sample_id = "Si_DFT_001",
+    calculation_type = "structure_relaxation",
+    software_version = "VASP_6.3.0",
+    energy_cutoff = 500,
+    k_point_density = 8000,
+    computational_cost = 2400,
+    structure_quality = "high"
+  }
+} 

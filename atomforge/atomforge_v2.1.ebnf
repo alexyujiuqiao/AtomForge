@@ -1,0 +1,343 @@
+/*======================================================================*
+  AtomForge DSL – Extended EBNF (v2025-05-08, Release 2.1 — Production Standard)
+  ======================================================================*
+  AtomForge: A Domain-Specific Language for Inorganic Repetitive Structures
+  
+  Release 2.1 - "Production Standard" for comprehensive materials specification:
+  - Universal scope: All inorganic repetitive structures (crystals, surfaces, 
+    interfaces, defects, amorphous regions, nanostructures)
+  - Revolutionary patching mechanism for structure modification workflows
+  - Multi-frame coordinate handling with explicit frame management
+  - Comprehensive provenance tracking for reproducible materials research
+  - Integration with AI/ML pipelines through standardized representation
+  - Support for advanced features: superspace structures, environmental coupling,
+    complex defect modeling, and materials property embedding
+  ======================================================================*/
+
+/***********************  LEXICAL RULES & ERROR HANDLING  *********************/
+WS            ::= ( ' ' | '\t' | '\r' | '\n' )+ ;          (* skipped *)
+CommentLine   ::= '#' [^'\n']* Newline ;                   (* skipped *)
+CommentBlk    ::= '/*' CommentBody '*/' ;                   (* skipped *)
+CommentBody   ::= ( ! '*/' . )* ;                           (* no nesting *)
+
+/****  The scanner MUST skip { WS | CommentLine | CommentBlk } between tokens  ****/
+
+/***********************  TOP-LEVEL STRUCTURE  ***********************/
+Program ::= "atom_spec" Identifier "{" Header ( "description" "=" Str "," )?
+             Units? TypeSystem? Lattice Symmetry Basis
+             EmergingMaterials? Defects? Tile? Bonds? Elastic? Phonon? Density? Environment?
+             AIIntegration? ProceduralGeneration? Benchmarking? Properties? Validation? Simplification? Provenance? Patch? Meta? "}" ;
+
+/*----------------------------  HEADER & METADATA -------------------------*/
+Header ::= "header" "{" "dsl_version" "=" Str
+                       ("," "content_schema_version" "=" Str)?
+                       ("," "uuid" "=" Str)?
+                       "," "title" "=" Str
+                       "," "created" "=" Date
+                       ("," "modified" "=" Date)? "}" ;
+
+Units  ::= "units" "{" "system" "=" Str "," "length" "=" LenU "," "angle" "=" AngU ","
+                       "disp" "=" DispU "," "temp" "=" TempU ","
+                       "pressure" "=" PresU "}" ;
+
+/*----------------------------  TYPE SYSTEM FOR COMPATIBILITY -------------------------*/
+TypeSystem ::= "type_system" "{" ( StructuralTypes | ChemicalTypes | ComputationalTypes | AutoInference )
+              ( "," TypeSystemProperty )* "}" ;
+
+StructuralTypes ::= "structural_types" "=" "{" ( StructuralType )+ "}" ","
+                   "compatibility_rules" "=" FeatureList ;
+
+ChemicalTypes ::= "chemical_types" "=" "{" ( ChemicalType )+ "}" ","
+                 "validation_rules" "=" FeatureList ;
+
+ComputationalTypes ::= "computational_types" "=" "{" ( ComputationalType )+ "}" ","
+                      "resource_requirements" "=" "{" ( ResourceRequirement )+ "}" ;
+
+AutoInference ::= "auto_inference" "=" "{" "enabled" "=" Bool ","
+                 "inference_methods" "=" FeatureList ","
+                 "validation_strictness" "=" ( "strict" | "moderate" | "permissive" ) ","
+                 "error_handling" "=" ( "error" | "warn_and_continue" | "silent" ) "}" ;
+
+StructuralType ::= QName "=" ( Str | FeatureList ) ";" ;
+ChemicalType ::= QName "=" ( Str | FeatureList | "{" ( ChemicalProperty )+ "}" ) ";" ;
+ComputationalType ::= QName "=" Str ";" ;
+ResourceRequirement ::= QName "=" Str ";" ;
+ChemicalProperty ::= QName "=" ( Str | FeatureList | "[" ( Str | Num ) ( "," ( Str | Num ) )* "]" ) ";" ;
+TypeSystemProperty ::= QName "=" ( Str | Bool | FeatureList ) ;
+
+/*----------------------------  LATTICE SPECIFICATION -------------------------*/
+Lattice ::= "lattice" "{" ("description" "=" Str ",")? ( Bravais | Vectors ) "}" ;
+Bravais ::= "type" "=" LatT "," "a" "=" Len "," "b" "=" Len "," "c" "=" Len ","
+           "alpha" "=" Ang "," "beta" "=" Ang "," "gamma" "=" Ang ;
+Vectors ::= "vectors" "=" "(" Vec3 "," Vec3 "," Vec3 ")" ; (* Lattice vectors defining fractional coordinate basis *)
+
+/*----------------------------  SYMMETRY OPERATIONS -------------------------*/
+Symmetry ::= "symmetry" "{" ("description" "=" Str ",")? "space_group" "=" SG ","
+             "origin_choice" "=" Int
+             ("," "magnetic_group" "=" Str)?
+             ("," "superspace" "=" Superspace)? "}" ;
+Superspace ::= "{" "k_vectors" "=" "(" Vec3F ( "," Vec3F )* ")" "," (* k-vectors in fractional reciprocal coordinates *)
+               "t_phase" "=" Num "}" ;
+
+/*----------------------------  ATOMIC BASIS -------------------------*/
+Basis ::= "basis" "{" ("description" "=" Str ",")? Site ( "," Site )* "}" ;
+Site  ::= "site" Id "{" ("description" "=" Str ",")? "wyckoff" "=" Wyk "," "position" "=" Vec3F ","
+          "frame" "=" Frame "," "species" "=" "(" Species ( "," Species )* ")"
+          ("," "moment" "=" Vec3 Frame Str)?         (* Magnetic moment vector with explicit frame and unit *)
+          ("," "constraint" "=" Str)?
+          ("," "adp_iso" "=" Disp)?
+          ("," "adp_aniso" "=" ADP)?
+          ("," "label" "=" Str)? "}" ;
+Species ::= "{" "element" "=" Elem "," "occupancy" "=" Num
+              ("," "isotope" "=" Int)?
+              ("," "charge" "=" Num)?
+              ("," "valence" "=" Num)? "}" ; (* Extended metadata *)
+ADP ::= "[" Num "," Num "," Num "," Num "," Num "," Num "]" (* U11, U22, U33, U23, U13, U12 in angstrom^2 *)
+     | "{" "U11" "=" Num "," "U22" "=" Num "," "U33" "=" Num "," "U23" "=" Num "," "U13" "=" Num "," "U12" "=" Num "}" ; (* in angstrom^2 *)
+
+/*----------------------------  DEFECT MODELING -------------------------*/
+Defects ::= "defects" "{" DefEntry ( "," DefEntry )* "}" ;
+DefEntry ::= "{" "site_ref" "=" Id ","
+             "type" "=" ( "vacancy" | "interstitial" | "substitution" ) ","
+             "prob" "=" Num ( "," "species" "=" Species )? "}" ;
+
+/*----------------------------  TRANSFORMATIONS & SUPERCELLS -------------------------*/
+Tile ::= "tile" "{" "repeat" "=" Vec3I
+         ("," "origin_shift" "=" Vec3F)?    (* Origin shift in fractional coordinates *)
+         ("," "transforms" "=" "(" TSeq ( "," TSeq )* ")")? "}" ; (* List of individual transform operations *)
+TSeq ::= TOp | "(" TSeq ")" ; (* A single transform operation, possibly parenthesized for clarity *)
+TOp  ::= Mirror | Rotate | Translate | Mat4 ;
+Mirror    ::= "mirror" "(" Axis ")" ; (* Mirror plane normal to the axis, through origin *)
+Rotate    ::= "rotate" "(" Axis "," Ang ")" ; (* Rotation around an axis, through origin *)
+Translate ::= "translate" "(" Vec3 Frame ")" ; (* Translation vector with explicit frame *)
+Mat4      ::= "matrix4" "[" "(" Num "," Num "," Num "," Num ")" "," (* Homogeneous transformation matrix *)
+                          "(" Num "," Num "," Num "," Num ")" ","
+                          "(" Num "," Num "," Num "," Num ")" ","
+                          "(" Num "," Num "," Num "," Num ")" "]" ;
+
+/*----------------------------  CHEMICAL BONDING -------------------------*/
+Bonds ::= "bonds" "{" Bond ( "," Bond )* "}" ;
+Bond  ::= "(" Id "," Id ")" "=" Len ; (* Bond length between two sites *)
+
+/*----------------------------  EMERGING MATERIALS FEATURES -------------------------*/
+EmergingMaterials ::= "emerging_materials" "{" "type" "=" EmergingType ","
+                     ( LayerStack | Topology | Metamaterial | QuantumState ) "}" ;
+
+EmergingType ::= "2D_heterostructure" | "topological_insulator" | "topological_semimetal" 
+               | "metamaterial" | "quantum_material" | "van_der_waals" | "moire_system" ;
+
+LayerStack ::= "layer_stack" "=" "{" "layers" "=" "[" LayerSpec ( "," LayerSpec )* "]" ","
+               "interlayer_distance" "=" Len "," "coupling_strength" "=" Str ( "," LayerProperty )* "}" ;
+LayerSpec ::= "{" "material" "=" Str "," "twist_angle" "=" Ang ( "," LayerProperty )* "}" ;
+
+Topology ::= "topology" "=" "{" "classification" "=" Str "," "z2_invariant" "=" Str ","
+             "surface_states" "=" Str "," "bulk_gap" "=" Num ( "," TopologyProperty )* "}" ;
+
+Metamaterial ::= "metamaterial_type" "=" Str "," "unit_cell_period" "=" Vec3 ","
+                "effective_properties" "=" "{" ( EffectiveProperty )+ "}" ( "," MetamaterialProperty )* ;
+
+QuantumState ::= "quantum_state" "=" Str "," "frustration" "=" "{" FrustrationSpec "}" ","
+                "entanglement" "=" "{" EntanglementSpec "}" ( "," QuantumProperty )* ;
+
+LayerProperty ::= QName "=" ( Str | Num | Bool ) ;
+TopologyProperty ::= QName "=" ( Str | Num | Bool ) ;
+MetamaterialProperty ::= QName "=" ( Str | Num | Bool ) ;
+QuantumProperty ::= QName "=" ( Str | Num | Bool ) ;
+EffectiveProperty ::= QName "=" ( Num | Str ) ";" ;
+FrustrationSpec ::= QName "=" ( Str | Num ) ( "," QName "=" ( Str | Num ) )* ;
+EntanglementSpec ::= QName "=" ( Str | Num ) ( "," QName "=" ( Str | Num ) )* ;
+
+/*----------------------------  PHYSICAL PROPERTIES -------------------------*/
+Elastic ::= "elastic" "{" "C_ijkl" "=" "[" Num ( "," Num )* "]" "}" ; (* Elastic constants (e.g., Voigt notation) *)
+Phonon  ::= "phonon" "{" "q_grid" "=" Vec3I ","
+            "frequencies" "=" "[" Num ( "," Num )* "]" "}" ;
+
+/*----------------------------  DENSITY MAPS & VOLUMETRIC DATA -------------------------*/
+Density ::= "density_map" "{" "grid" "=" Vec3I "," "format" "=" Str ","
+            ( "data" "=" Base64 | "data_file" "=" Str ) ( "," "description" "=" Str )? "}" ; (* Inline Base64 data or path to data file *)
+Base64Quad ::= Base64Char Base64Char Base64Char Base64Char ;
+Base64Pad2  ::= Base64Char Base64Char "=" "=" ;
+Base64Pad   ::= Base64Char Base64Char Base64Char "=" ;
+Base64     ::= ( Base64Quad )* ( Base64Pad2 | Base64Pad | Base64Quad ) ; (* Standard Base64; padding characters ('=') only at the very end. *)
+Base64Char ::= "A".."Z" | "a".."z" | "0".."9" | "+" | "/" ;
+
+/*----------------------------  ENVIRONMENTAL CONDITIONS -------------------------*/
+Environment ::= "environment" "{" ("temperature" "=" Temp ",")?
+                ("pressure" "=" Pres ",")?
+                ("e_field" "=" Vec3 Frame? Str ",")? (* Electric field vector; Frame optional, Cartesian often implied if omitted. *)
+                ("e_grad" "=" Mat3 Frame? FieldGradU ",")? (* Electric field gradient tensor; Frame for Mat3 optional, Cartesian often implied if omitted. *)
+                ("b_field" "=" Vec3 Frame? Str)? "}" ; (* Magnetic field vector; Frame optional, Cartesian often implied if omitted. *)
+Mat3        ::= "[" "(" Num "," Num "," Num ")" "," "(" Num "," Num "," Num ")" "," "(" Num "," Num "," Num ")" "]" ; (* 3x3 Matrix *)
+FieldGradU  ::= "V/m2" | "T/m" ;
+
+/*----------------------------  AI-NATIVE INTEGRATION -------------------------*/
+AIIntegration ::= "ai_integration" "{" ( GraphRepresentation | GenerationModel | ActiveLearning | MultiFidelity ) 
+                 ( "," AIIntegrationProperty )* "}" ;
+
+GraphRepresentation ::= "graph_representation" "=" "{" "node_features" "=" FeatureList ","
+                       "edge_features" "=" FeatureList "," "global_features" "=" FeatureList "}" ;
+
+GenerationModel ::= "generation_model" "=" "{" "type" "=" Str "," "latent_dim" "=" Int ","
+                   "constraints" "=" FeatureList "," "sampling_temperature" "=" Num "}" ;
+
+ActiveLearning ::= "active_learning" "=" "{" "acquisition_function" "=" Str ","
+                  "surrogate_model" "=" Str "," "exploration_weight" "=" Num ","
+                  "batch_size" "=" Int "}" ;
+
+MultiFidelity ::= "multi_fidelity" "=" "{" "low_fidelity" "=" Str ","
+                  "high_fidelity" "=" Str "," "correlation_model" "=" Str ","
+                  "cost_ratio" "=" Num "}" ;
+
+FeatureList ::= "[" Str ( "," Str )* "]" ;
+AIIntegrationProperty ::= QName "=" ( Str | Num | Bool | FeatureList ) ;
+
+/*----------------------------  PROCEDURAL GENERATION SYSTEM -------------------------*/
+ProceduralGeneration ::= "procedural_generation" "{" "generator_type" "=" GeneratorType ","
+                        ( TemplateGeneration | ParameterSweep | MLGuided | Hybridization )
+                        ( "," GenerationProperty )* "}" ;
+
+GeneratorType ::= "template_based" | "parameter_sweep" | "combinatorial" | "ml_guided" | "hybridization" ;
+
+TemplateGeneration ::= "template" "=" Str "," "parameter_space" "=" "{" ( ParameterSpace )+ "}" "," 
+                      "constraints" "=" FeatureList ;
+
+ParameterSweep ::= "base_structure" "=" Str "," "sweep_parameters" "=" "{" ( SweepParameter )+ "}" ","
+                  "generation_mode" "=" ( "combinatorial" | "random_sampling" | "adaptive" ) ;
+
+MLGuided ::= "target_properties" "=" "{" ( PropertyTarget )+ "}" "," "generation_method" "=" Str ","
+            "population_size" "=" Int "," "generations" "=" Int ;
+
+Hybridization ::= "parent_selection" "=" "{" ParentSelection "}" "," "crossover_operations" "=" FeatureList ","
+                 "mutation_rate" "=" Num "," "fitness_function" "=" Str ;
+
+ParameterSpace ::= QName "=" ( FeatureList | "[" Num "," Num "]" ) ";" ;
+SweepParameter ::= QName "=" ( FeatureList | "[" Num "," Num "," Num "]" ) ";" ; (* [min, max, step] *)
+PropertyTarget ::= QName "=" Str ";" ;
+ParentSelection ::= ( "method" "=" Str | QName "=" Str ) ( "," ( "method" "=" Str | QName "=" Str ) )* ;
+GenerationProperty ::= QName "=" ( Str | Num | Bool | FeatureList ) ;
+
+/*----------------------------  BENCHMARKING SYSTEM -------------------------*/
+Benchmarking ::= "benchmarking" "{" "benchmark_type" "=" BenchmarkType ","
+                "tasks" "=" "[" BenchmarkTask ( "," BenchmarkTask )* "]" 
+                ( "," BenchmarkProperty )* "}" ;
+
+BenchmarkType ::= "structure_reconstruction" | "property_prediction" | "inverse_design" 
+                | "materials_understanding" | "multi_modal" | "comprehensive" ;
+
+BenchmarkTask ::= "{" ( TaskProperty )+ "}" ;
+TaskProperty ::= ( "input_modality" "=" FeatureList
+               | "input_data" "=" Str
+               | "target_output" "=" Str  
+               | "target_properties" "=" ( FeatureList | "{" ( PropertySpec )+ "}" )
+               | "difficulty_level" "=" ( "beginner" | "intermediate" | "expert" )
+               | "evaluation_metrics" "=" FeatureList
+               | "constraints" "=" FeatureList
+               | QName "=" ( Str | Num | Bool | FeatureList )
+               ) ";" ;
+
+PropertySpec ::= QName "=" ( Str | Num | "[" Num "," Num "]" ) ";" ;
+BenchmarkProperty ::= QName "=" ( Str | Num | Bool | FeatureList | "{" ( PropertySpec )+ "}" ) ;
+
+/*----------------------------  EXTENSIBLE PROPERTIES & VALIDATION -------------------------*/
+Properties ::= "properties" "{" PEntry ( "," PEntry )* "}" ;
+PEntry     ::= QName "=" PVal ;
+PVal       ::= Num | Str | "(" Vec3 Frame? ")" | Vec3I | "[" Num ( "," Num )* "]" | Bool
+              | Len | Ang | Temp | Pres | Disp ;
+              (* Vec3 can have optional frame. Dimensioned types allow explicit units. *)
+
+Validation ::= "validate" "{" "tolerance" "=" Num "," "occupancy_clamp" "=" Bool ","
+               "vector_unit_consistent" "=" Bool ","
+               "max_transform_depth" "=" Int "," (* default = 64 *)
+               "enforce_units" "=" Bool "}" ;
+
+/*----------------------------  COMPLEXITY MANAGEMENT -------------------------*/
+Simplification ::= "simplification" "{" "complexity_level" "=" ComplexityLevel ","
+                  "auto_complete" "=" Bool "," "suggest_defaults" "=" Bool ","
+                  ( SimplificationOption )* "}" ;
+
+ComplexityLevel ::= "beginner" | "intermediate" | "expert" | "domain_specific" ;
+SimplificationOption ::= "hide_advanced_features" "=" FeatureList 
+                      | "template_suggestions" "=" Bool
+                      | "domain" "=" Str
+                      | "templates" "=" FeatureList
+                      | "required_properties" "=" FeatureList
+                      | QName "=" ( Str | Bool | FeatureList ) ;
+
+/*----------------------------  PROVENANCE & DATA LINEAGE -------------------------*/
+Provenance ::= "provenance" "{" "source" "=" Str "," "method" "=" Str ","
+               "doi" "=" Str ("," "url" "=" Str)? ( "," ProvenanceExtension )* "}" ;
+ProvenanceExtension ::= QName "=" ( Str | Num | Bool ) ;
+
+/*----------------------------  REVOLUTIONARY PATCHING SYSTEM -------------------------*/
+PathSegment ::= Ident ( "[" Int "]" )? ; (* e.g., 'name' or 'list[0]' *)
+Path       ::= PathSegment ( "." PathSegment )* ; (* e.g., 'basis.siteID.label' or 'basis.siteID.species[0].occupancy' *)
+Patch ::= "patch" "{" PatchOp ( "," PatchOp )* "}" ;
+PatchOp ::= "add" ( Site | Path "=" PVal ) | (* Adds a new Site to the main Basis collection, or adds value at Path *)
+            "remove" Path | (* Removes the element at Path (e.g., a whole Site, a Species in a list, a Site's label field). *)
+            "update" Path "=" PVal ; (* Updates the field at Path with PVal. Target field type must be semantically compatible with PVal. *)
+
+/*----------------------------  EXTENSIBLE METADATA -------------------------*/
+Meta ::= "meta" "{" MEntry ( "," MEntry )* "}" ;
+MEntry ::= QName "=" ( Str | Num | Bool ) ; (* Meta values: string, number, or boolean. *)
+
+/*----------------------------  DATA TYPES & TERMINALS -------------------------*/
+Vec3  ::= "(" Num "," Num "," Num ")" ; (* General 3D vector of Nums (can be Int or Float) *)
+Vec3F ::= "(" Num "," Num "," Num ")" ; (* 3D vector typically for fractional coordinates (components can be Int or Float) *)
+Vec3I ::= "(" Int "," Int "," Int ")" ; (* 3D vector of Integers *)
+Len  ::= Num LenU? ;
+Ang  ::= Num AngU? ;
+Temp ::= Num TempU? ;
+Pres ::= Num PresU? ;
+Disp ::= Num DispU? ;
+Frame ::= "fractional" | "cartesian" ; (* Coordinate frame specifier *)
+Axis  ::= "x" | "y" | "z" ; (* Standard Cartesian axes *)
+
+/*----------------------------  IDENTIFIERS & LEXICAL ELEMENTS -------------------------*/
+Ident   ::= Letter ( Letter | Digit | "_" )* ; (* must not match any Keyword or Bool literal if not part of an assignment *)
+BTIdent ::= "`" BTChar+ "`" ; (* Backticked identifier; for Idents that would clash with Keywords or contain special characters. *)
+Id      ::= Ident | BTIdent ; (* General identifier for Site labels, etc. *)
+QName   ::= ( Ident ":" )? Ident ; (* Qualified name (optional namespace) *)
+Keyword ::= "atom_spec" | "header" | "units" | "type_system" | "lattice" | "symmetry" |
+            "basis" | "site" | "emerging_materials" | "defects" | "tile" | "mirror" | "rotate" |
+            "translate" | "matrix4" | "bonds" | "elastic" | "phonon" |
+            "density_map" | "environment" | "ai_integration" | "procedural_generation" | "benchmarking" | "properties" | "validate" |
+            "simplification" | "provenance" | "patch" | "add" | "remove" | "update" |
+            "meta" | "true" | "false" | "fractional" | "cartesian" ;
+            (* Note: 'true'/'false' are keywords when used as Bool literals. *)
+            (* Keys in "key"=Value pairs (e.g. "dsl_version", "element", "description") are contextually reserved. *)
+
+/*----------------------------  UNITS & PHYSICAL QUANTITIES -------------------------*/
+LenU  ::= "angstrom" | "nm" | "pm" | "bohr" ;
+AngU  ::= "degree" | "radian" ;
+TempU ::= "K" ;
+PresU ::= "Pa" | "kPa" | "bar" | "GPa" ;
+DispU ::= "angstrom^2" ;
+
+/*----------------------------  ENUMERATIONS & CONSTANTS -------------------------*/
+LatT ::= "cubic" | "tetragonal" | "orthorhombic" | "hexagonal" |
+         "rhombohedral" | "monoclinic" | "triclinic" ;
+SG   ::= Int | Str ; (* Space group number or Hermann-Mauguin symbol *)
+Wyk  ::= Str ; (* Wyckoff symbol *)
+Elem ::= "H"|"He"|"Li"|"Be"|"B"|"C"|"N"|"O"|"F"|"Ne"|"Na"|"Mg"|"Al"|"Si"|"P"|"S"|"Cl"|"Ar"|"K"|"Ca"|"Sc"|"Ti"|"V"|"Cr"|"Mn"|"Fe"|"Co"|"Ni"|"Cu"|"Zn"|"Ga"|"Ge"|"As"|"Se"|"Br"|"Kr"|"Rb"|"Sr"|"Y"|"Zr"|"Nb"|"Mo"|"Tc"|"Ru"|"Rh"|"Pd"|"Ag"|"Cd"|"In"|"Sn"|"Sb"|"Te"|"I"|"Xe"|"Cs"|"Ba"|"La"|"Ce"|"Pr"|"Nd"|"Pm"|"Sm"|"Eu"|"Gd"|"Tb"|"Dy"|"Ho"|"Er"|"Tm"|"Yb"|"Lu"|"Hf"|"Ta"|"W"|"Re"|"Os"|"Ir"|"Pt"|"Au"|"Hg"|"Tl"|"Pb"|"Bi"|"Po"|"At"|"Rn"|"Fr"|"Ra"|"Ac"|"Th"|"Pa"|"U"|"Np"|"Pu"|"Am"|"Cm"|"Bk"|"Cf"|"Es"|"Fm"|"Md"|"No"|"Lr"|"Rf"|"Db"|"Sg"|"Bh"|"Hs"|"Mt"|"Ds"|"Rg"|"Cn"|"Nh"|"Fl"|"Mc"|"Lv"|"Ts"|"Og" ;
+
+Bool ::= "true" | "false" ; (* Now a distinct type usable in PVal, MEntry, Validation, etc. *)
+
+/*----------------------------  PRIMITIVE LEXICAL ELEMENTS -------------------------*/
+Num   ::= Float | Int ;
+Int   ::= Digit+ ;
+Float ::= Digit+ "." Digit+ Exp? | Digit+ Exp ;
+Exp   ::= ( "e"|"E" ) ( "+"|"-" )? Digit+ ;
+Digit ::= "0".."9" ;
+Letter::= "A".."Z" | "a".."z" ;
+Date  ::= Digit Digit Digit Digit "-" Digit Digit "-" Digit Digit ; (* YYYY-MM-DD (a profile of ISO 8601) *)
+
+Str     ::= "\"" StrChar* "\"" ;
+StrChar ::= "\\" EscSeq | AnyCharNoQuote ;
+EscSeq  ::= "n" | "r" | "t" | "\\" | "\"" | "`" | "u" HexDigit HexDigit HexDigit HexDigit ;
+HexDigit::= "0".."9" | "A".."F" | "a".."f" ;
+BTChar  ::= "\\" EscSeq | AnyCharNoBack ;
+AnyCharNoQuote ::= !('"'|'\\'|Newline) . ;
+AnyCharNoBack   ::= !('`'|'\\'|Newline) . ;
+Newline ::= "\r"? "\n" ;
+
+(* End AtomForge DSL *) 

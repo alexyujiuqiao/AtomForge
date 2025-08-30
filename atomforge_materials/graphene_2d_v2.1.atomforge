@@ -1,0 +1,221 @@
+atom_spec "graphene_2d_heterostructure" {
+  header { 
+    dsl_version = "2.1",
+    content_schema_version = "2d_materials_v1.0",
+    uuid = "550e8400-e29b-41d4-a716-446655440000",
+    title = "Twisted Bilayer Graphene with AI Integration",
+    created = 2025-05-08,
+    modified = 2025-05-08
+  }
+  
+  description = "Twisted bilayer graphene demonstrating 2D materials and AI integration features"
+  
+  units {
+    system = "materials_science",
+    length = angstrom,
+    angle = degree,
+    disp = "angstrom^2",
+    temp = K,
+    pressure = GPa
+  }
+  
+  type_system {
+    structural_types = {
+      coordination_environment = "trigonal_planar",
+      crystal_system = "hexagonal",
+      space_group_family = "primitive",
+      connectivity = "2D_layered"
+    },
+    chemical_types = {
+      central_atom = {
+        element_category = "carbon",
+        oxidation_states = [0, 1, 2, 3, 4],
+        coordination_preference = ["trigonal_planar", "tetrahedral"]
+      }
+    },
+    computational_types = {
+      calculation_method = "DFT_PBE_PAW",
+      basis_requirements = "plane_wave_500eV",
+      k_point_density = "8000_per_reciprocal_atom"
+    },
+    auto_inference = {
+      enabled = true,
+      inference_methods = [
+        "coordination_analysis", "bond_valence_sum", 
+        "space_group_analysis", "electronic_structure_prediction"
+      ],
+      validation_strictness = "moderate",
+      error_handling = "warn_and_continue"
+    }
+  }
+  
+  lattice {
+    description = "Twisted bilayer graphene, 1.1° magic angle",
+    vectors = (
+      (12.856, 0.0, 0.0),
+      (-6.428, 11.134, 0.0),
+      (0.0, 0.0, 20.0)
+    )
+  }
+  
+  symmetry {
+    description = "Twisted bilayer with moiré pattern",
+    space_group = "P6/mmm",
+    origin_choice = 1
+  }
+  
+  basis {
+    description = "Carbon atoms in twisted bilayer graphene",
+    site "C1_layer1" {
+      description = "Carbon atom in first graphene layer",
+      wyckoff = "1a",
+      position = (0.0, 0.0, 0.0),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.0, charge = 0.0 }),
+      label = "C_layer1"
+    },
+    site "C2_layer1" {
+      description = "Second carbon atom in first layer",
+      wyckoff = "1b",
+      position = (0.333, 0.667, 0.0),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.0, charge = 0.0 }),
+      label = "C_layer1_2"
+    },
+    site "C1_layer2" {
+      description = "Carbon atom in second graphene layer",
+      wyckoff = "1a",
+      position = (0.0, 0.0, 0.5),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.0, charge = 0.0 }),
+      label = "C_layer2"
+    },
+    site "C2_layer2" {
+      description = "Second carbon atom in second layer",
+      wyckoff = "1b",
+      position = (0.333, 0.667, 0.5),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.0, charge = 0.0 }),
+      label = "C_layer2_2"
+    }
+  }
+  
+  emerging_materials {
+    type = "2D_heterostructure",
+    layer_stack = {
+      layers = [
+        { material = "graphene", twist_angle = 1.05 degree },
+        { material = "graphene", twist_angle = 0.0 degree }
+      ],
+      interlayer_distance = 3.35 angstrom,
+      coupling_strength = "weak_vdw"
+    }
+  }
+  
+  bonds {
+    ("C1_layer1", "C2_layer1") = 1.42 angstrom,
+    ("C1_layer2", "C2_layer2") = 1.42 angstrom
+  }
+  
+  environment {
+    temperature = 300 K,
+    pressure = 1 bar,
+    e_field = (0.0, 0.0, 0.0) cartesian "V/m"
+  }
+  
+  ai_integration {
+    graph_representation = {
+      node_features = [
+        "atomic_number", "electronegativity", "covalent_radius",
+        "oxidation_state", "coordination_number"
+      ],
+      edge_features = [
+        "bond_distance", "bond_order", "electronic_overlap"
+      ],
+      global_features = [
+        "space_group", "density", "formation_energy"
+      ]
+    },
+    generation_model = {
+      type = "VAE_crystal",
+      latent_dim = 512,
+      constraints = [
+        "charge_neutrality", "space_group_symmetry", "realistic_bonding"
+      ],
+      sampling_temperature = 0.8
+    },
+    active_learning = {
+      acquisition_function = "expected_improvement",
+      surrogate_model = "gaussian_process",
+      exploration_weight = 0.1,
+      batch_size = 10
+    }
+  }
+  
+  procedural_generation {
+    generator_type = "ml_guided",
+    target_properties = {
+      band_gap = "> 0.0 eV",
+      formation_energy = "< 0.1 eV/atom",
+      electronic_conductivity = "> 1e6 S/m"
+    },
+    generation_method = "VAE_latent_sampling",
+    population_size = 1000,
+    generations = 50
+  }
+  
+  benchmarking {
+    benchmark_type = "property_prediction",
+    tasks = [
+      {
+        input_data = "atomforge_specification",
+        target_properties = ["band_gap", "formation_energy", "electronic_conductivity"],
+        prediction_fidelity = "DFT_quality",
+        uncertainty_quantification = true
+      }
+    ]
+  }
+  
+  properties {
+    band_gap = 0.0 eV,
+    electronic_conductivity = 1e8 "S/m",
+    thermal_conductivity = 3000 "W/mK",
+    young_modulus = 1.0 TPa,
+    optical_transparency = 97.7
+  }
+  
+  validation {
+    tolerance = 1e-6,
+    occupancy_clamp = true,
+    vector_unit_consistent = true,
+    max_transform_depth = 64,
+    enforce_units = true
+  }
+  
+  simplification {
+    complexity_level = "expert",
+    auto_complete = false,
+    suggest_defaults = false,
+    show_all_features = true,
+    advanced_validation = true
+  }
+  
+  provenance {
+    source = "Graph Neural Network Prediction",
+    method = "M3GNet universal potential, trained on MPF.2021.2.8",
+    doi = "10.1038/s41567-021-01234-x",
+    url = "https://github.com/materialsvirtuallab/m3gnet"
+  }
+  
+  meta {
+    sample_id = "TBG_ML_001",
+    dataset_partition = "training",
+    cross_validation_fold = 3,
+    feature_importance_score = 0.85,
+    prediction_confidence = 0.92,
+    model_version = "GCN_v2.1",
+    training_epochs = 500,
+    validation_loss = 0.023,
+    overfitting_indicator = false
+  }
+} 

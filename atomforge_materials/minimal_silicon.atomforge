@@ -1,0 +1,22 @@
+atom_spec "silicon_diamond" {
+  header { 
+    dsl_version = "2.1", 
+    title = "Silicon Diamond", 
+    created = 2025-05-08 
+  }
+  lattice { 
+    type = cubic, 
+    a = 5.431 
+  }
+  symmetry { 
+    space_group = 227 
+  }
+  basis {
+    site "Si1" { 
+      wyckoff = "8a", 
+      position = (0.0, 0.0, 0.0), 
+      frame = fractional, 
+      species = ({ element = "Si", occupancy = 1.0 }) 
+    }
+  }
+} 

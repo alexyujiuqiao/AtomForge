@@ -1,0 +1,48 @@
+// AtomForge Lark Grammar (from EBNF v1.0, flat, no indentation)
+start: atomforge_file
+
+atomforge_file: language_version_decl? atom_spec
+language_version_decl: "#atomforge_version" STRING_LITERAL ";"
+
+atom_spec: "atom_spec" IDENTIFIER "{" header description? units? lattice symmetry basis property_validation? provenance? "}"
+
+header: "header" "{" "dsl_version" "=" STRING_LITERAL "," "title" "=" STRING_LITERAL "," "created" "=" date "," ("uuid" "=" STRING_LITERAL [","])? "}"
+description: "description" "=" STRING_LITERAL ","
+units: "units" "{" "system" "=" STRING_LITERAL "," "length" "=" length_unit "," "angle" "=" angle_unit [","] "}"
+lattice: "lattice" "{" "type" "=" lattice_type "," "a" "=" REAL_LITERAL "," "b" "=" REAL_LITERAL "," "c" "=" REAL_LITERAL "," "alpha" "=" REAL_LITERAL "," "beta" "=" REAL_LITERAL "," "gamma" "=" REAL_LITERAL [","] "}"
+symmetry: "symmetry" "{" "space_group" "=" space_group "," ("origin_choice" "=" INTEGER_LITERAL [","])? "}"
+basis: "basis" "{" site* "}"
+site: "site" IDENTIFIER "{" "wyckoff" "=" STRING_LITERAL "," "position" "=" vector3 "," "frame" "=" coordinate_frame "," "species" "=" "(" species_list ")" "," ("adp_iso" "=" REAL_LITERAL [","])? ("label" "=" STRING_LITERAL [","])? "}"
+species_list: species ("," species)* [","]
+species: "{" "element" "=" element_symbol "," "occupancy" "=" REAL_LITERAL [","] ("charge" "=" REAL_LITERAL [","])? "}"
+
+property_validation: "property_validation" "{" "computational_backend" ":" computational_backend "," ("convergence_criteria" ":" convergence_criteria [","])? ("target_properties" ":" target_properties [","])? "}"
+computational_backend: "VASP" "{" "functional" ":" STRING_LITERAL "," "energy_cutoff" ":" REAL_LITERAL "," "k_point_density" ":" REAL_LITERAL [","] "}"
+convergence_criteria: "{" ("energy_tolerance" ":" REAL_LITERAL [","])? ("force_tolerance" ":" REAL_LITERAL [","])? ("stress_tolerance" ":" REAL_LITERAL [","])? "}"
+target_properties: "{" ("formation_energy" ":" BOOL [","])? ("band_gap" ":" BOOL [","])? ("elastic_constants" ":" BOOL [","])? "}"
+provenance: "provenance" "{" "source" "=" STRING_LITERAL "," ("method" "=" STRING_LITERAL [","])? ("doi" "=" STRING_LITERAL [","])? "}"
+
+patch: "patch" "{" patch_operation* "}"
+patch_operation: update_occupancy | add_site | modify_property
+update_occupancy: "update" IDENTIFIER "." IDENTIFIER ".species[" INTEGER_LITERAL "]" ".occupancy =" REAL_LITERAL ","
+add_site: "add_site" IDENTIFIER "{" "wyckoff" "=" STRING_LITERAL "," "position" "=" vector3 "," "frame" "=" coordinate_frame "," "species" "=" "(" species_list ")" "," ("label" "=" STRING_LITERAL [","])? "}"
+modify_property: "update_properties." IDENTIFIER "=" REAL_LITERAL ","
+lattice_type: "cubic" | "tetragonal" | "orthorhombic" | "hexagonal" | "rhombohedral" | "monoclinic" | "triclinic"
+space_group: INTEGER_LITERAL | STRING_LITERAL
+coordinate_frame: "fractional" | "cartesian"
+length_unit: "angstrom" | "nm" | "pm" | "bohr"
+angle_unit: "degree" | "radian"
+vector3: "(" REAL_LITERAL "," REAL_LITERAL "," REAL_LITERAL ")"
+date: INTEGER_LITERAL "-" INTEGER_LITERAL "-" INTEGER_LITERAL
+element_symbol: STRING_LITERAL
+BOOL: "true" | "false"
+IDENTIFIER: /[a-zA-Z_][a-zA-Z_0-9]*/
+STRING_LITERAL: ESCAPED_STRING
+REAL_LITERAL: /-?\d+(\.\d+)?([eE][-+]?\d+)?/
+INTEGER_LITERAL: /-?\d+/
+
+%import common.ESCAPED_STRING
+%import common.WS
+%import common.NEWLINE -> _NL
+%ignore WS
+%ignore _NL

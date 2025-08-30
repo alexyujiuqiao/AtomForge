@@ -1,0 +1,126 @@
+**must-have operations + workflows** set for AtomForge Crystals. Each op is **pure** (no side effects), takes immutable inputs, and returns new values plus a small report you can cache (hash over inputs + params).
+
+# A) Ingest, Canonicalize, Validate  
+
+1. **from\_cif / from\_poscar** - `Crystal`
+   Parse file - minimal Crystal (symmetry may be inferred later).
+
+2. **canonicalize(crystal, policy)** - `Crystal`, `CanonReport`
+   Primitive - conventional, wrap+quantize, infer Wyckoff/multiplicity, stable sort, set `provenance.hash`.
+
+3. **validate(crystal, rules)** - `ValidationReport`
+   Check metric PD, occupancy sums, composition consistency, symmetry coherence, fractional bounds, charge neutrality, disorder groups.
+
+4. **identity\_hash(crystal)** - `str`
+   SHA-256 over canonical byte string. Used as cache key across all operations.
+
+# B) Database & Variant Selection
+
+5. **match\_database(crystal, sources, tolerance)** - `List[Match]`
+   Find similar structures in MP/ICSD/COD with provenance and similarity score.
+
+6. **select\_variant(candidates, policy)** - `Crystal`, `SelectionReport`
+   Choose best variant by policy: energy_hull, experimental, completeness, explicit_space_group.
+
+# C) Geometry Operations
+
+7. **reduce\_to\_primitive(crystal)** - `Crystal`
+8. **to\_conventional(crystal, setting\_policy)** - `Crystal`
+9. **standardize\_symmetry(crystal, origin\_policy)** - `Crystal`
+
+# D) Editing & Patching
+
+10. **substitute(crystal, site\_sel, new\_species, occupancy)** - `Crystal`, `PatchRecord`
+11. **vacancy(crystal, site\_sel, occupancy=1.0)** - `Crystal`, `PatchRecord`
+12. **interstitial(crystal, frac, species, occupancy=1.0)** - `Crystal`, `PatchRecord`
+13. **set\_lattice(crystal, new\_lattice)** - `Crystal`, `PatchRecord`
+14. **set\_symmetry(crystal, new\_symmetry)** - `Crystal`, `PatchRecord`
+
+# E) Supercell & Export
+
+15. **make\_supercell(crystal, M\_3x3)** - `Crystal`, `SupercellMap`, `PatchRecord`
+   Returns child crystal and mapping: child\_site\_i - (parent\_site\_index, lattice\_vector).
+
+16. **to\_poscar(crystal)** - `Dict[str,str]` (INCAR/KPOINTS may be separate)
+17. **to\_cif(crystal)** - `str`
+18. **to\_pymatgen(crystal)** / **from\_pymatgen(struct)** - adapters
+
+# F) Calculation Setup
+
+19. **prepare\_calc(crystal, backend\_caps, targets, defaults)** - `CalcInput`, `PrepReport`
+   Generate VASP/Quantum ESPRESSO input files with k-points, pseudopotentials, etc.
+
+20. **estimate\_kmesh(crystal, policy)** - `Tuple[int,int,int]`
+
+# G) Comparison & Retrieval
+
+21. **compare(crystal\_a, crystal\_b, tol)** - `CompareReport`
+22. **diff(crystal\_a, crystal\_b)** - `PatchRecord[]`
+   Best-effort inverse patch: what minimal sequence transforms A-B (useful for reviews and provenance).
+
+23. **retrieve\_by\_formula(formula, sources, disambig\_policy)** - `List[Crystal]`
+24. **generate\_prototype(proto\_id, params)** - `Crystal`
+
+# J) Reports (lightweight, cacheable)
+
+* `CanonReport`: actions taken, epsilon used, spglib settings.
+* `ValidationReport`: pass/fail and messages per rule.
+* `SelectionReport`: ranking criteria and chosen variant.
+* `SupercellMap`: mapping child-parent.
+* `PrepReport`: filled defaults, derived k-mesh, warnings (e.g., non-neutral when spin requested).
+* `CompareReport`: equivalence flag, diffs summary.
+* `PatchRecord`: `op`, `params`, `preconditions`, `result_hash`, timestamp.
+
+
+## Minimal end-to-end workflows (compose the ops)
+
+### 1) Clean import - ready for DFT
+
+```
+cr0 = from_cif(path)
+cr1, canrep = canonicalize(cr0)
+val = validate(cr1, rules=default_rules)
+assert val.ok
+calc_in, prep = prepare_calc(cr1, backend_caps="VASP", targets=bandgap_defaults, defaults=policy_v1)
+```
+
+### 2) Database-pinned variant
+
+```
+cands = match_database(cr1, sources=["MP","ICSD"], tolerance=tol_v1)
+cr2, selrep = select_variant(cands, policy=prefer_low_hull_then_experimental)
+```
+
+### 3) Doping sweep (patches) - supercell - export
+
+```
+cr_doped, p1 = substitute(cr2, site_sel="Wyckoff:4a", new_species="Ta", occupancy=0.1)
+cr_super, map_, p2 = make_supercell(cr_doped, M=[[2,0,0],[0,2,0],[0,0,1]])
+val2 = validate(cr_super, rules=default_rules)
+files = to_poscar(cr_super)
+```
+
+### 4) Equivalence / regression test
+
+```
+assert identity_hash(canonicalize(from_poscar(files)) ) == cr_super.provenance.hash
+```
+
+
+## Guardrails & contracts (baked into each op)
+
+* **Purity:** No in-place edits; every op returns a new `Crystal`.
+* **Determinism:** Same inputs + params - same outputs + hash.
+* **Preconditions:** Checked up front (e.g., symmetry\_locked).
+* **Postconditions:** Re-canonicalize; update `provenance.hash`; attach a `PatchRecord` or report.
+* **Caching:** Cache key = `hash(inputs) + hash(params) + op_name + op_version`.
+
+
+## Prioritization 
+
+1. **canonicalize / validate / identity\_hash** (foundation for everything).
+2. **from\_cif / to\_cif / to\_poscar** + **pymatgen adapters**.
+3. **patch ops (substitute, vacancy, interstitial)** + **make\_supercell**.
+4. **prepare\_calc** with a single backend (VASP) and a clear policy.
+5. **match\_database / select\_variant** (keeps provenance consistent and kills drift).
+6. **compare / diff** (super helpful for reviews, testing, and LLM “autofix” critique).
