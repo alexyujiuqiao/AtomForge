@@ -1,0 +1,75 @@
+============================================================
+          AtomForge Crystal MVP Plan 
+============================================================
+
+Phase 0 : Freeze the core
+---------------------------------
+* Land Crystal v1.1 + JSON Schema + typed adapters
+* Implement canonicalize - identity_hash - validate
+  - document epsilons and conventional-cell policy
+* CI: CIF/POSCAR round-trip invariance
+      symmetry equivalence - same hash
+
+Phase 1 : Interop + variant pinning
+-------------------------------------------
+* Build from_cif / from_poscar and match_database (MP/ICSD/COD)
+* Ship select_variant(policy):
+    prefer low E_hull - experimental - completeness - explicit space group
+* UI: variant cards with space group, a_hull, site count - pick & pin
+      (provenance.database/id)
+* Fixes: "same name, different lattice system" + provenance mismatches
+
+Phase 2 : Edits & scale
+----------------------------------
+* Implement substitute / vacancy / interstitial / set_lattice / set_symmetry
+  with preconditions
+* Implement make_supercell(M) + child-parent mapping
+* Define PatchRecord (op, params, preconditions, result_hash, timestamp)
+* Aligns with "Dynamic Patching system" slide
+
+Phase 3 : Calculation prep (VASP-first)
+-----------------------------------------------
+* prepare_calc: deterministic policy for functional, ENCUT, k-mesh
+  (density or grid), smearing, spin
+* Separate targets from structure (typed units; no Bool/Float ambiguity)
+* Fixes: band_gap/formation_energy Bool vs Float; missing property blocks
+
+Phase 4 : Agent hardening
+------------------------------------
+* Rewire LLaMP pipeline so rules run before LLM:
+    1. retrieve by MP id/formula
+    2. canonicalize + hash
+    3. select_variant
+    4. fill calc settings from policy
+    5. only then call LLM to draft/repair DSL (schema-constrained JSON)
+* Enforce provenance guardrail:
+    no publish if IDs/DOIs aren’t API-resolvable
+* Fixes: converter instability & hallucinations
+
+Phase 5 : Metrics & demo set
+------------------------------------
+* Ship golden set (~100): {CIF, Crystal v1.1, POSCAR, hash} for regression
+* Dashboard metrics:
+    - parse/validator pass rate
+    - round-trip fidelity
+    - variant-selection accuracy
+    - provenance resolution rate
+    - agent stability (N-run variance)
+
+------------------------------------------------------------
+Definition of Done (MVP)
+------------------------------------------------------------
+* Import any MP/ICSD entry - canonicalize+validate
+  - select_variant - prepare_calc - POSCAR/KPOINTS/INCAR
+  with no manual fixes
+* 100% of golden set passes round-trip & symmetry checks
+* ≥95% property-block completeness from policies
+* 0 unreconciled DOIs/IDs
+
+------------------------------------------------------------
+Risks Neutralized
+------------------------------------------------------------
+* Grammar fragility  - typed data core; DSL is a view auto-repaired
+* Agent drift        - rules-first pipeline + schema-constrained outputs
+* Variant ambiguity  - explicit selection policy + provenance pinning
+============================================================

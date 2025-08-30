@@ -1,0 +1,249 @@
+# 1) Python types (immutable core)
+
+```python
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Tuple, Literal
+from datetime import datetime
+
+Vec3 = Tuple[float, float, float]            # fractional coords in [0,1)
+Mat3 = Tuple[Tuple[int,int,int], Tuple[int,int,int], Tuple[int,int,int]]
+
+# ---------- Core ----------
+@dataclass(frozen=True)
+class Lattice:
+    a: float      # Å
+    b: float      # Å
+    c: float      # Å
+    alpha: float  # deg
+    beta: float   # deg
+    gamma: float  # deg
+
+@dataclass(frozen=True)
+class Symmetry:
+    space_group: str                           # e.g., "P6_3/mmc"
+    number: int                                # 1..230
+    hall_symbol: Optional[str] = None
+    origin_choice: Optional[str] = None
+    symmetry_source: Optional[Literal["provided","inferred"]] = None
+
+@dataclass(frozen=True)
+class Site:
+    species: Dict[str, float]                  # {"Li":0.5,"La":0.5} (sum ≈ 1.0)
+    frac: Vec3                                 # fractional coord in [0,1)
+    wyckoff: Optional[str] = None              # e.g., "4e" (filled by canonicalizer when possible)
+    multiplicity: Optional[int] = None
+    label: Optional[str] = None
+    magnetic_moment: Optional[Tuple[float,float,float]] = None
+    charge: Optional[float] = None
+    disorder_group: Optional[str] = None       # correlate partial occupancies
+
+@dataclass(frozen=True)
+class Composition:
+    reduced: Dict[str, int]                    # integer formula
+    atomic_fractions: Dict[str, float]         # normalized to 1.0
+
+@dataclass(frozen=True)
+class ConstraintSet:
+    min_interatomic_distance: Optional[float] = None   # Å
+    charge_neutrality: Optional[bool] = None
+    symmetry_locked: Optional[bool] = None             # forbid symmetry-breaking edits
+
+@dataclass(frozen=True)
+class Provenance:
+    database: Optional[str] = None             # "MP","ICSD","COD","user"
+    id: Optional[str] = None                   # e.g., "mp-12345"
+    doi: Optional[str] = None
+    retrieved_at: Optional[str] = None         # ISO 8601
+    generator: Optional[str] = None            # if produced by a generator
+    schema_version: str = "AtomForge/Crystal/1.1"
+    hash: Optional[str] = None                 # canonical identity hash (set by canonicalizer)
+    external_ids: Dict[str, str] = field(default_factory=dict)  # e.g., {"task_id":"mp-...","icsd":"..."} 
+
+@dataclass(frozen=True)
+class Crystal:
+    lattice: Lattice
+    symmetry: Symmetry
+    sites: Tuple[Site, ...]                    # symmetry-unique sites only
+    composition: Composition
+    oxidation_states: Optional[Dict[str, float]] = None  # species -> ox state (e.g., {"O":-2})
+    constraints: Optional[ConstraintSet] = None
+    provenance: Provenance = field(default_factory=Provenance)
+    notes: Optional[str] = None
+
+# ---------- Optional (separate modules) ----------
+@dataclass(frozen=True)
+class DefectSpec:
+    kind: Literal["vacancy","substitution","interstitial"]
+    site_index: Optional[int] = None           # for vacancy/substitution
+    species: Optional[str] = None              # new species (substitution/interstitial)
+    occupancy: Optional[float] = None
+    frac: Optional[Vec3] = None                # for interstitials
+
+@dataclass(frozen=True)
+class Supercell:
+    transform: Mat3
+    parent_hash: Optional[str] = None
+    mapping: Optional[List[Tuple[int, Tuple[int,int,int]]]] = None  # child i -> (parent_site, lattice_vec)
+```
+
+---
+
+# 2) JSON Schema (v1.1)
+
+```json
+{
+  "$id": "https://atomforge.ai/schemas/crystal-1.1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AtomForge Crystal v1.1",
+  "type": "object",
+  "required": ["lattice","symmetry","sites","composition","provenance"],
+  "properties": {
+    "lattice": {
+      "type": "object",
+      "required": ["a","b","c","alpha","beta","gamma"],
+      "properties": {
+        "a": {"type":"number","exclusiveMinimum":0},
+        "b": {"type":"number","exclusiveMinimum":0},
+        "c": {"type":"number","exclusiveMinimum":0},
+        "alpha": {"type":"number","minimum":0,"maximum":180},
+        "beta":  {"type":"number","minimum":0,"maximum":180},
+        "gamma": {"type":"number","minimum":0,"maximum":180}
+      },
+      "additionalProperties": false
+    },
+    "symmetry": {
+      "type": "object",
+      "required": ["space_group","number"],
+      "properties": {
+        "space_group": {"type":"string","minLength":1},
+        "number": {"type":"integer","minimum":1,"maximum":230},
+        "hall_symbol": {"type":"string"},
+        "origin_choice": {"type":"string"},
+        "symmetry_source": {"enum":["provided","inferred"]}
+      },
+      "additionalProperties": false
+    },
+    "sites": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type":"object",
+        "required":["species","frac"],
+        "properties": {
+          "species": {
+            "type":"object",
+            "minProperties":1,
+            "additionalProperties":{"type":"number","minimum":0,"maximum":1}
+          },
+          "frac": {
+            "type":"array",
+            "prefixItems":[{"type":"number"},{"type":"number"},{"type":"number"}],
+            "items": false,
+            "minItems":3,
+            "maxItems":3
+          },
+          "wyckoff": {"type":"string"},
+          "multiplicity": {"type":"integer","minimum":1},
+          "label": {"type":"string"},
+          "magnetic_moment": {
+            "type":"array",
+            "prefixItems":[{"type":"number"},{"type":"number"},{"type":"number"}],
+            "items": false, "minItems":3, "maxItems":3
+          },
+          "charge": {"type":"number"},
+          "disorder_group": {"type":"string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "composition": {
+      "type":"object",
+      "required":["reduced","atomic_fractions"],
+      "properties": {
+        "reduced": {
+          "type":"object","minProperties":1,
+          "additionalProperties":{"type":"integer","minimum":0}
+        },
+        "atomic_fractions": {
+          "type":"object","minProperties":1,
+          "additionalProperties":{"type":"number","minimum":0,"maximum":1}
+        }
+      },
+      "additionalProperties": false
+    },
+    "oxidation_states": {
+      "type":"object",
+      "additionalProperties":{"type":"number"}
+    },
+    "constraints": {
+      "type":"object",
+      "properties": {
+        "min_interatomic_distance":{"type":"number","exclusiveMinimum":0},
+        "charge_neutrality":{"type":"boolean"},
+        "symmetry_locked":{"type":"boolean"}
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type":"object",
+      "required":["schema_version"],
+      "properties": {
+        "database":{"type":"string"},
+        "id":{"type":"string"},
+        "doi":{"type":"string"},
+        "retrieved_at":{"type":"string","format":"date-time"},
+        "generator":{"type":"string"},
+        "schema_version":{"type":"string","const":"AtomForge/Crystal/1.1"},
+        "hash":{"type":"string"},
+        "external_ids":{
+          "type":"object",
+          "additionalProperties":{"type":"string"}
+        }
+      },
+      "additionalProperties": false
+    },
+    "notes": {"type":"string"}
+  },
+  "additionalProperties": false
+}
+```
+
+---
+
+# 3) Validator + canonicalizer checklist (CI-ready)
+
+**Canonicalization (before hashing):**
+
+1. Reduce to **primitive** cell (spglib), then convert to **conventional** setting (document the convention).
+2. Wrap fractional coords to **\[0,1)** and **quantize** lattice and coords with fixed epsilons (e.g., `1e-6` Å and `1e-8` fractional).
+3. Infer `wyckoff` and `multiplicity` where possible; sort sites by `(species tuple - wyckoff - frac)`.
+4. Strip non-physical labels; normalize element symbols (and optional tags) consistently.
+
+**Identity hash:**
+
+* Compute SHA-256 over a canonical byte string of `(symmetry.number|space_group, lattice, sorted sites: species+occupancies+frac+wyckoff+multiplicity)` after quantization.
+* Store in `provenance.hash`.
+
+**Validation rules:**
+
+* **Metric PD**: cell metric tensor must be positive definite; angles in valid ranges.
+* **Species occupancies**: for every `Site`, `sum(occupancy) == 1 ± 1e-8`.
+* **Composition consistency**: recompute formula from `(sites × multiplicity)` and assert match with `composition` within tolerance.
+* **Disorder groups**: if `disorder_group` used, correlated occupancies per group obey domain rule (≤ 1.0; exactly 1.0 if mutually exclusive).
+* **Charge neutrality**: if `constraints.charge_neutrality == True`, validate using `oxidation_states` (global or per-site override if you add later).
+* **Symmetry coherence**: reported `Symmetry` agrees with spglib analysis of the canonical structure (warn on benign origin choices; fail on mismatch).
+* **Fractional bounds**: no value equals 1.0 after wrapping; negatives corrected by wrap rule.
+* **Supercell lineage** (if used): `mapping` indices valid; `parent_hash` present.
+
+**Import/export round-trip tests:**
+
+* `CIF/POSCAR -> Crystal -> canonicalize -> export -> re-import -> canonicalize` must keep the same `provenance.hash`.
+* Different origin choices or symmetry-equivalent settings yield the **same** hash.
+
+---
+
+# 4) Interop note (Materials Project / ICSD / COD)
+
+This v1.1 schema maps 1:1 to pymatgen/MP structures (lattice, fractional coords with occupancies). Wyckoff/multiplicity can be filled via spglib (`get_symmetry_dataset`). Provenance fields (`database`, `id`, `external_ids`) hold MP/ICSD identifiers. Keep oxidation states optional.
+

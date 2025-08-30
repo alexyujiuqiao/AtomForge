@@ -1,0 +1,280 @@
+// AtomForge DSL – Lark Grammar (v2025-05-08, Release 2.1 — Production Standard)
+// AtomForge: A Domain-Specific Language for Inorganic Repetitive Structures
+// Lark-compatible grammar for AtomForge DSL v2.1
+
+// Lexical rules
+WS: /[ \t\r\n]+/
+COMMENT_LINE: /#[^\n]*\n/
+COMMENT_BLOCK: /\/\*[^*]*\*+([^/*][^*]*\*+)*\//
+
+// Skip whitespace and comments
+%import common.WS_INLINE
+%import common.NEWLINE
+%import common.ESCAPED_STRING
+%import common.NUMBER
+%import common.INT
+%import common.FLOAT
+%import common.CNAME
+
+// Main program structure
+program: "atom_spec" identifier "{" header description? units? type_system? lattice symmetry basis emerging_materials? defects? tile? bonds? elastic? phonon? density? environment? ai_integration? procedural_generation? benchmarking? properties? validation? simplification? provenance? patch? meta? "}"
+
+// Header and metadata
+header: "header" "{" "dsl_version" "=" string
+                      ("," content_schema_version "=" string)?
+                      ("," uuid "=" string)?
+                      "," "title" "=" string
+                      "," "created" "=" date
+                      ("," modified "=" date)? "}"
+content_schema_version: "content_schema_version"
+uuid: "uuid"
+modified: "modified"
+
+description: "description" "=" string ","
+
+units: "units" "{" "system" "=" string "," "length" "=" len_unit "," "angle" "=" ang_unit "," "disp" "=" disp_unit "," "temp" "=" temp_unit "," "pressure" "=" pres_unit "}"
+
+// Type system
+type_system: "type_system" "{" (structural_types | chemical_types | computational_types | auto_inference) ("," type_system_property)* "}"
+
+structural_types: "structural_types" "=" "{" structural_type+ "}" "," "compatibility_rules" "=" feature_list
+chemical_types: "chemical_types" "=" "{" chemical_type+ "}" "," "validation_rules" "=" feature_list
+computational_types: "computational_types" "=" "{" computational_type+ "}" "," "resource_requirements" "=" "{" resource_requirement+ "}"
+auto_inference: "auto_inference" "=" "{" "enabled" "=" bool "," "inference_methods" "=" feature_list "," "validation_strictness" "=" ("strict" | "moderate" | "permissive") "," "error_handling" "=" ("error" | "warn_and_continue" | "silent") "}"
+
+structural_type: qname "=" (string | feature_list) ";"
+chemical_type: qname "=" (string | feature_list | "{" chemical_property+ "}") ";"
+computational_type: qname "=" string ";"
+resource_requirement: qname "=" string ";"
+chemical_property: qname "=" (string | feature_list | "[" (string | number) ("," (string | number))* "]") ";"
+type_system_property: qname "=" (string | bool | feature_list)
+
+// Lattice specification
+lattice: "lattice" "{" description? (bravais | vectors) "}"
+bravais: "type" "=" lat_type "," "a" "=" length "," "b" "=" length "," "c" "=" length "," "alpha" "=" angle "," "beta" "=" angle "," "gamma" "=" angle
+vectors: "vectors" "=" "(" vec3 "," vec3 "," vec3 ")"
+
+// Symmetry operations
+symmetry: "symmetry" "{" description?
+                       "space_group" "=" space_group ","
+                       "origin_choice" "=" int
+                       ("," magnetic_group "=" string)?
+                       ("," superspace "=" superspace)? "}"
+magnetic_group: "magnetic_group"
+superspace: "{" "k_vectors" "=" "(" vec3f ("," vec3f)* ")" "," "t_phase" "=" number "}"
+
+// Atomic basis
+basis: "basis" "{" description? site ("," site)* "}"
+site: "site" id "{" description?
+                 "wyckoff" "=" wyckoff ","
+                 "position" "=" vec3f ","
+                 "frame" "=" frame ","
+                 "species" "=" "(" species ("," species)* ")"
+                 ("," moment "=" vec3 frame string)?
+                 ("," constraint "=" string)?
+                 ("," adp_iso "=" disp)?
+                 ("," adp_aniso "=" adp)?
+                 ("," label "=" string)? "}"
+constraint: "constraint"
+moment: "moment"
+label: "label"
+species: "{" "element" "=" element "," "occupancy" "=" number
+             ("," isotope "=" int)?
+             ("," charge "=" number)?
+             ("," valence "=" number)? "}"
+isotope: "isotope"
+charge: "charge"
+valence: "valence"
+adp_iso: "adp_iso"
+adp_aniso: "adp_aniso"
+adp: "[" number "," number "," number "," number "," number "," number "]" | "{" "U11" "=" number "," "U22" "=" number "," "U33" "=" number "," "U23" "=" number "," "U13" "=" number "," "U12" "=" number "}"
+
+// Defect modeling
+defects: "defects" "{" defect_entry ("," defect_entry)* "}"
+defect_entry: "{" "site_ref" "=" id "," "type" "=" ("vacancy" | "interstitial" | "substitution") "," "prob" "=" number ("," "species" "=" species)? "}"
+
+// Transformations and supercells
+tile: "tile" "{" "repeat" "=" vec3i
+                 ("," origin_shift "=" vec3f)?
+                 ("," transforms "=" "(" transform_seq ("," transform_seq)* ")")? "}"
+origin_shift: "origin_shift"
+transforms: "transforms"
+transform_seq: transform_op | "(" transform_seq ")"
+transform_op: mirror | rotate | translate | mat4
+mirror: "mirror" "(" axis ")"
+rotate: "rotate" "(" axis "," angle ")"
+translate: "translate" "(" vec3 frame ")"
+mat4: "matrix4" "[" "(" number "," number "," number "," number ")" "," "(" number "," number "," number "," number ")" "," "(" number "," number "," number "," number ")" "," "(" number "," number "," number "," number ")" "]"
+
+// Chemical bonding
+bonds: "bonds" "{" bond ("," bond)* "}"
+bond: "(" id "," id ")" "=" length
+
+// Emerging materials features
+emerging_materials: "emerging_materials" "{" "type" "=" emerging_type "," (layer_stack | topology | metamaterial | quantum_state) "}"
+emerging_type: "2D_heterostructure" | "topological_insulator" | "topological_semimetal" | "metamaterial" | "quantum_material" | "van_der_waals" | "moire_system"
+
+layer_stack: "layer_stack" "=" "{" "layers" "=" "[" layer_spec ("," layer_spec)* "]" "," "interlayer_distance" "=" length "," "coupling_strength" "=" string ("," layer_property)* "}"
+layer_spec: "{" "material" "=" string "," "twist_angle" "=" angle ("," layer_property)* "}"
+
+topology: "topology" "=" "{" "classification" "=" string "," "z2_invariant" "=" string "," "surface_states" "=" string "," "bulk_gap" "=" number ("," topology_property)* "}"
+
+metamaterial: "metamaterial_type" "=" string "," "unit_cell_period" "=" vec3 "," "effective_properties" "=" "{" effective_property+ "}" ("," metamaterial_property)*
+
+quantum_state: "quantum_state" "=" string "," "frustration" "=" "{" frustration_spec "}" "," "entanglement" "=" "{" entanglement_spec "}" ("," quantum_property)*
+
+layer_property: qname "=" (string | number | bool)
+topology_property: qname "=" (string | number | bool)
+metamaterial_property: qname "=" (string | number | bool)
+quantum_property: qname "=" (string | number | bool)
+effective_property: qname "=" (number | string) ";"
+frustration_spec: qname "=" (string | number) ("," qname "=" (string | number))*
+entanglement_spec: qname "=" (string | number) ("," qname "=" (string | number))*
+
+// Physical properties
+elastic: "elastic" "{" "C_ijkl" "=" "[" number ("," number)* "]" "}"
+phonon: "phonon" "{" "q_grid" "=" vec3i "," "frequencies" "=" "[" number ("," number)* "]" "}"
+
+// Density maps and volumetric data
+density: "density_map" "{" "grid" "=" vec3i "," "format" "=" string "," (density_data | density_file) ("," "description" "=" string)? "}"
+density_data: "data" "=" base64
+density_file: "data_file" "=" string
+base64: base64_quad* (base64_pad2 | base64_pad | base64_quad)
+base64_quad: base64_char base64_char base64_char base64_char
+base64_pad2: base64_char base64_char "=" "="
+base64_pad: base64_char base64_char base64_char "="
+base64_char: /[A-Za-z0-9+\/]/
+
+// Environmental conditions
+environment: "environment" "{" (temperature "=" temp ",")?
+                            (pressure "=" pres ",")?
+                            (e_field "=" vec3 frame? string ",")?
+                            (e_grad "=" mat3 frame? field_grad_unit ",")?
+                            (b_field "=" vec3 frame? string)? "}"
+temperature: "temperature"
+pressure: "pressure"
+e_field: "e_field"
+e_grad: "e_grad"
+b_field: "b_field"
+mat3: "[" "(" number "," number "," number ")" "," "(" number "," number "," number ")" "," "(" number "," number "," number ")" "]"
+field_grad_unit: "V/m2" | "T/m"
+
+// AI-native integration
+ai_integration: "ai_integration" "{" (graph_representation | generation_model | active_learning | multi_fidelity) ("," ai_integration_property)* "}"
+
+graph_representation: "graph_representation" "=" "{" "node_features" "=" feature_list "," "edge_features" "=" feature_list "," "global_features" "=" feature_list "}"
+
+generation_model: "generation_model" "=" "{" "type" "=" string "," "latent_dim" "=" int "," "constraints" "=" feature_list "," "sampling_temperature" "=" number "}"
+
+active_learning: "active_learning" "=" "{" "acquisition_function" "=" string "," "surrogate_model" "=" string "," "exploration_weight" "=" number "," "batch_size" "=" int "}"
+
+multi_fidelity: "multi_fidelity" "=" "{" "low_fidelity" "=" string "," "high_fidelity" "=" string "," "correlation_model" "=" string "," "cost_ratio" "=" number "}"
+
+feature_list: "[" string ("," string)* "]"
+ai_integration_property: qname "=" (string | number | bool | feature_list)
+
+// Procedural generation system
+procedural_generation: "procedural_generation" "{" "generator_type" "=" generator_type "," (template_generation | parameter_sweep | ml_guided | hybridization) ("," generation_property)* "}"
+
+generator_type: "template_based" | "parameter_sweep" | "combinatorial" | "ml_guided" | "hybridization"
+
+template_generation: "template" "=" string "," "parameter_space" "=" "{" parameter_space+ "}" "," "constraints" "=" feature_list
+
+parameter_sweep: "base_structure" "=" string "," "sweep_parameters" "=" "{" sweep_parameter+ "}" "," "generation_mode" "=" ("combinatorial" | "random_sampling" | "adaptive")
+
+ml_guided: "target_properties" "=" "{" property_target+ "}" "," "generation_method" "=" string "," "population_size" "=" int "," "generations" "=" int
+
+hybridization: "parent_selection" "=" "{" parent_selection "}" "," "crossover_operations" "=" feature_list "," "mutation_rate" "=" number "," "fitness_function" "=" string
+
+parameter_space: qname "=" (feature_list | "[" number "," number "]") ";"
+sweep_parameter: qname "=" (feature_list | "[" number "," number "," number "]") ";"
+property_target: qname "=" string ";"
+parent_selection: ("method" "=" string | qname "=" string) ("," ("method" "=" string | qname "=" string))*
+generation_property: qname "=" (string | number | bool | feature_list)
+
+// Benchmarking system
+benchmarking: "benchmarking" "{" "benchmark_type" "=" benchmark_type "," "tasks" "=" "[" benchmark_task ("," benchmark_task)* "]" ("," benchmark_property)* "}"
+
+benchmark_type: "structure_reconstruction" | "property_prediction" | "inverse_design" | "materials_understanding" | "multi_modal" | "comprehensive"
+
+benchmark_task: "{" task_property+ "}"
+task_property: ("input_modality" "=" feature_list | "input_data" "=" string | "target_output" "=" string | "target_properties" "=" (feature_list | "{" property_spec+ "}") | "difficulty_level" "=" ("beginner" | "intermediate" | "expert") | "evaluation_metrics" "=" feature_list | "constraints" "=" feature_list | qname "=" (string | number | bool | feature_list)) ";"
+
+property_spec: qname "=" (string | number | "[" number "," number "]") ";"
+benchmark_property: qname "=" (string | number | bool | feature_list | "{" property_spec+ "}")
+
+// Extensible properties and validation
+properties: "properties" "{" property_entry ("," property_entry)* "}"
+property_entry: qname "=" property_value
+property_value: number | string | "(" vec3 frame? ")" | vec3i | "[" number ("," number)* "]" | bool | length | angle | temp | pres | disp
+
+validation: "validate" "{" "tolerance" "=" number "," "occupancy_clamp" "=" bool "," "vector_unit_consistent" "=" bool "," "max_transform_depth" "=" int "," "enforce_units" "=" bool "}"
+
+// Complexity management
+simplification: "simplification" "{" "complexity_level" "=" complexity_level "," "auto_complete" "=" bool "," "suggest_defaults" "=" bool "," simplification_option* "}"
+
+complexity_level: "beginner" | "intermediate" | "expert" | "domain_specific"
+simplification_option: "hide_advanced_features" "=" feature_list | "template_suggestions" "=" bool | "domain" "=" string | "templates" "=" feature_list | "required_properties" "=" feature_list | qname "=" (string | bool | feature_list)
+
+// Provenance and data lineage
+provenance: "provenance" "{" "source" "=" string "," "method" "=" string "," "doi" "=" string ("," url "=" string)? ("," provenance_extension)* "}"
+url: "url"
+provenance_extension: qname "=" (string | number | bool)
+
+// Revolutionary patching system
+path_segment: ident ("[" int "]")?
+path: path_segment ("." path_segment)*
+patch: "patch" "{" patch_op ("," patch_op)* "}"
+patch_op: "add" (site | path "=" property_value) | "remove" path | "update" path "=" property_value
+
+// Extensible metadata
+meta: "meta" "{" meta_entry ("," meta_entry)* "}"
+meta_entry: qname "=" (string | number | bool)
+
+// Data types and terminals
+vec3: "(" number "," number "," number ")"
+vec3f: "(" number "," number "," number ")"
+vec3i: "(" int "," int "," int ")"
+length: number len_unit?
+angle: number ang_unit?
+temp: number temp_unit?
+pres: number pres_unit?
+disp: number disp_unit?
+frame: "fractional" | "cartesian"
+axis: "x" | "y" | "z"
+
+// Identifiers and lexical elements
+ident: /[A-Za-z_][A-Za-z0-9_]*/
+bt_ident: "`" bt_char+ "`"
+id: ident | bt_ident
+qname: (ident ":")? ident
+keyword: "atom_spec" | "header" | "units" | "type_system" | "lattice" | "symmetry" | "basis" | "site" | "emerging_materials" | "defects" | "tile" | "mirror" | "rotate" | "translate" | "matrix4" | "bonds" | "elastic" | "phonon" | "density_map" | "environment" | "ai_integration" | "procedural_generation" | "benchmarking" | "properties" | "validate" | "simplification" | "provenance" | "patch" | "add" | "remove" | "update" | "meta" | "true" | "false" | "fractional" | "cartesian"
+
+// Units and physical quantities
+len_unit: "angstrom" | "nm" | "pm" | "bohr"
+ang_unit: "degree" | "radian"
+temp_unit: "K"
+pres_unit: "Pa" | "kPa" | "bar" | "GPa"
+disp_unit: "angstrom^2"
+
+// Enumerations and constants
+lat_type: "cubic" | "tetragonal" | "orthorhombic" | "hexagonal" | "rhombohedral" | "monoclinic" | "triclinic"
+space_group: int | string
+wyckoff: string
+element: "H"|"He"|"Li"|"Be"|"B"|"C"|"N"|"O"|"F"|"Ne"|"Na"|"Mg"|"Al"|"Si"|"P"|"S"|"Cl"|"Ar"|"K"|"Ca"|"Sc"|"Ti"|"V"|"Cr"|"Mn"|"Fe"|"Co"|"Ni"|"Cu"|"Zn"|"Ga"|"Ge"|"As"|"Se"|"Br"|"Kr"|"Rb"|"Sr"|"Y"|"Zr"|"Nb"|"Mo"|"Tc"|"Ru"|"Rh"|"Pd"|"Ag"|"Cd"|"In"|"Sn"|"Sb"|"Te"|"I"|"Xe"|"Cs"|"Ba"|"La"|"Ce"|"Pr"|"Nd"|"Pm"|"Sm"|"Eu"|"Gd"|"Tb"|"Dy"|"Ho"|"Er"|"Tm"|"Yb"|"Lu"|"Hf"|"Ta"|"W"|"Re"|"Os"|"Ir"|"Pt"|"Au"|"Hg"|"Tl"|"Pb"|"Bi"|"Po"|"At"|"Rn"|"Fr"|"Ra"|"Ac"|"Th"|"Pa"|"U"|"Np"|"Pu"|"Am"|"Cm"|"Bk"|"Cf"|"Es"|"Fm"|"Md"|"No"|"Lr"|"Rf"|"Db"|"Sg"|"Bh"|"Hs"|"Mt"|"Ds"|"Rg"|"Cn"|"Nh"|"Fl"|"Mc"|"Lv"|"Ts"|"Og"
+
+bool: "true" | "false"
+
+// Primitive lexical elements
+number: float | int
+string: ESCAPED_STRING
+date: /[0-9]{4}-[0-9]{2}-[0-9]{2}/
+bt_char: /[^`\\\r\n]|\\[nrt\\"`]|\\u[0-9a-fA-F]{4}/
+
+// Start rule
+start: program
+
+// Ignore whitespace and comments
+%ignore WS
+%ignore COMMENT_LINE
+%ignore COMMENT_BLOCK 

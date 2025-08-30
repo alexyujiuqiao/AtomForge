@@ -1,0 +1,148 @@
+(* AtomForge MVP 1.0 -- Minimal EBNF Specification *)
+(* ==== Core Materials Structure ==== *)
+AtomForgeFile ::= [ LanguageVersionDecl ] AtomSpec
+
+LanguageVersionDecl ::= "#atomforge_version" StringLiteral ";"
+
+AtomSpec ::= "atom_spec" Identifier "{" 
+                Header
+                [ Description ]
+                [ Units ]
+                Lattice
+                Symmetry
+                Basis
+                [ PropertyValidation ]
+                [ Provenance ]
+            "}"
+
+(* ==== Core Metadata ==== *)
+Header ::= "header" "{" 
+            "dsl_version" "=" StringLiteral ","
+            "title" "=" StringLiteral ","
+            "created" "=" Date ","
+            [ "uuid" "=" StringLiteral "," ]
+        "}"
+
+Description ::= "description" "=" StringLiteral ","
+
+(* ==== Units System (Simplified) ==== *)
+Units ::= "units" "{" 
+           "system" "=" StringLiteral ","
+           "length" "=" LengthUnit ","
+           "angle" "=" AngleUnit ","
+        "}"
+
+(* ==== Crystal Lattice ==== *)
+Lattice ::= "lattice" "{" 
+             "type" "=" LatticeType ","
+             "a" "=" RealLiteral ","
+             "b" "=" RealLiteral ","
+             "c" "=" RealLiteral ","
+             "alpha" "=" RealLiteral ","
+             "beta" "=" RealLiteral ","
+             "gamma" "=" RealLiteral ","
+            "}"
+
+(* ==== Crystal Symmetry ==== *)
+Symmetry ::= "symmetry" "{" 
+              "space_group" "=" SpaceGroup ","
+              [ "origin_choice" "=" IntegerLiteral "," ]
+            "}"
+
+(* ==== Atomic Basis ==== *)
+Basis ::= "basis" "{" 
+            { Site }
+          "}"
+
+Site ::= "site" Identifier "{" 
+           "wyckoff" "=" StringLiteral ","
+           "position" "=" Vector3 ","
+           "frame" "=" CoordinateFrame ","
+           "species" "=" "(" SpeciesList ")" ","
+           [ "adp_iso" "=" RealLiteral "," ]
+           [ "label" "=" StringLiteral "," ]
+         "}"
+
+SpeciesList ::= Species { "," Species }
+
+Species ::= "{" 
+              "element" "=" ElementSymbol ","
+              "occupancy" "=" RealLiteral ","
+              [ "charge" "=" RealLiteral "," ]
+            "}"
+
+(* ==== Property Validation (Single Backend) ==== *)
+PropertyValidation ::= "property_validation" "{" 
+                         "computational_backend" ":" ComputationalBackend ","
+                         [ "convergence_criteria" ":" ConvergenceCriteria "," ]
+                         [ "target_properties" ":" TargetProperties "," ]
+                       "}"
+
+ComputationalBackend ::= "VASP" "{" 
+                           "functional" ":" StringLiteral ","
+                           "energy_cutoff" ":" RealLiteral ","
+                           "k_point_density" ":" RealLiteral ","
+                        "}"
+
+ConvergenceCriteria ::= "{" 
+                          [ "energy_tolerance" ":" RealLiteral "," ]
+                          [ "force_tolerance" ":" RealLiteral "," ]
+                          [ "stress_tolerance" ":" RealLiteral "," ]
+                        "}"
+
+TargetProperties ::= "{" 
+                      [ "formation_energy" ":" Bool "," ]
+                      [ "band_gap" ":" Bool "," ]
+                      [ "elastic_constants" ":" Bool "," ]
+                    "}"
+
+(* ==== Provenance Tracking ==== *)
+Provenance ::= "provenance" "{" 
+                 "source" "=" StringLiteral ","
+                 [ "method" "=" StringLiteral "," ]
+                 [ "doi" "=" StringLiteral "," ]
+               "}"
+
+(* ==== Patch System ==== *)
+Patch ::= "patch" "{" 
+            { PatchOperation }
+          "}"
+
+PatchOperation ::= UpdateOccupancy | AddSite | ModifyProperty
+
+UpdateOccupancy ::= "update" Identifier "." Identifier ".species[" IntegerLiteral "]" ".occupancy =" RealLiteral ","
+
+AddSite ::= "add_site" Identifier "{" 
+              "wyckoff" "=" StringLiteral ","
+              "position" "=" Vector3 ","
+              "frame" "=" CoordinateFrame ","
+              "species" "=" "(" SpeciesList ")" ","
+              [ "label" "=" StringLiteral "," ]
+            "}"
+
+ModifyProperty ::= "update_properties." Identifier "=" RealLiteral ","
+
+(* ==== Materials Science Data Types ==== *)
+LatticeType ::= "cubic" | "tetragonal" | "orthorhombic" | "hexagonal" | "rhombohedral" | "monoclinic" | "triclinic"
+SpaceGroup ::= IntegerLiteral | StringLiteral
+CoordinateFrame ::= "fractional" | "cartesian"
+LengthUnit ::= "angstrom" | "nm" | "pm" | "bohr"
+AngleUnit ::= "degree" | "radian"
+Vector3 ::= "(" RealLiteral "," RealLiteral "," RealLiteral ")"
+Date ::= IntegerLiteral "-" IntegerLiteral "-" IntegerLiteral
+
+(* ==== Chemical Elements ==== *)
+ElementSymbol ::=  "H" | "He" | "Li" | "Be" | "B" | "C" | "N" | "O" | "F" | "Ne" |
+                    "Na" | "Mg" | "Al" | "Si" | "P" | "S" | "Cl" | "Ar" | "K" | "Ca" |
+                    "Sc" | "Ti" | "V" | "Cr" | "Mn" | "Fe" | "Co" | "Ni" | "Cu" | "Zn" |
+                    StringLiteral (* All valid elements allowed *)
+
+(* ==== Terminal Definitions ==== *)
+Identifier ::= ( Letter | "_" ) { Letter | Digit | "_" }*
+StringLiteral ::= '"' { StringChar } '"'
+StringChar ::= any printable char except '"'
+RealLiteral ::= [ "-" ] Digit { Digit } [ "." Digit { Digit } ]
+IntegerLiteral ::= [ "-" ] Digit { Digit }
+Bool ::= "true" | "false"
+Letter ::= "a".."z" | "A".."Z"
+Digit ::= "0".."9"
