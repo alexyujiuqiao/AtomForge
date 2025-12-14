@@ -1,0 +1,81 @@
+atom_spec "YbC2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e6631230-10ec-4351-b90d-e758a6abbea8",
+    title = "C4Yb2",
+    created = "2025-12-07"
+  }
+  description = "YbC2 from Materials Project (mp-1100)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.815846,
+    b = 3.815846,
+    c = 6.427580,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.401917),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.598083),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.098083),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.901917),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.2376999999999998
+    formation_energy = -0.0511568399999996
+  }
+}

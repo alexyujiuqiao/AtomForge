@@ -1,0 +1,109 @@
+atom_spec "Y2GaCo2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c6d5720a-ccda-4a54-8a46-51b252666818",
+    title = "Co4Ga2Y4",
+    created = "2025-12-07"
+  }
+  description = "Y2GaCo2 from Materials Project (mp-1206356)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.053037,
+    b = 5.451524,
+    c = 8.379652,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 71,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.000000, 0.213912, 0.500000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.000000, 0.786088, 0.500000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.500000, 0.286088, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.500000, 0.713912, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.000000, 0.500000, 0.206589),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.000000, 0.500000, 0.793412),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.500000, 0.000000, 0.293411),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.500000, 0.000000, 0.706589),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4013947541666667
+  }
+}

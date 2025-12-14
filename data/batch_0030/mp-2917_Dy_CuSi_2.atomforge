@@ -1,0 +1,109 @@
+atom_spec "Dy(CuSi)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8f0b8bbc-60d6-4164-8c8a-58d8459d548e",
+    title = "Cu4Dy2Si4",
+    created = "2025-12-07"
+  }
+  description = "Dy(CuSi)2 from Materials Project (mp-2917)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.977716,
+    b = 3.977716,
+    c = 9.966168,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.381875),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.618125),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.118125),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.881875),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5672439340000004
+  }
+}

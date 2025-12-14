@@ -1,0 +1,123 @@
+atom_spec "Ta4CoNi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "56afdd03-75ff-4f2e-82ee-bbe69f279a87",
+    title = "Co2Ni2Ta8",
+    created = "2025-12-07"
+  }
+  description = "Ta4CoNi from Materials Project (mp-1217989)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 6.169738,
+    b = 6.169738,
+    c = 4.914918,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 97,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "8j",
+      position = (0.159413, 0.340587, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "8j",
+      position = (0.159413, 0.659413, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "8j",
+      position = (0.340587, 0.159413, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "8j",
+      position = (0.340587, 0.840588, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "8j",
+      position = (0.659413, 0.159413, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "8j",
+      position = (0.659413, 0.840588, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "8j",
+      position = (0.840588, 0.340587, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "8j",
+      position = (0.840588, 0.659413, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2439275091666672
+  }
+}

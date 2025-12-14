@@ -1,0 +1,60 @@
+atom_spec "CaCuSi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2a9a744e-2f53-4e22-b5d4-732f0fe84f5f",
+    title = "CaCuSi",
+    created = "2025-12-07"
+  }
+  description = "CaCuSi from Materials Project (mp-1227246)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.121331,
+    b = 4.081012,
+    c = 4.121458,
+    alpha = 90.000000,
+    beta = 119.984969,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.999967, 0.000000, 0.999759),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.333817, 0.500000, 0.666968),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666216, 0.500000, 0.333173),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.356352333333333
+  }
+}

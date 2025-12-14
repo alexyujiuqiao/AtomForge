@@ -1,0 +1,102 @@
+atom_spec "K2GeF6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ef1c3c92-d5dd-45bf-a97c-3af608653470",
+    title = "F6GeK2",
+    created = "2025-12-07"
+  }
+  description = "K2GeF6 from Materials Project (mp-7825)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 5.751770,
+    b = 5.751770,
+    c = 4.777799,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.152683, 0.305366, 0.215889),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.152683, 0.847317, 0.215889),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.305366, 0.152683, 0.784111),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.694634, 0.847317, 0.215889),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.847317, 0.152683, 0.784111),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.847317, 0.694634, 0.784111),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.701914),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.298086),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 5.8095
+    formation_energy = -3.034016304
+  }
+}

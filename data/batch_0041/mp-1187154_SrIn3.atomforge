@@ -1,0 +1,67 @@
+atom_spec "SrIn3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0c65c0f4-bd30-45cb-8dff-e07217666b85",
+    title = "In3Sr",
+    created = "2025-12-07"
+  }
+  description = "SrIn3 from Materials Project (mp-1187154)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.874404,
+    b = 4.874404,
+    c = 4.874404,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in cubic structure",
+      wyckoff = "3c",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2853322466666665
+  }
+}

@@ -1,0 +1,102 @@
+atom_spec "HoSnPt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "88526c6d-f90a-4234-9bb4-68cfffe1cc64",
+    title = "Ho3Pt3Sn3",
+    created = "2025-12-07"
+  }
+  description = "HoSnPt from Materials Project (mp-30733)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.509191,
+    b = 7.509191,
+    c = 4.015695,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ho {
+      description = "Ho site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.595198, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.404802, 0.404802, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.595198, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.259779, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.259779, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.740221, 0.740221, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.0890596094444445
+  }
+}

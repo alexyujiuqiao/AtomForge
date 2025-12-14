@@ -1,0 +1,95 @@
+atom_spec "NbSnS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "321fa670-f342-4318-b17c-1a2f99eac61e",
+    title = "Nb2S4Sn2",
+    created = "2025-12-07"
+  }
+  description = "NbSnS2 from Materials Project (mp-9586)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.357430,
+    b = 3.357430,
+    c = 17.583029,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Nb {
+      description = "Nb site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.161074),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.338926),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.661074),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.838926),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.1088975390625002
+  }
+}

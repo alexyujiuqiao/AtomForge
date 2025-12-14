@@ -1,0 +1,53 @@
+atom_spec "Hg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3de4d934-50dc-4f44-b314-089438b1d8a8",
+    title = "Hg2",
+    created = "2025-12-07"
+  }
+  description = "Hg from Materials Project (mp-1184554)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.579844,
+    b = 3.579844,
+    c = 5.734710,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.307
+    formation_energy = 0.0
+  }
+}

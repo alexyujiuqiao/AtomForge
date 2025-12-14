@@ -1,0 +1,109 @@
+atom_spec "La2Ga5Cu3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "980453d7-bf0b-4925-8cc9-c32210d105fb",
+    title = "Cu3Ga5La2",
+    created = "2025-12-07"
+  }
+  description = "La2Ga5Cu3 from Materials Project (mp-1223339)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.325791,
+    b = 4.325791,
+    c = 10.227631,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 115,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.500000, 0.619968),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.500000, 0.868005),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.500000, 0.000000, 0.131995),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.500000, 0.000000, 0.380032),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.500000, 0.253077),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.500000, 0.000000, 0.746923),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4862237887500001
+  }
+}

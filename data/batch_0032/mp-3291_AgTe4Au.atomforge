@@ -1,0 +1,123 @@
+atom_spec "AgTe4Au" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "977a16ff-60eb-4408-a8b5-f22e7fbdfa52",
+    title = "Ag2Au2Te8",
+    created = "2025-12-07"
+  }
+  description = "AgTe4Au from Materials Project (mp-3291)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 9.067899,
+    b = 4.578168,
+    c = 10.275683,
+    alpha = 90.000000,
+    beta = 123.934753,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 13,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.480012, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.519988, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.193326, 0.399539, 0.454785),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.193326, 0.600461, 0.954785),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.296822, 0.031110, 0.294927),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.296822, 0.968890, 0.794927),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.703178, 0.031110, 0.205073),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.703178, 0.968890, 0.705073),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.806674, 0.399539, 0.045215),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.806674, 0.600461, 0.545215),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.355640566111111
+  }
+}

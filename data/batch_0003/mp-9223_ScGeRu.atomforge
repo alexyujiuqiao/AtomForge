@@ -1,0 +1,102 @@
+atom_spec "ScGeRu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5a6865cc-4f3b-4465-87d5-6eb7525163ad",
+    title = "Ge3Ru3Sc3",
+    created = "2025-12-07"
+  }
+  description = "ScGeRu from Materials Project (mp-9223)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.001622,
+    b = 7.001622,
+    c = 3.484092,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.253263, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.253263, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.746737, 0.746737, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.598928, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.401072, 0.401072, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.598928, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7940437972222227
+  }
+}

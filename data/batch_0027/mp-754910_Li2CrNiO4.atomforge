@@ -1,0 +1,95 @@
+atom_spec "Li2CrNiO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "11efb21d-b54f-4c33-b577-2f19da7f76de",
+    title = "CrLi2NiO4",
+    created = "2025-12-07"
+  }
+  description = "Li2CrNiO4 from Materials Project (mp-754910)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.054974,
+    b = 4.054979,
+    c = 5.163636,
+    alpha = 113.118852,
+    beta = 113.118730,
+    gamma = 90.000383
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cr {
+      description = "Cr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.250003, 0.749998, 0.500001),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.499999, 0.500001, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750000, 0.250001, 0.500001),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999999, 0.000000, 0.999999),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.017762, 0.517763, 0.035525),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.231071, 0.231069, 0.462141),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.482235, 0.982236, 0.964472),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.768930, 0.768931, 0.537859),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.924022612083334
+  }
+}

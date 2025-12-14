@@ -1,0 +1,123 @@
+atom_spec "Li2MnO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1b67e549-f889-4fee-832c-009de1d04318",
+    title = "Li4Mn2O6",
+    created = "2025-12-07"
+  }
+  description = "Li2MnO3 from Materials Project (mp-1173930)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 2.895400,
+    b = 5.068527,
+    c = 7.673116,
+    alpha = 107.923908,
+    beta = 100.615460,
+    gamma = 89.753420
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in triclinic structure",
+      wyckoff = "1f",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in triclinic structure",
+      wyckoff = "1g",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.337151, 0.512477, 0.176523),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.662849, 0.487523, 0.823477),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.165904, 0.006632, 0.824499),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.834096, 0.993368, 0.175501),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.095040, 0.239357, 0.683005),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.256752, 0.786325, 0.011912),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.400206, 0.222420, 0.312521),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.599794, 0.777580, 0.687479),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.743248, 0.213675, 0.988088),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.904960, 0.760643, 0.316995),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.9367
+    formation_energy = -2.1184523540996167
+  }
+}

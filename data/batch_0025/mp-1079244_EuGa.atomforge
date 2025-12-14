@@ -1,0 +1,95 @@
+atom_spec "EuGa" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d6509228-da29-436a-83cf-861752f735d7",
+    title = "Eu4Ga4",
+    created = "2025-12-07"
+  }
+  description = "EuGa from Materials Project (mp-1079244)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.856532,
+    b = 6.260823,
+    c = 6.499761,
+    alpha = 68.136323,
+    beta = 78.487639,
+    gamma = 85.110666
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Eu {
+      description = "Eu site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.232907, 0.148912, 0.074184),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.327621, 0.700608, 0.646700),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.672379, 0.299392, 0.353300),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.767093, 0.851088, 0.925816),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.134886, 0.238643, 0.566823),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.213756, 0.608711, 0.191000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.786244, 0.391289, 0.809000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.865114, 0.761357, 0.433177),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4545908112500001
+  }
+}

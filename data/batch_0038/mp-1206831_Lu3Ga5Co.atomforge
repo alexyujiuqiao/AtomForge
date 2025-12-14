@@ -1,0 +1,102 @@
+atom_spec "Lu3Ga5Co" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "50bf3cec-cd82-4547-aa20-070c59d63714",
+    title = "CoGa5Lu3",
+    created = "2025-12-07"
+  }
+  description = "Lu3Ga5Co from Materials Project (mp-1206831)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 6.803950,
+    b = 6.803950,
+    c = 4.171966,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.231824, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.231824, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.768176, 0.768176, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.591781, 0.000000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.408219, 0.408219, 0.000000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.591781, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6161227069444443
+  }
+}

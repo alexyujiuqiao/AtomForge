@@ -1,0 +1,81 @@
+atom_spec "CeCoGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c00d3638-3d98-45d2-8b9c-895f14d872a8",
+    title = "Ce2Co2Ge2",
+    created = "2025-12-07"
+  }
+  description = "CeCoGe from Materials Project (mp-21339)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.191045,
+    b = 4.191045,
+    c = 6.564840,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.692899),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.307101),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.198074),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.801926),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.589318038333334
+  }
+}

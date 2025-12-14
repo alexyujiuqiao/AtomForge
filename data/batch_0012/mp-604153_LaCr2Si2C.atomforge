@@ -1,0 +1,81 @@
+atom_spec "LaCr2Si2C" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "487e5473-5cf8-41e6-9d7a-1ad27cafc13c",
+    title = "CCr2LaSi2",
+    created = "2025-12-07"
+  }
+  description = "LaCr2Si2C from Materials Project (mp-604153)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.014911,
+    b = 4.014911,
+    c = 5.431377,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in tetragonal structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in tetragonal structure",
+      wyckoff = "2e",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.238266),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.761734),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4058742158333335
+  }
+}

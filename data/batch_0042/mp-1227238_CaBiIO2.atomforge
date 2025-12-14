@@ -1,0 +1,109 @@
+atom_spec "CaBiIO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8e2b0f2e-0c12-4273-955c-3ca88fe0ba82",
+    title = "Bi2Ca2I2O4",
+    created = "2025-12-07"
+  }
+  description = "CaBiIO2 from Materials Project (mp-1227238)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.036648,
+    b = 4.036648,
+    c = 13.581908,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 107,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.325351),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.825351),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.665830),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.165830),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.009895),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.509895),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.249462),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.749462),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.249462),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.749462),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.8877
+    formation_energy = -2.168917279
+  }
+}

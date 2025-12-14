@@ -1,0 +1,81 @@
+atom_spec "EuCu4Pd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0cc60e80-65c5-446f-b075-2169cd3f2a12",
+    title = "Cu4EuPd",
+    created = "2025-12-07"
+  }
+  description = "EuCu4Pd from Materials Project (mp-1225153)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.157247,
+    b = 4.219807,
+    c = 5.159239,
+    alpha = 90.000000,
+    beta = 119.974797,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.333424, 0.000000, 0.666906),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.008038, 0.500000, 0.504035),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.495970, 0.500000, 0.991939),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.496025, 0.500000, 0.504024),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000031, 0.000000, 0.000045),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.666612, 0.000000, 0.333051),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2450102708333332
+  }
+}

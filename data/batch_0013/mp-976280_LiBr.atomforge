@@ -1,0 +1,67 @@
+atom_spec "LiBr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f8c943bd-6bc3-48bd-a3c2-16fcbc826178",
+    title = "Br2Li2",
+    created = "2025-12-07"
+  }
+  description = "LiBr from Materials Project (mp-976280)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.188176,
+    b = 4.188176,
+    c = 6.808261,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.999501),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.499501),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.375497),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.875497),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.9350000000000005
+    formation_energy = -1.8359013554166663
+  }
+}

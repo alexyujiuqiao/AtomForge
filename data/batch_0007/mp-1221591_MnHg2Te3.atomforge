@@ -1,0 +1,81 @@
+atom_spec "MnHg2Te3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7eecdbad-3f2c-4043-a113-c85203edb745",
+    title = "Hg2MnTe3",
+    created = "2025-12-07"
+  }
+  description = "MnHg2Te3 from Materials Project (mp-1221591)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.665178,
+    b = 4.665178,
+    c = 11.271573,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.996865),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.338364),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.663516),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.250347),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.905370),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.595538),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3465679796551726
+  }
+}

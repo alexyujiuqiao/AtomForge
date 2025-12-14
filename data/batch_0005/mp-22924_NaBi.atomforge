@@ -1,0 +1,53 @@
+atom_spec "NaBi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a859e780-08b1-4f99-bb57-58c221d09021",
+    title = "BiNa",
+    created = "2025-12-07"
+  }
+  description = "NaBi from Materials Project (mp-22924)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.430193,
+    b = 3.430193,
+    c = 4.939507,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2922423982758619
+  }
+}

@@ -1,0 +1,123 @@
+atom_spec "Ag2S" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9a45389b-f1e2-4a12-b9df-c13e36622ba3",
+    title = "Ag8S4",
+    created = "2025-12-07"
+  }
+  description = "Ag2S from Materials Project (mp-36216)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.818870,
+    b = 6.968858,
+    c = 7.577337,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.120108, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.879892, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.379892, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.620108, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.279710, 0.750000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.720290, 0.250000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.220290, 0.250000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.779710, 0.750000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1307
+    formation_energy = -0.2152714421527779
+  }
+}

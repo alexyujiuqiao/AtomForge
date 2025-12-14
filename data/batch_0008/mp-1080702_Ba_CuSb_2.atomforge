@@ -1,0 +1,109 @@
+atom_spec "Ba(CuSb)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c3d10527-0437-4fad-9784-a37ad6a3dea1",
+    title = "Ba2Cu4Sb4",
+    created = "2025-12-07"
+  }
+  description = "Ba(CuSb)2 from Materials Project (mp-1080702)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.682993,
+    b = 4.682993,
+    c = 10.853969,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.761229),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.238771),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.369447),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.630553),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.125512),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.874488),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5424667650000004
+  }
+}

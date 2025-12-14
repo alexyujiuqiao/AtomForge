@@ -1,0 +1,95 @@
+atom_spec "AlVCrC" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0079974f-d55f-4103-a13f-2681556abce3",
+    title = "Al2C2Cr2V2",
+    created = "2025-12-07"
+  }
+  description = "AlVCrC from Materials Project (mp-1228847)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 2.881107,
+    b = 2.881107,
+    c = 12.870351,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.743267),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.256733),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.417545),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.582455),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.087569),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.912431),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.34325265875
+  }
+}

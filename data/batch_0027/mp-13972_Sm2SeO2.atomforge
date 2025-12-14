@@ -1,0 +1,74 @@
+atom_spec "Sm2SeO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "018ffc4e-40a8-4e86-87b4-f67fafcd2140",
+    title = "O2SeSm2",
+    created = "2025-12-07"
+  }
+  description = "Sm2SeO2 from Materials Project (mp-13972)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.956491,
+    b = 3.956491,
+    c = 6.984786,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.625623),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.374377),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.289557),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.710443),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.2962
+    formation_energy = -3.421143230468749
+  }
+}

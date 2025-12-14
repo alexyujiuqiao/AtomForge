@@ -1,0 +1,95 @@
+atom_spec "LiCu2Sn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "96d4e2c3-222b-4ddf-8dc8-36872068bc48",
+    title = "Cu4Li2Sn2",
+    created = "2025-12-07"
+  }
+  description = "LiCu2Sn from Materials Project (mp-569834)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.297550,
+    b = 4.297550,
+    c = 7.653346,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.588838),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.911162),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.088838),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.411162),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1891148095833332
+  }
+}

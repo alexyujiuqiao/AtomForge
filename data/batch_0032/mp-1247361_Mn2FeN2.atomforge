@@ -1,0 +1,109 @@
+atom_spec "Mn2FeN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "05339b4f-e085-4d7f-84f8-4a3563078f63",
+    title = "Fe2Mn4N4",
+    created = "2025-12-07"
+  }
+  description = "Mn2FeN2 from Materials Project (mp-1247361)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 2.853950,
+    b = 2.854766,
+    c = 11.420362,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Fe {
+      description = "Fe site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.238475, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.761525, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.256166, 0.000000, 0.348462),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.256166, 0.000000, 0.651538),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.743834, 0.500000, 0.151538),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.743834, 0.500000, 0.848462),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.243916, 0.000000, 0.162496),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.243916, 0.000000, 0.837504),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.756084, 0.500000, 0.337504),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.756084, 0.500000, 0.662496),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3125834341724143
+  }
+}

@@ -45,6 +45,7 @@ class Symmetry:
     hall_symbol: Optional[str] = None
     origin_choice: Optional[str] = None
     symmetry_source: Optional[Literal["provided","inferred"]] = None
+    crystal_system: Optional[str] = None       # e.g., "cubic", "monoclinic"
 
 @dataclass(frozen=True)
 class Site:
@@ -137,10 +138,20 @@ def from_cif(cif_path: str) -> Crystal:
     except ImportError:
         raise ImportError("pymatgen is required for CIF parsing. Install with: pip install pymatgen")
     
-    # Parse CIF file using pymatgen
-    cif_parser = cif_io.CifParser(cif_path)
-    structures = cif_parser.parse_structures()
-    structure = structures[0]  # Get first structure
+    # Parse CIF file using pymatgen with increased occupancy tolerance
+    # Suppress warnings about missing symmetry operations
+    import warnings
+    with warnings.catch_warnings():
+        warnings.filterwarnings('ignore', message='No _symmetry_equiv_pos_as_xyz type key found')
+        warnings.filterwarnings('ignore', message='Issues encountered while parsing CIF')
+        warnings.filterwarnings('ignore', message='Some occupancies')
+        warnings.filterwarnings('ignore', message='The default value of primitive')
+        
+        cif_parser = cif_io.CifParser(cif_path, occupancy_tolerance=2.0)
+        structures = cif_parser.parse_structures()
+        if not structures:
+            raise ValueError(f'No structures found in CIF file: {cif_path}')
+        structure = structures[0]  # Get first structure
     
     # Extract lattice parameters
     lattice = Lattice(
@@ -378,6 +389,7 @@ class CrystalCanonicalizer:
         try:
             import spglib
             from pymatgen.core import Structure, Lattice as PMGLattice
+            from pymatgen.core.periodic_table import Element
             from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
         except ImportError:
             # If spglib/pymatgen not available, return as-is
@@ -428,8 +440,12 @@ class CrystalCanonicalizer:
         # Create new sites
         new_sites = []
         for i, (coords, atomic_number) in enumerate(zip(primitive_coords, primitive_numbers)):
-            # Get element symbol from atomic number
-            element = structure.species[i].symbol
+            # Get element symbol from atomic number returned by spglib
+            try:
+                element = Element.from_Z(int(atomic_number)).symbol
+            except Exception:
+                # Fallback to original species list if Element lookup fails
+                element = structure.species[i].symbol
             
             site = Site(
                 species={element: 1.0},
@@ -448,7 +464,7 @@ class CrystalCanonicalizer:
         new_symmetry = Symmetry(
             space_group=space_group_symbol,
             number=space_group_number,
-            symmetry_source="spglib_inferred"
+            symmetry_source="inferred"
         )
         
         # Recompute composition
@@ -498,36 +514,65 @@ class CrystalCanonicalizer:
         
         structure = Structure(pmg_lattice, species, coords)
         
-        # Use spglib to get symmetry dataset
-        spglib_cell = (structure.lattice.matrix, structure.frac_coords, structure.atomic_numbers)
-        symmetry_dataset = spglib.get_symmetry_dataset(spglib_cell, symprec=1e-5)
-        
-        if symmetry_dataset is None:
-            # If spglib fails, return original structure
+        # Build conventional standard structure via pymatgen
+        analyzer = SpacegroupAnalyzer(structure, symprec=1e-5)
+        conventional = analyzer.get_conventional_standard_structure()
+        if conventional is None:
+            # Fallback: return original crystal
             return crystal
         
-        # For conventional cell, we'll use the original structure but with updated symmetry
-        # The conventional cell is often the same as the input for many structures
-        # We'll focus on updating the symmetry information
+        # Build new Crystal from conventional structure
+        new_lattice = Lattice(
+            a=conventional.lattice.a,
+            b=conventional.lattice.b,
+            c=conventional.lattice.c,
+            alpha=conventional.lattice.alpha,
+            beta=conventional.lattice.beta,
+            gamma=conventional.lattice.gamma
+        )
         
-        # Update symmetry information using SpacegroupAnalyzer
-        analyzer = SpacegroupAnalyzer(structure, symprec=1e-5)
+        new_sites: List[Site] = []
+        for site in conventional:
+            species_dict: Dict[str, float] = {}
+            for sp, occ in site.species.items():
+                species_dict[str(sp)] = occ
+            new_sites.append(
+                Site(
+                    species=species_dict,
+                    frac=tuple(site.frac_coords),
+                    wyckoff=None,
+                    multiplicity=None,
+                    label=site.label if hasattr(site, 'label') else None
+                )
+            )
+        
+        # Recompute composition from conventional structure
+        composition_dict = conventional.composition.as_dict()
+        reduced: Dict[str, Any] = {}
+        for element, count in composition_dict.items():
+            try:
+                reduced[element] = int(count) if float(count).is_integer() else float(count)
+            except Exception:
+                reduced[element] = count
+        new_composition = Composition(
+            reduced=reduced,
+            atomic_fractions=composition_dict
+        )
+        
+        # Update symmetry info from analyzer
         space_group_symbol = analyzer.get_space_group_symbol()
         space_group_number = analyzer.get_space_group_number()
-        
         new_symmetry = Symmetry(
             space_group=space_group_symbol,
             number=space_group_number,
-            symmetry_source="spglib_conventional"
+            symmetry_source="inferred"
         )
         
-        # For now, return the structure with updated symmetry
-        # In a full implementation, we would apply the conventional cell transformation
         return Crystal(
-            lattice=crystal.lattice,
+            lattice=new_lattice,
             symmetry=new_symmetry,
-            sites=crystal.sites,
-            composition=crystal.composition,
+            sites=tuple(new_sites),
+            composition=new_composition,
             oxidation_states=crystal.oxidation_states,
             constraints=crystal.constraints,
             provenance=crystal.provenance,
@@ -697,7 +742,7 @@ class CrystalCanonicalizer:
             number=space_group_number,
             hall_symbol=str(getattr(symmetry_dataset, 'hall_number', '')),
             origin_choice=str(getattr(symmetry_dataset, 'origin_choice', '')),
-            symmetry_source="spglib_wyckoff"
+            symmetry_source="inferred"
         )
         
         return Crystal(
@@ -793,8 +838,8 @@ class CrystalValidator:
         Validation checks:
         - Metric PD: cell metric tensor must be positive definite; angles in valid ranges
         - Species occupancies: for every Site, sum(occupancy) == 1 ± tolerance
-        - Composition consistency: recompute formula from (sites × multiplicity) and assert match with composition within tolerance
-        - Disorder groups: if disorder_group used, correlated occupancies per group obey domain rule (≤ 1.0; exactly 1.0 if mutually exclusive)
+        - Composition consistency: recompute formula from (sites times multiplicity) and assert match with composition within tolerance
+        - Disorder groups: if disorder_group used, correlated occupancies per group obey domain rule (<= 1.0; exactly 1.0 if mutually exclusive)
         - Charge neutrality: if constraints.charge_neutrality == True, validate using oxidation_states
         - Symmetry coherence: reported Symmetry agrees with spglib analysis of the canonical structure
         - Fractional bounds: no value equals 1.0 after wrapping; negatives corrected by wrap rule

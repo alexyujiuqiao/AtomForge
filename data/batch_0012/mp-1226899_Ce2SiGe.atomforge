@@ -1,0 +1,95 @@
+atom_spec "Ce2SiGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ad855b27-af20-47bf-a113-62c681cbe6cd",
+    title = "Ce4Ge2Si2",
+    created = "2025-12-07"
+  }
+  description = "Ce2SiGe from Materials Project (mp-1226899)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.954127,
+    b = 5.891591,
+    c = 8.209559,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 26,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.133671, 0.681035),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.866329, 0.181035),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.362599, 0.319724),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.637401, 0.819724),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.377908, 0.036510),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.622092, 0.536510),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.119925, 0.962731),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.880075, 0.462731),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6760588699999994
+  }
+}

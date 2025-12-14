@@ -1,0 +1,95 @@
+atom_spec "GeIr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b22f1215-ad7f-431e-9914-418006c1bd93",
+    title = "Ge4Ir4",
+    created = "2025-12-07"
+  }
+  description = "GeIr from Materials Project (mp-208)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.578637,
+    b = 5.628255,
+    c = 6.378454,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.193304, 0.576158),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.693304, 0.923842),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.306696, 0.076158),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.806696, 0.423842),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.002934, 0.208742),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.502934, 0.291258),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.497066, 0.708742),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.997066, 0.791258),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3280739300000004
+  }
+}

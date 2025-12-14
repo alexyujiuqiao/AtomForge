@@ -1,0 +1,67 @@
+atom_spec "He" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9848aff3-adb7-4321-b567-862bb1cf7ae8",
+    title = "He4",
+    created = "2025-12-07"
+  }
+  description = "He from Materials Project (mp-614456)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 3.698094,
+    b = 3.698094,
+    c = 3.698094,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 225,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site He {
+      description = "He site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "He", occupancy = 1.000000 })
+    },
+    site He {
+      description = "He site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "He", occupancy = 1.000000 })
+    },
+    site He {
+      description = "He site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "He", occupancy = 1.000000 })
+    },
+    site He {
+      description = "He site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "He", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 17.9023
+    formation_energy = 0.00829941
+  }
+}

@@ -1,0 +1,74 @@
+atom_spec "Rb2PdC2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0574db5a-2091-4e7f-baf8-a835ebb430a9",
+    title = "C2PdRb2",
+    created = "2025-12-07"
+  }
+  description = "Rb2PdC2 from Materials Project (mp-10918)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 5.463165,
+    b = 5.463165,
+    c = 5.309841,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.380223),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.619777),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.277828),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.722172),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.9770000000000003
+    formation_energy = 0.0369013250000001
+  }
+}

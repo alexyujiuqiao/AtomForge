@@ -1,0 +1,109 @@
+atom_spec "LaVN3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d21c0e69-5ade-41b6-9ad9-bfdb194d218b",
+    title = "La2N6V2",
+    created = "2025-12-07"
+  }
+  description = "LaVN3 from Materials Project (mp-989403)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.629583,
+    b = 6.024941,
+    c = 6.328776,
+    alpha = 106.962517,
+    beta = 96.411963,
+    gamma = 90.838030
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site La {
+      description = "La site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.551356, 0.789201, 0.270698),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.625547, 0.332568, 0.728008),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.065590, 0.467923, 0.080916),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.106748, 0.523846, 0.564671),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.110518, 0.001776, 0.584567),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.553302, 0.221848, 0.310897),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.677433, 0.834830, 0.886875),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.969907, 0.946938, 0.050075),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.076637, 0.288219, 0.252209),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.147972, 0.817700, 0.752545),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.7303999999999995
+    formation_energy = -1.2543164439999983
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "EuAlAg4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ef2428ca-4674-4d76-95e6-5225f4102241",
+    title = "Ag4AlEu",
+    created = "2025-12-07"
+  }
+  description = "EuAlAg4 from Materials Project (mp-1225185)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.815713,
+    b = 5.815713,
+    c = 4.416045,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "1e",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.006579, 0.503290, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.496710, 0.503290, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.496710, 0.993421, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in hexagonal structure",
+      wyckoff = "1c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1931777469444438
+  }
+}

@@ -1,0 +1,67 @@
+atom_spec "ZrRh" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e10c86f4-e88e-48e3-8ec3-64d6e38bd2c0",
+    title = "Rh2Zr2",
+    created = "2025-12-07"
+  }
+  description = "ZrRh from Materials Project (mp-1017545)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.161393,
+    b = 4.770603,
+    c = 4.781562,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 51,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.250000, 0.739532),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.750000, 0.260468),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.245889),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.754111),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7461412025000005
+  }
+}

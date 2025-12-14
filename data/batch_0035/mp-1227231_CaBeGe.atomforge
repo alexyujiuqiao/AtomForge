@@ -1,0 +1,60 @@
+atom_spec "CaBeGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fcce5af5-1373-4b21-9b8b-c27864415868",
+    title = "BeCaGe",
+    created = "2025-12-07"
+  }
+  description = "CaBeGe from Materials Project (mp-1227231)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.967084,
+    b = 3.967084,
+    c = 4.327345,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Be {
+      description = "Be site in hexagonal structure",
+      wyckoff = "1f",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Be", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "1d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.39695484
+  }
+}

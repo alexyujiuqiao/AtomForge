@@ -1,0 +1,95 @@
+atom_spec "PuPt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c9347031-8294-40ba-ab3c-0098c5f12295",
+    title = "Pt4Pu4",
+    created = "2025-12-07"
+  }
+  description = "PuPt from Materials Project (mp-1065793)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.821064,
+    b = 10.518754,
+    c = 4.308981,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.404002, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.595998, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.095998, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.904002, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.135948, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.864052, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.364052, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.635948, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7846548925000008
+  }
+}

@@ -1,0 +1,53 @@
+atom_spec "TiHg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3e2a5a02-0338-4149-b5a1-7b9d98c96002",
+    title = "HgTi",
+    created = "2025-12-07"
+  }
+  description = "TiHg from Materials Project (mp-1526)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.045089,
+    b = 3.045089,
+    c = 4.102296,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0092394991666662
+  }
+}

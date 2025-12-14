@@ -1,0 +1,88 @@
+atom_spec "Ta2O5" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "58f45b52-e692-49b5-872d-d6f15e425420",
+    title = "O5Ta2",
+    created = "2025-12-07"
+  }
+  description = "Ta2O5 from Materials Project (mp-1238961)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 3.862778,
+    b = 3.867548,
+    c = 6.675636,
+    alpha = 90.000000,
+    beta = 100.680236,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 10,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "1g",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.216386, 0.000000, 0.875714),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.783614, 0.000000, 0.124286),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.274698, 0.500000, 0.217375),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.725302, 0.500000, 0.782625),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.326997, 0.000000, 0.211408),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.673003, 0.000000, 0.788592),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.4075
+    formation_energy = -3.3255299392857154
+  }
+}

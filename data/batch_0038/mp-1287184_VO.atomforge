@@ -1,0 +1,95 @@
+atom_spec "VO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "383f1dea-7dc6-4c15-bc21-9b4cab20b455",
+    title = "O4V4",
+    created = "2025-12-07"
+  }
+  description = "VO from Materials Project (mp-1287184)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.164579,
+    b = 5.268020,
+    c = 5.426034,
+    alpha = 98.069228,
+    beta = 106.783773,
+    gamma = 89.733948
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.124966, 0.375016, 0.249993),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.375034, 0.124980, 0.750009),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.624965, 0.875016, 0.249993),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.875012, 0.624981, 0.750002),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.250287, 0.744234, 0.499616),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.499712, 0.505770, 0.000380),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750300, 0.244234, 0.499621),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999724, 0.005769, 0.000385),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.9785000000000004
+    formation_energy = -2.08532182875
+  }
+}

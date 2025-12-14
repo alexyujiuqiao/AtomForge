@@ -1,0 +1,81 @@
+atom_spec "BaSrGa4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a76dd0e0-06b5-428b-a388-a8c782d6bd0f",
+    title = "BaGa4Sr",
+    created = "2025-12-07"
+  }
+  description = "BaSrGa4 from Materials Project (mp-1227665)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.410228,
+    b = 4.410228,
+    c = 9.922445,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 191,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.333333, 0.666667, 0.245670),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.333333, 0.666667, 0.754330),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.666667, 0.333333, 0.245670),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.666667, 0.333333, 0.754330),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4811635927777778
+  }
+}

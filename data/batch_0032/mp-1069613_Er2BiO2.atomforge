@@ -1,0 +1,109 @@
+atom_spec "Er2BiO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2ff68c9c-b804-466c-aac4-ea732b77d6eb",
+    title = "Bi2Er4O4",
+    created = "2025-12-07"
+  }
+  description = "Er2BiO2 from Materials Project (mp-1069613)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.853250,
+    b = 3.853250,
+    c = 13.485836,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.330608),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.669392),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.169392),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.830608),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -2.9870577620000014
+  }
+}

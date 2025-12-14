@@ -1,0 +1,67 @@
+atom_spec "Al3Ga" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0bccd2e7-9875-4744-951f-e742d59128cb",
+    title = "Al3Ga",
+    created = "2025-12-07"
+  }
+  description = "Al3Ga from Materials Project (mp-983594)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.067882,
+    b = 4.067882,
+    c = 4.067882,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in cubic structure",
+      wyckoff = "3c",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0295972306249998
+  }
+}

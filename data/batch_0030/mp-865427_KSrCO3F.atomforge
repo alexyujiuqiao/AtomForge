@@ -1,0 +1,88 @@
+atom_spec "KSrCO3F" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8de97ad7-c4e5-413f-bf34-e1a7c7cc9ddd",
+    title = "CFKO3Sr",
+    created = "2025-12-07"
+  }
+  description = "KSrCO3F from Materials Project (mp-865427)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.314263,
+    b = 5.314263,
+    c = 4.766392,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "1c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in hexagonal structure",
+      wyckoff = "1e",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.283219, 0.141609, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.858391, 0.141609, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.858391, 0.716781, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in hexagonal structure",
+      wyckoff = "1d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.1032
+    formation_energy = -2.7855705453095245
+  }
+}

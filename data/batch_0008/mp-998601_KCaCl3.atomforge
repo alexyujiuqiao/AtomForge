@@ -1,0 +1,109 @@
+atom_spec "KCaCl3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3a145089-59ad-4fa1-a6fb-1ef9250f2cc7",
+    title = "Ca2Cl6K2",
+    created = "2025-12-07"
+  }
+  description = "KCaCl3 from Materials Project (mp-998601)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 7.645730,
+    b = 7.648628,
+    c = 5.406517,
+    alpha = 90.000000,
+    beta = 90.005596,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 8,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.002106, 0.500000, 0.514787),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.502106, 0.000000, 0.514787),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.492711, 0.000000, 0.014859),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.992711, 0.500000, 0.014859),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.252528, 0.251949, 0.517224),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.252528, 0.748051, 0.517224),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.752528, 0.248051, 0.517224),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.752528, 0.751949, 0.517224),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.001953, 0.000000, 0.000015),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.501953, 0.500000, 0.000015),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.799
+    formation_energy = -2.5653103686
+  }
+}

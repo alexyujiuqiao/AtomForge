@@ -1,0 +1,67 @@
+atom_spec "Nd3Y" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "439f5c3c-0252-458d-9718-7204b7c813ae",
+    title = "Nd3Y",
+    created = "2025-12-07"
+  }
+  description = "Nd3Y from Materials Project (mp-1220208)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.650480,
+    b = 3.650480,
+    c = 11.913473,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Nd {
+      description = "Nd site in hexagonal structure",
+      wyckoff = "1c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.253584),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.746416),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in hexagonal structure",
+      wyckoff = "1f",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0008124658333326
+  }
+}

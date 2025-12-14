@@ -1,0 +1,53 @@
+atom_spec "LuZr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "589e720a-d254-4bf4-b352-d75f9d85afa9",
+    title = "LuZr",
+    created = "2025-12-07"
+  }
+  description = "LuZr from Materials Project (mp-1222252)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.376536,
+    b = 3.376536,
+    c = 5.282854,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in hexagonal structure",
+      wyckoff = "1d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.039872335
+  }
+}

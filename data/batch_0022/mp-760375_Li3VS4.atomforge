@@ -1,0 +1,95 @@
+atom_spec "Li3VS4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5cdb83d0-aa15-4a6e-ac23-fff2d4a2b7ee",
+    title = "Li3S4V",
+    created = "2025-12-07"
+  }
+  description = "Li3VS4 from Materials Project (mp-760375)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.955422,
+    b = 5.955422,
+    c = 5.955422,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 215,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in cubic structure",
+      wyckoff = "3d",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in cubic structure",
+      wyckoff = "3d",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in cubic structure",
+      wyckoff = "3d",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4e",
+      position = (0.209620, 0.209620, 0.209620),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4e",
+      position = (0.209620, 0.790380, 0.790380),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4e",
+      position = (0.790380, 0.209620, 0.790380),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4e",
+      position = (0.790380, 0.790380, 0.209620),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.8951
+    formation_energy = -1.3606976965625002
+  }
+}

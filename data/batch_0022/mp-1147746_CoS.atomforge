@@ -1,0 +1,67 @@
+atom_spec "CoS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e0f6bc8a-0eca-4ad9-a5f7-21d26477981c",
+    title = "Co2S2",
+    created = "2025-12-07"
+  }
+  description = "CoS from Materials Project (mp-1147746)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.633014,
+    b = 3.633014,
+    c = 5.179464,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.234553),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.765447),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6720815315625011
+  }
+}

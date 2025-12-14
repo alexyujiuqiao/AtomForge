@@ -1,0 +1,95 @@
+atom_spec "BaEu3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e7e606c5-b4ad-4977-a9aa-5a1a3fb914a8",
+    title = "Ba2Eu6",
+    created = "2025-12-07"
+  }
+  description = "BaEu3 from Materials Project (mp-1183387)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.741674,
+    b = 5.741674,
+    c = 11.895602,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0731708737499996
+  }
+}

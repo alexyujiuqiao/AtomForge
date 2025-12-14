@@ -1,0 +1,102 @@
+atom_spec "NaSrP" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bea71553-bcdc-4db7-bd07-d6502a29ca17",
+    title = "Na3P3Sr3",
+    created = "2025-12-07"
+  }
+  description = "NaSrP from Materials Project (mp-13275)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.706704,
+    b = 7.706704,
+    c = 4.498083,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.757936, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.242064, 0.242064, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.757936, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.413816, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.413816, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.586184, 0.586184, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.2349
+    formation_energy = -0.7961197132950192
+  }
+}

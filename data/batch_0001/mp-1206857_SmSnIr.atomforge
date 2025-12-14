@@ -1,0 +1,102 @@
+atom_spec "SmSnIr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "13443027-c37b-42d3-8d52-504d4b6d1f77",
+    title = "Ir3Sm3Sn3",
+    created = "2025-12-07"
+  }
+  description = "SmSnIr from Materials Project (mp-1206857)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.458242,
+    b = 7.458242,
+    c = 4.145754,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.591354, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.408646, 0.408646, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.591354, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.251831, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.251831, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.748169, 0.748169, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8118994322222224
+  }
+}

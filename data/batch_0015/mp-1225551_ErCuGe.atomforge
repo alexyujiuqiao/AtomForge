@@ -1,0 +1,60 @@
+atom_spec "ErCuGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8cef0ffd-bbc1-486f-9485-adb22834c5d4",
+    title = "CuErGe",
+    created = "2025-12-07"
+  }
+  description = "ErCuGe from Materials Project (mp-1225551)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.214201,
+    b = 3.669233,
+    c = 4.216426,
+    alpha = 90.000000,
+    beta = 119.953575,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666722, 0.500000, 0.333051),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000193, 0.000000, 0.000278),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.333185, 0.500000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6335518383333335
+  }
+}

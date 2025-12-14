@@ -1,0 +1,123 @@
+atom_spec "SiO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4cce911a-fbcb-4dbf-91c7-a65f377a1a4c",
+    title = "O8Si4",
+    created = "2025-12-07"
+  }
+  description = "SiO2 from Materials Project (mp-600000)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.289578,
+    b = 7.142852,
+    c = 7.142852,
+    alpha = 76.029420,
+    beta = 68.267687,
+    gamma = 68.267687
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1h",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.191832, 0.808168, 0.308168),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.250000, 0.849791, 0.650209),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.308168, 0.191832, 0.691832),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.691832, 0.808168, 0.308168),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.750000, 0.150209, 0.349791),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.808168, 0.191832, 0.691832),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.092249, 0.058201, 0.757300),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.407750, 0.742700, 0.441800),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.592250, 0.257300, 0.558200),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.907751, 0.941799, 0.242700),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 5.563
+    formation_energy = -3.256908246666667
+  }
+}

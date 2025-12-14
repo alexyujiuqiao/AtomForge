@@ -1,0 +1,60 @@
+atom_spec "MoSe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a5a13f09-9826-4416-86d0-796e23ef27cb",
+    title = "MoSe2",
+    created = "2025-12-07"
+  }
+  description = "MoSe2 from Materials Project (mp-1023934)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.326948,
+    b = 3.326948,
+    c = 17.725712,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.094361),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.905639),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.4311
+    formation_energy = -0.9865632248958331
+  }
+}

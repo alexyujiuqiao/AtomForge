@@ -1,0 +1,74 @@
+atom_spec "Cr3IrN" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bb0ca6df-aed3-48ac-ae6f-55b7a72635a9",
+    title = "Cr3IrN",
+    created = "2025-12-07"
+  }
+  description = "Cr3IrN from Materials Project (mp-505628)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 3.817087,
+    b = 3.817087,
+    c = 3.817087,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "3c",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in cubic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3624821549999993
+  }
+}

@@ -1,0 +1,109 @@
+atom_spec "Al2Ni3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3f8fa4da-6109-426f-9dc7-d192dbe59019",
+    title = "Al4Ni6",
+    created = "2025-12-07"
+  }
+  description = "Al2Ni3 from Materials Project (mp-1229048)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 2.805653,
+    b = 2.805653,
+    c = 14.961883,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.195658),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.399931),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.600069),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.804342),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.100488),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.299455),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.700545),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.899512),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5417251839999999
+  }
+}

@@ -1,0 +1,109 @@
+atom_spec "Pr(SiRu)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2df038d7-21da-4a03-9498-e86b8d0cf9c0",
+    title = "Pr2Ru4Si4",
+    created = "2025-12-07"
+  }
+  description = "Pr(SiRu)2 from Materials Project (mp-4904)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.232884,
+    b = 4.232884,
+    c = 9.902156,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pr {
+      description = "Pr site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in tetragonal structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.363132),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.636868),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.136868),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.863132),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8473113409999996
+  }
+}

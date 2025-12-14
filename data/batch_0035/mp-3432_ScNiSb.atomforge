@@ -1,0 +1,123 @@
+atom_spec "ScNiSb" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bd1b138d-3856-4db4-a367-7a80462a8647",
+    title = "Ni4Sb4Sc4",
+    created = "2025-12-07"
+  }
+  description = "ScNiSb from Materials Project (mp-3432)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 6.110746,
+    b = 6.110746,
+    c = 6.110746,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 216,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ni {
+      description = "Ni site in cubic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.250000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in cubic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.750000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in cubic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.250000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in cubic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.750000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in cubic structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in cubic structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in cubic structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in cubic structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.3161000000000005
+    formation_energy = -0.963593911666667
+  }
+}

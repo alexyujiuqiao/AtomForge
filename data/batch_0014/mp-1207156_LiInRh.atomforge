@@ -1,0 +1,81 @@
+atom_spec "LiInRh" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ea2be68a-67d6-44e9-a81d-f57ee7c930aa",
+    title = "In2Li2Rh2",
+    created = "2025-12-07"
+  }
+  description = "LiInRh from Materials Project (mp-1207156)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.341713,
+    b = 4.341713,
+    c = 5.703251,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3635242644444443
+  }
+}

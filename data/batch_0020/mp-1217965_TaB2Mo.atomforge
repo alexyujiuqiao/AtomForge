@@ -1,0 +1,95 @@
+atom_spec "TaB2Mo" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "aec55cb0-5ce4-4af5-b484-28638e578f5a",
+    title = "B4Mo2Ta2",
+    created = "2025-12-07"
+  }
+  description = "TaB2Mo from Materials Project (mp-1217965)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.242594,
+    b = 8.622740,
+    c = 3.128050,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 38,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.440376, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.940376, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.558080, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.058080, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.855435, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.355435, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.146110, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.646110, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6632582495833326
+  }
+}

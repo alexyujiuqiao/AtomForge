@@ -1,0 +1,81 @@
+atom_spec "U2Si3Au" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "49defb0e-a5de-424f-bef9-4d0eb0cb35ad",
+    title = "AuSi3U2",
+    created = "2025-12-07"
+  }
+  description = "U2Si3Au from Materials Project (mp-1216862)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.158766,
+    b = 3.878910,
+    c = 7.206991,
+    alpha = 90.000000,
+    beta = 90.002612,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.000092, 0.500000, 0.666223),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.000055, 0.500000, 0.324687),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.500015, 0.500000, 0.166632),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.500043, 0.500000, 0.845414),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.500049, 0.000000, 0.479085),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.999946, 0.000000, 0.017960),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2470844083333337
+  }
+}

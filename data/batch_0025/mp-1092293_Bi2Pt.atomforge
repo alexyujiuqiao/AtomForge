@@ -1,0 +1,81 @@
+atom_spec "Bi2Pt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2d769502-438c-4a33-aa35-25842052dff9",
+    title = "Bi4Pt2",
+    created = "2025-12-07"
+  }
+  description = "Bi2Pt from Materials Project (mp-1092293)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.710182,
+    b = 4.196778,
+    c = 5.927049,
+    alpha = 90.000000,
+    beta = 91.843096,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.160501, 0.500000, 0.262485),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.339499, 0.000000, 0.737515),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.660501, 0.000000, 0.262485),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.839499, 0.500000, 0.737515),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1976801866666667
+  }
+}

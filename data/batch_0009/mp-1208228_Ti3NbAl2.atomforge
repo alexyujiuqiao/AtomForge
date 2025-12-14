@@ -1,0 +1,81 @@
+atom_spec "Ti3NbAl2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5af56a9a-f9d4-437b-8c5f-f605ed964253",
+    title = "Al2NbTi3",
+    created = "2025-12-07"
+  }
+  description = "Ti3NbAl2 from Materials Project (mp-1208228)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.592964,
+    b = 4.592964,
+    c = 5.501413,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.224706),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.775294),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.716951),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.283049),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3230605183333341
+  }
+}

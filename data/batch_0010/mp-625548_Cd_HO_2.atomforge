@@ -1,0 +1,74 @@
+atom_spec "Cd(HO)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d3da88c3-cac0-4c2c-bc3c-cd93d1d58660",
+    title = "CdH2O2",
+    created = "2025-12-07"
+  }
+  description = "Cd(HO)2 from Materials Project (mp-625548)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.587126,
+    b = 3.587126,
+    c = 4.694469,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.445272),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.554728),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.236909),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.763091),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.642
+    formation_energy = -1.310220948
+  }
+}

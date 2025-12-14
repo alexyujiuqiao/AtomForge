@@ -1,0 +1,123 @@
+atom_spec "CsClO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e3a77515-c7a0-4e41-aca8-a2ad4bcdfdf2",
+    title = "Cl2Cs2O8",
+    created = "2025-12-07"
+  }
+  description = "CsClO4 from Materials Project (mp-675623)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.259965,
+    b = 5.259965,
+    c = 7.285711,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 137,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.000000, 0.224714, 0.883509),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.000000, 0.775286, 0.883509),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.224714, 0.000000, 0.116491),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.275286, 0.500000, 0.383509),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.500000, 0.275286, 0.616491),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.500000, 0.724714, 0.616491),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.724714, 0.500000, 0.383509),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.775286, 0.000000, 0.116491),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 6.0335
+    formation_energy = -1.038451872988506
+  }
+}

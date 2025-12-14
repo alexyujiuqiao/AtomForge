@@ -1,0 +1,67 @@
+atom_spec "H2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5dfce76f-2b02-4a10-befa-87ffaeb4e8bb",
+    title = "H4",
+    created = "2025-12-07"
+  }
+  description = "H2 from Materials Project (mp-632172)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.456788,
+    b = 4.456788,
+    c = 3.147888,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.119158),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.880842),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.380842),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.619158),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 9.4428
+    formation_energy = 0.000643245
+  }
+}

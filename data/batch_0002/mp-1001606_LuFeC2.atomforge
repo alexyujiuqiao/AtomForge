@@ -1,0 +1,95 @@
+atom_spec "LuFeC2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "05e81fda-b8bd-4fb0-aaaa-3edd24388043",
+    title = "C4Fe2Lu2",
+    created = "2025-12-07"
+  }
+  description = "LuFeC2 from Materials Project (mp-1001606)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.531884,
+    b = 5.898704,
+    c = 3.471353,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 38,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.155084, 0.298714, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.344917, 0.798713, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.655084, 0.798713, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.844917, 0.298714, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.613014, 0.500000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.113014, 0.500000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.004559, 0.000000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.504559, 0.000000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.287021255
+  }
+}

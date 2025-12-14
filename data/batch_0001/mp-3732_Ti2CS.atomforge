@@ -1,0 +1,95 @@
+atom_spec "Ti2CS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d8d23187-19e6-44ce-8141-f09d9af53311",
+    title = "C2S2Ti4",
+    created = "2025-12-07"
+  }
+  description = "Ti2CS from Materials Project (mp-3732)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.204696,
+    b = 3.204696,
+    c = 11.263511,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.099386),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.400614),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.599386),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.900614),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.3781354611979155
+  }
+}

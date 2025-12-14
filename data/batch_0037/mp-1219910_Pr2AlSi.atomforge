@@ -1,0 +1,95 @@
+atom_spec "Pr2AlSi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c4c25b9d-d26c-49ca-ad20-3b6e3ef413d7",
+    title = "Al2Pr4Si2",
+    created = "2025-12-07"
+  }
+  description = "Pr2AlSi from Materials Project (mp-1219910)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.505876,
+    b = 11.438624,
+    c = 4.104451,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 38,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.933694, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.433694, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.641058, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.141058, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.356051, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.856051, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.069197, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.569197, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5703859699999994
+  }
+}

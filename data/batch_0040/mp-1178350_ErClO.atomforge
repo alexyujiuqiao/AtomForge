@@ -1,0 +1,81 @@
+atom_spec "ErClO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0085c5a9-26ec-4c1e-8cc4-88709e315a45",
+    title = "Cl2Er2O2",
+    created = "2025-12-07"
+  }
+  description = "ErClO from Materials Project (mp-1178350)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.884469,
+    b = 3.884469,
+    c = 6.666856,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.627207),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.372793),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.165677),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.834323),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 5.1904
+    formation_energy = -3.5099091366666664
+  }
+}

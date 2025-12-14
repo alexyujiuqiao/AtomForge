@@ -1,0 +1,95 @@
+atom_spec "LaSn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c4dae5a4-6987-442b-ba33-a2648f0ab392",
+    title = "La4Sn4",
+    created = "2025-12-07"
+  }
+  description = "LaSn from Materials Project (mp-1018047)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.837586,
+    b = 12.004450,
+    c = 4.449342,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.136597, 0.250000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.863403, 0.750000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.363403, 0.750000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.636597, 0.250000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.413802, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.586198, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.086198, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.913802, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8019649650000007
+  }
+}

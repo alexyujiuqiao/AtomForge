@@ -1,0 +1,60 @@
+atom_spec "SrBeGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "479b2d01-4f45-4f61-8991-e2d772aa8219",
+    title = "BeGeSr",
+    created = "2025-12-07"
+  }
+  description = "SrBeGe from Materials Project (mp-1208642)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.073828,
+    b = 4.073828,
+    c = 4.641090,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Be {
+      description = "Be site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Be", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "1c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in hexagonal structure",
+      wyckoff = "1f",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.347003778888889
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "Dy2(InSn)3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e33664a6-439e-43ae-8f7d-2b9b352c87ca",
+    title = "Dy2In3Sn3",
+    created = "2025-12-07"
+  }
+  description = "Dy2(InSn)3 from Materials Project (mp-1225415)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.673764,
+    b = 4.685331,
+    c = 9.337133,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 47,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Dy {
+      description = "Dy site in orthorhombic structure",
+      wyckoff = "2q",
+      position = (0.000000, 0.000000, 0.248354),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in orthorhombic structure",
+      wyckoff = "2q",
+      position = (0.000000, 0.000000, 0.751646),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "1g",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2t",
+      position = (0.500000, 0.500000, 0.250774),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2t",
+      position = (0.500000, 0.500000, 0.749226),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "1e",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4121686593750002
+  }
+}

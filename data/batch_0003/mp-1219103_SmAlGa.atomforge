@@ -1,0 +1,60 @@
+atom_spec "SmAlGa" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "03bdb253-95c4-440a-9cc6-580e067df94a",
+    title = "AlGaSm",
+    created = "2025-12-07"
+  }
+  description = "SmAlGa from Materials Project (mp-1219103)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.415796,
+    b = 4.415796,
+    c = 3.890535,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in hexagonal structure",
+      wyckoff = "1d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "1f",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5853579975000004
+  }
+}

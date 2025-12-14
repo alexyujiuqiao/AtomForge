@@ -1,0 +1,67 @@
+atom_spec "BeTe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "cad57b84-d23b-4135-8fee-c70bec633e2c",
+    title = "Be2Te2",
+    created = "2025-12-07"
+  }
+  description = "BeTe from Materials Project (mp-1183441)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.996637,
+    b = 3.996637,
+    c = 6.586771,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Be {
+      description = "Be site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000433),
+      frame = fractional,
+      species = ({ element = "Be", occupancy = 1.000000 })
+    },
+    site Be {
+      description = "Be site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.500431),
+      frame = fractional,
+      species = ({ element = "Be", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.374568),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.874569),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.2711999999999994
+    formation_energy = -0.5645448749999997
+  }
+}

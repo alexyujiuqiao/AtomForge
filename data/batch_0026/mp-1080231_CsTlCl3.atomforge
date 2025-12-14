@@ -1,0 +1,74 @@
+atom_spec "CsTlCl3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e1fdccec-f4fe-472f-a4ba-baaad8929a0c",
+    title = "Cl3CsTl",
+    created = "2025-12-07"
+  }
+  description = "CsTlCl3 from Materials Project (mp-1080231)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.579830,
+    b = 5.579950,
+    c = 5.580080,
+    alpha = 89.993048,
+    beta = 89.997372,
+    gamma = 89.984618
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000027, 0.515064, 0.505491),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.496867, 0.013619, 0.497230),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.501773, 0.512475, 0.002483),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.001043, 0.005500, 0.001888),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500293, 0.513340, 0.502908),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.6562699602528732
+  }
+}

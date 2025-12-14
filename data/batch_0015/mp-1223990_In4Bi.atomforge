@@ -1,0 +1,109 @@
+atom_spec "In4Bi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8377de09-8c74-435d-8c84-bac82ec13127",
+    title = "Bi2In8",
+    created = "2025-12-07"
+  }
+  description = "In4Bi from Materials Project (mp-1223990)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.453040,
+    b = 3.555424,
+    c = 14.893698,
+    alpha = 90.000000,
+    beta = 90.307741,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.098103, 0.500000, 0.796358),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.200561, 0.000000, 0.599254),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.299439, 0.500000, 0.400746),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.401897, 0.000000, 0.203642),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.598103, 0.000000, 0.796358),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.700561, 0.500000, 0.599254),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.799439, 0.000000, 0.400746),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.901897, 0.500000, 0.203642),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0685365539999999
+  }
+}

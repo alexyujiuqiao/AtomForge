@@ -1,0 +1,67 @@
+atom_spec "MgGa3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e7b2b4b5-2470-4ca5-9068-fbf88d1680fd",
+    title = "Ga3Mg",
+    created = "2025-12-07"
+  }
+  description = "MgGa3 from Materials Project (mp-1094950)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.270746,
+    b = 4.586037,
+    c = 5.147397,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 25,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.987874),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.506615),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.835399),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.500000, 0.336778),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0544767131249996
+  }
+}

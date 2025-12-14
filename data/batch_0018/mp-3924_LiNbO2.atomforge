@@ -1,0 +1,95 @@
+atom_spec "LiNbO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "89924c1c-5796-4461-aaa9-b04e33e79f1e",
+    title = "Li2Nb2O4",
+    created = "2025-12-07"
+  }
+  description = "LiNbO2 from Materials Project (mp-3924)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 2.938246,
+    b = 2.938246,
+    c = 10.596158,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.123279),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.376721),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.623279),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.876721),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.5790999999999995
+    formation_energy = -2.6863822395833346
+  }
+}

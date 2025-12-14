@@ -1,0 +1,95 @@
+atom_spec "TaC" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f3e1e9df-3074-4c9e-bdfe-bd3cb8dba6c5",
+    title = "C4Ta4",
+    created = "2025-12-07"
+  }
+  description = "TaC from Materials Project (mp-1086)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.482076,
+    b = 4.482076,
+    c = 4.482076,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 225,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in cubic structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in cubic structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in cubic structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in cubic structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5762719450000002
+  }
+}

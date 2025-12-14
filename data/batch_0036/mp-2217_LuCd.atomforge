@@ -1,0 +1,53 @@
+atom_spec "LuCd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "26e0b979-5e2b-45b9-8377-297554fc61de",
+    title = "CdLu",
+    created = "2025-12-07"
+  }
+  description = "LuCd from Materials Project (mp-2217)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 3.675296,
+    b = 3.675296,
+    c = 3.675296,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in cubic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3043143049999997
+  }
+}

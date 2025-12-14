@@ -1,0 +1,95 @@
+atom_spec "Rb2MnF5" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "dbc575ac-fcb9-447c-bb36-3f3154201165",
+    title = "F5MnRb2",
+    created = "2025-12-07"
+  }
+  description = "Rb2MnF5 from Materials Project (mp-555014)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 6.184415,
+    b = 6.184415,
+    c = 4.220243,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4j",
+      position = (0.217575, 0.217575, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4j",
+      position = (0.217575, 0.782425, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4j",
+      position = (0.782425, 0.217575, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4j",
+      position = (0.782425, 0.782425, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in tetragonal structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in tetragonal structure",
+      wyckoff = "2e",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.3174
+    formation_energy = -2.97361525067888
+  }
+}

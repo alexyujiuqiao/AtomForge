@@ -1,0 +1,95 @@
+atom_spec "TbFeSi2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1c929ee5-8b40-44e2-9782-3abececab1ab",
+    title = "Fe2Si4Tb2",
+    created = "2025-12-07"
+  }
+  description = "TbFeSi2 from Materials Project (mp-1207018)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.284902,
+    b = 3.950615,
+    c = 7.951053,
+    alpha = 90.000000,
+    beta = 103.093752,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Fe {
+      description = "Fe site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.117125, 0.750000, 0.391024),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.882875, 0.250000, 0.608976),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.040223, 0.750000, 0.097695),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.329369, 0.250000, 0.507531),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.670631, 0.750000, 0.492469),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.959777, 0.250000, 0.902305),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.404174, 0.750000, 0.794856),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.595826, 0.250000, 0.205144),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6864849575000003
+  }
+}

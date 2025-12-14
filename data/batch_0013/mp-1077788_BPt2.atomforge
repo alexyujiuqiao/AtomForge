@@ -1,0 +1,81 @@
+atom_spec "BPt2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a0cf3234-5382-4de3-851b-40c8683556cd",
+    title = "B2Pt4",
+    created = "2025-12-07"
+  }
+  description = "BPt2 from Materials Project (mp-1077788)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 2.951696,
+    b = 2.951696,
+    c = 10.390903,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.616209),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.883791),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.116209),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.383791),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1757225063888891
+  }
+}

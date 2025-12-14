@@ -1,0 +1,95 @@
+atom_spec "TiBr3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b62f129f-277a-4f1f-b4c7-691c4d0818e0",
+    title = "Br6Ti2",
+    created = "2025-12-07"
+  }
+  description = "TiBr3 from Materials Project (mp-28214)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 6.482673,
+    b = 6.488226,
+    c = 7.794753,
+    alpha = 65.268146,
+    beta = 65.553346,
+    gamma = 60.339542
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.073096, 0.219463, 0.781304),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.274994, 0.073307, 0.226458),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.425736, 0.572588, 0.783233),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.574264, 0.427412, 0.216767),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.725006, 0.926693, 0.773542),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.926904, 0.780537, 0.218696),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.339325, 0.841268, 0.999971),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.660675, 0.158732, 0.000029),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0561
+    formation_energy = -1.624829143958333
+  }
+}

@@ -1,0 +1,88 @@
+atom_spec "Na(VSe2)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "156edd30-3008-4f53-ab4c-a3775d86e460",
+    title = "NaSe4V2",
+    created = "2025-12-07"
+  }
+  description = "Na(VSe2)2 from Materials Project (mp-1221454)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.171214,
+    b = 3.551934,
+    c = 7.831496,
+    alpha = 90.000000,
+    beta = 110.117221,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Na {
+      description = "Na site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.338283, 0.500000, 0.507774),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.427043, 0.000000, 0.219991),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.589876, 0.000000, 0.817711),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.073316, 0.500000, 0.779371),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.909148, 0.500000, 0.180765),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.028746, 0.000000, 0.995991),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.468488, 0.500000, 0.003096),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.0788082465609603
+  }
+}

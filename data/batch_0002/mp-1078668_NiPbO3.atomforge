@@ -1,0 +1,109 @@
+atom_spec "NiPbO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1e1400f9-2357-47f2-96bb-7d493cf9d844",
+    title = "Ni2O6Pb2",
+    created = "2025-12-07"
+  }
+  description = "NiPbO3 from Materials Project (mp-1078668)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.447529,
+    b = 5.447560,
+    c = 5.732591,
+    alpha = 89.999822,
+    beta = 118.361532,
+    gamma = 119.999455
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.001660, 0.500830, 0.502489),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.001667, 0.000831, 0.002495),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.089099, 0.713272, 0.209344),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.089119, 0.875811, 0.709364),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.496045, 0.620226, 0.709342),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.496056, 0.375835, 0.209350),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.833536, 0.120247, 0.209344),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.833545, 0.213304, 0.709362),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.577824, 0.288902, 0.866750),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.577848, 0.788943, 0.366761),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.289322197
+  }
+}

@@ -1,0 +1,102 @@
+atom_spec "SmZnPd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8e3c7ba3-155b-4f67-9340-c73c47ea23c0",
+    title = "Pd3Sm3Zn3",
+    created = "2025-12-07"
+  }
+  description = "SmZnPd from Materials Project (mp-1080449)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.422342,
+    b = 7.422342,
+    c = 3.948266,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.408024, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.408024, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.591976, 0.591976, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.754892, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.245108, 0.245108, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.754892, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.719417243888889
+  }
+}

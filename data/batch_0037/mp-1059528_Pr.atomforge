@@ -1,0 +1,67 @@
+atom_spec "Pr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0d821344-5bb5-4949-b576-72eab2d5e38d",
+    title = "Pr4",
+    created = "2025-12-07"
+  }
+  description = "Pr from Materials Project (mp-1059528)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.434228,
+    b = 3.712186,
+    c = 6.445565,
+    alpha = 90.000000,
+    beta = 109.563168,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pr {
+      description = "Pr site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.239352, 0.000000, 0.749613),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.260648, 0.500000, 0.250387),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.739352, 0.500000, 0.749613),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.760648, 0.000000, 0.250387),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0096948550000002
+  }
+}

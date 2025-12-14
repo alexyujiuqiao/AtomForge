@@ -1,0 +1,67 @@
+atom_spec "LiAgO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "88340de7-9731-4745-96c6-73abd301cb5e",
+    title = "AgLiO2",
+    created = "2025-12-07"
+  }
+  description = "LiAgO2 from Materials Project (mp-996988)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.049805,
+    b = 3.158819,
+    c = 5.346602,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 47,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "1h",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2r",
+      position = (0.000000, 0.500000, 0.245259),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2r",
+      position = (0.000000, 0.500000, 0.754741),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.1239
+    formation_energy = -1.0605295250000002
+  }
+}

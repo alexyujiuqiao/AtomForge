@@ -1,0 +1,109 @@
+atom_spec "Sm2MgSi2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b10e38cf-0e3f-4c20-8815-9ee639c9c695",
+    title = "Mg2Si4Sm4",
+    created = "2025-12-07"
+  }
+  description = "Sm2MgSi2 from Materials Project (mp-1208848)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.306984,
+    b = 7.306984,
+    c = 4.306832,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.116201, 0.383799, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.383799, 0.883799, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.616201, 0.116201, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.883799, 0.616201, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.179358, 0.679358, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.320642, 0.179358, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.679358, 0.820642, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.820642, 0.320642, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6692328690000003
+  }
+}

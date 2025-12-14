@@ -1,0 +1,67 @@
+atom_spec "SnP" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bc2e9f99-9588-4e8d-a36b-1fda2a99c49d",
+    title = "P2Sn2",
+    created = "2025-12-07"
+  }
+  description = "SnP from Materials Project (mp-7526)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.864448,
+    b = 3.864448,
+    c = 6.101084,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 107,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site P {
+      description = "P site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.429959),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.929959),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.998041),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.498041),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0034055358333331
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "TbSbPd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2b1bbed7-140b-4fe6-9ea7-cf593a00a409",
+    title = "Pd2Sb2Tb2",
+    created = "2025-12-07"
+  }
+  description = "TbSbPd from Materials Project (mp-1206527)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.601633,
+    b = 4.601633,
+    c = 7.447856,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.813637),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.313637),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.210073),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.710073),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.485290),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.985290),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.082878183333334
+  }
+}

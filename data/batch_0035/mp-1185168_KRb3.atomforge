@@ -1,0 +1,95 @@
+atom_spec "KRb3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c1de7e45-dc7d-45a6-ba3a-5dd81947c5d0",
+    title = "K2Rb6",
+    created = "2025-12-07"
+  }
+  description = "KRb3 from Materials Project (mp-1185168)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 10.084618,
+    b = 10.084618,
+    c = 7.918306,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site K {
+      description = "K site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.169007, 0.338014, 0.250000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.169007, 0.830993, 0.250000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.338014, 0.169007, 0.750000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.661986, 0.830993, 0.250000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.830993, 0.169007, 0.750000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.830993, 0.661986, 0.750000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.023337124875
+  }
+}

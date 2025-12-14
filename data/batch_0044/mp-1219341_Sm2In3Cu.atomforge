@@ -1,0 +1,81 @@
+atom_spec "Sm2In3Cu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f8e02eb9-981e-45bb-aac7-0c535b8db52e",
+    title = "CuIn3Sm2",
+    created = "2025-12-07"
+  }
+  description = "Sm2In3Cu from Materials Project (mp-1219341)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.791598,
+    b = 3.713011,
+    c = 8.337856,
+    alpha = 90.000000,
+    beta = 90.022784,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.000012, 0.500000, 0.329351),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.000051, 0.500000, 0.646679),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.499902, 0.500000, 0.182732),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.500138, 0.500000, 0.837300),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000038, 0.000000, 0.007822),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.500060, 0.000000, 0.496116),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.402374218333333
+  }
+}

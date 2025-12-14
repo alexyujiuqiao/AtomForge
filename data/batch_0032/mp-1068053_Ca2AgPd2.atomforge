@@ -1,0 +1,109 @@
+atom_spec "Ca2AgPd2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bb166276-4b34-472b-a0bc-89d910d58233",
+    title = "Ag2Ca4Pd4",
+    created = "2025-12-07"
+  }
+  description = "Ca2AgPd2 from Materials Project (mp-1068053)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.531332,
+    b = 5.859824,
+    c = 8.488840,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 71,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.000000, 0.500000, 0.202140),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.000000, 0.500000, 0.797860),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.500000, 0.000000, 0.297860),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.500000, 0.000000, 0.702140),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.000000, 0.231030, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.000000, 0.768970, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.500000, 0.268970, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.500000, 0.731030, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6132807633333328
+  }
+}

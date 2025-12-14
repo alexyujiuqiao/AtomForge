@@ -1,0 +1,67 @@
+atom_spec "Pr3Y" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "36d13c25-06c0-404b-a550-eaa784151363",
+    title = "Pr3Y",
+    created = "2025-12-07"
+  }
+  description = "Pr3Y from Materials Project (mp-1186734)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.206904,
+    b = 5.206904,
+    c = 5.206904,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pr {
+      description = "Pr site in cubic structure",
+      wyckoff = "3c",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0052595620833342
+  }
+}

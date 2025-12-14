@@ -1,0 +1,102 @@
+atom_spec "Sb2PbO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "001742b4-ca03-40ad-b124-162238acf56f",
+    title = "O6PbSb2",
+    created = "2025-12-07"
+  }
+  description = "Sb2PbO6 from Materials Project (mp-20727)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 5.386318,
+    b = 5.386318,
+    c = 5.458211,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 162,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.000000, 0.379173, 0.294237),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.000000, 0.620827, 0.705763),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.379173, 0.000000, 0.294237),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.379173, 0.379173, 0.705763),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.620827, 0.000000, 0.705763),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.620827, 0.620827, 0.294237),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.132
+    formation_energy = -1.900305225555556
+  }
+}

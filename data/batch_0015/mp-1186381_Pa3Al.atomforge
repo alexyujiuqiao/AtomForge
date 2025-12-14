@@ -1,0 +1,67 @@
+atom_spec "Pa3Al" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d4e98ff5-3e51-4573-b1f6-5823be21f26b",
+    title = "AlPa3",
+    created = "2025-12-07"
+  }
+  description = "Pa3Al from Materials Project (mp-1186381)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.527572,
+    b = 4.527572,
+    c = 4.527572,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Pa {
+      description = "Pa site in cubic structure",
+      wyckoff = "3c",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pa", occupancy = 1.000000 })
+    },
+    site Pa {
+      description = "Pa site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pa", occupancy = 1.000000 })
+    },
+    site Pa {
+      description = "Pa site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pa", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0934880525000014
+  }
+}

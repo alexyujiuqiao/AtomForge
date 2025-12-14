@@ -1,0 +1,95 @@
+atom_spec "MgGa" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c51a4065-bfbc-4926-a0cc-9e9259ca12e7",
+    title = "Ga4Mg4",
+    created = "2025-12-07"
+  }
+  description = "MgGa from Materials Project (mp-1094621)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 11.173390,
+    b = 2.964898,
+    c = 5.078786,
+    alpha = 90.000000,
+    beta = 112.205245,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.125578, 0.000000, 0.789221),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.374422, 0.500000, 0.210779),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.625578, 0.500000, 0.789221),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.874422, 0.000000, 0.210779),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.122304, 0.500000, 0.289507),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.377696, 0.000000, 0.710493),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.622304, 0.000000, 0.289507),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.877696, 0.500000, 0.710493),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.10166974875
+  }
+}

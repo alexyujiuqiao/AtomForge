@@ -1,0 +1,95 @@
+atom_spec "BrCl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "07861804-64b5-4e14-93cf-d8e42f720b80",
+    title = "Br4Cl4",
+    created = "2025-12-07"
+  }
+  description = "BrCl from Materials Project (mp-1008492)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.927516,
+    b = 7.877746,
+    c = 7.810701,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.213352, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.286648, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.713352, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.786648, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.8278
+    formation_energy = -0.35889313875
+  }
+}

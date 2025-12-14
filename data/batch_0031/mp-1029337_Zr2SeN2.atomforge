@@ -1,0 +1,74 @@
+atom_spec "Zr2SeN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "391c16d9-3041-4c09-a6e2-91f1c2be67c3",
+    title = "N2SeZr2",
+    created = "2025-12-07"
+  }
+  description = "Zr2SeN2 from Materials Project (mp-1029337)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.676996,
+    b = 3.676996,
+    c = 6.706933,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.631797),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.368203),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.304345),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.695655),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.5073999999999996
+    formation_energy = -1.7943417964687511
+  }
+}

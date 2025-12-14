@@ -1,0 +1,102 @@
+atom_spec "SmSiAg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bf3b7f1f-737f-48fe-835a-67bf07484d5a",
+    title = "Ag3Si3Sm3",
+    created = "2025-12-07"
+  }
+  description = "SmSiAg from Materials Project (mp-972524)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.187348,
+    b = 7.187348,
+    c = 4.268899,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.248789, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.248789, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.751211, 0.751211, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.584148, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.415852, 0.415852, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.584148, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5493906994444444
+  }
+}

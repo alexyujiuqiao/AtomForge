@@ -1,0 +1,95 @@
+atom_spec "SmAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7e0822c7-f898-431a-a235-aee99e662bb1",
+    title = "Au4Sm4",
+    created = "2025-12-07"
+  }
+  description = "SmAu from Materials Project (mp-1079811)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.764471,
+    b = 5.777087,
+    c = 7.456301,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.655769, 0.042387),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.844231, 0.542387),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.155769, 0.457613),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.344231, 0.957613),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.149361, 0.187554),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.350639, 0.687554),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.649361, 0.312446),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.850639, 0.812446),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8334757024999995
+  }
+}

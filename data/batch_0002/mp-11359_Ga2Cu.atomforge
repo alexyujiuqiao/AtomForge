@@ -1,0 +1,60 @@
+atom_spec "Ga2Cu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e097e09b-4d82-4f2e-bc00-68fd1f7e8930",
+    title = "CuGa2",
+    created = "2025-12-07"
+  }
+  description = "Ga2Cu from Materials Project (mp-11359)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 2.839537,
+    b = 2.839537,
+    c = 5.896990,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.284422),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.715578),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0841782350000001
+  }
+}

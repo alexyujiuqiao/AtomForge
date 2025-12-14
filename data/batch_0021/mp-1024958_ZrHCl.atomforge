@@ -1,0 +1,81 @@
+atom_spec "ZrHCl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e4392ea8-355c-4e14-9758-b38e4d9c099d",
+    title = "Cl2H2Zr2",
+    created = "2025-12-07"
+  }
+  description = "ZrHCl from Materials Project (mp-1024958)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.359189,
+    b = 3.359189,
+    c = 9.997075,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.174204),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.825796),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.443908),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.556092),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.649130),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.350870),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.2884614900000002
+  }
+}

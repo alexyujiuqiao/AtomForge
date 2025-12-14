@@ -1,0 +1,81 @@
+atom_spec "LaZnNi4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ce737bd1-77b4-4f22-974f-9743290f61d0",
+    title = "LaNi4Zn",
+    created = "2025-12-07"
+  }
+  description = "LaZnNi4 from Materials Project (mp-1222791)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.114960,
+    b = 3.966051,
+    c = 5.115069,
+    alpha = 90.000000,
+    beta = 119.994510,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site La {
+      description = "La site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000015, 0.000000, 0.999974),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.000000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.005081, 0.500000, 0.502554),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.497434, 0.500000, 0.994903),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.497459, 0.500000, 0.502529),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.000000, 0.333333),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3346803358333332
+  }
+}

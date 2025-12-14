@@ -1,0 +1,102 @@
+atom_spec "BaEuFeCuO5" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ca8c3047-9f5b-4567-b60d-d0c535414749",
+    title = "BaCuEuFeO5",
+    created = "2025-12-07"
+  }
+  description = "BaEuFeCuO5 from Materials Project (mp-1228144)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.930390,
+    b = 3.930390,
+    c = 7.881022,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 99,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.024561),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.276555),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.499432),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.748765),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.984956),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.304371),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.687994),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.304371),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.687994),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -2.2580154422222227
+  }
+}

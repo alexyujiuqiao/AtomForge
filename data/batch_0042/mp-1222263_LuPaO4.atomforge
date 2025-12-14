@@ -1,0 +1,81 @@
+atom_spec "LuPaO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "18d761ee-a474-4b50-82e5-72f322749dd0",
+    title = "LuO4Pa",
+    created = "2025-12-07"
+  }
+  description = "LuPaO4 from Materials Project (mp-1222263)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.780270,
+    b = 3.780270,
+    c = 5.315651,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Lu {
+      description = "Lu site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.500000, 0.254260),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.500000, 0.745740),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.000000, 0.254260),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.000000, 0.745740),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Pa {
+      description = "Pa site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pa", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.7337000000000007
+    formation_energy = -4.206224939999999
+  }
+}

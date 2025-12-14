@@ -1,0 +1,95 @@
+atom_spec "SrCaPb6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "43ec16d6-aa5a-415c-a977-a45811d485c6",
+    title = "CaPb6Sr",
+    created = "2025-12-07"
+  }
+  description = "SrCaPb6 from Materials Project (mp-1218699)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.072931,
+    b = 5.072931,
+    c = 9.848261,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.500000, 0.245778),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.500000, 0.754222),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.000000, 0.245778),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.000000, 0.754222),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3088292945833331
+  }
+}

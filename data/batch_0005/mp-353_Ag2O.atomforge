@@ -1,0 +1,81 @@
+atom_spec "Ag2O" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "069d6dcd-66dc-4f0a-8dc4-02c855f6de47",
+    title = "Ag4O2",
+    created = "2025-12-07"
+  }
+  description = "Ag2O from Materials Project (mp-353)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.840837,
+    b = 4.840837,
+    c = 4.840837,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 224,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in cubic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.250000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in cubic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.750000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in cubic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.250000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in cubic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.750000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in cubic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in cubic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0597999999999999
+    formation_energy = -0.3225549744444442
+  }
+}

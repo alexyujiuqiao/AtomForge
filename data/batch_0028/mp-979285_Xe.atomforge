@@ -1,0 +1,53 @@
+atom_spec "Xe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "89367a54-2ab5-4bc6-84d2-2965a547d7f5",
+    title = "Xe2",
+    created = "2025-12-07"
+  }
+  description = "Xe from Materials Project (mp-979285)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.895884,
+    b = 5.895884,
+    c = 5.895884,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 229,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Xe {
+      description = "Xe site in cubic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Xe", occupancy = 1.000000 })
+    },
+    site Xe {
+      description = "Xe site in cubic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Xe", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 6.4618
+    formation_energy = 0.00193749
+  }
+}

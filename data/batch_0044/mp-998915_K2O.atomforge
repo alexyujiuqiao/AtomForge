@@ -1,0 +1,81 @@
+atom_spec "K2O" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "16eec455-6cba-444f-bba6-6b29dcab54d0",
+    title = "K4O2",
+    created = "2025-12-07"
+  }
+  description = "K2O from Materials Project (mp-998915)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.236669,
+    b = 5.947081,
+    c = 6.326059,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 58,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site K {
+      description = "K site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.328678, 0.295617),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.671322, 0.704383),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.171322, 0.795617),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.828678, 0.204383),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.0848
+    formation_energy = -1.2183042036666665
+  }
+}

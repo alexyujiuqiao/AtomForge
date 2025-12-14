@@ -1,0 +1,109 @@
+atom_spec "Sm2CdAu2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a2c237b9-b9ae-45b5-bd90-9bf5c2523d0b",
+    title = "Au4Cd2Sm4",
+    created = "2025-12-07"
+  }
+  description = "Sm2CdAu2 from Materials Project (mp-1205933)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 8.120520,
+    b = 8.120520,
+    c = 3.785908,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.126137, 0.373863, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.373863, 0.873863, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.626137, 0.126137, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.873863, 0.626137, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.174389, 0.674389, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.325611, 0.174389, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.674389, 0.825611, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.825611, 0.325611, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7217816929999998
+  }
+}

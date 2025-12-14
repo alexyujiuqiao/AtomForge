@@ -1,0 +1,123 @@
+atom_spec "Ca2PI" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1eed684f-c756-4562-a73b-671315abe415",
+    title = "Ca6I3P3",
+    created = "2025-12-07"
+  }
+  description = "Ca2PI from Materials Project (mp-23040)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.310410,
+    b = 4.310410,
+    c = 22.463761,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 166,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.229280),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.770720),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.437387),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.895947),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.104053),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.562613),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.666667),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.333333),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.333333, 0.666667, 0.166667),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.666667, 0.333333, 0.833333),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.8021
+    formation_energy = -1.5037430245833336
+  }
+}

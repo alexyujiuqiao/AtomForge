@@ -1,0 +1,95 @@
+atom_spec "Fe2SiP" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3996d414-69d0-4e2d-b38b-c8ff73117bfe",
+    title = "Fe4P2Si2",
+    created = "2025-12-07"
+  }
+  description = "Fe2SiP from Materials Project (mp-1225141)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 2.954213,
+    b = 5.259367,
+    c = 5.898285,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 26,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Fe {
+      description = "Fe site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.001392, 0.548235),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.501392, 0.451765),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.497938, 0.057515),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.997938, 0.942485),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.314916, 0.689409),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.814916, 0.310591),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.185754, 0.187093),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.685754, 0.812907),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.473166877083333
+  }
+}

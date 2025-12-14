@@ -1,0 +1,74 @@
+atom_spec "Tb(AlGe)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "630fa701-5357-4e01-8230-7c13de56a2ef",
+    title = "Al2Ge2Tb",
+    created = "2025-12-07"
+  }
+  description = "Tb(AlGe)2 from Materials Project (mp-7157)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.289655,
+    b = 4.289655,
+    c = 6.635361,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.646276),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.353724),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.258738),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.741262),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.420589348
+  }
+}

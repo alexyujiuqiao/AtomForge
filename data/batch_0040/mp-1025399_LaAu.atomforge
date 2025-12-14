@@ -1,0 +1,95 @@
+atom_spec "LaAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2d41bf05-4b5a-4d8f-9190-28bc9c921efa",
+    title = "Au4La4",
+    created = "2025-12-07"
+  }
+  description = "LaAu from Materials Project (mp-1025399)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.895847,
+    b = 6.027268,
+    c = 7.592446,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.151586, 0.040973),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.348414, 0.540973),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.651586, 0.459027),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.848414, 0.959027),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.645647, 0.184479),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.854353, 0.684479),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.145647, 0.315521),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.354353, 0.815521),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8200342512500001
+  }
+}

@@ -1,0 +1,123 @@
+atom_spec "Ta2V3Cu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1d4c3588-9a68-4743-ba99-4963a6e7c95d",
+    title = "Cu2Ta4V6",
+    created = "2025-12-07"
+  }
+  description = "Ta2V3Cu from Materials Project (mp-1218034)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.947966,
+    b = 4.947966,
+    c = 8.388912,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.058989),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.441011),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.558989),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.941011),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.173875, 0.347750, 0.750000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.173875, 0.826125, 0.750000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.347750, 0.173875, 0.250000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.652250, 0.826125, 0.750000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.826125, 0.173875, 0.250000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.826125, 0.652250, 0.250000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.027417590833334
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "Ba2Cd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "aa679305-755f-4f30-9d2b-287f74ef80c4",
+    title = "Ba4Cd2",
+    created = "2025-12-07"
+  }
+  description = "Ba2Cd from Materials Project (mp-8093)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.315876,
+    b = 4.315876,
+    c = 15.322520,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.367290),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.632710),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.132710),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.867290),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2377896166666667
+  }
+}

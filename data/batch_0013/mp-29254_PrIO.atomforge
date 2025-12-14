@@ -1,0 +1,81 @@
+atom_spec "PrIO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5410943d-eb28-4c67-ad84-11cb58919276",
+    title = "I2O2Pr2",
+    created = "2025-12-07"
+  }
+  description = "PrIO from Materials Project (mp-29254)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.124515,
+    b = 4.124515,
+    c = 9.890152,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site I {
+      description = "I site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.313891),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.686109),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.880564),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.119436),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.7233
+    formation_energy = -3.0251421483333325
+  }
+}

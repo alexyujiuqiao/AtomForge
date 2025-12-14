@@ -1,0 +1,95 @@
+atom_spec "DyNiC2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "04864baa-976c-4fd7-baf5-22e38cbe9692",
+    title = "C4Dy2Ni2",
+    created = "2025-12-07"
+  }
+  description = "DyNiC2 from Materials Project (mp-4587)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.516436,
+    b = 6.004392,
+    c = 3.594192,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 38,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.152063, 0.697863, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.347936, 0.197863, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.652064, 0.197863, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.847936, 0.697863, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.997879, 0.000000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.497879, 0.000000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.386394, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.886394, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.336932805
+  }
+}

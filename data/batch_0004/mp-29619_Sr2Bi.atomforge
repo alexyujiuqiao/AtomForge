@@ -1,0 +1,123 @@
+atom_spec "Sr2Bi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "123434fb-92b7-484f-bbec-a8290334f2cb",
+    title = "Bi4Sr8",
+    created = "2025-12-07"
+  }
+  description = "Sr2Bi from Materials Project (mp-29619)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.152634,
+    b = 5.152634,
+    c = 18.155626,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.135544),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.864456),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.364456),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.635544),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.323232),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.676768),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.176768),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.823232),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7510741827777782
+  }
+}

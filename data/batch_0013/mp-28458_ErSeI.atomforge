@@ -1,0 +1,81 @@
+atom_spec "ErSeI" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b2201ef1-f61b-444d-8a4a-c73ca26499d4",
+    title = "Er2I2Se2",
+    created = "2025-12-07"
+  }
+  description = "ErSeI from Materials Project (mp-28458)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.202814,
+    b = 5.613280,
+    c = 9.819798,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Er {
+      description = "Er site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.116353),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.883647),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.661441),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.338559),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.079255),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.920745),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.3094
+    formation_energy = -1.969166459114584
+  }
+}

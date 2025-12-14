@@ -1,0 +1,95 @@
+atom_spec "VRh" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c6040348-74a3-4b92-934c-889d78ac4250",
+    title = "Rh4V4",
+    created = "2025-12-07"
+  }
+  description = "VRh from Materials Project (mp-971751)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 5.839150,
+    b = 6.712434,
+    c = 2.796386,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 65,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.000000, 0.214298, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.000000, 0.785702, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.500000, 0.285702, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.500000, 0.714298, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.203596, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.296404, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.703596, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.796404, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3861620575
+  }
+}

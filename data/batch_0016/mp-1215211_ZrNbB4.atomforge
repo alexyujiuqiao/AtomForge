@@ -1,0 +1,81 @@
+atom_spec "ZrNbB4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e0e067c3-d5ec-4e03-b000-3809f692fe05",
+    title = "B4NbZr",
+    created = "2025-12-07"
+  }
+  description = "ZrNbB4 from Materials Project (mp-1215211)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.148454,
+    b = 3.148454,
+    c = 6.873795,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 191,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.333333, 0.666667, 0.242232),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.333333, 0.666667, 0.757768),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.666667, 0.333333, 0.242232),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.666667, 0.333333, 0.757768),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8472373344444435
+  }
+}

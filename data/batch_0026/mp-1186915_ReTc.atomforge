@@ -1,0 +1,53 @@
+atom_spec "ReTc" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c4f3a947-dc37-4dbc-aecb-da5e2fd21098",
+    title = "ReTc",
+    created = "2025-12-07"
+  }
+  description = "ReTc from Materials Project (mp-1186915)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 2.769288,
+    b = 2.769288,
+    c = 4.464644,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Tc {
+      description = "Tc site in hexagonal structure",
+      wyckoff = "1e",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0034905274999985
+  }
+}

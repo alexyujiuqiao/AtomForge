@@ -1,0 +1,109 @@
+atom_spec "Er2CdCu2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f10001aa-cfb6-4255-a543-ea67c727b0fd",
+    title = "Cd2Cu4Er4",
+    created = "2025-12-07"
+  }
+  description = "Er2CdCu2 from Materials Project (mp-1206454)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.564361,
+    b = 7.564361,
+    c = 3.616833,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.116963, 0.383037, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.383037, 0.883037, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.616963, 0.116963, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.883037, 0.616963, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.177445, 0.677445, 0.500000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.322555, 0.177445, 0.500000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.677445, 0.822555, 0.500000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.822555, 0.322555, 0.500000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.301352859
+  }
+}

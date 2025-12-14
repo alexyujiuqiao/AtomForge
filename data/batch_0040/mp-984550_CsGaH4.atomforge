@@ -1,0 +1,123 @@
+atom_spec "CsGaH4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d4ec75c7-03e4-4b3a-9290-0be479c43e5b",
+    title = "Cs2Ga2H8",
+    created = "2025-12-07"
+  }
+  description = "CsGaH4 from Materials Project (mp-984550)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.563871,
+    b = 5.563871,
+    c = 7.785656,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 137,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.000000, 0.234515, 0.881420),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.000000, 0.765485, 0.881420),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.234515, 0.000000, 0.118580),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.265485, 0.500000, 0.381420),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.500000, 0.265485, 0.618580),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.500000, 0.734515, 0.618580),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.734515, 0.500000, 0.381420),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.765485, 0.000000, 0.118580),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.625299999999999
+    formation_energy = -0.314199631738506
+  }
+}

@@ -1,0 +1,109 @@
+atom_spec "BaZnIn3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b2c68203-c36f-4f71-9997-f5475a23edc2",
+    title = "Ba2In6Zn2",
+    created = "2025-12-07"
+  }
+  description = "BaZnIn3 from Materials Project (mp-1227349)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.831212,
+    b = 4.831212,
+    c = 12.197072,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 107,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.003601),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.503601),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.393514),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.893514),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.243647),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.743647),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.243647),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.743647),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.615591),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.115591),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3493119159999999
+  }
+}

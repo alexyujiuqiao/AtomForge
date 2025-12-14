@@ -1,0 +1,81 @@
+atom_spec "CoPPd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "43b75e66-8844-43f6-b43a-11c3d1c00c3e",
+    title = "Co2P2Pd2",
+    created = "2025-12-07"
+  }
+  description = "CoPPd from Materials Project (mp-1018673)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.619077,
+    b = 3.619077,
+    c = 5.842052,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.779210),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.220790),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.377505),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.622495),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6020116727777776
+  }
+}

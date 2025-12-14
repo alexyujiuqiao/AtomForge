@@ -1,0 +1,95 @@
+atom_spec "Li2HN" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "83127060-84eb-46b8-bbe5-d8d88e13302e",
+    title = "H2Li4N2",
+    created = "2025-12-07"
+  }
+  description = "Li2HN from Materials Project (mp-34465)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.455142,
+    b = 3.546390,
+    c = 5.414750,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 44,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.237489, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.737489, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.022038, 0.500000, 0.216125),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.022038, 0.500000, 0.783875),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.522038, 0.000000, 0.283875),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.522038, 0.000000, 0.716125),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.438435, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.938435, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.7785
+    formation_energy = -0.5190587091666665
+  }
+}

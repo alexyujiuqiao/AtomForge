@@ -40,6 +40,15 @@ from .atomforge_ir import (
     Meta
 )
 
+from .crystal_calc import (
+    CalculationTarget,
+    CalcSettings,
+    CalcInput,
+    PrepReport,
+    prepare_calc,
+    estimate_kmesh,
+)
+
 __version__ = "2.1.0"
 
 __all__ = [
@@ -75,5 +84,13 @@ __all__ = [
     "Validation",
     "Simplification",
     "Provenance",
-    "Meta"
+    "Meta",
+
+    # Calculation prep
+    "CalculationTarget",
+    "CalcSettings",
+    "CalcInput",
+    "PrepReport",
+    "prepare_calc",
+    "estimate_kmesh",
 ] 

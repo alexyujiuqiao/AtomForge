@@ -1,0 +1,88 @@
+atom_spec "Sm2C(NO)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e9a3a73e-00cc-47a9-94a9-e25a01c1b371",
+    title = "CN2O2Sm2",
+    created = "2025-12-07"
+  }
+  description = "Sm2C(NO)2 from Materials Project (mp-9499)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.855772,
+    b = 3.855772,
+    c = 8.308202,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.351107),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.648893),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.896765),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.103235),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.179120),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.820880),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.8857
+    formation_energy = -2.4181848257142846
+  }
+}

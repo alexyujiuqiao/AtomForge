@@ -1,0 +1,74 @@
+atom_spec "Mg(ZnN)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e562161c-26e1-4f55-92e3-2c716fadda4c",
+    title = "MgN2Zn2",
+    created = "2025-12-07"
+  }
+  description = "Mg(ZnN)2 from Materials Project (mp-1245625)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.347335,
+    b = 3.347335,
+    c = 5.828350,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.769369),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.230631),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.345766),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.654234),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3137067800000004
+  }
+}

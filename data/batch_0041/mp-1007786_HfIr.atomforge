@@ -1,0 +1,67 @@
+atom_spec "HfIr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6bdf81ca-369b-4793-9be0-0a43577e5a97",
+    title = "Hf2Ir2",
+    created = "2025-12-07"
+  }
+  description = "HfIr from Materials Project (mp-1007786)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 3.169103,
+    b = 4.482867,
+    c = 5.301642,
+    alpha = 90.000000,
+    beta = 106.383402,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hf {
+      description = "Hf site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.137559, 0.750000, 0.786672),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.862441, 0.250000, 0.213328),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.412981, 0.750000, 0.315938),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.587019, 0.250000, 0.684062),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.9479892349999997
+  }
+}

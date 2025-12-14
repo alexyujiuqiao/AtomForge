@@ -1,0 +1,102 @@
+atom_spec "CeZnNi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bad7aba3-e677-4418-93ff-1cdf0af0c2f1",
+    title = "Ce3Ni3Zn3",
+    created = "2025-12-07"
+  }
+  description = "CeZnNi from Materials Project (mp-1079342)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.083870,
+    b = 7.083870,
+    c = 3.812306,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.415780, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.415780, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.584220, 0.584220, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.761209, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.238791, 0.238791, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.761209, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4051902261111111
+  }
+}

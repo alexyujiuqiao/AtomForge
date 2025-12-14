@@ -1,0 +1,81 @@
+atom_spec "ScGeAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7086fd80-a9be-42d6-8355-e598670a628a",
+    title = "Au2Ge2Sc2",
+    created = "2025-12-07"
+  }
+  description = "ScGeAu from Materials Project (mp-9350)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.374908,
+    b = 4.374908,
+    c = 6.917367,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.698851),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.198851),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.298694),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.798694),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.001655),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.501655),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7224387733333332
+  }
+}

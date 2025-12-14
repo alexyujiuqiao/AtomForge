@@ -1,0 +1,109 @@
+atom_spec "SrNiO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "045ab1fb-62bb-40c2-8a73-5179c503c544",
+    title = "Ni2O6Sr2",
+    created = "2025-12-07"
+  }
+  description = "SrNiO3 from Materials Project (mp-762506)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.504619,
+    b = 5.512447,
+    c = 5.513835,
+    alpha = 60.079972,
+    beta = 60.057979,
+    gamma = 60.083213
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500058, 0.999815, 0.000157),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999940, 0.500179, 0.499840),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.249993, 0.749985, 0.250016),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.249998, 0.250012, 0.749990),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.250289, 0.249711, 0.249710),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.749714, 0.750289, 0.750289),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750002, 0.749992, 0.250010),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750006, 0.250015, 0.749987),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.249999, 0.750002, 0.750002),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750002, 0.249999, 0.249999),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.764556810333334
+  }
+}

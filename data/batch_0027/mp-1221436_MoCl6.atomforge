@@ -1,0 +1,88 @@
+atom_spec "MoCl6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3178c7fa-0842-4c66-8df7-598fe3cf0d0c",
+    title = "Cl6Mo",
+    created = "2025-12-07"
+  }
+  description = "MoCl6 from Materials Project (mp-1221436)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 6.446101,
+    b = 6.446101,
+    c = 5.855089,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 162,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.000000, 0.292916, 0.726894),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.000000, 0.707084, 0.273106),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.292916, 0.000000, 0.726894),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.292916, 0.292916, 0.273106),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.707084, 0.000000, 0.273106),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.707084, 0.707084, 0.726894),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1308
+    formation_energy = -1.2539298714285714
+  }
+}

@@ -1,0 +1,109 @@
+atom_spec "Ba2CoMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "372ddabd-1b50-4621-9064-5153b7dd3409",
+    title = "Ba2CoMoO6",
+    created = "2025-12-07"
+  }
+  description = "Ba2CoMoO6 from Materials Project (mp-561894)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.734433,
+    b = 5.734643,
+    c = 5.847484,
+    alpha = 119.359430,
+    beta = 119.349355,
+    gamma = 90.000023
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.249919, 0.750020, 0.500007),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.750081, 0.249980, 0.499993),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in triclinic structure",
+      wyckoff = "1e",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.258097, 0.741575, 0.999997),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.258387, 0.258070, 0.999931),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.267713, 0.267724, 0.535394),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.732287, 0.732276, 0.464606),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.741613, 0.741930, 0.000069),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.741903, 0.258425, 0.000003),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.2990999999999997
+    formation_energy = -2.456581189500001
+  }
+}

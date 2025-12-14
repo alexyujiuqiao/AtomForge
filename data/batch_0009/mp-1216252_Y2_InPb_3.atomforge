@@ -1,0 +1,95 @@
+atom_spec "Y2(InPb)3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fadd74f0-b5c1-4697-a918-5d67782275b8",
+    title = "In3Pb3Y2",
+    created = "2025-12-07"
+  }
+  description = "Y2(InPb)3 from Materials Project (mp-1216252)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.802002,
+    b = 4.813112,
+    c = 9.513121,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 47,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "1g",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2t",
+      position = (0.500000, 0.500000, 0.252573),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2t",
+      position = (0.500000, 0.500000, 0.747427),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in orthorhombic structure",
+      wyckoff = "1e",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in orthorhombic structure",
+      wyckoff = "2q",
+      position = (0.000000, 0.000000, 0.249307),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in orthorhombic structure",
+      wyckoff = "2q",
+      position = (0.000000, 0.000000, 0.750693),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3276830829166668
+  }
+}

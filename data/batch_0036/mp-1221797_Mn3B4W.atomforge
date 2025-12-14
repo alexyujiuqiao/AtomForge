@@ -1,0 +1,95 @@
+atom_spec "Mn3B4W" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0982da8c-7fa1-44de-a9c6-4bd4c350ee1d",
+    title = "B4Mn3W",
+    created = "2025-12-07"
+  }
+  description = "Mn3B4W from Materials Project (mp-1221797)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.278371,
+    b = 3.010654,
+    c = 5.628501,
+    alpha = 90.000000,
+    beta = 90.595832,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.618323, 0.000000, 0.958238),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.881744, 0.000000, 0.474298),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.097323, 0.500000, 0.545169),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.397391, 0.500000, 0.020151),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.123223, 0.000000, 0.826670),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.625832, 0.500000, 0.678288),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.879873, 0.500000, 0.172259),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.376292, 0.000000, 0.324927),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4377785063074704
+  }
+}

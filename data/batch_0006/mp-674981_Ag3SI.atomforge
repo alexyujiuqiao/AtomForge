@@ -1,0 +1,74 @@
+atom_spec "Ag3SI" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d74cdae5-c898-4001-a33f-d6f600eae234",
+    title = "Ag3IS",
+    created = "2025-12-07"
+  }
+  description = "Ag3SI from Materials Project (mp-674981)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.020287,
+    b = 4.876098,
+    c = 5.059903,
+    alpha = 90.000000,
+    beta = 92.380521,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.484652, 0.000000, 0.885060),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.889381, 0.000000, 0.483941),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.003786, 0.500000, 0.138166),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.493935, 0.500000, 0.501926),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.998146, 0.000000, 0.990907),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.2886000000000002
+    formation_energy = -0.2564776116250001
+  }
+}

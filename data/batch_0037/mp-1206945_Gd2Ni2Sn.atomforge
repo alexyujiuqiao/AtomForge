@@ -1,0 +1,109 @@
+atom_spec "Gd2Ni2Sn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2cd84b36-0d81-45b7-9393-134a4121ab6b",
+    title = "Gd4Ni4Sn2",
+    created = "2025-12-07"
+  }
+  description = "Gd2Ni2Sn from Materials Project (mp-1206945)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.294760,
+    b = 5.720696,
+    c = 8.347660,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 71,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Gd {
+      description = "Gd site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.000000, 0.500000, 0.203716),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.000000, 0.500000, 0.796284),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.500000, 0.000000, 0.296284),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in orthorhombic structure",
+      wyckoff = "4j",
+      position = (0.500000, 0.000000, 0.703716),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.000000, 0.210610, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.000000, 0.789390, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.500000, 0.289390, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.500000, 0.710610, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5809001069999994
+  }
+}

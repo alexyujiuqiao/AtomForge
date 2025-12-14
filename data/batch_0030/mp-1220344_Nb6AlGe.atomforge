@@ -1,0 +1,95 @@
+atom_spec "Nb6AlGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "aa3343f7-9536-4a9c-8911-e7f43842c565",
+    title = "AlGeNb6",
+    created = "2025-12-07"
+  }
+  description = "Nb6AlGe from Materials Project (mp-1220344)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.193789,
+    b = 5.193789,
+    c = 5.193789,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 200,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in cubic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in cubic structure",
+      wyckoff = "6f",
+      position = (0.000000, 0.500000, 0.250050),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in cubic structure",
+      wyckoff = "6f",
+      position = (0.000000, 0.500000, 0.749950),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in cubic structure",
+      wyckoff = "6f",
+      position = (0.250050, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.250050, 0.000000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.749950, 0.000000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in cubic structure",
+      wyckoff = "6f",
+      position = (0.749950, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2242485681249988
+  }
+}

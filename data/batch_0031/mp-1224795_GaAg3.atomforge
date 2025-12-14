@@ -1,0 +1,67 @@
+atom_spec "GaAg3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3281e171-407a-4b51-8913-19faceb39ebe",
+    title = "Ag3Ga",
+    created = "2025-12-07"
+  }
+  description = "GaAg3 from Materials Project (mp-1224795)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 2.959222,
+    b = 2.959222,
+    c = 9.311341,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "1f",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.242077),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.757923),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "1e",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0157170518750002
+  }
+}

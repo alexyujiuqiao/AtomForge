@@ -1,0 +1,60 @@
+atom_spec "TiCl2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0d4a709a-b522-4725-862e-22fea6dbe3f1",
+    title = "Cl2Ti",
+    created = "2025-12-07"
+  }
+  description = "TiCl2 from Materials Project (mp-28116)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.527368,
+    b = 3.527368,
+    c = 6.823784,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.219483),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.780517),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.8052848177777785
+  }
+}

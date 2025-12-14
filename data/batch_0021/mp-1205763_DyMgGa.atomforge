@@ -1,0 +1,102 @@
+atom_spec "DyMgGa" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3f24f77e-c3c1-4279-895c-cca53fe8d138",
+    title = "Dy3Ga3Mg3",
+    created = "2025-12-07"
+  }
+  description = "DyMgGa from Materials Project (mp-1205763)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.307321,
+    b = 7.307321,
+    c = 4.415753,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Dy {
+      description = "Dy site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.579151, 0.000000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.420849, 0.420849, 0.000000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.579151, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.245131, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.245131, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.754869, 0.754869, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4920278902777772
+  }
+}

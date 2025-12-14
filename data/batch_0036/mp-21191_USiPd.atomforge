@@ -1,0 +1,123 @@
+atom_spec "USiPd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "db054b09-8919-4970-a9ac-71a2460ba167",
+    title = "Pd4Si4U4",
+    created = "2025-12-07"
+  }
+  description = "USiPd from Materials Project (mp-21191)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.186527,
+    b = 7.066190,
+    c = 7.516240,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.160514, 0.569693),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.660514, 0.930307),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.339486, 0.069693),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.839486, 0.430307),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.289726, 0.886626),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.789726, 0.613374),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.210274, 0.386626),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.710274, 0.113374),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.005986, 0.173478),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.505986, 0.326522),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.494014, 0.673478),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.994014, 0.826522),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4924447866666656
+  }
+}

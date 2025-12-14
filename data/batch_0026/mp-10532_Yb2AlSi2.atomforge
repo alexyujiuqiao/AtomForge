@@ -1,0 +1,109 @@
+atom_spec "Yb2AlSi2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7d230b85-9ebe-41b3-ac86-0a9aee92474a",
+    title = "Al2Si4Yb4",
+    created = "2025-12-07"
+  }
+  description = "Yb2AlSi2 from Materials Project (mp-10532)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 6.823029,
+    b = 6.823029,
+    c = 4.586874,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.123794, 0.376206, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.376206, 0.876206, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.623794, 0.123794, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.876206, 0.623794, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.174672, 0.674672, 0.500000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.325328, 0.174672, 0.500000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.674672, 0.825328, 0.500000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.825328, 0.325328, 0.500000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4093326839999996
+  }
+}

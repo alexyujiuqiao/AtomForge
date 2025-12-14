@@ -1,0 +1,95 @@
+atom_spec "PmLu3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "463a43b2-34bf-49cb-8373-ebc5e0fd131d",
+    title = "Lu6Pm2",
+    created = "2025-12-07"
+  }
+  description = "PmLu3 from Materials Project (mp-1186605)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.146164,
+    b = 7.146164,
+    c = 5.613924,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.164356, 0.328712, 0.250000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.164356, 0.835644, 0.250000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.328712, 0.164356, 0.750000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.671288, 0.835644, 0.250000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.835644, 0.164356, 0.750000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.835644, 0.671288, 0.750000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0067409231250001
+  }
+}

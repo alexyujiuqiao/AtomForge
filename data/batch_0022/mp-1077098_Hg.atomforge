@@ -1,0 +1,81 @@
+atom_spec "Hg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a87cbae2-0592-4a36-8b1c-3adf0452827f",
+    title = "Hg6",
+    created = "2025-12-07"
+  }
+  description = "Hg from Materials Project (mp-1077098)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.074048,
+    b = 6.483430,
+    c = 6.246726,
+    alpha = 90.000000,
+    beta = 113.491598,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 14,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.416890, 0.642726, 0.260136),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.416890, 0.857274, 0.760136),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.583110, 0.142726, 0.239864),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.583110, 0.357274, 0.739864),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.4741
+    formation_energy = 0.017943575
+  }
+}

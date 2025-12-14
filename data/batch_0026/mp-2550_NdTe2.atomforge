@@ -1,0 +1,81 @@
+atom_spec "NdTe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a2b2d143-36ab-40bc-8eb3-5a23b8561635",
+    title = "Nd2Te4",
+    created = "2025-12-07"
+  }
+  description = "NdTe2 from Materials Project (mp-2550)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.508331,
+    b = 4.508331,
+    c = 9.189379,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Nd {
+      description = "Nd site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.727377),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.272623),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.369803),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.630197),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.5372252583333337
+  }
+}

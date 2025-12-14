@@ -1,0 +1,67 @@
+atom_spec "MgZnS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0ab4a6eb-8c96-49d2-a551-7d05c4896456",
+    title = "MgS2Zn",
+    created = "2025-12-07"
+  }
+  description = "MgZnS2 from Materials Project (mp-1221929)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.941292,
+    b = 3.941292,
+    c = 5.568067,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 115,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.500000, 0.238296),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.500000, 0.000000, 0.761704),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.5488
+    formation_energy = -1.3503736190624998
+  }
+}

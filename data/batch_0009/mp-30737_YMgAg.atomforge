@@ -1,0 +1,102 @@
+atom_spec "YMgAg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "aa131b92-e702-428b-bfba-ae9da7fe6aa4",
+    title = "Ag3Mg3Y3",
+    created = "2025-12-07"
+  }
+  description = "YMgAg from Materials Project (mp-30737)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.767285,
+    b = 7.767285,
+    c = 4.103610,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.247917, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.247917, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.752083, 0.752083, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.588387, 0.500000),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.411613, 0.411613, 0.500000),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.588387, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2916123666666668
+  }
+}

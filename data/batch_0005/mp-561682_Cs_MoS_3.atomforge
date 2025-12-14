@@ -1,0 +1,137 @@
+atom_spec "Cs(MoS)3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1178a81f-ed80-4d20-ad8b-7cdf506c542f",
+    title = "Cs2Mo6S6",
+    created = "2025-12-07"
+  }
+  description = "Cs(MoS)3 from Materials Project (mp-561682)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 9.522863,
+    b = 9.522863,
+    c = 4.462596,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 176,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.022285, 0.172129, 0.750000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.149844, 0.977715, 0.750000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.172129, 0.149844, 0.250000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.827871, 0.850156, 0.750000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.850156, 0.022285, 0.250000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.977715, 0.827871, 0.250000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.043567, 0.322360, 0.250000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.278793, 0.956433, 0.250000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.322360, 0.278793, 0.750000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.677640, 0.721207, 0.250000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.721207, 0.043567, 0.750000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.956433, 0.677640, 0.750000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.7270000000000003
+    formation_energy = -1.0348569589008625
+  }
+}

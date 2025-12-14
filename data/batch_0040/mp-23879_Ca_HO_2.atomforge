@@ -1,0 +1,74 @@
+atom_spec "Ca(HO)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "24717381-3703-44d0-9a05-b018df869138",
+    title = "CaH2O2",
+    created = "2025-12-07"
+  }
+  description = "Ca(HO)2 from Materials Project (mp-23879)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.619634,
+    b = 3.619634,
+    c = 4.933917,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.430896),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.569104),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.233449),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.766551),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.1225000000000005
+    formation_energy = -2.1656756200000005
+  }
+}

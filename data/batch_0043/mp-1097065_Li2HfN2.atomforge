@@ -1,0 +1,74 @@
+atom_spec "Li2HfN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8b4f3d9b-09ee-466b-b049-b7d67f8b877d",
+    title = "HfLi2N2",
+    created = "2025-12-07"
+  }
+  description = "Li2HfN2 from Materials Project (mp-1097065)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.260172,
+    b = 3.260172,
+    c = 5.477711,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hf {
+      description = "Hf site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.618191),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.381809),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.219972),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.780028),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.9346
+    formation_energy = -1.343756919333334
+  }
+}

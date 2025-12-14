@@ -1,0 +1,102 @@
+atom_spec "PrCdAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "733d71a0-5fba-4037-bc18-be4b19b5c057",
+    title = "Au3Cd3Pr3",
+    created = "2025-12-07"
+  }
+  description = "PrCdAu from Materials Project (mp-1205879)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 8.005169,
+    b = 8.005169,
+    c = 4.047711,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.255488, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.255488, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.744512, 0.744512, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.591483, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.408517, 0.408517, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.591483, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6396204027777775
+  }
+}

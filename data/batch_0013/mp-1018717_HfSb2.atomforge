@@ -1,0 +1,81 @@
+atom_spec "HfSb2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6e8c6cac-b61a-4b55-9b29-b6ad8178c25d",
+    title = "Hf2Sb4",
+    created = "2025-12-07"
+  }
+  description = "HfSb2 from Materials Project (mp-1018717)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.146859,
+    b = 4.146859,
+    c = 8.573279,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.734893),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.265107),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.381406),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.618594),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4720563566666674
+  }
+}

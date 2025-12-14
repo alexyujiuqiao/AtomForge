@@ -1,0 +1,74 @@
+atom_spec "Ho2SeO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "928019eb-9dca-416e-a328-1dbb7b2f286c",
+    title = "Ho2O2Se",
+    created = "2025-12-07"
+  }
+  description = "Ho2SeO2 from Materials Project (mp-13974)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.826344,
+    b = 3.826344,
+    c = 6.807835,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ho {
+      description = "Ho site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.291423),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.708577),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.625598),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.374402),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.225
+    formation_energy = -3.5010285944687487
+  }
+}

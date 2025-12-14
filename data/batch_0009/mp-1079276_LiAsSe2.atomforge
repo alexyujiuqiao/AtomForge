@@ -1,0 +1,95 @@
+atom_spec "LiAsSe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2c104c15-c895-4a1e-a437-c5e67cd6eddd",
+    title = "As2Li2Se4",
+    created = "2025-12-07"
+  }
+  description = "LiAsSe2 from Materials Project (mp-1079276)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.703639,
+    b = 5.483301,
+    c = 5.831039,
+    alpha = 90.000000,
+    beta = 94.213579,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site As {
+      description = "As site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.197268, 0.250000, 0.587063),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.802732, 0.750000, 0.412937),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.260616, 0.750000, 0.995479),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.739384, 0.250000, 0.004521),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.231130, 0.750000, 0.498095),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.249047, 0.250000, 0.991629),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.750953, 0.750000, 0.008371),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.768870, 0.250000, 0.501905),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.5244
+    formation_energy = -0.7746571745052084
+  }
+}

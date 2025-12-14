@@ -1,0 +1,81 @@
+atom_spec "MnFeB" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9575f230-6205-4158-a8b1-1c05abe45639",
+    title = "B2Fe2Mn2",
+    created = "2025-12-07"
+  }
+  description = "MnFeB from Materials Project (mp-1221654)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.149559,
+    b = 4.149559,
+    c = 4.168368,
+    alpha = 104.817491,
+    beta = 104.817491,
+    gamma = 119.091104
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.250000, 0.750000, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750000, 0.250000, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333281, 0.333333, 0.666562),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.666719, 0.333333),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.162878, 0.837122, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.837122, 0.162878, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.304749379032567
+  }
+}

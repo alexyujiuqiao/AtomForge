@@ -1,0 +1,81 @@
+atom_spec "MgHg5" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "059f62b3-76ac-455b-8765-33d68cdea98f",
+    title = "Hg5Mg",
+    created = "2025-12-07"
+  }
+  description = "MgHg5 from Materials Project (mp-1185885)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.708060,
+    b = 3.708060,
+    c = 13.158086,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.159667),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.507000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.333333),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.681853),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.984813),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.833334),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0156236558333333
+  }
+}

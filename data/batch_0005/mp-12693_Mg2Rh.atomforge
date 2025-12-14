@@ -1,0 +1,81 @@
+atom_spec "Mg2Rh" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2aa4ccd1-297e-4dc9-b2e3-738395accd9e",
+    title = "Mg4Rh2",
+    created = "2025-12-07"
+  }
+  description = "Mg2Rh from Materials Project (mp-12693)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.226178,
+    b = 3.226178,
+    c = 9.982814,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.355578),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.644422),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.144422),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.855578),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4210671933333335
+  }
+}

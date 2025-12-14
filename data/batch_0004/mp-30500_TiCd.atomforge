@@ -1,0 +1,67 @@
+atom_spec "TiCd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3d117f66-1794-45a7-98c1-b1ab4cbcc9c2",
+    title = "Cd2Ti2",
+    created = "2025-12-07"
+  }
+  description = "TiCd from Materials Project (mp-30500)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 2.910929,
+    b = 2.910929,
+    c = 9.107281,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.864127),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.135873),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.392690),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.607310),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0518511191666668
+  }
+}

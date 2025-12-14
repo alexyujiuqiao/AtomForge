@@ -1,0 +1,109 @@
+atom_spec "SrMgIn3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6881ca00-9d54-4e5e-9de3-cdead09c4261",
+    title = "In6Mg2Sr2",
+    created = "2025-12-07"
+  }
+  description = "SrMgIn3 from Materials Project (mp-571443)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.735938,
+    b = 4.735938,
+    c = 12.869182,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 119,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.389066),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.610934),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.110934),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.889066),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "2d",
+      position = (0.000000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "2d",
+      position = (0.500000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2930759413333333
+  }
+}

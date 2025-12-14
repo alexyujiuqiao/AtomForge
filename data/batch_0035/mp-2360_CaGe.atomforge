@@ -1,0 +1,95 @@
+atom_spec "CaGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4e1b2a07-ca1a-4f0b-8452-9908a6aa00e8",
+    title = "Ca4Ge4",
+    created = "2025-12-07"
+  }
+  description = "CaGe from Materials Project (mp-2360)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.588384,
+    b = 10.886542,
+    c = 4.020018,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.363259, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.636741, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.136741, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.863259, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.076826, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.923174, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.423174, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.576826, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6613938774999997
+  }
+}

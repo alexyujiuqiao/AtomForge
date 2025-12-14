@@ -1,0 +1,95 @@
+atom_spec "TmAu3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c44b3996-ced8-46e3-80eb-78e19ec3c4e2",
+    title = "Au6Tm2",
+    created = "2025-12-07"
+  }
+  description = "TmAu3 from Materials Project (mp-568247)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 5.034922,
+    b = 5.175958,
+    c = 6.084599,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.342751, 0.500000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.657249, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.841378, 0.253918),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.841378, 0.746082),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.158622, 0.246082),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.158622, 0.753918),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.345283, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.654717, 0.500000),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.725009357916667
+  }
+}

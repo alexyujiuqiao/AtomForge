@@ -1,0 +1,123 @@
+atom_spec "ZrSiNi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e7188827-0d80-488f-98f1-ab3f5a63b909",
+    title = "Ni4Si4Zr4",
+    created = "2025-12-07"
+  }
+  description = "ZrSiNi from Materials Project (mp-1103272)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.821161,
+    b = 6.478937,
+    c = 7.301057,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.141241, 0.561162),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.641241, 0.938838),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.358759, 0.061162),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.858759, 0.438838),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.274428, 0.886176),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.774428, 0.613824),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.225572, 0.386176),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.725572, 0.113824),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.016238, 0.185406),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.516238, 0.314594),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.483762, 0.685406),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.983762, 0.814594),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8861792499999991
+  }
+}

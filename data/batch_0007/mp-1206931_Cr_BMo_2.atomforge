@@ -1,0 +1,109 @@
+atom_spec "Cr(BMo)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "05d3af28-ba1d-4345-856a-ef85636fdfc9",
+    title = "B4Cr2Mo4",
+    created = "2025-12-07"
+  }
+  description = "Cr(BMo)2 from Materials Project (mp-1206931)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.842820,
+    b = 5.842820,
+    c = 3.126887,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.113629, 0.386371, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.386371, 0.886371, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.613629, 0.113629, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.886371, 0.613629, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.177379, 0.677379, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.322621, 0.177379, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.677379, 0.822621, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.822621, 0.322621, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4426620686666666
+  }
+}

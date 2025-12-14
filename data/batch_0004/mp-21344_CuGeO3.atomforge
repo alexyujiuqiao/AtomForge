@@ -1,0 +1,109 @@
+atom_spec "CuGeO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b0d9d789-34e9-485a-9a78-a2268440127b",
+    title = "Cu2Ge2O6",
+    created = "2025-12-07"
+  }
+  description = "CuGeO3 from Materials Project (mp-21344)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 2.980992,
+    b = 4.942222,
+    c = 8.745921,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 17,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000164, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.999836, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "2d",
+      position = (0.500000, 0.408584, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "2d",
+      position = (0.500000, 0.591416, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.387280, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.612720, 0.750000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.499838, 0.206554, 0.917132),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.499838, 0.793446, 0.082868),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500162, 0.206554, 0.582868),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500162, 0.793446, 0.417132),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.590967304
+  }
+}

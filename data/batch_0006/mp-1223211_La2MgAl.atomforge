@@ -1,0 +1,67 @@
+atom_spec "La2MgAl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8a4c713a-5ddb-4ca9-b491-fac3dfd3b4ed",
+    title = "AlLa2Mg",
+    created = "2025-12-07"
+  }
+  description = "La2MgAl from Materials Project (mp-1223211)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.864226,
+    b = 3.864226,
+    c = 7.859989,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.233962),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.766038),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2399630324999999
+  }
+}

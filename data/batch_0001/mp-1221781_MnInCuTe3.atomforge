@@ -1,0 +1,81 @@
+atom_spec "MnInCuTe3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "33f93870-c598-4c94-89bf-f750ad159b0c",
+    title = "CuInMnTe3",
+    created = "2025-12-07"
+  }
+  description = "MnInCuTe3 from Materials Project (mp-1221781)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.477455,
+    b = 6.271814,
+    c = 7.703663,
+    alpha = 114.020550,
+    beta = 106.894211,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.001217, 0.993219, 0.002433),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.335441, 0.345999, 0.670881),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.663130, 0.662663, 0.326261),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.154571, 0.405643, 0.309143),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.506833, 0.781496, 0.013667),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.838809, 0.060981, 0.677616),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0228999999999999
+    formation_energy = -0.412021654655172
+  }
+}

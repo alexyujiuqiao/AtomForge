@@ -1,0 +1,81 @@
+atom_spec "Sn2PbSe3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "24cca850-a48a-41a8-93c2-28db6dc0daf2",
+    title = "PbSe3Sn2",
+    created = "2025-12-07"
+  }
+  description = "Sn2PbSe3 from Materials Project (mp-1219016)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.317996,
+    b = 4.317996,
+    c = 10.589726,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pb {
+      description = "Pb site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.172990),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.827010),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.664740),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.335260),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.1929000000000007
+    formation_energy = -0.7050937678385415
+  }
+}

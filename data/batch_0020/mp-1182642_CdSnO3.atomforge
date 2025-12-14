@@ -1,0 +1,109 @@
+atom_spec "CdSnO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "cdfb4067-5818-48bd-b129-1deb2f3d8e2e",
+    title = "Cd2O6Sn2",
+    created = "2025-12-07"
+  }
+  description = "CdSnO3 from Materials Project (mp-1182642)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.365316,
+    b = 5.786483,
+    c = 8.489199,
+    alpha = 109.515938,
+    beta = 90.151853,
+    gamma = 90.207173
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.246868, 0.705502, 0.663557),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.753132, 0.294498, 0.336443),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.245105, 0.101737, 0.781612),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.250473, 0.597852, 0.911470),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.254193, 0.575757, 0.380745),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.745807, 0.424243, 0.619255),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.749527, 0.402148, 0.088530),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.754895, 0.898263, 0.218388),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.253174, 0.669068, 0.169022),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.746826, 0.330932, 0.830978),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.7079
+    formation_energy = -1.765560946
+  }
+}

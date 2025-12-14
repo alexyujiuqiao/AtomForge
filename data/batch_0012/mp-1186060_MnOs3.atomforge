@@ -1,0 +1,95 @@
+atom_spec "MnOs3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9873cd75-2fd0-4707-be42-c0dd186baf4f",
+    title = "Mn2Os6",
+    created = "2025-12-07"
+  }
+  description = "MnOs3 from Materials Project (mp-1186060)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.418734,
+    b = 5.418734,
+    c = 4.265543,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mn {
+      description = "Mn site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.170585, 0.341170, 0.250000),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.170585, 0.829415, 0.250000),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.341170, 0.170585, 0.750000),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.658830, 0.829415, 0.250000),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.829415, 0.170585, 0.750000),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.829415, 0.658830, 0.750000),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0317416757327588
+  }
+}

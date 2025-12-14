@@ -1,0 +1,81 @@
+atom_spec "SrTl2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3dada29f-8df0-45de-a7ba-5ead06792d62",
+    title = "Sr2Tl4",
+    created = "2025-12-07"
+  }
+  description = "SrTl2 from Materials Project (mp-30877)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.214921,
+    b = 5.214921,
+    c = 8.435266,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Sr {
+      description = "Sr site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.048853),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.451147),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.548853),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.951147),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3384702677777778
+  }
+}

@@ -1,0 +1,109 @@
+atom_spec "Ta2FeB2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "36d183b7-fe8b-484a-88e2-7a96e42fbf30",
+    title = "B4Fe2Ta4",
+    created = "2025-12-07"
+  }
+  description = "Ta2FeB2 from Materials Project (mp-1095076)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.721419,
+    b = 5.721419,
+    c = 3.413859,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.115608, 0.384392, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.384392, 0.884392, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.615608, 0.115608, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.884392, 0.615608, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.179827, 0.679827, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.320173, 0.179827, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.679827, 0.820173, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.820173, 0.320173, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6519739406666674
+  }
+}

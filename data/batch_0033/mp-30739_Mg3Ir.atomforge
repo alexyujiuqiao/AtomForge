@@ -1,0 +1,95 @@
+atom_spec "Mg3Ir" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "60768fd9-526b-4eb1-b255-744957685f9f",
+    title = "Ir2Mg6",
+    created = "2025-12-07"
+  }
+  description = "Mg3Ir from Materials Project (mp-30739)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.577424,
+    b = 4.577424,
+    c = 8.303636,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.577969),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.922031),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.077969),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.422031),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3288262087499998
+  }
+}

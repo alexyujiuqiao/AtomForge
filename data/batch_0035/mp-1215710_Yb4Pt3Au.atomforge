@@ -1,0 +1,95 @@
+atom_spec "Yb4Pt3Au" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "21e10e2a-7710-4ad3-940c-eb63472030d3",
+    title = "AuPt3Yb4",
+    created = "2025-12-07"
+  }
+  description = "Yb4Pt3Au from Materials Project (mp-1215710)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.653024,
+    b = 4.446192,
+    c = 7.211585,
+    alpha = 90.000000,
+    beta = 90.069701,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.845544, 0.500000, 0.537328),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.154045, 0.000000, 0.463280),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.348386, 0.000000, 0.959616),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.654127, 0.500000, 0.038090),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.638945, 0.000000, 0.305246),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.858393, 0.000000, 0.825710),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.146868, 0.500000, 0.179502),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.353692, 0.500000, 0.691228),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.05112368
+  }
+}

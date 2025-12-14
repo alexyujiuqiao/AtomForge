@@ -1,0 +1,60 @@
+atom_spec "MgI2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a1a4310f-7492-4993-bd59-b1ef15a668d9",
+    title = "I2Mg",
+    created = "2025-12-07"
+  }
+  description = "MgI2 from Materials Project (mp-23205)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.209498,
+    b = 4.209498,
+    c = 7.731276,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.216461),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.783539),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.6766
+    formation_energy = -1.3138168766666671
+  }
+}

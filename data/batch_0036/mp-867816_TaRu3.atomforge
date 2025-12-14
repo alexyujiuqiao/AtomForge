@@ -1,0 +1,67 @@
+atom_spec "TaRu3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "45496b65-ba6f-4c9c-b3db-3bea57b08ec1",
+    title = "Ru3Ta",
+    created = "2025-12-07"
+  }
+  description = "TaRu3 from Materials Project (mp-867816)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 3.907380,
+    b = 3.907380,
+    c = 3.907380,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ru {
+      description = "Ru site in cubic structure",
+      wyckoff = "3d",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in cubic structure",
+      wyckoff = "3d",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in cubic structure",
+      wyckoff = "3d",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in cubic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2081216962500001
+  }
+}

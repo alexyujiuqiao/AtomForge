@@ -1,0 +1,53 @@
+atom_spec "Ar" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3a77989d-a195-4cba-8ef6-da269b0e24f4",
+    title = "Ar2",
+    created = "2025-12-07"
+  }
+  description = "Ar from Materials Project (mp-568145)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.987594,
+    b = 3.987594,
+    c = 6.538394,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ar {
+      description = "Ar site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ar", occupancy = 1.000000 })
+    },
+    site Ar {
+      description = "Ar site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ar", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 8.5061
+    formation_energy = 0.00043104
+  }
+}

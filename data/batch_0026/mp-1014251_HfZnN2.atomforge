@@ -1,0 +1,67 @@
+atom_spec "HfZnN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6fa41c5e-a0b9-4acb-9dcf-2e9a4cf1db33",
+    title = "HfN2Zn",
+    created = "2025-12-07"
+  }
+  description = "HfZnN2 from Materials Project (mp-1014251)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.265184,
+    b = 3.265184,
+    c = 5.321488,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hf {
+      description = "Hf site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.792395),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.976514),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.540490),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.343301),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.2797
+    formation_energy = -1.1712421775000008
+  }
+}

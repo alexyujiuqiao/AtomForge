@@ -1,0 +1,95 @@
+atom_spec "Ag3O" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "414d3d9d-58e4-4567-bde9-78a8df67fb6e",
+    title = "Ag6O2",
+    created = "2025-12-07"
+  }
+  description = "Ag3O from Materials Project (mp-27819)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 5.409801,
+    b = 5.409801,
+    c = 5.043357,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 162,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.000000, 0.310752, 0.221665),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.000000, 0.689248, 0.778335),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.310752, 0.000000, 0.221665),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.310752, 0.310752, 0.778335),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.689248, 0.000000, 0.778335),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.689248, 0.689248, 0.221665),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2243499099999999
+  }
+}

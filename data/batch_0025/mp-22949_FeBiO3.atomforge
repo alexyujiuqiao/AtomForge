@@ -1,0 +1,109 @@
+atom_spec "FeBiO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "00c3a65d-864e-4a58-841f-d9e25c6f1394",
+    title = "Bi2Fe2O6",
+    created = "2025-12-07"
+  }
+  description = "FeBiO3 from Materials Project (mp-22949)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.662175,
+    b = 5.662532,
+    c = 5.818411,
+    alpha = 60.884472,
+    beta = 60.884393,
+    gamma = 60.002222
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.235386, 0.235435, 0.293792),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.735386, 0.735433, 0.793797),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.024620, 0.024628, 0.926132),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.524618, 0.524626, 0.426137),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.283744, 0.808927, 0.623584),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.283755, 0.283722, 0.623598),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.308924, 0.783721, 0.123599),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.783744, 0.308926, 0.123585),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.783757, 0.783722, 0.123598),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.808925, 0.283722, 0.623597),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.8606
+    formation_energy = -1.640832425
+  }
+}

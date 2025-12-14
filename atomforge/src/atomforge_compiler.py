@@ -16,8 +16,18 @@ from datetime import datetime, date
 from dataclasses import asdict
 
 # Add core to path for inheritance
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
-from core.compiler import DSLCompiler
+core_path = os.path.join(os.path.dirname(__file__), '..', '..', 'core')
+if core_path not in sys.path:
+    sys.path.append(core_path)
+
+try:
+    from compiler import DSLCompiler
+except ImportError:
+    # Fallback: create a simple base class if core module not available
+    class DSLCompiler:
+        def __init__(self, parser, transformer):
+            self.parser = parser
+            self.transformer = transformer
 
 # Import pymatgen for materials science output formats
 try:
@@ -29,8 +39,8 @@ except ImportError:
     PYMAGEN_AVAILABLE = False
     print("Warning: pymatgen not available. VASP and CIF output will be limited.")
 
-from .atomforge_ir import AtomForgeProgram
-from .atomforge_parser import AtomForgeParser, AtomForgeTransformer
+from atomforge_ir import AtomForgeProgram
+from atomforge_parser import AtomForgeParser, AtomForgeTransformer
 
 
 class AtomForgeCompiler(DSLCompiler):

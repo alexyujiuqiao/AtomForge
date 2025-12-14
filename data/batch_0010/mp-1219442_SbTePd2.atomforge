@@ -1,0 +1,67 @@
+atom_spec "SbTePd2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e3903528-0185-4ad6-80ee-10b6e9facdd6",
+    title = "Pd2SbTe",
+    created = "2025-12-07"
+  }
+  description = "SbTePd2 from Materials Project (mp-1219442)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.188080,
+    b = 4.188080,
+    c = 5.710710,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.666667, 0.333333, 0.254116),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.666667, 0.333333, 0.745884),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in hexagonal structure",
+      wyckoff = "1e",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5666549900000009
+  }
+}

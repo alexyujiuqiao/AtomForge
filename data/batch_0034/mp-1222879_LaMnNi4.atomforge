@@ -1,0 +1,81 @@
+atom_spec "LaMnNi4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a0b4b274-149f-4482-acef-2dfa5442f8ea",
+    title = "LaMnNi4",
+    created = "2025-12-07"
+  }
+  description = "LaMnNi4 from Materials Project (mp-1222879)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.073582,
+    b = 5.073582,
+    c = 4.008872,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in hexagonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in hexagonal structure",
+      wyckoff = "1e",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.330654, 0.165327, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.834673, 0.165327, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in hexagonal structure",
+      wyckoff = "3k",
+      position = (0.834673, 0.669346, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2180944221551719
+  }
+}

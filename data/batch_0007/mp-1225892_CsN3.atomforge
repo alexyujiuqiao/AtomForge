@@ -1,0 +1,67 @@
+atom_spec "CsN3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "935bb90f-e2db-4da3-a70f-a5e8db6fd1f0",
+    title = "CsN3",
+    created = "2025-12-07"
+  }
+  description = "CsN3 from Materials Project (mp-1225892)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.101117,
+    b = 4.101117,
+    c = 5.741748,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.207323),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.792677),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.79
+    formation_energy = -0.4068283757327586
+  }
+}

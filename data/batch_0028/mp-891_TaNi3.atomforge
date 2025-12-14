@@ -1,0 +1,95 @@
+atom_spec "TaNi3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8c992c9d-5a7f-4bcf-8ed6-87cede98b223",
+    title = "Ni6Ta2",
+    created = "2025-12-07"
+  }
+  description = "TaNi3 from Materials Project (mp-891)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.246301,
+    b = 4.542529,
+    c = 5.108370,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.680539, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.319461, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.158829, 0.249709),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.158829, 0.750291),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.841171, 0.250291),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.841171, 0.749709),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.651017, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.348983, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3576018737499993
+  }
+}

@@ -1,0 +1,123 @@
+atom_spec "LiCaP" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "dc7c5052-11b0-48d5-949a-a160f3ce5984",
+    title = "Ca4Li4P4",
+    created = "2025-12-07"
+  }
+  description = "LiCaP from Materials Project (mp-1211088)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.169802,
+    b = 7.070838,
+    c = 7.875376,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.021846, 0.690369),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.521846, 0.809631),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.478154, 0.190369),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.978154, 0.309631),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.139535, 0.061786),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.639535, 0.438214),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.360465, 0.561786),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.860465, 0.938214),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.266615, 0.390090),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.766615, 0.109910),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.233385, 0.890090),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.733385, 0.609910),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.3865000000000005
+    formation_energy = -1.033032967222222
+  }
+}

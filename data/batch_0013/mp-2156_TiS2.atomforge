@@ -1,0 +1,60 @@
+atom_spec "TiS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4c33d2be-ef94-4dc6-ab22-c5b01cfb7d4e",
+    title = "S2Ti",
+    created = "2025-12-07"
+  }
+  description = "TiS2 from Materials Project (mp-2156)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.416998,
+    b = 3.416998,
+    c = 6.418992,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.220963),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.779037),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.6081458098611112
+  }
+}

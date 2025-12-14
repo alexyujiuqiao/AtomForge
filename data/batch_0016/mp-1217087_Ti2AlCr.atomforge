@@ -1,0 +1,67 @@
+atom_spec "Ti2AlCr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "56736b7d-378a-41af-994e-b2cfbcda5118",
+    title = "AlCrTi2",
+    created = "2025-12-07"
+  }
+  description = "Ti2AlCr from Materials Project (mp-1217087)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.132130,
+    b = 3.132130,
+    c = 6.167992,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.275335),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.724665),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2513338391666675
+  }
+}

@@ -1,0 +1,60 @@
+atom_spec "CoTeSe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3af4c1ea-e3b7-494a-8d87-7f52f760a56a",
+    title = "CoSeTe",
+    created = "2025-12-07"
+  }
+  description = "CoTeSe from Materials Project (mp-1225994)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.634900,
+    b = 3.634900,
+    c = 5.423938,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.981822),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.770102),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.248077),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5342074557812501
+  }
+}

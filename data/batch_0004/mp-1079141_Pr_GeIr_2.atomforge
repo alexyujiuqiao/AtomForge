@@ -1,0 +1,109 @@
+atom_spec "Pr(GeIr)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "51c8b20b-9287-4f8c-bb63-c075eb078c3e",
+    title = "Ge4Ir4Pr2",
+    created = "2025-12-07"
+  }
+  description = "Pr(GeIr)2 from Materials Project (mp-1079141)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.288098,
+    b = 4.288098,
+    c = 10.221753,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.868693),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.131307),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.627796),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.372204),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.253551),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.746449),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7762026040000002
+  }
+}

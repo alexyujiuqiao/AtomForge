@@ -1,0 +1,95 @@
+atom_spec "AgO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "51aa671a-c87f-4094-a565-d858ad29ee93",
+    title = "Ag4O4",
+    created = "2025-12-07"
+  }
+  description = "AgO from Materials Project (mp-1066856)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.027030,
+    b = 4.273092,
+    c = 5.645653,
+    alpha = 90.000000,
+    beta = 94.357648,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 15,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "4d",
+      position = (0.250000, 0.250000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "4d",
+      position = (0.250000, 0.750000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "4d",
+      position = (0.750000, 0.250000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "4d",
+      position = (0.750000, 0.750000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.024841, 0.750000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.975159, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.475159, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.524841, 0.750000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4390433383333327
+  }
+}

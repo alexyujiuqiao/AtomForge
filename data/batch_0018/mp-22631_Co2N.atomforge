@@ -1,0 +1,81 @@
+atom_spec "Co2N" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "cc3f78f4-5d82-475a-a6f2-a33d24859fb4",
+    title = "Co4N2",
+    created = "2025-12-07"
+  }
+  description = "Co2N from Materials Project (mp-22631)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 2.838705,
+    b = 4.292000,
+    c = 4.539061,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 58,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.270638, 0.324654),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.729362, 0.675346),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.229362, 0.824654),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.770638, 0.175346),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0529111633333331
+  }
+}

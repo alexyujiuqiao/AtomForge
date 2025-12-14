@@ -1,0 +1,81 @@
+atom_spec "GeTe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c0d72084-54ea-4949-9b00-dc59a6d55e0d",
+    title = "Ge3Te3",
+    created = "2025-12-07"
+  }
+  description = "GeTe from Materials Project (mp-938)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.230666,
+    b = 4.230666,
+    c = 10.889580,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 160,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.995060),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.661727),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.328393),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.525940),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.192607),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.859273),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.8215000000000003
+    formation_energy = -0.3032218774999995
+  }
+}

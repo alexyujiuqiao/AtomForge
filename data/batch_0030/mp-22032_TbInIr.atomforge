@@ -1,0 +1,102 @@
+atom_spec "TbInIr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2406b7c9-f2cd-44e2-9e48-bbf70218cf76",
+    title = "In3Ir3Tb3",
+    created = "2025-12-07"
+  }
+  description = "TbInIr from Materials Project (mp-22032)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.528088,
+    b = 7.528088,
+    c = 3.989684,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.256318, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.256318, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.743682, 0.743682, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.593598, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.406402, 0.406402, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.593598, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7019566000000003
+  }
+}

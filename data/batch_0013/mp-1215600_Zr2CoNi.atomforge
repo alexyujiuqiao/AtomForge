@@ -1,0 +1,95 @@
+atom_spec "Zr2CoNi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "831c93c8-1783-447f-931d-6efd5512da0f",
+    title = "Co2Ni2Zr4",
+    created = "2025-12-07"
+  }
+  description = "Zr2CoNi from Materials Project (mp-1215600)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.317028,
+    b = 9.895902,
+    c = 4.088452,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 38,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.414440, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.914440, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.582821, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.082821, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.141109, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.641109, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.861630, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.361630, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4016237687500004
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "KLaF4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1e84fd3a-670a-4e4d-97f6-4b200e059d65",
+    title = "F4KLa",
+    created = "2025-12-07"
+  }
+  description = "KLaF4 from Materials Project (mp-1223447)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.117131,
+    b = 4.117131,
+    c = 6.259984,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.500000, 0.285884),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.500000, 0.714116),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.000000, 0.285884),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.000000, 0.714116),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 6.1491
+    formation_energy = -4.028044111333333
+  }
+}

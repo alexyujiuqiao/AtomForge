@@ -1,0 +1,81 @@
+atom_spec "WSeS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3187fe25-ec1f-480f-ba9a-366323898443",
+    title = "S2Se2W2",
+    created = "2025-12-07"
+  }
+  description = "WSeS from Materials Project (mp-1216174)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.257078,
+    b = 3.257597,
+    c = 14.916318,
+    alpha = 90.006603,
+    beta = 90.000000,
+    gamma = 119.994726
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666667, 0.360732),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333296, 0.639268),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666554, 0.142602),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666723, 0.333446, 0.857398),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666749, 0.742314),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666625, 0.333251, 0.257686),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.5081000000000002
+    formation_energy = -1.0028372218229162
+  }
+}

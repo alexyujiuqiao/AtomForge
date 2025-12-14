@@ -1,0 +1,123 @@
+atom_spec "KAlF4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3be90eb9-ffd9-484e-9721-1b041b0493ba",
+    title = "Al2F8K2",
+    created = "2025-12-07"
+  }
+  description = "KAlF4 from Materials Project (mp-2910)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.122449,
+    b = 5.122449,
+    c = 6.288182,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.284667),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.715333),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.284667),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.715333),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.200044, 0.299956, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.299956, 0.799956, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.700044, 0.200044, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.799956, 0.700044, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 6.939500000000001
+    formation_energy = -3.640183066333333
+  }
+}

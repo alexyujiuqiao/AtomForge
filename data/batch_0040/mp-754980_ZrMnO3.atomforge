@@ -1,0 +1,109 @@
+atom_spec "ZrMnO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6bf19767-a0dd-4bd2-8887-c6a11463a89b",
+    title = "Mn2O6Zr2",
+    created = "2025-12-07"
+  }
+  description = "ZrMnO3 from Materials Project (mp-754980)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.496020,
+    b = 5.496104,
+    c = 5.823759,
+    alpha = 90.001201,
+    beta = 118.154532,
+    gamma = 119.999058
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.281623, 0.640824, 0.922420),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.718326, 0.359147, 0.077495),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.187070, 0.232444, 0.740169),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.214473, 0.446915, 0.259853),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.492299, 0.045371, 0.259850),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.507716, 0.954638, 0.740178),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.785545, 0.553093, 0.740174),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.812946, 0.767567, 0.259856),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.289816, 0.144914, 0.434718),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.710186, 0.855088, 0.565288),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.8985
+    formation_energy = -3.053943192586206
+  }
+}

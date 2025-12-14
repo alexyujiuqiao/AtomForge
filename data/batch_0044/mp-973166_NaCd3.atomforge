@@ -1,0 +1,95 @@
+atom_spec "NaCd3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6f6913d6-827c-4b88-a82b-692317eaf084",
+    title = "Cd6Na2",
+    created = "2025-12-07"
+  }
+  description = "NaCd3 from Materials Project (mp-973166)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 6.477990,
+    b = 6.477990,
+    c = 5.263055,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.165464, 0.330928, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.165464, 0.834536, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.330928, 0.165464, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.669072, 0.834536, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.834536, 0.165464, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.834536, 0.669072, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.060070922887931
+  }
+}

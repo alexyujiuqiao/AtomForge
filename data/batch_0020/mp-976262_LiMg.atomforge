@@ -1,0 +1,123 @@
+atom_spec "LiMg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3899f977-78cd-4031-8928-1328e42c54e5",
+    title = "Li6Mg6",
+    created = "2025-12-07"
+  }
+  description = "LiMg from Materials Project (mp-976262)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 10.873188,
+    b = 3.329806,
+    c = 7.189935,
+    alpha = 90.000000,
+    beta = 108.959803,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.157202, 0.000000, 0.849364),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.342798, 0.500000, 0.150636),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.657202, 0.500000, 0.849364),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.842798, 0.000000, 0.150636),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "2d",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "2d",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.177742, 0.000000, 0.317106),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.322258, 0.500000, 0.682894),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.677742, 0.500000, 0.317106),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.822258, 0.000000, 0.682894),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.031623505
+  }
+}

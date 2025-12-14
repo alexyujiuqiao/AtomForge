@@ -1,0 +1,95 @@
+atom_spec "BaAg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1bfe5fea-a315-424d-9e93-1a5a09284641",
+    title = "Ag4Ba4",
+    created = "2025-12-07"
+  }
+  description = "BaAg from Materials Project (mp-11840)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 5.021482,
+    b = 6.746621,
+    c = 8.794666,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.616980, 0.033815),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.883020, 0.533815),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.116980, 0.466185),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.383020, 0.966185),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.133051, 0.180804),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.366949, 0.680804),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.633051, 0.319196),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.866949, 0.819196),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2811887170833334
+  }
+}

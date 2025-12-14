@@ -1,0 +1,102 @@
+atom_spec "MoS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8a493d22-f5d4-4b1c-b7b9-1b1065700a32",
+    title = "Mo3S6",
+    created = "2025-12-07"
+  }
+  description = "MoS2 from Materials Project (mp-1434)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.190644,
+    b = 3.190644,
+    c = 21.318200,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 160,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mo {
+      description = "Mo site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.000223),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.666890),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.333556),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.593465),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.740312),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.260132),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.406979),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.073645),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.926798),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.5775999999999994
+    formation_energy = -1.2013580954166667
+  }
+}

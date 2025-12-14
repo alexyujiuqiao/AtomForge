@@ -1,0 +1,81 @@
+atom_spec "CeCdIn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6b32029a-070b-4b41-8d40-18a7cce8dfe7",
+    title = "Cd2Ce2In2",
+    created = "2025-12-07"
+  }
+  description = "CeCdIn from Materials Project (mp-1227074)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.999746,
+    b = 4.999746,
+    c = 7.349321,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.520636),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.479364),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.259926),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.740074),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.958516),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.041484),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3012269099999993
+  }
+}

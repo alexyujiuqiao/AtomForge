@@ -1,0 +1,95 @@
+atom_spec "TlSbSe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5a6b4da9-3fc5-4dca-9544-da1529422aeb",
+    title = "Sb2Se4Tl2",
+    created = "2025-12-07"
+  }
+  description = "TlSbSe2 from Materials Project (mp-1216592)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.157682,
+    b = 14.489698,
+    c = 4.167138,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 38,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Sb {
+      description = "Sb site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.848818, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.348818, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.381026, 0.000000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.881026, 0.000000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.674162, 0.500000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.174162, 0.500000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.095995, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.595995, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.3181000000000002
+    formation_energy = -0.5316842420052081
+  }
+}

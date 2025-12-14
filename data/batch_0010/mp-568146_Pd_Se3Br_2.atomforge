@@ -1,0 +1,102 @@
+atom_spec "Pd(Se3Br)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e7177565-2be5-413a-bddb-559345cfbbe2",
+    title = "Br2PdSe6",
+    created = "2025-12-07"
+  }
+  description = "Pd(Se3Br)2 from Materials Project (mp-568146)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.845219,
+    b = 7.806179,
+    c = 8.199988,
+    alpha = 65.494867,
+    beta = 85.483029,
+    gamma = 79.305414
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.379633, 0.840925, 0.864158),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.620367, 0.159075, 0.135842),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.051279, 0.517384, 0.755315),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.147498, 0.729301, 0.280654),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.163599, 0.217722, 0.492064),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.836401, 0.782278, 0.507936),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.852502, 0.270699, 0.719346),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.948721, 0.482616, 0.244685),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1012
+    formation_energy = -0.5727001998958328
+  }
+}

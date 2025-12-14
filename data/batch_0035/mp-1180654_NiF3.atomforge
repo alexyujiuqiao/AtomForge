@@ -1,0 +1,95 @@
+atom_spec "NiF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6f29430c-15d1-4232-8d1e-4c1a824feb30",
+    title = "F6Ni2",
+    created = "2025-12-07"
+  }
+  description = "NiF3 from Materials Project (mp-1180654)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.217645,
+    b = 5.289677,
+    c = 7.675684,
+    alpha = 107.769772,
+    beta = 98.928976,
+    gamma = 90.357409
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.054162, 0.393979, 0.131981),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.228157, 0.515038, 0.532937),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.450328, 0.104600, 0.864563),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.549672, 0.895400, 0.135437),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.771843, 0.484962, 0.467063),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.945838, 0.606021, 0.868019),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1e",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.7607000000000002
+    formation_energy = -1.7564102431250008
+  }
+}

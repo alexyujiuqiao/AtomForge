@@ -1,0 +1,109 @@
+atom_spec "Na2FeO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "dd34e59c-8a99-4678-9819-e03c7b6545c2",
+    title = "Fe2Na4O4",
+    created = "2025-12-07"
+  }
+  description = "Na2FeO2 from Materials Project (mp-1176388)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.040056,
+    b = 5.812842,
+    c = 8.711657,
+    alpha = 75.419341,
+    beta = 79.951942,
+    gamma = 74.842411
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000002, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.309127, 0.036239, 0.345445),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.309137, 0.536240, 0.845424),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.690863, 0.463760, 0.154576),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.690873, 0.963761, 0.654555),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.366232, 0.700672, 0.566892),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.366240, 0.200647, 0.066900),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.633759, 0.799353, 0.933100),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.633767, 0.299328, 0.433108),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.5425846496206894
+  }
+}

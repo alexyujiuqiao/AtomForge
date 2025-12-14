@@ -1,0 +1,95 @@
+atom_spec "Ce2(PdRh)3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ff6e627c-c38a-448a-b8c2-2126f5ce3bdb",
+    title = "Ce2Pd3Rh3",
+    created = "2025-12-07"
+  }
+  description = "Ce2(PdRh)3 from Materials Project (mp-1226828)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.117400,
+    b = 4.210981,
+    c = 8.100172,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 47,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2q",
+      position = (0.000000, 0.000000, 0.244708),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2q",
+      position = (0.000000, 0.000000, 0.755292),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "1g",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "2t",
+      position = (0.500000, 0.500000, 0.250256),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "2t",
+      position = (0.500000, 0.500000, 0.749744),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "1e",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7095571337499997
+  }
+}

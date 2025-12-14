@@ -1,0 +1,81 @@
+atom_spec "PI2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0ebcf3bf-76e2-424a-8c55-a60f0ffc0d94",
+    title = "I4P2",
+    created = "2025-12-07"
+  }
+  description = "PI2 from Materials Project (mp-29443)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.204303,
+    b = 7.566276,
+    c = 7.739944,
+    alpha = 80.203805,
+    beta = 77.945224,
+    gamma = 73.530764
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site I {
+      description = "I site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.201430, 0.192245, 0.289992),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.443106, 0.672068, 0.220890),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.556894, 0.327932, 0.779110),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.798570, 0.807755, 0.710008),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.416060, 0.032941, 0.872097),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.583940, 0.967059, 0.127903),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.0584
+    formation_energy = -0.3141306561111114
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "ReN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "94f77f30-4106-45ed-bc1b-32c46ca5bbd3",
+    title = "N4Re2",
+    created = "2025-12-07"
+  }
+  description = "ReN2 from Materials Project (mp-1019077)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.237094,
+    b = 2.892928,
+    c = 5.108428,
+    alpha = 90.000000,
+    beta = 113.071849,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.110470, 0.250000, 0.829345),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.345434, 0.250000, 0.704505),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.654566, 0.750000, 0.295495),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.889530, 0.750000, 0.170655),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.294039, 0.250000, 0.283716),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.705961, 0.750000, 0.716284),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0350617666666674
+  }
+}

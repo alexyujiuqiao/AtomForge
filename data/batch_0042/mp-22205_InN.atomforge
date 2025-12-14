@@ -1,0 +1,67 @@
+atom_spec "InN" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e12d4445-3655-4563-bb50-53b9cc0290ed",
+    title = "In2N2",
+    created = "2025-12-07"
+  }
+  description = "InN from Materials Project (mp-22205)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.583882,
+    b = 3.583882,
+    c = 5.790932,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.000359),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.500359),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.379641),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.879641),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.4777000000000004
+    formation_energy = -0.0788462399999998
+  }
+}

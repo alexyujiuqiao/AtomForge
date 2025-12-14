@@ -1,0 +1,88 @@
+atom_spec "Ca(ErTe2)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "735ff435-809a-4b82-8a69-5b4cc80b0770",
+    title = "CaEr2Te4",
+    created = "2025-12-07"
+  }
+  description = "Ca(ErTe2)2 from Materials Project (mp-1227387)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 7.478593,
+    b = 4.393346,
+    c = 7.763897,
+    alpha = 90.000000,
+    beta = 107.628736,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 10,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "1g",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in monoclinic structure",
+      wyckoff = "1e",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.255015, 0.000000, 0.764094),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.744985, 0.000000, 0.235906),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.239596, 0.500000, 0.243026),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.760404, 0.500000, 0.756974),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.617
+    formation_energy = -1.692992391428572
+  }
+}

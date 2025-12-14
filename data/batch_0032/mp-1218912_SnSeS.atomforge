@@ -1,0 +1,60 @@
+atom_spec "SnSeS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "823d938f-7a2a-4749-9260-e37d558e1037",
+    title = "SSeSn",
+    created = "2025-12-07"
+  }
+  description = "SnSeS from Materials Project (mp-1218912)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.794489,
+    b = 3.794489,
+    c = 6.431902,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.235132),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.756997),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.007872),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.9221999999999996
+    formation_energy = -0.66605512015625
+  }
+}

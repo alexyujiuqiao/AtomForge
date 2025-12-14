@@ -1,0 +1,81 @@
+atom_spec "MgF2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "382c7443-6f12-4052-9d2b-b2085a5f0a29",
+    title = "F4Mg2",
+    created = "2025-12-07"
+  }
+  description = "MgF2 from Materials Project (mp-1072956)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.092330,
+    b = 4.643975,
+    c = 4.734953,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 58,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.285832, 0.320184),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.714168, 0.679816),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.214168, 0.820184),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.785832, 0.179816),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 6.8692
+    formation_energy = -3.8269408116666654
+  }
+}

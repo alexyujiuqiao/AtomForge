@@ -1,0 +1,95 @@
+atom_spec "NdInCo2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8b21c350-4c35-4873-99b9-0134b0172963",
+    title = "Co4In2Nd2",
+    created = "2025-12-07"
+  }
+  description = "NdInCo2 from Materials Project (mp-1078606)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.074597,
+    b = 5.097596,
+    c = 7.232439,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 51,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.091317),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.908683),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.250000, 0.341224),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.750000, 0.658776),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.716940),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.283060),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1957564850000004
+  }
+}

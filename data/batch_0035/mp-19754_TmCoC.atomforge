@@ -1,0 +1,81 @@
+atom_spec "TmCoC" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9b63fb66-9897-4042-b3aa-8884f4386c0b",
+    title = "C2Co2Tm2",
+    created = "2025-12-07"
+  }
+  description = "TmCoC from Materials Project (mp-19754)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.601206,
+    b = 3.601206,
+    c = 6.696925,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 131,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in tetragonal structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in tetragonal structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3525996438888891
+  }
+}

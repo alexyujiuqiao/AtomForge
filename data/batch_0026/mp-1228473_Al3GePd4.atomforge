@@ -1,0 +1,95 @@
+atom_spec "Al3GePd4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "29f7b3ee-8e87-4b5a-8c41-c2ab8e9080fc",
+    title = "Al3GePd4",
+    created = "2025-12-07"
+  }
+  description = "Al3GePd4 from Materials Project (mp-1228473)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.929677,
+    b = 4.930583,
+    c = 4.930714,
+    alpha = 90.223665,
+    beta = 90.155335,
+    gamma = 90.210117
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.151629, 0.157625, 0.842355),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.657596, 0.342517, 0.151502),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.842610, 0.651729, 0.657870),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.345730, 0.845751, 0.345921),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.147042, 0.354625, 0.352050),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.352080, 0.647120, 0.854768),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.648534, 0.148437, 0.648151),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.854779, 0.852196, 0.147382),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7834801931249995
+  }
+}

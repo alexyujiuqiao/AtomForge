@@ -1,0 +1,95 @@
+atom_spec "ReIr3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "36acffdb-5192-4018-927f-200b0d0b683f",
+    title = "Ir6Re2",
+    created = "2025-12-07"
+  }
+  description = "ReIr3 from Materials Project (mp-867792)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.539355,
+    b = 5.539355,
+    c = 4.398325,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.167426, 0.334852, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.167426, 0.832574, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.334852, 0.167426, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.665148, 0.832574, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.832574, 0.167426, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.832574, 0.665148, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1522747200000012
+  }
+}

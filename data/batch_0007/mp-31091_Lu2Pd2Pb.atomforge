@@ -1,0 +1,109 @@
+atom_spec "Lu2Pd2Pb" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "618014bb-01c6-4b9d-9551-ee26d1414ddf",
+    title = "Lu4Pb2Pd4",
+    created = "2025-12-07"
+  }
+  description = "Lu2Pd2Pb from Materials Project (mp-31091)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.883718,
+    b = 7.883718,
+    c = 3.507999,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Lu {
+      description = "Lu site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.167340, 0.667340, 0.500000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.332660, 0.167340, 0.500000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.667340, 0.832660, 0.500000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.832660, 0.332660, 0.500000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.127423, 0.372577, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.372577, 0.872577, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.627423, 0.127423, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.872577, 0.627423, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8422750449999995
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "Zn2GaAgSe4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "901fde76-1179-412c-a635-60938c147285",
+    title = "AgGaSe4Zn2",
+    created = "2025-12-07"
+  }
+  description = "Zn2GaAgSe4 from Materials Project (mp-1215584)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.085028,
+    b = 6.784965,
+    c = 7.198591,
+    alpha = 89.840040,
+    beta = 89.999083,
+    gamma = 89.999743
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999999, 0.496052, 0.337043),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500003, 0.014493, 0.157899),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.499998, 0.866885, 0.835929),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500007, 0.365247, 0.152002),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999996, 0.888060, 0.331910),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999999, 0.373725, 0.678164),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000004, 0.014452, 0.673495),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.499993, 0.485086, 0.833558),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.084
+    formation_energy = -0.7690165566927085
+  }
+}

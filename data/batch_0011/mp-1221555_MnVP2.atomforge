@@ -1,0 +1,95 @@
+atom_spec "MnVP2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "361fc625-6d5c-496d-ac7a-949c0e690365",
+    title = "Mn2P4V2",
+    created = "2025-12-07"
+  }
+  description = "MnVP2 from Materials Project (mp-1221555)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.063636,
+    b = 5.329465,
+    c = 6.051942,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 26,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mn {
+      description = "Mn site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.490729, 0.938282),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.990729, 0.061718),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.187158, 0.826314),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.687158, 0.173686),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.316592, 0.300116),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.816592, 0.699884),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.005521, 0.451459),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.505521, 0.548541),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6816040698994259
+  }
+}

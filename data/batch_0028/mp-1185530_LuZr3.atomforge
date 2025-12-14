@@ -1,0 +1,95 @@
+atom_spec "LuZr3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6a4a31f8-80d0-4c3c-bdb6-11f9a97f3525",
+    title = "Lu2Zr6",
+    created = "2025-12-07"
+  }
+  description = "LuZr3 from Materials Project (mp-1185530)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 6.603109,
+    b = 6.603109,
+    c = 5.233467,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.163850, 0.327699, 0.250000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.163850, 0.836151, 0.250000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.327699, 0.163850, 0.750000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.672301, 0.836151, 0.250000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.836151, 0.163850, 0.750000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.836151, 0.672301, 0.750000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0080886437499989
+  }
+}

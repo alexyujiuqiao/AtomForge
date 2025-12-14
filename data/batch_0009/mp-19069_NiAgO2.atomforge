@@ -1,0 +1,67 @@
+atom_spec "NiAgO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "702ec856-4e2b-4714-9741-62745eed4ee8",
+    title = "AgNiO2",
+    created = "2025-12-07"
+  }
+  description = "NiAgO2 from Materials Project (mp-19069)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.002593,
+    b = 3.002653,
+    c = 6.398791,
+    alpha = 90.001389,
+    beta = 103.569052,
+    gamma = 119.998563
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000002, 0.000001, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999993, 0.499996, 0.499996),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.223824, 0.111905, 0.335738),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.776182, 0.888098, 0.664265),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8017232366666658
+  }
+}

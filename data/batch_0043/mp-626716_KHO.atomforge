@@ -1,0 +1,81 @@
+atom_spec "KHO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c3e8eb6c-afe2-45a2-9431-7bf72402c298",
+    title = "H2K2O2",
+    created = "2025-12-07"
+  }
+  description = "KHO from Materials Project (mp-626716)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.054022,
+    b = 3.983887,
+    c = 5.753698,
+    alpha = 90.000000,
+    beta = 104.882994,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 4,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.430444, 0.105791, 0.909456),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.569556, 0.605791, 0.090544),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.172172, 0.241835, 0.288142),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.827828, 0.741835, 0.711858),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.324171, 0.252951, 0.774788),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.675829, 0.752951, 0.225212),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.6246
+    formation_energy = -1.5505645176666665
+  }
+}

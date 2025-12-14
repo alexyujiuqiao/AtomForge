@@ -1,0 +1,95 @@
+atom_spec "PrCu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "73eff4ce-a25f-410a-a506-616d3b1f2772",
+    title = "Cu4Pr4",
+    created = "2025-12-07"
+  }
+  description = "PrCu from Materials Project (mp-1079091)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.440266,
+    b = 6.142812,
+    c = 7.096502,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.611111, 0.036434),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.888889, 0.536434),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.111111, 0.463566),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.388889, 0.963566),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.141278, 0.172750),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.358722, 0.672750),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.641278, 0.327250),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    },
+    site Pr {
+      description = "Pr site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.858722, 0.827250),
+      frame = fractional,
+      species = ({ element = "Pr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1517641674999996
+  }
+}

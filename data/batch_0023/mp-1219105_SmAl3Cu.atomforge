@@ -1,0 +1,109 @@
+atom_spec "SmAl3Cu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "482c3a78-af63-439f-81ff-09d25d9164f9",
+    title = "Al6Cu2Sm2",
+    created = "2025-12-07"
+  }
+  description = "SmAl3Cu from Materials Project (mp-1219105)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.186774,
+    b = 4.186774,
+    c = 10.616622,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 107,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.400630),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.900630),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.241930),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.741930),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.241930),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in tetragonal structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.741930),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.621963),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.121963),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.993545),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.493545),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4656160249999999
+  }
+}

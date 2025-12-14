@@ -1,0 +1,95 @@
+atom_spec "MnCoSi2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2fe5dffa-11b6-4fff-9d3d-feaff3dda1db",
+    title = "Co2Mn2Si4",
+    created = "2025-12-07"
+  }
+  description = "MnCoSi2 from Materials Project (mp-1221669)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.494141,
+    b = 4.437394,
+    c = 4.505066,
+    alpha = 90.000000,
+    beta = 90.606282,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 4,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.389913, 0.135763, 0.363559),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.610087, 0.635763, 0.636441),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.106661, 0.362189, 0.871248),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.893339, 0.862189, 0.128752),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.088084, 0.842541, 0.649080),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.411694, 0.659507, 0.157435),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.588306, 0.159507, 0.842565),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.911916, 0.342541, 0.350920),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4725732169827594
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "Cd3Pd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "cfd5cf25-a3c6-4e82-b2ed-ef6369367b51",
+    title = "Cd6Pd2",
+    created = "2025-12-07"
+  }
+  description = "Cd3Pd from Materials Project (mp-1183648)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 6.009866,
+    b = 6.009866,
+    c = 4.949334,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.170808, 0.341616, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.170808, 0.829192, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.341616, 0.170808, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.658384, 0.829192, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.829192, 0.170808, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.829192, 0.658384, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2182805887499999
+  }
+}

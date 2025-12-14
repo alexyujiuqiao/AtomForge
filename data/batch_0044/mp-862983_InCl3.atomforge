@@ -1,0 +1,95 @@
+atom_spec "InCl3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e57e358d-f904-4891-8ae2-8b38c7e4dad9",
+    title = "Cl6In2",
+    created = "2025-12-07"
+  }
+  description = "InCl3 from Materials Project (mp-862983)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 9.644962,
+    b = 9.644962,
+    c = 3.434286,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.218016, 0.436032, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.218016, 0.781984, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.436032, 0.218016, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.563968, 0.781984, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.781984, 0.218016, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.781984, 0.563968, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.0308
+    formation_energy = -1.4415949400000003
+  }
+}

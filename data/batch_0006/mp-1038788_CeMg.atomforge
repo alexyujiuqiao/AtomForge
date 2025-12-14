@@ -1,0 +1,67 @@
+atom_spec "CeMg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9384afbf-bd2e-4c54-bb14-3134cef6ec6f",
+    title = "Ce2Mg2",
+    created = "2025-12-07"
+  }
+  description = "CeMg from Materials Project (mp-1038788)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.102453,
+    b = 5.134224,
+    c = 6.262851,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.438642),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.561358),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.079338),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.920662),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0212250375000002
+  }
+}

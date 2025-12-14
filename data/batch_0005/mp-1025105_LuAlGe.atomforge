@@ -1,0 +1,123 @@
+atom_spec "LuAlGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d0b7a025-bbbe-44e4-88d4-3176e61011f9",
+    title = "Al4Ge4Lu4",
+    created = "2025-12-07"
+  }
+  description = "LuAlGe from Materials Project (mp-1025105)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.036762,
+    b = 10.236594,
+    c = 5.672884,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.392130, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.607870, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.107870, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.892130, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.309691, 0.250000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.690309, 0.750000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.190309, 0.750000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.809691, 0.250000),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6007275966666666
+  }
+}

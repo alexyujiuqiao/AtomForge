@@ -1,0 +1,123 @@
+atom_spec "CoPSe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "395f2d64-2933-4718-82e9-2106b39a774e",
+    title = "Co4P4Se4",
+    created = "2025-12-07"
+  }
+  description = "CoPSe from Materials Project (mp-1226014)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.608048,
+    b = 5.608048,
+    c = 5.608048,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in cubic structure",
+      wyckoff = "4a",
+      position = (0.011175, 0.488825, 0.511175),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in cubic structure",
+      wyckoff = "4a",
+      position = (0.488825, 0.511175, 0.011175),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in cubic structure",
+      wyckoff = "4a",
+      position = (0.511175, 0.011175, 0.488825),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in cubic structure",
+      wyckoff = "4a",
+      position = (0.988825, 0.988825, 0.988825),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in cubic structure",
+      wyckoff = "4a",
+      position = (0.120382, 0.620382, 0.879618),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in cubic structure",
+      wyckoff = "4a",
+      position = (0.379618, 0.379618, 0.379618),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in cubic structure",
+      wyckoff = "4a",
+      position = (0.620382, 0.879618, 0.120382),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in cubic structure",
+      wyckoff = "4a",
+      position = (0.879618, 0.120382, 0.620382),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in cubic structure",
+      wyckoff = "4a",
+      position = (0.119854, 0.880146, 0.380146),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in cubic structure",
+      wyckoff = "4a",
+      position = (0.380146, 0.119854, 0.880146),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in cubic structure",
+      wyckoff = "4a",
+      position = (0.619854, 0.619854, 0.619854),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in cubic structure",
+      wyckoff = "4a",
+      position = (0.880146, 0.380146, 0.119854),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.8731999999999998
+    formation_energy = -0.5883591143923622
+  }
+}

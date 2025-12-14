@@ -1,0 +1,95 @@
+atom_spec "SrCa3Ag4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "99f6e747-cb5c-45ce-b9d5-96dd8a9e7bea",
+    title = "Ag4Ca3Sr",
+    created = "2025-12-07"
+  }
+  description = "SrCa3Ag4 from Materials Project (mp-1218380)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.131155,
+    b = 4.822903,
+    c = 11.498535,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 25,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.432101),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.500000, 0.582358),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.924884),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.067031),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.132146),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.500000, 0.860862),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.645079),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.355539),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3177779591666665
+  }
+}

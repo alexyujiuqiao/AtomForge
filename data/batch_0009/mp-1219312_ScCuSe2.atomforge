@@ -1,0 +1,67 @@
+atom_spec "ScCuSe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a3a92c0d-3012-4712-878e-10130df6641a",
+    title = "CuScSe2",
+    created = "2025-12-07"
+  }
+  description = "ScCuSe2 from Materials Project (mp-1219312)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.944913,
+    b = 3.944913,
+    c = 6.292052,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.622713),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.013129),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.753325),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.238833),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.6783000000000001
+    formation_energy = -1.331592357421874
+  }
+}

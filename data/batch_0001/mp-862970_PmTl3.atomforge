@@ -1,0 +1,67 @@
+atom_spec "PmTl3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6ff1c757-e12c-4aa3-bf27-1ba7c2530992",
+    title = "PmTl3",
+    created = "2025-12-07"
+  }
+  description = "PmTl3 from Materials Project (mp-862970)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.825488,
+    b = 4.825488,
+    c = 4.825488,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pm {
+      description = "Pm site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in cubic structure",
+      wyckoff = "3c",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in cubic structure",
+      wyckoff = "3c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3087818118750003
+  }
+}

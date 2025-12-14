@@ -1,0 +1,123 @@
+atom_spec "Hf2Si" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d466e6b4-ee57-41b5-83db-e750d9d3c04e",
+    title = "Hf8Si4",
+    created = "2025-12-07"
+  }
+  description = "Hf2Si from Materials Project (mp-9938)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 6.576962,
+    b = 6.576962,
+    c = 5.200230,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 140,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.157025, 0.342975, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.157025, 0.657025, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.342975, 0.157025, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.342975, 0.842975, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.657025, 0.157025, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.657025, 0.842975, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.842975, 0.342975, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.842975, 0.657025, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7200595366666676
+  }
+}

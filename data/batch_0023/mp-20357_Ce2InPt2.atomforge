@@ -1,0 +1,109 @@
+atom_spec "Ce2InPt2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b6c69e8d-6291-404d-a866-25479edcec35",
+    title = "Ce4In2Pt4",
+    created = "2025-12-07"
+  }
+  description = "Ce2InPt2 from Materials Project (mp-20357)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.855676,
+    b = 7.855676,
+    c = 3.763583,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.172516, 0.327484, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.327484, 0.827484, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.672516, 0.172516, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.827484, 0.672516, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.131017, 0.631017, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.368983, 0.131017, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.631017, 0.868983, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.868983, 0.368983, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.0187377780000006
+  }
+}

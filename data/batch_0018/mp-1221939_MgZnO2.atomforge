@@ -1,0 +1,123 @@
+atom_spec "MgZnO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "776245c5-7a1b-42b7-a567-8c4601af52f1",
+    title = "Mg3O6Zn3",
+    created = "2025-12-07"
+  }
+  description = "MgZnO2 from Materials Project (mp-1221939)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.043628,
+    b = 3.043628,
+    c = 14.839410,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 166,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.666667),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.333333),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.252913),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.747087),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.413754),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.919580),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.080420),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.586246),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.333333, 0.666667, 0.166667),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.666667, 0.333333, 0.833333),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 9.999999999976694e-05
+    formation_energy = -2.3519159775
+  }
+}

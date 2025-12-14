@@ -1,0 +1,109 @@
+atom_spec "CsSrI3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2607a42e-9abf-41cd-a6a2-11b022958398",
+    title = "Cs2I6Sr2",
+    created = "2025-12-07"
+  }
+  description = "CsSrI3 from Materials Project (mp-998417)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 9.154050,
+    b = 9.152302,
+    c = 6.464809,
+    alpha = 90.000000,
+    beta = 90.130087,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 8,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.498242, 0.500000, 0.999585),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.998242, 0.000000, 0.999585),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.012246, 0.500000, 0.016780),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.512246, 0.000000, 0.016780),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.249257, 0.251632, 0.513510),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.249257, 0.748368, 0.513510),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.749258, 0.248368, 0.513510),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.749258, 0.751632, 0.513510),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.494269, 0.000000, 0.517708),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.994269, 0.500000, 0.517708),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.099600000000001
+    formation_energy = -1.86235658991954
+  }
+}

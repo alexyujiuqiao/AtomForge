@@ -1,0 +1,102 @@
+atom_spec "HfReSi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f6fbb2b5-0f9a-46d7-975b-aafb5458c4ba",
+    title = "Hf3Re3Si3",
+    created = "2025-12-07"
+  }
+  description = "HfReSi from Materials Project (mp-1079831)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 6.966764,
+    b = 6.966764,
+    c = 3.405148,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.595402, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.404598, 0.404598, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.595402, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.255986, 0.000000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.255986, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.744014, 0.744014, 0.000000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.76663340611111
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "Re3Tc" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e709eda0-da5b-432a-a046-7fa1a73eeb07",
+    title = "Re6Tc2",
+    created = "2025-12-07"
+  }
+  description = "Re3Tc from Materials Project (mp-974411)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.550140,
+    b = 5.550140,
+    c = 4.484377,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.166062, 0.332124, 0.250000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.166062, 0.833938, 0.250000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.332124, 0.166062, 0.750000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.667876, 0.833938, 0.250000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.833938, 0.166062, 0.750000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.833938, 0.667876, 0.750000),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Tc {
+      description = "Tc site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Tc", occupancy = 1.000000 })
+    },
+    site Tc {
+      description = "Tc site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Tc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.000708158750001
+  }
+}

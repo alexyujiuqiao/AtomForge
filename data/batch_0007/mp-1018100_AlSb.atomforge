@@ -1,0 +1,67 @@
+atom_spec "AlSb" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6c7bed67-4dad-4999-91cf-3bacd0397034",
+    title = "Al2Sb2",
+    created = "2025-12-07"
+  }
+  description = "AlSb from Materials Project (mp-1018100)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.400424,
+    b = 4.400424,
+    c = 7.220631,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.999921),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.499921),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.375179),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.875179),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.9120999999999996
+    formation_energy = -0.2472039824999998
+  }
+}

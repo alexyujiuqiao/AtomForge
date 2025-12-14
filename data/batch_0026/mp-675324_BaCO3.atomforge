@@ -1,0 +1,109 @@
+atom_spec "BaCO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f2f6ccd0-2ecd-47ac-9c5e-b1fb5960e5d9",
+    title = "Ba2C2O6",
+    created = "2025-12-07"
+  }
+  description = "BaCO3 from Materials Project (mp-675324)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.486155,
+    b = 5.466677,
+    c = 7.060908,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 34,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.489199, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.989199, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.499938, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.999938, 0.000000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.262088, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.762088, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.135299, 0.628772, 0.633745),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.364701, 0.128772, 0.133745),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.635299, 0.128772, 0.866255),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.864701, 0.628772, 0.366255),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.0966000000000005
+    formation_energy = -2.607796669999999
+  }
+}

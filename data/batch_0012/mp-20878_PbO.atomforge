@@ -1,0 +1,95 @@
+atom_spec "PbO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "21af50fd-dcd6-453a-ae09-e927b5405eca",
+    title = "O4Pb4",
+    created = "2025-12-07"
+  }
+  description = "PbO from Materials Project (mp-20878)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.816821,
+    b = 5.728360,
+    c = 6.147622,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 57,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.250000, 0.093922, 0.867916),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.250000, 0.593922, 0.132084),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.750000, 0.406078, 0.867916),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.750000, 0.906078, 0.132084),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.250000, 0.482028, 0.778805),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.250000, 0.982028, 0.221195),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.750000, 0.017972, 0.778805),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.750000, 0.517972, 0.221195),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.2292000000000005
+    formation_energy = -1.4501138200000003
+  }
+}

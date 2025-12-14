@@ -1,0 +1,95 @@
+atom_spec "InBi3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "922c613f-08a1-463e-a2de-00b0d750f8a7",
+    title = "Bi6In2",
+    created = "2025-12-07"
+  }
+  description = "InBi3 from Materials Project (mp-1223901)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.303110,
+    b = 8.977194,
+    c = 8.906526,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 21,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in orthorhombic structure",
+      wyckoff = "2d",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in orthorhombic structure",
+      wyckoff = "2d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in orthorhombic structure",
+      wyckoff = "4k",
+      position = (0.250000, 0.250000, 0.753477),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in orthorhombic structure",
+      wyckoff = "4k",
+      position = (0.250000, 0.750000, 0.246523),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in orthorhombic structure",
+      wyckoff = "4k",
+      position = (0.750000, 0.250000, 0.246523),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in orthorhombic structure",
+      wyckoff = "4k",
+      position = (0.750000, 0.750000, 0.753477),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0661948974999995
+  }
+}

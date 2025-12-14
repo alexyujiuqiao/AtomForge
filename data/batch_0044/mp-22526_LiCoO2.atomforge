@@ -1,0 +1,123 @@
+atom_spec "LiCoO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d9567474-b5b4-4146-800a-714570fa1335",
+    title = "Co3Li3O6",
+    created = "2025-12-07"
+  }
+  description = "LiCoO2 from Materials Project (mp-22526)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 2.842898,
+    b = 2.842898,
+    c = 14.145615,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 166,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.333333, 0.666667, 0.166667),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.666667, 0.333333, 0.833333),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.666667),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.333333),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.239587),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.760413),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.427080),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.906254),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.093746),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.572920),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.7334999999999998
+    formation_energy = -1.7519253445833334
+  }
+}

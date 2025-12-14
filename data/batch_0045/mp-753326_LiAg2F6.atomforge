@@ -1,0 +1,102 @@
+atom_spec "LiAg2F6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4bdb3639-14c0-48b5-8262-b19b47fa9a7d",
+    title = "Ag2F6Li",
+    created = "2025-12-07"
+  }
+  description = "LiAg2F6 from Materials Project (mp-753326)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 5.474397,
+    b = 5.474397,
+    c = 4.817754,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 150,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.256952),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.743048),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "3e",
+      position = (0.000000, 0.657151, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "3e",
+      position = (0.342849, 0.342849, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "3e",
+      position = (0.657151, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.354444, 0.500000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "3f",
+      position = (0.354444, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in trigonal structure",
+      wyckoff = "3f",
+      position = (0.645556, 0.645556, 0.500000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.7535387968518517
+  }
+}

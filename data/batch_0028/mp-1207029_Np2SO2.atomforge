@@ -1,0 +1,74 @@
+atom_spec "Np2SO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "86b490d6-e200-4ef3-b674-b205ffb4d59c",
+    title = "Np2O2S",
+    created = "2025-12-07"
+  }
+  description = "Np2SO2 from Materials Project (mp-1207029)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.744186,
+    b = 3.744186,
+    c = 6.363116,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Np {
+      description = "Np site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.270394),
+      frame = fractional,
+      species = ({ element = "Np", occupancy = 1.000000 })
+    },
+    site Np {
+      description = "Np site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.729606),
+      frame = fractional,
+      species = ({ element = "Np", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.631441),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.368559),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -2.815029302125001
+  }
+}

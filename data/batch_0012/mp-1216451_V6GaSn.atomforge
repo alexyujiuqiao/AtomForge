@@ -1,0 +1,95 @@
+atom_spec "V6GaSn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "952ea9e9-6168-4b82-a31b-736295cc7ade",
+    title = "GaSnV6",
+    created = "2025-12-07"
+  }
+  description = "V6GaSn from Materials Project (mp-1216451)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.882871,
+    b = 4.882871,
+    c = 4.882871,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 200,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in cubic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in cubic structure",
+      wyckoff = "6f",
+      position = (0.000000, 0.500000, 0.258800),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in cubic structure",
+      wyckoff = "6f",
+      position = (0.000000, 0.500000, 0.741200),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in cubic structure",
+      wyckoff = "6f",
+      position = (0.258800, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.258800, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.741200, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in cubic structure",
+      wyckoff = "6f",
+      position = (0.741200, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1003546065625
+  }
+}

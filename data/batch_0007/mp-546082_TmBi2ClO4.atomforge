@@ -1,0 +1,95 @@
+atom_spec "TmBi2ClO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "592c239e-d0fc-4ee6-88b3-78dc65446bf0",
+    title = "Bi2ClO4Tm",
+    created = "2025-12-07"
+  }
+  description = "TmBi2ClO4 from Materials Project (mp-546082)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.871369,
+    b = 3.871369,
+    c = 9.008310,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.276967),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.723033),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.500000, 0.150394),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.500000, 0.849606),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.000000, 0.150394),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.000000, 0.849606),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.4891000000000003
+    formation_energy = -2.4822476858333333
+  }
+}

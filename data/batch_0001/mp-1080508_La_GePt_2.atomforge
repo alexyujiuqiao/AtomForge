@@ -1,0 +1,109 @@
+atom_spec "La(GePt)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2df3351f-63b7-41d5-ab4d-c3bf1e2dd134",
+    title = "Ge4La2Pt4",
+    created = "2025-12-07"
+  }
+  description = "La(GePt)2 from Materials Project (mp-1080508)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.427204,
+    b = 4.438111,
+    c = 10.115576,
+    alpha = 90.000000,
+    beta = 90.015257,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 4,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.243330, 0.238014, 0.130658),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.251767, 0.755946, 0.499402),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.748233, 0.255946, 0.500598),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.756670, 0.738014, 0.869342),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.249226, 0.247379, 0.747126),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.750774, 0.747379, 0.252874),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.248627, 0.255966, 0.376696),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.257900, 0.736694, 0.001082),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.742100, 0.236694, 0.998918),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.751373, 0.755966, 0.623304),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.9559729059999996
+  }
+}

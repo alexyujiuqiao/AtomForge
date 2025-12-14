@@ -1,0 +1,81 @@
+atom_spec "LiGaGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "32cf1999-ee00-42cd-89f8-e4ebdf2eec23",
+    title = "Ga2Ge2Li2",
+    created = "2025-12-07"
+  }
+  description = "LiGaGe from Materials Project (mp-7874)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.231325,
+    b = 4.231325,
+    c = 6.864639,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.054759),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.554759),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.439812),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.939812),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.255429),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.755429),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2673654902777779
+  }
+}

@@ -1,0 +1,102 @@
+atom_spec "WSe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5c631ef3-8f5a-4aee-8dd6-7ba33b7dca76",
+    title = "Se6W3",
+    created = "2025-12-07"
+  }
+  description = "WSe2 from Materials Project (mp-1025572)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.326082,
+    b = 3.326082,
+    c = 32.590385,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.051562),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.948438),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2i",
+      position = (0.666667, 0.333333, 0.179526),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2i",
+      position = (0.666667, 0.333333, 0.282658),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2i",
+      position = (0.666667, 0.333333, 0.717342),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2i",
+      position = (0.666667, 0.333333, 0.820474),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in hexagonal structure",
+      wyckoff = "1e",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.231098),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.768902),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.5182000000000002
+    formation_energy = -0.8719540482291658
+  }
+}

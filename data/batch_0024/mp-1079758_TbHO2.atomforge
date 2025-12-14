@@ -1,0 +1,95 @@
+atom_spec "TbHO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fceee64d-8087-4677-aa7e-8df7e21eebcb",
+    title = "H2O4Tb2",
+    created = "2025-12-07"
+  }
+  description = "TbHO2 from Materials Project (mp-1079758)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.366469,
+    b = 3.693715,
+    c = 6.052225,
+    alpha = 90.000000,
+    beta = 109.250552,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.477463, 0.750000, 0.582530),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.522537, 0.250000, 0.417470),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.247343, 0.750000, 0.563696),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.266049, 0.750000, 0.050487),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.733951, 0.250000, 0.949513),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.752657, 0.250000, 0.436304),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.165685, 0.250000, 0.811539),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.834315, 0.750000, 0.188461),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.3147
+    formation_energy = -2.995360936249999
+  }
+}

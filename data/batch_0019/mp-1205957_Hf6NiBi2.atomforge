@@ -1,0 +1,102 @@
+atom_spec "Hf6NiBi2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "099d7e49-74bb-4fb9-b518-d2f60cb2d80a",
+    title = "Bi2Hf6Ni",
+    created = "2025-12-07"
+  }
+  description = "Hf6NiBi2 from Materials Project (mp-1205957)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.824204,
+    b = 7.824204,
+    c = 3.670532,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.613567, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.386433, 0.386433, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.613567, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.234565, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.234565, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.765435, 0.765435, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2555953544444457
+  }
+}

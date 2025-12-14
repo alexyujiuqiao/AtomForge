@@ -1,0 +1,95 @@
+atom_spec "BeO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e5381e59-5187-4e91-aeb9-cd67fd122646",
+    title = "Be4O4",
+    created = "2025-12-07"
+  }
+  description = "BeO from Materials Project (mp-7599)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.641876,
+    b = 4.641876,
+    c = 2.700973,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 136,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Be {
+      description = "Be site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.173414, 0.173414, 0.500000),
+      frame = fractional,
+      species = ({ element = "Be", occupancy = 1.000000 })
+    },
+    site Be {
+      description = "Be site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.326586, 0.673414, 0.000000),
+      frame = fractional,
+      species = ({ element = "Be", occupancy = 1.000000 })
+    },
+    site Be {
+      description = "Be site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.673414, 0.326586, 0.000000),
+      frame = fractional,
+      species = ({ element = "Be", occupancy = 1.000000 })
+    },
+    site Be {
+      description = "Be site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.826586, 0.826586, 0.500000),
+      frame = fractional,
+      species = ({ element = "Be", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4f",
+      position = (0.188647, 0.811353, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4f",
+      position = (0.311353, 0.311353, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4f",
+      position = (0.688647, 0.688647, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4f",
+      position = (0.811353, 0.188647, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 7.345699999999999
+    formation_energy = -3.0911128025
+  }
+}

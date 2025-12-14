@@ -1,0 +1,109 @@
+atom_spec "LiFeF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ee31f886-6805-4fbb-87cf-a00ea3ad1e7a",
+    title = "F6Fe2Li2",
+    created = "2025-12-07"
+  }
+  description = "LiFeF3 from Materials Project (mp-1176698)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.831859,
+    b = 5.063451,
+    c = 5.075890,
+    alpha = 61.266735,
+    beta = 89.907872,
+    gamma = 89.867499
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.181185, 0.315855, 0.002097),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.181353, 0.683414, 0.315571),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.182543, 0.995017, 0.684730),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.681206, 0.006062, 0.314847),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.681535, 0.316497, 0.684492),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.682450, 0.684701, 0.996770),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.432605, 0.666099, 0.665624),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.932418, 0.334110, 0.333984),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.430635, 0.999414, 0.002419),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.930669, 0.998733, 0.999564),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.7202
+    formation_energy = -2.785754832166666
+  }
+}

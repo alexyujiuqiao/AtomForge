@@ -1,0 +1,95 @@
+atom_spec "Li2MnNiO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "00624267-320f-4b03-b070-6c98c26bca88",
+    title = "Li2MnNiO4",
+    created = "2025-12-07"
+  }
+  description = "Li2MnNiO4 from Materials Project (mp-754945)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.073060,
+    b = 2.915150,
+    c = 5.118490,
+    alpha = 90.000000,
+    beta = 109.676771,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 10,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1f",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "1g",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1e",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.274813, 0.000000, 0.736419),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.725187, 0.000000, 0.263581),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.273063, 0.500000, 0.275204),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.726937, 0.500000, 0.724796),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.1840999999999999
+    formation_energy = -1.9008708405747128
+  }
+}

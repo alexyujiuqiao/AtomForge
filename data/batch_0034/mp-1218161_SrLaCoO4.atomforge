@@ -1,0 +1,88 @@
+atom_spec "SrLaCoO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2ff1c637-d89c-4bdb-ae28-aacf6607ac30",
+    title = "CoLaO4Sr",
+    created = "2025-12-07"
+  }
+  description = "SrLaCoO4 from Materials Project (mp-1218161)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.857626,
+    b = 3.857639,
+    c = 6.865694,
+    alpha = 106.313190,
+    beta = 106.312794,
+    gamma = 89.999436
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.002866, 0.002867, 0.005740),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.358537, 0.358539, 0.717078),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.172165, 0.172165, 0.344291),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.494265, 0.994268, 0.988562),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.836477, 0.836477, 0.672937),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.994270, 0.494266, 0.988563),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.641421, 0.641420, 0.282830),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.8688000000000002
+    formation_energy = -2.751103940952381
+  }
+}

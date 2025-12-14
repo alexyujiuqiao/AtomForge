@@ -1,0 +1,95 @@
+atom_spec "PuPt3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "cbd0c8cd-fd82-42af-8d41-7bc1a4856d53",
+    title = "Pt6Pu2",
+    created = "2025-12-07"
+  }
+  description = "PuPt3 from Materials Project (mp-1186823)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.872580,
+    b = 5.872580,
+    c = 4.836290,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.161413, 0.322826, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.161413, 0.838587, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.322826, 0.161413, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.677174, 0.838587, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.838587, 0.161413, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.838587, 0.677174, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6787774674999998
+  }
+}

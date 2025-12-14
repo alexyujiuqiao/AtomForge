@@ -1,0 +1,81 @@
+atom_spec "SrCaI4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "51c9e24d-1261-4365-9295-f38f7e37af33",
+    title = "CaI4Sr",
+    created = "2025-12-07"
+  }
+  description = "SrCaI4 from Materials Project (mp-1101340)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 7.494139,
+    b = 4.682771,
+    c = 8.143849,
+    alpha = 90.000000,
+    beta = 90.154562,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 10,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "1f",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.235180, 0.000000, 0.345645),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.764820, 0.000000, 0.654355),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.241882, 0.500000, 0.820292),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.758118, 0.500000, 0.179708),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.82
+    formation_energy = -1.9299383894444448
+  }
+}

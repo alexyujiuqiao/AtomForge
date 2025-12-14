@@ -1,0 +1,74 @@
+atom_spec "CsInI3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "185f77ca-c645-4082-ba82-99334f9dac08",
+    title = "CsI3In",
+    created = "2025-12-07"
+  }
+  description = "CsInI3 from Materials Project (mp-998314)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.180118,
+    b = 6.176852,
+    c = 6.187018,
+    alpha = 90.000000,
+    beta = 90.033598,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.002874, 0.500000, 0.000119),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.015946, 0.000000, 0.507732),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.509122, 0.000000, 0.995642),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.511062, 0.500000, 0.496859),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.520999, 0.000000, 0.489651),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.1618293125862071
+  }
+}

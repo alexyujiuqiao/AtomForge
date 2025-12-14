@@ -1,0 +1,123 @@
+atom_spec "NaCl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bf62c673-286f-44d5-abbe-adab34c58249",
+    title = "Cl6Na6",
+    created = "2025-12-07"
+  }
+  description = "NaCl from Materials Project (mp-1120767)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 6.799634,
+    b = 6.799634,
+    c = 7.094838,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.000000, 0.249088),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.000000, 0.750912),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.333333, 0.666667, 0.250447),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.333333, 0.666667, 0.749553),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.666667, 0.333333, 0.250447),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.666667, 0.333333, 0.749553),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.336571, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.336571, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.663429, 0.663429, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.669200, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.330800, 0.330800, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.669200, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.3847000000000005
+    formation_energy = -2.0508459382758617
+  }
+}

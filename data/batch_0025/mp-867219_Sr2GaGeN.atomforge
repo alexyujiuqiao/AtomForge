@@ -1,0 +1,109 @@
+atom_spec "Sr2GaGeN" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1669e59b-4c7a-473d-bc0a-4f92fda28e0f",
+    title = "Ga2Ge2N2Sr4",
+    created = "2025-12-07"
+  }
+  description = "Sr2GaGeN from Materials Project (mp-867219)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.961825,
+    b = 4.102690,
+    c = 8.815596,
+    alpha = 90.000000,
+    beta = 108.572877,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.036702, 0.750000, 0.752302),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.963298, 0.250000, 0.247698),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.176958, 0.750000, 0.299662),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.823042, 0.250000, 0.700338),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.323591, 0.750000, 0.829110),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.676409, 0.250000, 0.170890),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.298135, 0.250000, 0.034036),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.314578, 0.250000, 0.621777),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.685422, 0.750000, 0.378223),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.701865, 0.750000, 0.965964),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0360999999999998
+    formation_energy = -0.7325577961666667
+  }
+}

@@ -1,0 +1,123 @@
+atom_spec "InPS4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c81fecf4-4025-427f-b890-19c013c590a4",
+    title = "In2P2S8",
+    created = "2025-12-07"
+  }
+  description = "InPS4 from Materials Project (mp-20790)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.772130,
+    b = 5.772130,
+    c = 9.268218,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 82,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.194699, 0.731432, 0.368200),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.231432, 0.305301, 0.131801),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.268568, 0.194699, 0.631800),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.305301, 0.768568, 0.868200),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.694700, 0.231432, 0.868200),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.731432, 0.805300, 0.631800),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.768568, 0.694700, 0.131801),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "8g",
+      position = (0.805300, 0.268568, 0.368200),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.4231000000000003
+    formation_energy = -0.6955120493055554
+  }
+}

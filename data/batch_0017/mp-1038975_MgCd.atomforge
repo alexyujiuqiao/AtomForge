@@ -1,0 +1,67 @@
+atom_spec "MgCd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "45ef4cae-de83-4a46-ba9d-041f77788339",
+    title = "Cd2Mg2",
+    created = "2025-12-07"
+  }
+  description = "MgCd from Materials Project (mp-1038975)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.249309,
+    b = 3.249309,
+    c = 9.783840,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.125935),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.874065),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.628974),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.371026),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0222706449999998
+  }
+}

@@ -1,0 +1,74 @@
+atom_spec "Ca(ZnSb)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "737aa891-8c4b-4093-b25c-62ebd17ea1b0",
+    title = "CaSb2Zn2",
+    created = "2025-12-07"
+  }
+  description = "Ca(ZnSb)2 from Materials Project (mp-7429)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.496506,
+    b = 4.496506,
+    c = 7.485371,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.257135),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.742865),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.633984),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.366016),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.523427616
+  }
+}

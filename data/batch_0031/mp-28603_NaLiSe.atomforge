@@ -1,0 +1,123 @@
+atom_spec "NaLiSe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6e2658e2-c2bc-43c6-b2f0-bfa1553e835e",
+    title = "Li4Na4Se4",
+    created = "2025-12-07"
+  }
+  description = "NaLiSe from Materials Project (mp-28603)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.279939,
+    b = 7.207313,
+    c = 7.776819,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.143508, 0.428211),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.643508, 0.071789),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.356492, 0.928211),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.856492, 0.571789),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.014632, 0.816588),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.514632, 0.683412),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.485368, 0.316588),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.985368, 0.183412),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.278765, 0.107014),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.778765, 0.392986),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.221235, 0.607014),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.721235, 0.892986),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.4337
+    formation_energy = -1.3241428849096024
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "MgIn3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2fb00aa9-0ed8-418b-9343-63c8e78f6bb9",
+    title = "In6Mg2",
+    created = "2025-12-07"
+  }
+  description = "MgIn3 from Materials Project (mp-973320)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.379480,
+    b = 5.681712,
+    c = 10.791554,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 44,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.663600, 0.000000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.163600, 0.500000),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.000542, 0.246244),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.000542, 0.753756),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.500542, 0.253756),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.500542, 0.746244),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.668652, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.168652, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0196548024999998
+  }
+}

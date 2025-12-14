@@ -1,0 +1,109 @@
+atom_spec "Nb(SBr)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6cb48028-b92c-455c-b211-c1f035f98a55",
+    title = "Br4Nb2S4",
+    created = "2025-12-07"
+  }
+  description = "Nb(SBr)2 from Materials Project (mp-1079487)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 6.657862,
+    b = 6.660749,
+    c = 7.711163,
+    alpha = 90.276722,
+    beta = 111.840051,
+    gamma = 118.950923
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.230794, 0.575229, 0.222796),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.359864, 0.831584, 0.777485),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.640136, 0.168416, 0.222515),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.769206, 0.424771, 0.777204),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.126679, 0.874596, 0.000436),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.873321, 0.125404, 0.999564),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.141120, 0.057859, 0.294105),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.197594, 0.234694, 0.871502),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.802406, 0.765306, 0.128498),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.858880, 0.942141, 0.705895),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.553
+    formation_energy = -1.26364124025
+  }
+}

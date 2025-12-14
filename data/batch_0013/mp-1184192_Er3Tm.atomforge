@@ -1,0 +1,95 @@
+atom_spec "Er3Tm" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1ba25f48-48ff-44e7-9e43-cecbe12b0504",
+    title = "Er6Tm2",
+    created = "2025-12-07"
+  }
+  description = "Er3Tm from Materials Project (mp-1184192)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.144542,
+    b = 7.144542,
+    c = 5.575912,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Er {
+      description = "Er site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.166795, 0.333589, 0.250000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.166795, 0.833206, 0.250000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.333589, 0.166795, 0.750000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.666411, 0.833206, 0.250000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.833206, 0.166795, 0.750000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.833206, 0.666411, 0.750000),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0075307145833329
+  }
+}

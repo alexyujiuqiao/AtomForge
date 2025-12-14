@@ -1,0 +1,81 @@
+atom_spec "PbBrCl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6c0ee0a1-4d64-4bfd-a21c-a595dd6cd875",
+    title = "Br2Cl2Pb2",
+    created = "2025-12-07"
+  }
+  description = "PbBrCl from Materials Project (mp-995147)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.703055,
+    b = 4.703055,
+    c = 7.902407,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.635174),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.364826),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.233062),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.766938),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.2852
+    formation_energy = -1.3690383708333334
+  }
+}

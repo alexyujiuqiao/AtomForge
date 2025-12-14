@@ -1,0 +1,95 @@
+atom_spec "PRu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7f811f83-4227-487f-ad1e-204cbcc7ba7b",
+    title = "P4Ru4",
+    created = "2025-12-07"
+  }
+  description = "PRu from Materials Project (mp-12636)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.179219,
+    b = 5.557424,
+    c = 6.195589,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.190067, 0.564727),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.690067, 0.935273),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.309933, 0.064727),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.809933, 0.435273),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.490547, 0.293034),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.990547, 0.206966),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.009453, 0.793034),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.509453, 0.706966),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5626218241666665
+  }
+}

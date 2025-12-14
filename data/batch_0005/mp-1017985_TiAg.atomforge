@@ -1,0 +1,67 @@
+atom_spec "TiAg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "25f38358-e9e1-4615-bdae-2473003f1a5e",
+    title = "Ag2Ti2",
+    created = "2025-12-07"
+  }
+  description = "TiAg from Materials Project (mp-1017985)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 2.918736,
+    b = 2.918736,
+    c = 8.271018,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.370042),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.629958),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.886288),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.113712),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0654640350000006
+  }
+}

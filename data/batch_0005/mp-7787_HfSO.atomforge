@@ -1,0 +1,123 @@
+atom_spec "HfSO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "61685936-891f-49e7-8398-e2d1c9609d95",
+    title = "Hf4O4S4",
+    created = "2025-12-07"
+  }
+  description = "HfSO from Materials Project (mp-7787)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.698620,
+    b = 5.698620,
+    c = 5.698620,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hf {
+      description = "Hf site in cubic structure",
+      wyckoff = "4a",
+      position = (0.179688, 0.679688, 0.820312),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in cubic structure",
+      wyckoff = "4a",
+      position = (0.320312, 0.320312, 0.320312),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in cubic structure",
+      wyckoff = "4a",
+      position = (0.679688, 0.820312, 0.179688),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in cubic structure",
+      wyckoff = "4a",
+      position = (0.820312, 0.179688, 0.679688),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in cubic structure",
+      wyckoff = "4a",
+      position = (0.094911, 0.405089, 0.594911),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in cubic structure",
+      wyckoff = "4a",
+      position = (0.405089, 0.594911, 0.094911),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in cubic structure",
+      wyckoff = "4a",
+      position = (0.594911, 0.094911, 0.405089),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in cubic structure",
+      wyckoff = "4a",
+      position = (0.905089, 0.905089, 0.905089),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4a",
+      position = (0.080975, 0.919025, 0.419025),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4a",
+      position = (0.419025, 0.080975, 0.919025),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4a",
+      position = (0.580975, 0.580975, 0.580975),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4a",
+      position = (0.919025, 0.419025, 0.080975),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.8696
+    formation_energy = -2.958856434375001
+  }
+}

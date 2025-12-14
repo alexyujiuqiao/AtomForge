@@ -1,0 +1,95 @@
+atom_spec "Cd4TeSe3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ad88ff2b-f0f9-41fa-b243-0d9cb415abe1",
+    title = "Cd4Se3Te",
+    created = "2025-12-07"
+  }
+  description = "Cd4TeSe3 from Materials Project (mp-1226768)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.469352,
+    b = 6.268114,
+    c = 8.961460,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 25,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.504459, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.477917, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.008231, 0.238315),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.008231, 0.761685),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.748091, 0.000000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.250086, 0.243177),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in orthorhombic structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.250086, 0.756823),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.752899, 0.500000),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.3725
+    formation_energy = -0.8003601246289063
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "LaCePt2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "df6bb1b7-9363-44fd-aea7-aeca4ed6db5b",
+    title = "Ce2La2Pt4",
+    created = "2025-12-07"
+  }
+  description = "LaCePt2 from Materials Project (mp-1222938)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.897210,
+    b = 11.233028,
+    c = 4.494938,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 38,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.133087, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.633087, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.862576, 0.500000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.362576, 0.500000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.408939, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.908939, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.595399, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.095399, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.1189073550000002
+  }
+}

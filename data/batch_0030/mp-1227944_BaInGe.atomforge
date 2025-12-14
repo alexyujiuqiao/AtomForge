@@ -1,0 +1,60 @@
+atom_spec "BaInGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3f8a1a20-0a3f-4d4f-ae7f-e9bc4fd72254",
+    title = "BaGeIn",
+    created = "2025-12-07"
+  }
+  description = "BaInGe from Materials Project (mp-1227944)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.712612,
+    b = 4.712612,
+    c = 5.094370,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.006744),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.457697),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.535560),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4635145483333336
+  }
+}

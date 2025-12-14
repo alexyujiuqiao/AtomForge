@@ -1,0 +1,95 @@
+atom_spec "NpF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5cb20142-6b87-4086-aeec-0390b8775efa",
+    title = "F6Np2",
+    created = "2025-12-07"
+  }
+  description = "NpF3 from Materials Project (mp-14107)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.151486,
+    b = 4.151486,
+    c = 7.282349,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.578990),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.921010),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.078990),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.421010),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Np {
+      description = "Np site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Np", occupancy = 1.000000 })
+    },
+    site Np {
+      description = "Np site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Np", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -3.798130807812502
+  }
+}

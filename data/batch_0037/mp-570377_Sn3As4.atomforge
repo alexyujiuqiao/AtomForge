@@ -1,0 +1,88 @@
+atom_spec "Sn3As4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3e195472-8b4e-4f5c-be3b-e304b1739c27",
+    title = "As4Sn3",
+    created = "2025-12-07"
+  }
+  description = "Sn3As4 from Materials Project (mp-570377)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.861202,
+    b = 5.861202,
+    c = 5.861202,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 215,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site As {
+      description = "As site in cubic structure",
+      wyckoff = "4e",
+      position = (0.286970, 0.286970, 0.713030),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in cubic structure",
+      wyckoff = "4e",
+      position = (0.286970, 0.713030, 0.286970),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in cubic structure",
+      wyckoff = "4e",
+      position = (0.713030, 0.286970, 0.286970),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in cubic structure",
+      wyckoff = "4e",
+      position = (0.713030, 0.713030, 0.713030),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in cubic structure",
+      wyckoff = "3d",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in cubic structure",
+      wyckoff = "3d",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in cubic structure",
+      wyckoff = "3d",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.7518000000000002
+    formation_energy = -0.0352505592857141
+  }
+}

@@ -1,0 +1,109 @@
+atom_spec "LiMnF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c53a6667-c309-4209-8d89-8ca5ba3be6e8",
+    title = "F6Li2Mn2",
+    created = "2025-12-07"
+  }
+  description = "LiMnF3 from Materials Project (mp-754676)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.202465,
+    b = 5.202465,
+    c = 4.861054,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 182,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.000000, 0.311097, 0.500000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.000000, 0.688903, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.311097, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.311097, 0.311097, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.688903, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.688903, 0.688903, 0.500000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.6582
+    formation_energy = -3.0228872807528746
+  }
+}

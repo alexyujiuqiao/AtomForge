@@ -1,0 +1,81 @@
+atom_spec "NbSeS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6f1d41ef-3ebd-42b1-b818-413d48b638cf",
+    title = "Nb2S2Se2",
+    created = "2025-12-07"
+  }
+  description = "NbSeS from Materials Project (mp-1220413)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.430568,
+    b = 3.430568,
+    c = 13.454823,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Nb {
+      description = "Nb site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.260467),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.739533),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.628000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.372000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.868471),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.131529),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.2512504801562505
+  }
+}

@@ -1,0 +1,67 @@
+atom_spec "Gd2ZnRu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "30b5e372-8a6a-4a35-985f-6b70d18967f5",
+    title = "Gd2RuZn",
+    created = "2025-12-07"
+  }
+  description = "Gd2ZnRu from Materials Project (mp-866217)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.963762,
+    b = 4.963770,
+    c = 4.963810,
+    alpha = 60.002766,
+    beta = 60.000938,
+    gamma = 60.002648
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Gd {
+      description = "Gd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000108, 0.000103, 0.999685),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.499898, 0.499897, 0.500317),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.749996, 0.750000, 0.749997),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.249997, 0.249999, 0.250004),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3295003287499991
+  }
+}

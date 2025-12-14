@@ -1,0 +1,95 @@
+atom_spec "EuCu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a11f4ba9-ef9e-4bcc-a1b4-e693073df629",
+    title = "Cu4Eu4",
+    created = "2025-12-07"
+  }
+  description = "EuCu from Materials Project (mp-1087547)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.409185,
+    b = 5.931292,
+    c = 7.764318,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.604266, 0.029698),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.895734, 0.529698),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.104266, 0.470302),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.395734, 0.970302),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.130461, 0.181256),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.369539, 0.681256),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.630461, 0.318744),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.869539, 0.818744),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1341715987499991
+  }
+}

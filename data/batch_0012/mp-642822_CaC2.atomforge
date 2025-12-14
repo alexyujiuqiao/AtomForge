@@ -1,0 +1,81 @@
+atom_spec "CaC2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6419af72-b23f-418e-91d1-87561e61a740",
+    title = "C4Ca2",
+    created = "2025-12-07"
+  }
+  description = "CaC2 from Materials Project (mp-642822)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.930766,
+    b = 3.969845,
+    c = 7.449752,
+    alpha = 101.210077,
+    beta = 85.542058,
+    gamma = 119.530731
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.129435, 0.569553, 0.062363),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.445638, 0.364077, 0.430635),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.554362, 0.635923, 0.569365),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.870565, 0.430447, 0.937637),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.229329, 0.035657, 0.754144),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.770671, 0.964343, 0.245856),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.5537
+    formation_energy = 0.0233010666666674
+  }
+}

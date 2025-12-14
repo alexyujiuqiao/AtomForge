@@ -1,0 +1,67 @@
+atom_spec "CaMg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a40f26c7-8e3f-4d7e-8f66-66201302d3dc",
+    title = "Ca2Mg2",
+    created = "2025-12-07"
+  }
+  description = "CaMg from Materials Project (mp-1183575)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.834021,
+    b = 5.712864,
+    c = 5.719374,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 51,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.246510),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.753490),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.250000, 0.744452),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.750000, 0.255548),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0783633749999999
+  }
+}

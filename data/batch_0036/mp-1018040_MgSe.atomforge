@@ -1,0 +1,67 @@
+atom_spec "MgSe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "45b9b7f0-ea82-44b4-9a2b-c34257c31439",
+    title = "Mg2Se2",
+    created = "2025-12-07"
+  }
+  description = "MgSe from Materials Project (mp-1018040)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.253808,
+    b = 4.253808,
+    c = 6.885267,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.998757),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.498757),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.376243),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.876243),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.5791
+    formation_energy = -1.4893916961718752
+  }
+}

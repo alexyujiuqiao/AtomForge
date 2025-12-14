@@ -1,0 +1,81 @@
+atom_spec "CdI2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6f1ba3fe-2753-4dd2-85e0-447ec91e831f",
+    title = "Cd2I4",
+    created = "2025-12-07"
+  }
+  description = "CdI2 from Materials Project (mp-28248)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.334895,
+    b = 4.334895,
+    c = 15.000530,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.500003),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.000003),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.114870),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.614870),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.885127),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.385127),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.4364
+    formation_energy = -0.8384988966666667
+  }
+}

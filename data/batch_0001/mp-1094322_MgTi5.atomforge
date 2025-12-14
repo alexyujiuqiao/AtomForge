@@ -1,0 +1,81 @@
+atom_spec "MgTi5" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "10367c2a-8bc1-4ed2-8a1e-79ee8c825f18",
+    title = "MgTi5",
+    created = "2025-12-07"
+  }
+  description = "MgTi5 from Materials Project (mp-1094322)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 2.958746,
+    b = 2.958746,
+    c = 14.323395,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "1d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.336252),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.663748),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.179402),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.820598),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.061620037222223
+  }
+}

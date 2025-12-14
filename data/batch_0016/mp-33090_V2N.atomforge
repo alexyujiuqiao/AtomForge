@@ -1,0 +1,102 @@
+atom_spec "V2N" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "36b2ef60-4b76-4300-8744-fa2191dc8dea",
+    title = "N3V6",
+    created = "2025-12-07"
+  }
+  description = "V2N from Materials Project (mp-33090)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.905898,
+    b = 4.905898,
+    c = 4.543337,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 162,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.500000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.000000, 0.336315, 0.246319),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.000000, 0.663685, 0.753681),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.336315, 0.000000, 0.246319),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.336315, 0.336315, 0.753681),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.663685, 0.000000, 0.753681),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "6k",
+      position = (0.663685, 0.663685, 0.246319),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.0904292561111109
+  }
+}

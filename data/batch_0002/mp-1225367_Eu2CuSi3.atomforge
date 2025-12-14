@@ -1,0 +1,81 @@
+atom_spec "Eu2CuSi3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6a21aaa3-c50f-42dc-8535-39b72afbef7a",
+    title = "CuEu2Si3",
+    created = "2025-12-07"
+  }
+  description = "Eu2CuSi3 from Materials Project (mp-1225367)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.076599,
+    b = 8.778883,
+    c = 4.077447,
+    alpha = 90.000000,
+    beta = 119.987598,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.000000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.000018, 0.242289, 0.999922),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.000018, 0.757711, 0.999922),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.666531, 0.000000, 0.333381),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.333227, 0.500000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666716, 0.500000, 0.333333),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4129081150000004
+  }
+}

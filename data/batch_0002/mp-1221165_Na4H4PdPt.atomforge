@@ -1,0 +1,109 @@
+atom_spec "Na4H4PdPt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "913effb6-8486-4305-b0ab-fe30e56f9e23",
+    title = "H4Na4PdPt",
+    created = "2025-12-07"
+  }
+  description = "Na4H4PdPt from Materials Project (mp-1221165)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.638652,
+    b = 3.638652,
+    c = 11.275515,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.150721),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.849279),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.351626),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.648374),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.365501),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.634499),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.138789),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.861211),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3499397716206897
+  }
+}

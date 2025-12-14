@@ -1,0 +1,109 @@
+atom_spec "Pu2Ni2Sn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ace1c363-ce96-4f6e-9706-7b6c268df502",
+    title = "Ni4Pu4Sn2",
+    created = "2025-12-07"
+  }
+  description = "Pu2Ni2Sn from Materials Project (mp-640051)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.115634,
+    b = 7.115634,
+    c = 3.902533,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 127,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.123253, 0.376747, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.376747, 0.876747, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.623253, 0.123253, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "4g",
+      position = (0.876747, 0.623253, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.174747, 0.674747, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.325253, 0.174747, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.674747, 0.825253, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in tetragonal structure",
+      wyckoff = "4h",
+      position = (0.825253, 0.325253, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3213065380000003
+  }
+}

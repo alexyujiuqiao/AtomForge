@@ -1,0 +1,81 @@
+atom_spec "Tm2Ga3Cu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "745b7cfc-0fc5-4277-bc86-16df1ce69877",
+    title = "CuGa3Tm2",
+    created = "2025-12-07"
+  }
+  description = "Tm2Ga3Cu from Materials Project (mp-1216524)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.348904,
+    b = 4.348904,
+    c = 7.088718,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.537522),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.948721),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.046462),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.476132),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.260938),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.730224),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5864414943055548
+  }
+}

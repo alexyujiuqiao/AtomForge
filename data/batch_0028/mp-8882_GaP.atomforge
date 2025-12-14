@@ -1,0 +1,67 @@
+atom_spec "GaP" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1bc72105-f992-43e1-990f-43c87cc6ede3",
+    title = "Ga2P2",
+    created = "2025-12-07"
+  }
+  description = "GaP from Materials Project (mp-8882)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.880356,
+    b = 3.880356,
+    c = 6.395361,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.999939),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.499939),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.374061),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.874061),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.2984
+    formation_energy = -0.3990765454166665
+  }
+}

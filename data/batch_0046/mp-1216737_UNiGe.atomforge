@@ -1,0 +1,123 @@
+atom_spec "UNiGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fce58977-dd94-417a-9843-8621de20bbef",
+    title = "Ge4Ni4U4",
+    created = "2025-12-07"
+  }
+  description = "UNiGe from Materials Project (mp-1216737)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 9.809276,
+    b = 4.169040,
+    c = 6.669065,
+    alpha = 90.000000,
+    beta = 129.805567,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.164212, 0.000000, 0.100500),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.335788, 0.500000, 0.899500),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.664212, 0.500000, 0.100500),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.835788, 0.000000, 0.899500),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.163248, 0.000000, 0.713602),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.336752, 0.500000, 0.286398),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.663248, 0.500000, 0.713602),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.836752, 0.000000, 0.286398),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.051013, 0.500000, 0.325721),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.448987, 0.000000, 0.674279),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.551013, 0.000000, 0.325721),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.948987, 0.500000, 0.674279),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.306779891666667
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "NaTl3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "386f0ae8-bcd4-4064-90d9-2203a1294bdc",
+    title = "Na2Tl6",
+    created = "2025-12-07"
+  }
+  description = "NaTl3 from Materials Project (mp-1186197)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 7.322730,
+    b = 5.235658,
+    c = 7.322730,
+    alpha = 90.000000,
+    beta = 119.999990,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Na {
+      description = "Na site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.333333, 0.000000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.666667, 0.500000, 0.333333),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.164160, 0.500000, 0.328322),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.164161, 0.500000, 0.835838),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.328325, 0.000000, 0.164163),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.671676, 0.500000, 0.835838),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.835839, 0.000000, 0.164163),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.835839, 0.000000, 0.671677),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0646939841379308
+  }
+}

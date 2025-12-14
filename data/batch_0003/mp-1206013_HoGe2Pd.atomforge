@@ -1,0 +1,95 @@
+atom_spec "HoGe2Pd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f43c9022-a904-40b7-a039-8718ef804bb3",
+    title = "Ge4Ho2Pd2",
+    created = "2025-12-07"
+  }
+  description = "HoGe2Pd from Materials Project (mp-1206013)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.028264,
+    b = 4.240520,
+    c = 9.420738,
+    alpha = 90.000000,
+    beta = 102.345000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.035401, 0.750000, 0.070802),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.245274, 0.250000, 0.490548),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.754726, 0.750000, 0.509452),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.964599, 0.250000, 0.929198),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.399697, 0.750000, 0.799393),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.600303, 0.250000, 0.200607),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.166744, 0.750000, 0.333488),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.833256, 0.250000, 0.666512),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7024684150000002
+  }
+}

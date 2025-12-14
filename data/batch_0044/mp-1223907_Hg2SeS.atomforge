@@ -1,0 +1,67 @@
+atom_spec "Hg2SeS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "af04a7e6-f375-462f-a050-d917cd983de4",
+    title = "Hg2SSe",
+    created = "2025-12-07"
+  }
+  description = "Hg2SeS from Materials Project (mp-1223907)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.345975,
+    b = 4.345975,
+    c = 6.134291,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 115,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.500000, 0.237779),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.500000, 0.000000, 0.762221),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4073436188671873
+  }
+}

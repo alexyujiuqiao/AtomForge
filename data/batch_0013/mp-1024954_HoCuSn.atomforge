@@ -1,0 +1,81 @@
+atom_spec "HoCuSn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1177679a-4639-47dc-bba5-b2c7a9c0c14c",
+    title = "Cu2Ho2Sn2",
+    created = "2025-12-07"
+  }
+  description = "HoCuSn from Materials Project (mp-1024954)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.520928,
+    b = 4.520928,
+    c = 7.219703,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.812805),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.312805),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.495550),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.995550),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.225646),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.725646),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5962703133333331
+  }
+}

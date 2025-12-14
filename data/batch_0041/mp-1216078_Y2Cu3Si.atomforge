@@ -1,0 +1,81 @@
+atom_spec "Y2Cu3Si" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "779f9f40-a571-46f6-ac0d-15037b297fb5",
+    title = "Cu3SiY2",
+    created = "2025-12-07"
+  }
+  description = "Y2Cu3Si from Materials Project (mp-1216078)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.159818,
+    b = 3.651662,
+    c = 7.382020,
+    alpha = 90.000000,
+    beta = 90.072945,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.499913, 0.500000, 0.174416),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.500189, 0.500000, 0.837785),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.999718, 0.500000, 0.658022),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.000236, 0.500000, 0.330816),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.500246, 0.000000, 0.500856),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.999898, 0.000000, 0.998104),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4129179622222227
+  }
+}

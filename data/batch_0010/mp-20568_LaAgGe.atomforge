@@ -1,0 +1,81 @@
+atom_spec "LaAgGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4b99cd6f-1521-4455-b74c-23916dedf94d",
+    title = "Ag2Ge2La2",
+    created = "2025-12-07"
+  }
+  description = "LaAgGe from Materials Project (mp-20568)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.605024,
+    b = 4.605024,
+    c = 7.972096,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.007054),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.507054),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.458991),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.958991),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.243555),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.743555),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6460695505555556
+  }
+}

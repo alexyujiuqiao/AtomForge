@@ -1,0 +1,95 @@
+atom_spec "Hg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9101dcd4-c198-416a-bb08-9a727d438fbb",
+    title = "Hg8",
+    created = "2025-12-07"
+  }
+  description = "Hg from Materials Project (mp-1096992)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 6.454286,
+    b = 6.454286,
+    c = 6.689394,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 122,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "8d",
+      position = (0.204267, 0.750000, 0.125000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "8d",
+      position = (0.250000, 0.204267, 0.875000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "8d",
+      position = (0.250000, 0.295733, 0.375000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "8d",
+      position = (0.295733, 0.750000, 0.625000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "8d",
+      position = (0.704267, 0.250000, 0.625000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "8d",
+      position = (0.750000, 0.704267, 0.375000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "8d",
+      position = (0.750000, 0.795733, 0.875000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "8d",
+      position = (0.795733, 0.250000, 0.125000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0282263174999999
+  }
+}

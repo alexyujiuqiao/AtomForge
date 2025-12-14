@@ -1,0 +1,95 @@
+atom_spec "DyAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d15bc84c-1921-4342-bd7f-378e8aae03e0",
+    title = "Au4Dy4",
+    created = "2025-12-07"
+  }
+  description = "DyAu from Materials Project (mp-1007918)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.714238,
+    b = 11.005016,
+    c = 4.697603,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.412371, 0.750000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.587629, 0.250000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.087629, 0.250000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.912371, 0.750000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.138992, 0.750000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.861008, 0.250000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.361008, 0.250000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.638992, 0.750000),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8836153150000001
+  }
+}

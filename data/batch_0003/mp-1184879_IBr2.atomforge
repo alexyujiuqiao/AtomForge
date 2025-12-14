@@ -1,0 +1,81 @@
+atom_spec "IBr2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "df3ef85b-bb5b-4f7e-93b1-c6b7ea4ff8c0",
+    title = "Br4I2",
+    created = "2025-12-07"
+  }
+  description = "IBr2 from Materials Project (mp-1184879)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.446157,
+    b = 7.446157,
+    c = 4.856437,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 136,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "4f",
+      position = (0.248179, 0.751821, 0.500000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "4f",
+      position = (0.251821, 0.251821, 0.000000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "4f",
+      position = (0.748179, 0.748179, 0.000000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "4f",
+      position = (0.751821, 0.248179, 0.500000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2983895800000002
+  }
+}

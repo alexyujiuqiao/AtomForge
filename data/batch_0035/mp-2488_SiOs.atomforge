@@ -1,0 +1,95 @@
+atom_spec "SiOs" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "645b96ee-7826-4863-ae1a-b14e7d1fcd8a",
+    title = "Os4Si4",
+    created = "2025-12-07"
+  }
+  description = "SiOs from Materials Project (mp-2488)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.794101,
+    b = 4.794101,
+    c = 4.794101,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Os {
+      description = "Os site in cubic structure",
+      wyckoff = "4a",
+      position = (0.122822, 0.122822, 0.122822),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in cubic structure",
+      wyckoff = "4a",
+      position = (0.377178, 0.877178, 0.622822),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in cubic structure",
+      wyckoff = "4a",
+      position = (0.622822, 0.377178, 0.877178),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in cubic structure",
+      wyckoff = "4a",
+      position = (0.877178, 0.622822, 0.377178),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "4a",
+      position = (0.164550, 0.335450, 0.664550),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "4a",
+      position = (0.335450, 0.664550, 0.164550),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "4a",
+      position = (0.664550, 0.164550, 0.335450),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "4a",
+      position = (0.835450, 0.835450, 0.835450),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.6209000000000007
+    formation_energy = -0.3283798024999989
+  }
+}

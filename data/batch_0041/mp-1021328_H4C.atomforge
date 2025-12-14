@@ -1,0 +1,109 @@
+atom_spec "H4C" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f6838fa6-a4e7-4ddb-b3df-865df631bc4d",
+    title = "C2H8",
+    created = "2025-12-07"
+  }
+  description = "H4C from Materials Project (mp-1021328)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.973528,
+    b = 4.973528,
+    c = 4.973528,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 217,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in cubic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in cubic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in cubic structure",
+      wyckoff = "8c",
+      position = (0.127200, 0.127200, 0.127200),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in cubic structure",
+      wyckoff = "8c",
+      position = (0.127200, 0.872800, 0.872800),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in cubic structure",
+      wyckoff = "8c",
+      position = (0.372800, 0.372800, 0.627200),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in cubic structure",
+      wyckoff = "8c",
+      position = (0.372800, 0.627200, 0.372800),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in cubic structure",
+      wyckoff = "8c",
+      position = (0.627200, 0.372800, 0.372800),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in cubic structure",
+      wyckoff = "8c",
+      position = (0.627200, 0.627200, 0.627200),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in cubic structure",
+      wyckoff = "8c",
+      position = (0.872800, 0.127200, 0.872800),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in cubic structure",
+      wyckoff = "8c",
+      position = (0.872800, 0.872800, 0.127200),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 7.6375
+    formation_energy = -0.254755858
+  }
+}

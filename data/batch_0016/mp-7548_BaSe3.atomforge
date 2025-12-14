@@ -1,0 +1,95 @@
+atom_spec "BaSe3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "eb7a1c20-fb06-4519-a4e2-05cf8c8eda52",
+    title = "Ba2Se6",
+    created = "2025-12-07"
+  }
+  description = "BaSe3 from Materials Project (mp-7548)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.420792,
+    b = 7.420792,
+    c = 4.298563,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 113,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.821331),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.178669),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.191849, 0.691849, 0.513013),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.308151, 0.191849, 0.486987),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.691849, 0.808151, 0.486987),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.808151, 0.308151, 0.513013),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.9444
+    formation_energy = -1.3912777280078128
+  }
+}

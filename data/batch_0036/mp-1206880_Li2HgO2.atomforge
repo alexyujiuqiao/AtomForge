@@ -1,0 +1,109 @@
+atom_spec "Li2HgO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "29d56caf-4aad-4a50-927e-728ec1be8500",
+    title = "Hg2Li4O4",
+    created = "2025-12-07"
+  }
+  description = "Li2HgO2 from Materials Project (mp-1206880)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.087478,
+    b = 3.087478,
+    c = 12.799866,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.312673),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.687327),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.187327),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.812674),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.157950),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.842050),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.342050),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.657950),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1767
+    formation_energy = -1.5036577303333332
+  }
+}

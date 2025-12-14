@@ -1,0 +1,81 @@
+atom_spec "HoSI" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8e09f745-961e-4b70-a2e4-93cb8cbd28d0",
+    title = "Ho2I2S2",
+    created = "2025-12-07"
+  }
+  description = "HoSI from Materials Project (mp-1018731)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.162038,
+    b = 5.348992,
+    c = 10.134252,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ho {
+      description = "Ho site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.110515),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.889485),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.670581),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.329419),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.063245),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.936755),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.7206
+    formation_energy = -2.109408984375
+  }
+}

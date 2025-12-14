@@ -1,0 +1,123 @@
+atom_spec "LaAuO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "799c74ec-435c-4cdf-b120-e374c2841a5c",
+    title = "Au3La3O6",
+    created = "2025-12-07"
+  }
+  description = "LaAuO2 from Materials Project (mp-996952)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.896558,
+    b = 3.896558,
+    c = 18.045333,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 166,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.333333, 0.666667, 0.166667),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.666667, 0.333333, 0.833333),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.666667),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.333333),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.387402),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.612598),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.054069),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.279265),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.720735),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.945931),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.7398
+    formation_energy = -2.56304167125
+  }
+}

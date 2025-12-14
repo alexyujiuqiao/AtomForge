@@ -1,0 +1,95 @@
+atom_spec "CsHg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bb8469ae-836f-4086-9f1f-72852191b42b",
+    title = "Cs4Hg4",
+    created = "2025-12-07"
+  }
+  description = "CsHg from Materials Project (mp-1080797)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 7.460698,
+    b = 7.737675,
+    c = 7.873544,
+    alpha = 107.046417,
+    beta = 104.441801,
+    gamma = 92.984654
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.186134, 0.289956, 0.636654),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.260571, 0.843190, 0.053669),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.739429, 0.156810, 0.946331),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.813866, 0.710044, 0.363346),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.313050, 0.396804, 0.216165),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.368715, 0.751158, 0.554350),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.631285, 0.248842, 0.445650),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.686950, 0.603196, 0.783835),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2161535952155171
+  }
+}

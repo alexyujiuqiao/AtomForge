@@ -1,0 +1,81 @@
+atom_spec "Nd2Ge3Pt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1801f3b7-a8a0-4b46-ba73-dac86f48ae65",
+    title = "Ge3Nd2Pt",
+    created = "2025-12-07"
+  }
+  description = "Nd2Ge3Pt from Materials Project (mp-1220495)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.206242,
+    b = 4.386389,
+    c = 7.363857,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 25,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.175640),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.834444),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.660749),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.497938),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.500000, 0.002031),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.329198),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8705185758333336
+  }
+}

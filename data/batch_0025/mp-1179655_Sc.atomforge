@@ -1,0 +1,81 @@
+atom_spec "Sc" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "325cc103-39e9-451b-94fc-2094fc10c1b3",
+    title = "Sc6",
+    created = "2025-12-07"
+  }
+  description = "Sc from Materials Project (mp-1179655)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.000534,
+    b = 5.988404,
+    c = 5.993515,
+    alpha = 64.587270,
+    beta = 65.344455,
+    gamma = 65.322008
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Sc {
+      description = "Sc site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.019434, 0.580787, 0.085680),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333126, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333789, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.646996, 0.919365, 0.414392),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.685902, 0.419213, 0.914320),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.980753, 0.080635, 0.585608),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0662640499999997
+  }
+}

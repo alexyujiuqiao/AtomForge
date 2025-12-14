@@ -1,0 +1,109 @@
+atom_spec "MgTe(PbO3)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "28f4ee27-1cea-4fa6-91d8-e692ca1f484e",
+    title = "MgO6Pb2Te",
+    created = "2025-12-07"
+  }
+  description = "MgTe(PbO3)2 from Materials Project (mp-1222171)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.708671,
+    b = 5.710132,
+    c = 5.713690,
+    alpha = 60.137223,
+    beta = 60.150193,
+    gamma = 60.082958
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.990397, 0.999929, 0.005282),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.252282, 0.742558, 0.740129),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.258409, 0.257396, 0.728785),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.271439, 0.739389, 0.245697),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.733313, 0.263893, 0.746535),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.742671, 0.735232, 0.274384),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.752494, 0.261555, 0.258960),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.224401, 0.257478, 0.264886),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.728615, 0.742588, 0.759390),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.495979, 0.499980, 0.501951),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.282800000000001
+    formation_energy = -1.863301319
+  }
+}

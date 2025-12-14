@@ -1,0 +1,102 @@
+atom_spec "Mg2Ga2S5" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "26bd97f4-f25b-4a3f-af3a-ef0c0385db5c",
+    title = "Ga2Mg2S5",
+    created = "2025-12-07"
+  }
+  description = "Mg2Ga2S5 from Materials Project (mp-1206963)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.735726,
+    b = 3.735726,
+    c = 15.439557,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.671411),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.328589),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.099101),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.900899),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.393443),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.814093),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.185907),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.606557),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1601999999999997
+    formation_energy = -1.290451026736111
+  }
+}

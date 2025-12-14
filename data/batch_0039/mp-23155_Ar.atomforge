@@ -1,0 +1,67 @@
+atom_spec "Ar" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3e2576fe-0fbf-490c-a0da-b7f879f9d281",
+    title = "Ar4",
+    created = "2025-12-07"
+  }
+  description = "Ar from Materials Project (mp-23155)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.640772,
+    b = 5.640772,
+    c = 5.640772,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 225,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ar {
+      description = "Ar site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ar", occupancy = 1.000000 })
+    },
+    site Ar {
+      description = "Ar site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ar", occupancy = 1.000000 })
+    },
+    site Ar {
+      description = "Ar site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ar", occupancy = 1.000000 })
+    },
+    site Ar {
+      description = "Ar site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ar", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 8.6048
+    formation_energy = 0.0
+  }
+}

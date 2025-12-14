@@ -1,0 +1,95 @@
+atom_spec "Pm3Cd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2230fc8d-2722-4795-839e-f070c30837c6",
+    title = "Cd2Pm6",
+    created = "2025-12-07"
+  }
+  description = "Pm3Cd from Materials Project (mp-1186493)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.877575,
+    b = 6.877575,
+    c = 6.168976,
+    alpha = 90.000000,
+    beta = 123.878423,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 8,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000001, 0.500000, 0.000002),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.500001, 0.000000, 0.000002),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.249999, 0.499999),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.000000, 0.750001, 0.499999),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.250001, 0.499999),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.500000, 0.749999, 0.499999),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0939280306249994
+  }
+}

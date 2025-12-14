@@ -1,0 +1,109 @@
+atom_spec "CaAl3Au" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5149eaa7-5815-4c9f-9f76-69e00735c572",
+    title = "Al6Au2Ca2",
+    created = "2025-12-07"
+  }
+  description = "CaAl3Au from Materials Project (mp-1226791)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.876014,
+    b = 5.876014,
+    c = 6.596876,
+    alpha = 90.000000,
+    beta = 116.446580,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 8,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.393757, 0.000000, 0.787514),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.893757, 0.500000, 0.787514),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.498434, 0.250000, 0.496869),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.498434, 0.750000, 0.496869),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.998434, 0.250000, 0.496869),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.998434, 0.750000, 0.496869),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.109978, 0.500000, 0.219956),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.609978, 0.000000, 0.219956),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.499396, 0.500000, 0.998791),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.999396, 0.000000, 0.998791),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4915052459999998
+  }
+}

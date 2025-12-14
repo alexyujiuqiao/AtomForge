@@ -1,0 +1,81 @@
+atom_spec "TiBrO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e3c8dbe0-354b-4117-883f-22b2fb6956fe",
+    title = "Br2O2Ti2",
+    created = "2025-12-07"
+  }
+  description = "TiBrO from Materials Project (mp-23002)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.387106,
+    b = 4.047891,
+    c = 8.408613,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.311487),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.688513),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.934660),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.065340),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.922087),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.077913),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -2.538050145277777
+  }
+}

@@ -1,0 +1,123 @@
+atom_spec "PIrS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e980dcc0-3dee-4139-8e2e-e65bdad38253",
+    title = "Ir4P4S4",
+    created = "2025-12-07"
+  }
+  description = "PIrS from Materials Project (mp-1220004)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.693542,
+    b = 5.693542,
+    c = 5.693542,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "4a",
+      position = (0.005399, 0.494601, 0.505399),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "4a",
+      position = (0.494601, 0.505399, 0.005399),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "4a",
+      position = (0.505399, 0.005399, 0.494601),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "4a",
+      position = (0.994601, 0.994601, 0.994601),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in cubic structure",
+      wyckoff = "4a",
+      position = (0.112176, 0.612176, 0.887824),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in cubic structure",
+      wyckoff = "4a",
+      position = (0.387824, 0.387824, 0.387824),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in cubic structure",
+      wyckoff = "4a",
+      position = (0.612176, 0.887824, 0.112176),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in cubic structure",
+      wyckoff = "4a",
+      position = (0.887824, 0.112176, 0.612176),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4a",
+      position = (0.109719, 0.890281, 0.390281),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4a",
+      position = (0.390281, 0.109719, 0.890281),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4a",
+      position = (0.609719, 0.609719, 0.609719),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in cubic structure",
+      wyckoff = "4a",
+      position = (0.890281, 0.390281, 0.109719),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.8622000000000003
+    formation_energy = -0.9006937579861116
+  }
+}

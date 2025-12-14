@@ -1,0 +1,74 @@
+atom_spec "Eu(CdP)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fc570139-e03f-4557-9e03-7b41734f44eb",
+    title = "Cd2EuP2",
+    created = "2025-12-07"
+  }
+  description = "Eu(CdP)2 from Materials Project (mp-22609)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.357512,
+    b = 4.357512,
+    c = 7.147448,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.637322),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.362678),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.244777),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.755223),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5953988343333328
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "CaNiBN" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a30e7274-2448-4ef9-a266-75a458587052",
+    title = "B2Ca2N2Ni2",
+    created = "2025-12-07"
+  }
+  description = "CaNiBN from Materials Project (mp-1079500)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.535345,
+    b = 3.535345,
+    c = 7.624182,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.845958),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.154042),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.341241),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.658759),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.663438),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.336562),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.9658783622916668
+  }
+}

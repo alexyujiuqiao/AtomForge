@@ -1,0 +1,109 @@
+atom_spec "Cd(HO)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "38ebff17-0fcc-4f9a-82c6-7d0452538a50",
+    title = "Cd2H4O4",
+    created = "2025-12-07"
+  }
+  description = "Cd(HO)2 from Materials Project (mp-625094)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.505580,
+    b = 5.766148,
+    c = 6.127080,
+    alpha = 116.594495,
+    beta = 106.332014,
+    gamma = 90.614907
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.170744, 0.154849, 0.314251),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.863747, 0.842466, 0.701477),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.163891, 0.663221, 0.291378),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.349142, 0.307549, 0.994832),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.542314, 0.725270, 0.027376),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.878685, 0.373035, 0.718452),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.069602, 0.305113, 0.994789),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.239085, 0.836286, 0.447898),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.537491, 0.886648, 0.012135),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.796109, 0.397442, 0.561656),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.7067
+    formation_energy = -1.321028982
+  }
+}

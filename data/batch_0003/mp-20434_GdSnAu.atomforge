@@ -1,0 +1,81 @@
+atom_spec "GdSnAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "57a5cf82-d297-4d4a-9ae8-3e5aebb51350",
+    title = "Au2Gd2Sn2",
+    created = "2025-12-07"
+  }
+  description = "GdSnAu from Materials Project (mp-20434)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.742038,
+    b = 4.742038,
+    c = 7.510925,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.219525),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.719525),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.400934),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.900934),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.624641),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.124641),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8285864649999996
+  }
+}

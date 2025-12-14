@@ -1,0 +1,81 @@
+atom_spec "LiSn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8cde6629-3f96-4432-b413-401f401a0a51",
+    title = "Li3Sn3",
+    created = "2025-12-07"
+  }
+  description = "LiSn from Materials Project (mp-569073)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.181401,
+    b = 3.224093,
+    c = 7.805340,
+    alpha = 90.000000,
+    beta = 105.747491,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 10,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1e",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.268026, 0.500000, 0.331701),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.731974, 0.500000, 0.668299),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.241273, 0.000000, 0.661946),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.758727, 0.000000, 0.338054),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3258669891666669
+  }
+}

@@ -1,0 +1,123 @@
+atom_spec "Na2Au" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b5f7a5a7-797e-4e7c-a7c7-faae23012fe8",
+    title = "Au4Na8",
+    created = "2025-12-07"
+  }
+  description = "Na2Au from Materials Project (mp-1363)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.439584,
+    b = 7.439584,
+    c = 5.612520,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 140,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.170260, 0.329740, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.170260, 0.670260, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.329740, 0.170260, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.329740, 0.829740, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.670260, 0.170260, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.670260, 0.829740, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.829740, 0.329740, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in tetragonal structure",
+      wyckoff = "8h",
+      position = (0.829740, 0.670260, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2831007343678162
+  }
+}

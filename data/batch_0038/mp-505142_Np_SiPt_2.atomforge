@@ -1,0 +1,109 @@
+atom_spec "Np(SiPt)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d806acbf-c7c3-49b9-b6fa-7f06f4e50c0b",
+    title = "Np2Pt4Si4",
+    created = "2025-12-07"
+  }
+  description = "Np(SiPt)2 from Materials Project (mp-505142)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.215534,
+    b = 4.215534,
+    c = 9.898660,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Np {
+      description = "Np site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.254027),
+      frame = fractional,
+      species = ({ element = "Np", occupancy = 1.000000 })
+    },
+    site Np {
+      description = "Np site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.745973),
+      frame = fractional,
+      species = ({ element = "Np", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.622197),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.377803),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.864564),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.135436),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7627354697499996
+  }
+}

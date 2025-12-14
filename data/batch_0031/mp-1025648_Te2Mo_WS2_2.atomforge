@@ -1,0 +1,102 @@
+atom_spec "Te2Mo(WS2)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a8fedaa1-7c02-4575-973b-5952b20050b1",
+    title = "MoS4Te2W2",
+    created = "2025-12-07"
+  }
+  description = "Te2Mo(WS2)2 from Materials Project (mp-1025648)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.297432,
+    b = 3.297432,
+    c = 30.502066,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mo {
+      description = "Mo site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.115614),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.296642),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.397367),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.527930),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.628696),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.052917),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.178337),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.578319),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.347020),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.882845612499998
+  }
+}

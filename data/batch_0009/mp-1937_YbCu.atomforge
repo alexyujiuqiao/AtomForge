@@ -1,0 +1,95 @@
+atom_spec "YbCu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "41104d17-0391-4b1b-97b3-3c457154600c",
+    title = "Cu4Yb4",
+    created = "2025-12-07"
+  }
+  description = "YbCu from Materials Project (mp-1937)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.275581,
+    b = 5.596772,
+    c = 7.254957,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.614860, 0.032972),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.885140, 0.532972),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.114860, 0.467028),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.385140, 0.967028),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.131479, 0.180588),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.368521, 0.680588),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.631479, 0.319412),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.868521, 0.819412),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2896376974999999
+  }
+}

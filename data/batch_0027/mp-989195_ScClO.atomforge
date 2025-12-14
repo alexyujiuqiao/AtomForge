@@ -1,0 +1,81 @@
+atom_spec "ScClO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2a177359-100c-4eac-ac6c-bac4222e914c",
+    title = "Cl2O2Sc2",
+    created = "2025-12-07"
+  }
+  description = "ScClO from Materials Project (mp-989195)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.571370,
+    b = 3.571370,
+    c = 7.956130,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.676641),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.323359),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.134563),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.865437),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.9387
+    formation_energy = -3.2787223183333336
+  }
+}

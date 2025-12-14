@@ -1,0 +1,81 @@
+atom_spec "BPd2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a8e8abad-6d08-4a4d-b21b-b7bfdea31962",
+    title = "B2Pd4",
+    created = "2025-12-07"
+  }
+  description = "BPd2 from Materials Project (mp-7424)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.159630,
+    b = 4.772288,
+    c = 5.172386,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 58,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.254017, 0.344176),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.745983, 0.655824),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.245983, 0.844176),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.754017, 0.155824),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.266144823055555
+  }
+}

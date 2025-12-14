@@ -1,0 +1,74 @@
+atom_spec "Ni(HO)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "398c5a2a-28ee-4d5e-854c-16704b8843d3",
+    title = "H2NiO2",
+    created = "2025-12-07"
+  }
+  description = "Ni(HO)2 from Materials Project (mp-1320002)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.152646,
+    b = 3.152676,
+    c = 4.663020,
+    alpha = 89.500316,
+    beta = 89.500047,
+    gamma = 60.014497
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.278818, 0.385614, 0.428627),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.614427, 0.721227, 0.571315),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.928766, 0.071086, 0.000088),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.262764, 0.401757, 0.220385),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.598273, 0.737268, 0.779585),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.1324000000000005
+    formation_energy = -1.2439854920000002
+  }
+}

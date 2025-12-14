@@ -1,0 +1,81 @@
+atom_spec "KHS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2ed034cf-d009-4e36-bef1-c0f361b04a74",
+    title = "H2K2S2",
+    created = "2025-12-07"
+  }
+  description = "KHS from Materials Project (mp-634676)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.394904,
+    b = 5.009592,
+    c = 6.676480,
+    alpha = 90.000000,
+    beta = 101.347669,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.470406, 0.250000, 0.605140),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.529594, 0.750000, 0.394860),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.230817, 0.750000, 0.761932),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.769183, 0.250000, 0.238068),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.259423, 0.750000, 0.256133),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.740577, 0.250000, 0.743867),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.2359
+    formation_energy = -0.9416777037083328
+  }
+}

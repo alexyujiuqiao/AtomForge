@@ -1,0 +1,81 @@
+atom_spec "UGeS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9cca040a-761e-4c24-974b-476682a9a913",
+    title = "Ge2S2U2",
+    created = "2025-12-07"
+  }
+  description = "UGeS from Materials Project (mp-20913)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.815463,
+    b = 3.815463,
+    c = 8.166654,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.358617),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.641383),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.699285),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.300715),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.1407816593750002
+  }
+}

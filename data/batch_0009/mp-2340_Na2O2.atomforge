@@ -1,0 +1,123 @@
+atom_spec "Na2O2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "93c25ba6-2cb1-4d53-9cb6-b91c537f9c17",
+    title = "Na6O6",
+    created = "2025-12-07"
+  }
+  description = "Na2O2 from Materials Project (mp-2340)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 6.279444,
+    b = 6.279444,
+    c = 4.506937,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.365556, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.365556, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.634444, 0.634444, 0.000000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.699801, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.300199, 0.300199, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.699801, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.000000, 0.170544),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.000000, 0.829456),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.333333, 0.666667, 0.327586),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.333333, 0.666667, 0.672414),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.666667, 0.333333, 0.327586),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "4h",
+      position = (0.666667, 0.333333, 0.672414),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.7724000000000002
+    formation_energy = -1.3076940424425283
+  }
+}

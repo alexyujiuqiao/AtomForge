@@ -1,0 +1,67 @@
+atom_spec "MgAl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "190e178d-004f-423c-964c-fd07a8ead713",
+    title = "Al2Mg2",
+    created = "2025-12-07"
+  }
+  description = "MgAl from Materials Project (mp-1094987)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.132483,
+    b = 4.785532,
+    c = 5.156960,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 51,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.250000, 0.162922),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.750000, 0.837078),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.679315),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.320685),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0293827900000001
+  }
+}

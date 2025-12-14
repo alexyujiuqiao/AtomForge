@@ -1,0 +1,81 @@
+atom_spec "CrFeSb4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ea4477f3-2b98-4dfb-9f06-79162e0a3269",
+    title = "CrFeSb4",
+    created = "2025-12-07"
+  }
+  description = "CrFeSb4 from Materials Project (mp-1226216)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.943649,
+    b = 3.224377,
+    c = 6.690728,
+    alpha = 90.000000,
+    beta = 90.061400,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 10,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cr {
+      description = "Cr site in monoclinic structure",
+      wyckoff = "1h",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.177713, 0.000000, 0.652075),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.822287, 0.000000, 0.347925),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.303027, 0.500000, 0.133767),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.696973, 0.500000, 0.866233),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0914433400000002
+  }
+}

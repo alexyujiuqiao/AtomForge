@@ -1,0 +1,81 @@
+atom_spec "DyCuPb" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "54b1672b-0354-4e97-8897-f23aa20c4d45",
+    title = "Cu2Dy2Pb2",
+    created = "2025-12-07"
+  }
+  description = "DyCuPb from Materials Project (mp-22085)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.626022,
+    b = 4.626022,
+    c = 7.392335,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.821483),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.321483),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.495054),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.995054),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.226563),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.726563),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3896924683333337
+  }
+}

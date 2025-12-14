@@ -1,0 +1,88 @@
+atom_spec "BiPbF5" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "29a6e845-13cf-42d3-9781-46880a54c0b9",
+    title = "BiF5Pb",
+    created = "2025-12-07"
+  }
+  description = "BiPbF5 from Materials Project (mp-35795)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.248260,
+    b = 4.340910,
+    c = 7.255092,
+    alpha = 90.300177,
+    beta = 106.056274,
+    gamma = 118.474589
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.881364, 0.903572, 0.960182),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.272278, 0.619572, 0.808559),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.300811, 0.145372, 0.373075),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.581754, 0.740495, 0.181357),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.702659, 0.316101, 0.974714),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.792237, 0.870082, 0.632060),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.964897, 0.529805, 0.445053),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.2907
+    formation_energy = -2.683331806071429
+  }
+}

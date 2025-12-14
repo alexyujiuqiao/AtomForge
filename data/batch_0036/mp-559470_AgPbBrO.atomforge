@@ -1,0 +1,95 @@
+atom_spec "AgPbBrO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c31fea39-ade7-4f27-98cf-db185e929d01",
+    title = "Ag2Br2O2Pb2",
+    created = "2025-12-07"
+  }
+  description = "AgPbBrO from Materials Project (mp-559470)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.027180,
+    b = 4.027180,
+    c = 14.241874,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.592182),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.407818),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.385807),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.614193),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.084665),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.915335),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.1882999999999999
+    formation_energy = -1.0098659010416666
+  }
+}

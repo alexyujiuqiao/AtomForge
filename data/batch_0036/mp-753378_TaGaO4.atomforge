@@ -1,0 +1,123 @@
+atom_spec "TaGaO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0d48b806-cda2-482d-a52b-997ee78f2ed7",
+    title = "Ga2O8Ta2",
+    created = "2025-12-07"
+  }
+  description = "TaGaO4 from Materials Project (mp-753378)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.670979,
+    b = 5.007901,
+    c = 5.650893,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 30,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.830258),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.330258),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.226753, 0.831564, 0.884607),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.227217, 0.323052, 0.110297),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.272783, 0.323052, 0.610297),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.273247, 0.831564, 0.384607),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.726753, 0.168436, 0.384607),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.727217, 0.676948, 0.610297),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.772783, 0.676948, 0.110297),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.773247, 0.168436, 0.884607),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.179934),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.000000, 0.679934),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.3885
+    formation_energy = -2.8585241687500003
+  }
+}

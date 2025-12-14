@@ -1,0 +1,95 @@
+atom_spec "MnGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e5c9c1c1-7de5-4f02-9a41-1d2af82458cf",
+    title = "Ge4Mn4",
+    created = "2025-12-07"
+  }
+  description = "MnGe from Materials Project (mp-1078464)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.761882,
+    b = 4.761882,
+    c = 4.761882,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in cubic structure",
+      wyckoff = "4a",
+      position = (0.157082, 0.157082, 0.157082),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in cubic structure",
+      wyckoff = "4a",
+      position = (0.342918, 0.842918, 0.657082),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in cubic structure",
+      wyckoff = "4a",
+      position = (0.657082, 0.342918, 0.842918),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in cubic structure",
+      wyckoff = "4a",
+      position = (0.842918, 0.657082, 0.342918),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in cubic structure",
+      wyckoff = "4a",
+      position = (0.137086, 0.362914, 0.637086),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in cubic structure",
+      wyckoff = "4a",
+      position = (0.362914, 0.637086, 0.137086),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in cubic structure",
+      wyckoff = "4a",
+      position = (0.637086, 0.137086, 0.362914),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in cubic structure",
+      wyckoff = "4a",
+      position = (0.862914, 0.862914, 0.862914),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1227602914655179
+  }
+}

@@ -1,0 +1,60 @@
+atom_spec "TbCuGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bf4cf877-dcff-40c1-923c-18cb11cce23b",
+    title = "CuGeTb",
+    created = "2025-12-07"
+  }
+  description = "TbCuGe from Materials Project (mp-1217567)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.242149,
+    b = 3.744401,
+    c = 4.243044,
+    alpha = 90.000000,
+    beta = 119.992589,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666583, 0.500000, 0.333250),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.333375, 0.500000, 0.666840),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.999960, 0.000000, 0.999910),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6421971816666664
+  }
+}

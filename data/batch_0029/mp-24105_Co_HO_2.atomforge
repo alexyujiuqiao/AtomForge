@@ -1,0 +1,74 @@
+atom_spec "Co(HO)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "cccf9f07-465f-4726-883e-bfc5824eabf8",
+    title = "CoH2O2",
+    created = "2025-12-07"
+  }
+  description = "Co(HO)2 from Materials Project (mp-24105)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.195569,
+    b = 3.209480,
+    c = 4.778507,
+    alpha = 90.100476,
+    beta = 90.621142,
+    gamma = 119.528663
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.938228, 0.938042, 0.000036),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.268379, 0.613227, 0.576748),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.603863, 0.259286, 0.423265),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.270086, 0.610242, 0.780481),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.605499, 0.265258, 0.219470),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.3787000000000003
+    formation_energy = -1.246020217000001
+  }
+}

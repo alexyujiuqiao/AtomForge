@@ -1,0 +1,95 @@
+atom_spec "Zr2NiP" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "66393688-6d4e-483c-8803-8986d4d506fc",
+    title = "Ni2P2Zr4",
+    created = "2025-12-07"
+  }
+  description = "Zr2NiP from Materials Project (mp-29153)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.267749,
+    b = 3.649041,
+    c = 7.490565,
+    alpha = 90.000000,
+    beta = 110.277248,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.353034, 0.750000, 0.710224),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.646966, 0.250000, 0.289776),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.142689, 0.250000, 0.787876),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.857311, 0.750000, 0.212124),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.220633, 0.250000, 0.429753),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.282342, 0.750000, 0.074550),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.717658, 0.250000, 0.925450),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.779367, 0.750000, 0.570247),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.9924390145833328
+  }
+}

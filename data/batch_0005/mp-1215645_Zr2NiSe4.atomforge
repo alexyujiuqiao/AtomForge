@@ -1,0 +1,88 @@
+atom_spec "Zr2NiSe4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7920f9b1-9e75-446e-858f-d5bfd1d455d2",
+    title = "NiSe4Zr2",
+    created = "2025-12-07"
+  }
+  description = "Zr2NiSe4 from Materials Project (mp-1215645)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.745878,
+    b = 6.448844,
+    c = 7.099038,
+    alpha = 116.610129,
+    beta = 105.279437,
+    gamma = 90.019252
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "1h",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.114133, 0.780629, 0.727593),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.386677, 0.715882, 0.274173),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.613323, 0.284118, 0.725827),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.885867, 0.219371, 0.272407),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.247474, 0.249928, 0.995149),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.752526, 0.750072, 0.004851),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.3408109041964278
+  }
+}

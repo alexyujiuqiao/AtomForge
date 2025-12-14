@@ -1,0 +1,74 @@
+atom_spec "Li2CeP2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "85456d58-0a70-4aed-89db-7d1ebe6333e8",
+    title = "CeLi2P2",
+    created = "2025-12-07"
+  }
+  description = "Li2CeP2 from Materials Project (mp-9912)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.156796,
+    b = 4.156796,
+    c = 6.636458,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.622302),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.377698),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.230914),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.769086),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.8348999999999998
+    formation_energy = -1.000183449666666
+  }
+}

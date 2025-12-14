@@ -1,0 +1,123 @@
+atom_spec "MgAlAg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fd926e61-1cba-4040-83f0-efddd27080a7",
+    title = "Ag4Al4Mg4",
+    created = "2025-12-07"
+  }
+  description = "MgAlAg from Materials Project (mp-1222060)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.393792,
+    b = 8.736018,
+    c = 5.395474,
+    alpha = 90.000000,
+    beta = 118.164352,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.347601, 0.500000, 0.160496),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.839266, 0.500000, 0.652388),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.989238, 0.238339, 0.010841),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.989238, 0.761661, 0.010841),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.170218, 0.000000, 0.829872),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.179447, 0.000000, 0.347159),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.652940, 0.000000, 0.820624),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.836959, 0.500000, 0.162964),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.331459, 0.314635, 0.668497),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.331459, 0.685365, 0.668497),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.666088, 0.185548, 0.333909),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.666088, 0.814452, 0.333909),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1425078713888889
+  }
+}

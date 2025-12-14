@@ -1,0 +1,67 @@
+atom_spec "Li3Mg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9a57dc02-b3cc-4316-9096-c7d7e720bd79",
+    title = "Li3Mg",
+    created = "2025-12-07"
+  }
+  description = "Li3Mg from Materials Project (mp-976139)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.084965,
+    b = 4.980281,
+    c = 5.250380,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 25,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.998656),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.499585),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.832902),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.500000, 0.335524),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0221756474999998
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "LaGd(ClO)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "61276152-2698-4402-9efd-0f0b9c8c9e52",
+    title = "Cl2GdLaO2",
+    created = "2025-12-07"
+  }
+  description = "LaGd(ClO)2 from Materials Project (mp-1222800)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.045936,
+    b = 4.045936,
+    c = 6.917652,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 99,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.632127),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.371028),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.832643),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.174701),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.994050),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.994050),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.0539
+    formation_energy = -3.531901034166668
+  }
+}

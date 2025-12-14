@@ -1,0 +1,109 @@
+atom_spec "Ba(FeAs)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "36ff3f25-42e4-49b4-8f3d-c1067f262682",
+    title = "As4Ba2Fe4",
+    created = "2025-12-07"
+  }
+  description = "Ba(FeAs)2 from Materials Project (mp-568961)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.600425,
+    b = 5.693443,
+    c = 7.044789,
+    alpha = 66.177462,
+    beta = 89.999617,
+    gamma = 89.999635
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site As {
+      description = "As site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500068, 0.149429, 0.701329),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500073, 0.850570, 0.298671),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999927, 0.649403, 0.701327),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999932, 0.350597, 0.298673),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500034, 0.500000, 0.999999),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999967, 0.000000, 0.000001),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.249942, 0.500002, 0.499998),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.250059, 0.999998, 0.500001),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.749939, 0.000004, 0.499997),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750060, 0.499998, 0.500003),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5638677110000003
+  }
+}

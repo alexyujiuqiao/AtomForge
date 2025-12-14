@@ -1,0 +1,109 @@
+atom_spec "Ag(AuS)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c43722b3-eb2c-45f9-9c9d-b8d5c5108fed",
+    title = "Ag2Au4S4",
+    created = "2025-12-07"
+  }
+  description = "Ag(AuS)2 from Materials Project (mp-35835)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 7.172518,
+    b = 4.454032,
+    c = 7.288495,
+    alpha = 90.000000,
+    beta = 90.935492,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 7,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.146004, 0.236904, 0.597858),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.646004, 0.763096, 0.597858),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.244463, 0.500992, 0.008212),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.499925, 0.104043, 0.247013),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.744463, 0.499008, 0.008212),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.999925, 0.895957, 0.247013),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.490220, 0.264082, 0.549377),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.494388, 0.829577, 0.972540),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.990220, 0.735918, 0.549377),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.994388, 0.170423, 0.972540),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.167409200583333
+  }
+}

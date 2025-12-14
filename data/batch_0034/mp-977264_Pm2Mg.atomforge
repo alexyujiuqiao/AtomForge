@@ -1,0 +1,81 @@
+atom_spec "Pm2Mg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f3155c14-8a38-43e4-b508-8195bf92ac9d",
+    title = "Mg2Pm4",
+    created = "2025-12-07"
+  }
+  description = "Pm2Mg from Materials Project (mp-977264)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.816564,
+    b = 3.816564,
+    c = 12.758590,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.157039),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.842961),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.342961),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    },
+    site Pm {
+      description = "Pm site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.657039),
+      frame = fractional,
+      species = ({ element = "Pm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0521220083333329
+  }
+}

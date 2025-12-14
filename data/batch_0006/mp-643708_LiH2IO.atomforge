@@ -1,0 +1,109 @@
+atom_spec "LiH2IO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "40eb2463-6cfa-42a8-bade-36714cc49114",
+    title = "H4I2Li2O2",
+    created = "2025-12-07"
+  }
+  description = "LiH2IO from Materials Project (mp-643708)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.673307,
+    b = 4.390022,
+    c = 6.349507,
+    alpha = 90.000000,
+    beta = 90.186483,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.608749, 0.323629, 0.999820),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.608749, 0.676371, 0.999820),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.900172, 0.323095, 0.489470),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.900172, 0.676905, 0.489470),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000406, 0.000000, 0.998793),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.501934, 0.000000, 0.499932),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.251126, 0.500000, 0.749544),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.253265, 0.500000, 0.248113),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.008698, 0.500000, 0.492091),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.499729, 0.500000, 0.999948),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.636000000000001
+    formation_energy = -1.3440354196666664
+  }
+}

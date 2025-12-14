@@ -1,0 +1,95 @@
+atom_spec "Ba3SrAg4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "01567147-65ac-45a8-8a02-206d970bae05",
+    title = "Ag4Ba3Sr",
+    created = "2025-12-07"
+  }
+  description = "Ba3SrAg4 from Materials Project (mp-1228028)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.621815,
+    b = 4.988713,
+    c = 8.656050,
+    alpha = 90.000000,
+    beta = 90.727399,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.622063, 0.000000, 0.469674),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.881231, 0.000000, 0.961255),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.116351, 0.500000, 0.030985),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.382982, 0.500000, 0.536278),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.129291, 0.000000, 0.322280),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.368971, 0.000000, 0.817745),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.631902, 0.500000, 0.180479),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.867209, 0.500000, 0.681303),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2860573066666667
+  }
+}

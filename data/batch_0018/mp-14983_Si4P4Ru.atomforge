@@ -1,0 +1,102 @@
+atom_spec "Si4P4Ru" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "92f20bf0-4fda-4738-b8a5-dba54d627699",
+    title = "P4RuSi4",
+    created = "2025-12-07"
+  }
+  description = "Si4P4Ru from Materials Project (mp-14983)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.970290,
+    b = 5.665877,
+    c = 6.208293,
+    alpha = 85.594434,
+    beta = 111.729939,
+    gamma = 109.245581
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site P {
+      description = "P site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.159942, 0.984831, 0.681286),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.341355, 0.773001, 0.241288),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.621573, 0.588978, 0.877939),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.766435, 0.357797, 0.436424),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999810, 0.000271, 0.000489),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.237463, 0.656247, 0.567712),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.358840, 0.405517, 0.119103),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.670220, 0.224384, 0.773619),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.844262, 0.027174, 0.310639),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.4916999999999998
+    formation_energy = -0.358363407592593
+  }
+}

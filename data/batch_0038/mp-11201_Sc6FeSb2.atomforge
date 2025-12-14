@@ -1,0 +1,102 @@
+atom_spec "Sc6FeSb2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bc204359-4a2c-4753-8045-fcc5810e8d3f",
+    title = "FeSb2Sc6",
+    created = "2025-12-07"
+  }
+  description = "Sc6FeSb2 from Materials Project (mp-11201)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.659093,
+    b = 7.659093,
+    c = 3.906991,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Fe {
+      description = "Fe site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.232069, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.232069, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.767931, 0.767931, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.610774, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.389226, 0.389226, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.610774, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6234422666666661
+  }
+}

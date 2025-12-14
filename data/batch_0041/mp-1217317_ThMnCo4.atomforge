@@ -1,0 +1,81 @@
+atom_spec "ThMnCo4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a881c351-2ca9-4a33-a525-46a7d9992718",
+    title = "Co4MnTh",
+    created = "2025-12-07"
+  }
+  description = "ThMnCo4 from Materials Project (mp-1217317)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.027682,
+    b = 4.002395,
+    c = 5.027833,
+    alpha = 90.000000,
+    beta = 119.993071,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.000000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.005515, 0.500000, 0.502738),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.497243, 0.500000, 0.502760),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.497263, 0.500000, 0.994479),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.666588, 0.000000, 0.333333),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.999985, 0.000000, 0.999973),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1205402229885059
+  }
+}

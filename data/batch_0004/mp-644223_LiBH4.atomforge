@@ -1,0 +1,123 @@
+atom_spec "LiBH4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "52c2a1e0-bf20-42b7-bed8-8021087b76f3",
+    title = "B2H8Li2",
+    created = "2025-12-07"
+  }
+  description = "LiBH4 from Materials Project (mp-644223)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.180003,
+    b = 4.180003,
+    c = 6.709922,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.557793),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.057793),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.376311),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.876311),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.174677, 0.349354, 0.618330),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.174677, 0.825323, 0.618330),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.349354, 0.174677, 0.118330),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.650646, 0.825323, 0.618330),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.825323, 0.174677, 0.118330),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.825323, 0.650646, 0.118330),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.005882),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.505882),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 6.757099999999999
+    formation_energy = -0.4031085945833338
+  }
+}

@@ -1,0 +1,123 @@
+atom_spec "BiTeIr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7b878db9-d235-4daf-b54f-8a1e4688b45d",
+    title = "Bi4Ir4Te4",
+    created = "2025-12-07"
+  }
+  description = "BiTeIr from Materials Project (mp-1227372)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 6.618116,
+    b = 6.618116,
+    c = 6.618116,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in cubic structure",
+      wyckoff = "4a",
+      position = (0.130751, 0.869249, 0.369249),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in cubic structure",
+      wyckoff = "4a",
+      position = (0.369249, 0.130751, 0.869249),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in cubic structure",
+      wyckoff = "4a",
+      position = (0.630751, 0.630751, 0.630751),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in cubic structure",
+      wyckoff = "4a",
+      position = (0.869249, 0.369249, 0.130751),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "4a",
+      position = (0.006379, 0.493621, 0.506379),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "4a",
+      position = (0.493621, 0.506379, 0.006379),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "4a",
+      position = (0.506379, 0.006379, 0.493621),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in cubic structure",
+      wyckoff = "4a",
+      position = (0.993621, 0.993621, 0.993621),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in cubic structure",
+      wyckoff = "4a",
+      position = (0.126573, 0.626573, 0.873427),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in cubic structure",
+      wyckoff = "4a",
+      position = (0.373427, 0.373427, 0.373427),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in cubic structure",
+      wyckoff = "4a",
+      position = (0.626573, 0.873427, 0.126573),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in cubic structure",
+      wyckoff = "4a",
+      position = (0.873427, 0.126573, 0.626573),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.4737
+    formation_energy = -0.2304124383333334
+  }
+}

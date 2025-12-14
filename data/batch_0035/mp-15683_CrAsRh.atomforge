@@ -1,0 +1,102 @@
+atom_spec "CrAsRh" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8c9952ef-4e3f-42f6-9162-4d144fcf9a42",
+    title = "As3Cr3Rh3",
+    created = "2025-12-07"
+  }
+  description = "CrAsRh from Materials Project (mp-15683)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 6.504806,
+    b = 6.504806,
+    c = 3.737686,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 189,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site As {
+      description = "As site in hexagonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.000000),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.000000, 0.592491, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.407509, 0.407509, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in hexagonal structure",
+      wyckoff = "3g",
+      position = (0.592491, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.000000, 0.254819, 0.000000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.254819, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in hexagonal structure",
+      wyckoff = "3f",
+      position = (0.745181, 0.745181, 0.000000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2484777427777784
+  }
+}

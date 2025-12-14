@@ -1,0 +1,95 @@
+atom_spec "Co3Si" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bd606e81-7930-4b20-bd8f-ef0dacb217c3",
+    title = "Co6Si2",
+    created = "2025-12-07"
+  }
+  description = "Co3Si from Materials Project (mp-1079393)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.976470,
+    b = 4.976470,
+    c = 3.972794,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.167472, 0.334944, 0.750000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.167472, 0.832528, 0.750000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.334944, 0.167472, 0.250000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.665056, 0.832528, 0.750000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.832528, 0.167472, 0.250000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.832528, 0.665056, 0.250000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2563429374999986
+  }
+}

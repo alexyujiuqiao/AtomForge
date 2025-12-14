@@ -1,0 +1,67 @@
+atom_spec "VPt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "773710c5-d4c8-4712-9b3a-3d57f48de89f",
+    title = "Pt2V2",
+    created = "2025-12-07"
+  }
+  description = "VPt from Materials Project (mp-1017531)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 2.708746,
+    b = 4.406270,
+    c = 4.809712,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 51,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.318474),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.681526),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.250000, 0.829367),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.750000, 0.170633),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5501723499999995
+  }
+}

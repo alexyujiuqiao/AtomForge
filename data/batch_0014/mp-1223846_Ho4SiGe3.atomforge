@@ -1,0 +1,95 @@
+atom_spec "Ho4SiGe3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fc2a0531-c482-45d9-94c0-38686dff2f19",
+    title = "Ge3Ho4Si",
+    created = "2025-12-07"
+  }
+  description = "Ho4SiGe3 from Materials Project (mp-1223846)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.922518,
+    b = 4.268190,
+    c = 10.638491,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 25,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.500000, 0.914923),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.582054),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.084836),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.140180),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.500000, 0.637900),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.860921),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.361854),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.417332),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8455312643749995
+  }
+}

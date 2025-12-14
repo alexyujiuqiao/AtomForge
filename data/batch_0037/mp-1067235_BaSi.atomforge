@@ -1,0 +1,67 @@
+atom_spec "BaSi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8a4b81d1-2afe-484b-a593-aa2927986386",
+    title = "Ba2Si2",
+    created = "2025-12-07"
+  }
+  description = "BaSi from Materials Project (mp-1067235)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.198282,
+    b = 5.029040,
+    c = 6.571384,
+    alpha = 112.497337,
+    beta = 90.871109,
+    gamma = 89.973808
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.259238, 0.637232, 0.274436),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Ba {
+      description = "Ba site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.740765, 0.362761, 0.725552),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.247325, 0.943600, 0.886975),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.752672, 0.056408, 0.113038),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.385268425
+  }
+}

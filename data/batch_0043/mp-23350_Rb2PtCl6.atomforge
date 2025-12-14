@@ -1,0 +1,102 @@
+atom_spec "Rb2PtCl6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a7216158-5f81-4f19-a6e8-ed977e0a7782",
+    title = "Cl6PtRb2",
+    created = "2025-12-07"
+  }
+  description = "Rb2PtCl6 from Materials Project (mp-23350)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 7.207645,
+    b = 7.207645,
+    c = 7.207645,
+    alpha = 60.000000,
+    beta = 60.000000,
+    gamma = 60.000000
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.230835, 0.769164, 0.230836),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.230835, 0.769165, 0.769165),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.230836, 0.230834, 0.769165),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.769165, 0.230834, 0.230836),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.769165, 0.230835, 0.769165),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.769165, 0.769163, 0.230836),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.250000, 0.250000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750000, 0.750000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.0431
+    formation_energy = -1.6357177794444442
+  }
+}

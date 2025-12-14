@@ -1,0 +1,95 @@
+atom_spec "TmPt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "27140cb1-9054-42da-843e-8227051f8b45",
+    title = "Pt4Tm4",
+    created = "2025-12-07"
+  }
+  description = "TmPt from Materials Project (mp-1025409)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.422505,
+    b = 5.577861,
+    c = 6.975081,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.157521, 0.044717),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.342479, 0.544717),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.657521, 0.455283),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.842479, 0.955283),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.641649, 0.180974),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.858351, 0.680974),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.141649, 0.319026),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.358351, 0.819026),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.3223895583333336
+  }
+}

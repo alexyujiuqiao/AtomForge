@@ -1,0 +1,74 @@
+atom_spec "CsAgBr3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "767ea992-f28e-48a1-9696-aaeae600dbc4",
+    title = "AgBr3Cs",
+    created = "2025-12-07"
+  }
+  description = "CsAgBr3 from Materials Project (mp-998344)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.494482,
+    b = 5.494833,
+    c = 5.497825,
+    alpha = 89.946866,
+    beta = 89.974035,
+    gamma = 89.946227
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.495339, 0.484736, 0.499160),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.494715, 0.486964, 0.999292),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.502975, 0.984850, 0.502902),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.995506, 0.489436, 0.498215),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.001464, 0.994011, 0.000431),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.2416455954195402
+  }
+}

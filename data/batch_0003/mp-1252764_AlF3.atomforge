@@ -1,0 +1,95 @@
+atom_spec "AlF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a5ea32b1-9888-479b-87ba-7295b773be79",
+    title = "Al2F6",
+    created = "2025-12-07"
+  }
+  description = "AlF3 from Materials Project (mp-1252764)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.638963,
+    b = 5.322738,
+    c = 5.905147,
+    alpha = 64.001682,
+    beta = 89.386179,
+    gamma = 89.094631
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.305626, 0.830228, 0.982010),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.305779, 0.555288, 0.521189),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.298661, 0.910090, 0.255774),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.305751, 0.193217, 0.752546),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.305788, 0.694023, 0.750752),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.312693, 0.475077, 0.247405),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.805635, 0.836702, 0.972746),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.805795, 0.548238, 0.530443),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 7.4477
+    formation_energy = -3.8352303706249993
+  }
+}

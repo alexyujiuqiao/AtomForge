@@ -1,0 +1,74 @@
+atom_spec "ErZnCuP2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "387207a7-7bab-40a0-89a6-aa503444ab75",
+    title = "CuErP2Zn",
+    created = "2025-12-07"
+  }
+  description = "ErZnCuP2 from Materials Project (mp-1225396)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.965470,
+    b = 3.965470,
+    c = 6.495285,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.638695),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.984440),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.748642),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.252693),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.375529),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.1311
+    formation_energy = -0.7652317193333339
+  }
+}

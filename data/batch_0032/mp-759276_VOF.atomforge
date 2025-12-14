@@ -1,0 +1,123 @@
+atom_spec "VOF" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1ae5edac-bcb9-4aaa-81b9-510744268c41",
+    title = "F4O4V4",
+    created = "2025-12-07"
+  }
+  description = "VOF from Materials Project (mp-759276)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.307618,
+    b = 5.255045,
+    c = 7.238018,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.618304, 0.115486),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.881696, 0.615486),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.118304, 0.384514),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.381696, 0.884514),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.103158, 0.125870),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.396842, 0.625870),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.603158, 0.374130),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.896842, 0.874130),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.133580, 0.844791),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.366420, 0.344791),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.633580, 0.655209),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.866420, 0.155209),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.03
+    formation_energy = -2.815830631666666
+  }
+}

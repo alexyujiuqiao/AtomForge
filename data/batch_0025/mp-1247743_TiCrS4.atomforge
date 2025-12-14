@@ -1,0 +1,123 @@
+atom_spec "TiCrS4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a76234f0-5203-45d3-9072-31dff1d70c68",
+    title = "Cr2S8Ti2",
+    created = "2025-12-07"
+  }
+  description = "TiCrS4 from Materials Project (mp-1247743)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 6.832563,
+    b = 6.833067,
+    c = 6.833669,
+    alpha = 90.465808,
+    beta = 119.630403,
+    gamma = 119.825492
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cr {
+      description = "Cr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000004, 0.499995, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.499893, 0.999842, 0.500106),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000004, 0.746746, 0.746653),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.011689, 0.748897, 0.260521),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.488488, 0.748895, 0.737277),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.499950, 0.246696, 0.746691),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500024, 0.753309, 0.253256),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.511779, 0.251172, 0.262877),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.988278, 0.251116, 0.739377),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999959, 0.253216, 0.253234),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.499969, 0.000089, 0.000065),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999956, 0.000014, 0.499948),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.2043991784722223
+  }
+}

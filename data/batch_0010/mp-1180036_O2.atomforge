@@ -1,0 +1,67 @@
+atom_spec "O2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b0f71109-c1e4-4f46-902e-de9a27e4b8d9",
+    title = "O4",
+    created = "2025-12-07"
+  }
+  description = "O2 from Materials Project (mp-1180036)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 3.117047,
+    b = 3.789457,
+    c = 3.892258,
+    alpha = 90.000000,
+    beta = 108.647427,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 13,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.181295, 0.305877, 0.332966),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.318705, 0.305877, 0.667034),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.681295, 0.694123, 0.332966),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4g",
+      position = (0.818705, 0.694123, 0.667034),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.6698999999999999
+    formation_energy = 0.0299740924999998
+  }
+}

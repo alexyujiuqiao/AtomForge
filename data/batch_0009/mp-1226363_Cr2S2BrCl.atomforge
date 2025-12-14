@@ -1,0 +1,81 @@
+atom_spec "Cr2S2BrCl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a43acc1e-0ec5-458c-8a5f-969a880fa010",
+    title = "BrClCr2S2",
+    created = "2025-12-07"
+  }
+  description = "Cr2S2BrCl from Materials Project (mp-1226363)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.503637,
+    b = 4.750448,
+    c = 8.172696,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 25,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.344794),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.669409),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in orthorhombic structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.500000, 0.124471),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in orthorhombic structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.000000, 0.867901),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.067102),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.926324),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.1925007956250002
+  }
+}

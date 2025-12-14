@@ -1,0 +1,102 @@
+atom_spec "Ta4N5" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9f04dcf8-da4c-4dae-8d53-4f0c5ca4c5ea",
+    title = "N5Ta4",
+    created = "2025-12-07"
+  }
+  description = "Ta4N5 from Materials Project (mp-8046)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.294464,
+    b = 5.329653,
+    c = 5.329653,
+    alpha = 80.658677,
+    beta = 66.241404,
+    gamma = 66.241404
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.091587, 0.215597, 0.601229),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.307184, 0.601229, 0.784403),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.692816, 0.398771, 0.215597),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.908413, 0.784403, 0.398771),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.216211, 0.388882, 0.178696),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.394907, 0.821304, 0.388883),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.605093, 0.178696, 0.611117),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.783789, 0.611118, 0.821304),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.288977688333334
+  }
+}

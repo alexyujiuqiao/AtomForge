@@ -1,0 +1,81 @@
+atom_spec "NbMoS4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3f6e2c62-21b7-4f4c-b110-5d83c5f8b4bc",
+    title = "MoNbS4",
+    created = "2025-12-07"
+  }
+  description = "NbMoS4 from Materials Project (mp-1220404)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.702960,
+    b = 3.289175,
+    c = 6.647754,
+    alpha = 90.000000,
+    beta = 106.811170,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mo {
+      description = "Mo site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.997107, 0.000000, 0.000771),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.504895, 0.500000, 0.000949),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.587995, 0.000000, 0.753270),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.754688, 0.000000, 0.247713),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.080451, 0.500000, 0.759300),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.242866, 0.500000, 0.241998),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.260217537083334
+  }
+}

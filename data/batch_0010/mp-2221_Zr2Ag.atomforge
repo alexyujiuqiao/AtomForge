@@ -1,0 +1,81 @@
+atom_spec "Zr2Ag" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c75720c8-4db4-4c38-baac-3db4cd76ca12",
+    title = "Ag2Zr4",
+    created = "2025-12-07"
+  }
+  description = "Zr2Ag from Materials Project (mp-2221)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.261990,
+    b = 3.261990,
+    c = 12.198154,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.336468),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.663532),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.163532),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.836468),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1058254055555553
+  }
+}

@@ -1,0 +1,74 @@
+atom_spec "Sr(CdP)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b8cb4697-9f63-49b1-b911-fa9c23e53bdb",
+    title = "Cd2P2Sr",
+    created = "2025-12-07"
+  }
+  description = "Sr(CdP)2 from Materials Project (mp-8277)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.388891,
+    b = 4.388891,
+    c = 7.331568,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.635209),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.364791),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.252778),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.747222),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.7104999999999997
+    formation_energy = -0.588413768666667
+  }
+}

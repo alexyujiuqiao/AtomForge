@@ -1,0 +1,60 @@
+atom_spec "LaSiAg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "463b80ac-23d4-454e-a4aa-8f29659b909a",
+    title = "AgLaSi",
+    created = "2025-12-07"
+  }
+  description = "LaSiAg from Materials Project (mp-1222760)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.423348,
+    b = 4.226064,
+    c = 4.424198,
+    alpha = 90.000000,
+    beta = 119.993074,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666667, 0.500000, 0.333333),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000014, 0.000000, 0.999998),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.333404, 0.500000, 0.666710),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4947648205555553
+  }
+}

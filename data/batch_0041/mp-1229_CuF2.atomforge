@@ -1,0 +1,81 @@
+atom_spec "CuF2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "88837344-2da4-4eee-afe1-3db66ada976b",
+    title = "Cu2F4",
+    created = "2025-12-07"
+  }
+  description = "CuF2 from Materials Project (mp-1229)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 3.299972,
+    b = 4.613169,
+    c = 5.423148,
+    alpha = 90.000000,
+    beta = 120.768922,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 14,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.268831, 0.200300, 0.795827),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.268831, 0.299700, 0.295827),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.731169, 0.700300, 0.704173),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.731169, 0.799700, 0.204173),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.8129397616666667
+  }
+}

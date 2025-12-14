@@ -1,0 +1,81 @@
+atom_spec "SmGePt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0e479afe-745c-4e7a-b044-d0fcdda9f917",
+    title = "Ge2Pt2Sm2",
+    created = "2025-12-07"
+  }
+  description = "SmGePt from Materials Project (mp-1219011)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.406627,
+    b = 5.723891,
+    c = 5.796554,
+    alpha = 85.708425,
+    beta = 112.340334,
+    gamma = 112.639563
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.065860, 0.227597, 0.904124),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.934140, 0.772403, 0.095876),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.459021, 0.638642, 0.279400),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.540979, 0.361358, 0.720600),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.236825, 0.784531, 0.689118),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.763175, 0.215469, 0.310882),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.0386578466666674
+  }
+}

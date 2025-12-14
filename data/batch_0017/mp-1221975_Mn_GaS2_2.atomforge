@@ -1,0 +1,88 @@
+atom_spec "Mn(GaS2)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fc0e0e80-dd83-4e43-b4e9-2046b386281e",
+    title = "Ga2MnS4",
+    created = "2025-12-07"
+  }
+  description = "Mn(GaS2)2 from Materials Project (mp-1221975)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.237038,
+    b = 3.709567,
+    c = 6.778377,
+    alpha = 90.000000,
+    beta = 90.332118,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.098397, 0.500000, 0.148798),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.645644, 0.500000, 0.831273),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.632983, 0.000000, 0.347490),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.016553, 0.000000, 0.343697),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.492169, 0.000000, 0.675407),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.002217, 0.500000, 0.834249),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.487037, 0.500000, 0.153087),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.5679000000000003
+    formation_energy = -0.8954776422044333
+  }
+}

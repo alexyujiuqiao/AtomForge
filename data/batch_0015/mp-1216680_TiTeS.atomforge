@@ -1,0 +1,60 @@
+atom_spec "TiTeS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "022f4f00-4632-4f5f-8f08-c4ff3986ddd9",
+    title = "STeTi",
+    created = "2025-12-07"
+  }
+  description = "TiTeS from Materials Project (mp-1216680)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.612304,
+    b = 3.612305,
+    c = 6.516130,
+    alpha = 89.998398,
+    beta = 89.998396,
+    gamma = 60.004199
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333295, 0.333333, 0.220812),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666729, 0.666729, 0.744100),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999956, 0.999957, 0.035087),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.3194268788194456
+  }
+}

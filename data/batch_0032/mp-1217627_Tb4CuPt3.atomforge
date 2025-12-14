@@ -1,0 +1,95 @@
+atom_spec "Tb4CuPt3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d9a98c3c-483a-4da6-ab7d-7244786c64c2",
+    title = "CuPt3Tb4",
+    created = "2025-12-07"
+  }
+  description = "Tb4CuPt3 from Materials Project (mp-1217627)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.579799,
+    b = 4.558579,
+    c = 7.024598,
+    alpha = 90.000000,
+    beta = 90.413348,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.863965, 0.000000, 0.463249),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.659815, 0.000000, 0.956156),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.132908, 0.500000, 0.534719),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.344382, 0.500000, 0.044965),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.142871, 0.000000, 0.818968),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.359378, 0.000000, 0.316620),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.635408, 0.500000, 0.688138),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.861272, 0.500000, 0.177185),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.0324440874999992
+  }
+}

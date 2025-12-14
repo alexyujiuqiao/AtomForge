@@ -1,0 +1,95 @@
+atom_spec "TiVS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "fd19cea8-3080-4e71-bc0c-e6db8ba63043",
+    title = "S4Ti2V2",
+    created = "2025-12-07"
+  }
+  description = "TiVS2 from Materials Project (mp-1216761)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.318112,
+    b = 5.845528,
+    c = 5.974421,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 26,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.336294, 0.219382),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.663706, 0.719382),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.179273, 0.786256),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.820727, 0.286256),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.058961, 0.508928),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.941039, 0.008928),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.442132, 0.485434),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.557868, 0.985434),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.4058491086458336
+  }
+}

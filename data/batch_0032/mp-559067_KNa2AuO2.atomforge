@@ -1,0 +1,123 @@
+atom_spec "KNa2AuO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "23adb69a-3e9d-485e-b3f6-5e0dcf1aa542",
+    title = "Au2K2Na4O4",
+    created = "2025-12-07"
+  }
+  description = "KNa2AuO2 from Materials Project (mp-559067)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.986195,
+    b = 5.493005,
+    c = 10.296963,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 58,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in orthorhombic structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in orthorhombic structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.401298, 0.266246),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.598702, 0.733754),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.098702, 0.766246),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.901298, 0.233754),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.249850, 0.853051),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.750150, 0.146949),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.250150, 0.353051),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.749850, 0.646949),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.0644
+    formation_energy = -1.322921190183908
+  }
+}

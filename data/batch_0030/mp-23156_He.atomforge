@@ -1,0 +1,53 @@
+atom_spec "He" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0e22dce0-ed5f-4254-932d-8bb13e1664a8",
+    title = "He2",
+    created = "2025-12-07"
+  }
+  description = "He from Materials Project (mp-23156)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 2.732697,
+    b = 2.732697,
+    c = 4.449274,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site He {
+      description = "He site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "He", occupancy = 1.000000 })
+    },
+    site He {
+      description = "He site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "He", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 17.775399999999998
+    formation_energy = 0.0019704049999999
+  }
+}

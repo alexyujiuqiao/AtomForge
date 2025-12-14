@@ -1,0 +1,81 @@
+atom_spec "SmAsPd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a0bdcaf6-1c72-490c-af8a-0430a1273d22",
+    title = "As2Pd2Sm2",
+    created = "2025-12-07"
+  }
+  description = "SmAsPd from Materials Project (mp-8951)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.375248,
+    b = 4.375248,
+    c = 7.654915,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site As {
+      description = "As site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.769370),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.269370),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.230312),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.730312),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.499717),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.999717),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.1811829683333326
+  }
+}

@@ -1,0 +1,123 @@
+// AtomForge Core DSL – Lark Grammar (minimal)
+
+// ---------------------------------------------------------------------
+// Lexical rules
+// ---------------------------------------------------------------------
+WS: /[ \t\r\n]+/
+COMMENT_LINE: /#[^\n]*/
+COMMENT_BLOCK: /\/\*(.|\n)*?\*\//
+
+%import common.ESCAPED_STRING
+%import common.INT
+%import common.FLOAT
+%import common.CNAME
+
+int: INT
+float: FLOAT
+string: ESCAPED_STRING
+number: float | int
+
+ident: /[A-Za-z_][A-Za-z0-9_]*/
+bt_char: /[^`\\\r\n]|\\[nrt\\"`]|\\u[0-9a-fA-F]{4}/
+bt_ident: "`" bt_char+ "`"
+id: ident | bt_ident
+identifier: string | id
+
+date: /[0-9]{4}-[0-9]{2}-[0-9]{2}/
+bool: "true" | "false"
+
+// ---------------------------------------------------------------------
+// Top-level
+// ---------------------------------------------------------------------
+start: program
+
+program: "atom_spec" identifier "{" header description? units? lattice symmetry basis defects? tile? properties? validation? provenance? patch? meta? "}"
+
+// For parser/lexer simplicity, treat created/modified as strings ("YYYY-MM-DD")
+header: "header" "{" "dsl_version" "=" string ("," "content_schema_version" "=" string)? ("," "uuid" "=" string)? "," "title" "=" string "," "created" "=" string ("," "modified" "=" string)? "}"
+
+description: "description" "=" string ","
+
+// Units block (treat units as strings for simplicity)
+units: "units" "{" "system" "=" string "," "length" "=" string "," "angle" "=" string "," "disp" "=" string "," "temp" "=" string "," "pressure" "=" string "}"
+
+// ---------------------------------------------------------------------
+// Core structural blocks (same shapes as your big grammar)
+// ---------------------------------------------------------------------
+
+lattice: "lattice" "{" description? (bravais | vectors) "}"
+bravais: "type" "=" lat_type "," "a" "=" length "," "b" "=" length "," "c" "=" length "," "alpha" "=" angle "," "beta" "=" angle "," "gamma" "=" angle
+vectors: "vectors" "=" "(" vec3 "," vec3 "," vec3 ")"
+
+symmetry: "symmetry" "{" description? "space_group" "=" space_group "," "origin_choice" "=" int ("," "magnetic_group" "=" string)? ("," "superspace" "=" superspace)? "}"
+
+superspace: "{" "k_vectors" "=" "(" vec3f ("," vec3f)* ")" "," "t_phase" "=" number "}"
+
+basis: "basis" "{" description? site ("," site)* "}"
+site: "site" identifier "{"description? "wyckoff" "=" wyckoff "," "position" "=" vec3f "," "frame" "=" frame "," "species" "=" "(" species ("," species)* ")" ("," "moment" "=" vec3 frame string)? ("," "constraint" "=" string)? ("," "adp_iso" "=" disp)? ("," "adp_aniso" "=" adp)? ("," "label" "=" string)? "}"
+
+// Species: element as generic string, occupancy numeric
+species: "{" "element" "=" string "," "occupancy" "=" number ("," "isotope" "=" int)? ("," "charge" "=" number)? ("," "valence" "=" number)? "}"
+
+adp: "[" number "," number "," number "," number "," number "," number "]" | "{" "U11" "=" number "," "U22" "=" number "," "U33" "=" number "," "U23" "=" number "," "U13" "=" number "," "U12" "=" number "}"
+
+defects: "defects" "{" defect_entry ("," defect_entry)* "}"
+defect_entry: "{" "site_ref" "=" id "," "type" "=" ("vacancy" | "interstitial" | "substitution") "," "prob" "=" number ("," "species" "=" species)? "}"
+
+tile: "tile" "{" "repeat" "=" vec3i ("," "origin_shift" "=" vec3f)?"}"
+
+properties: "properties" "{" property_entry ("," property_entry)* "}"
+property_entry: qname "=" property_value
+
+// Keep property_value simple to avoid ambiguity with typed quantities
+property_value: number | string | "(" vec3 frame? ")" | vec3i | "[" number ("," number)* "]" | bool
+
+validation: "validation" "{" "tolerance" "=" number "," "occupancy_clamp" "=" bool "," "vector_unit_consistent" "=" bool "," "max_transform_depth" "=" int "," "enforce_units" "=" bool "}"
+
+// Minimal provenance: arbitrary key/value pairs, require at least 'source'
+provenance: "provenance" "{" provenance_entry ("," provenance_entry)* "}"
+provenance_entry: qname "=" (string | number | bool)
+
+patch: "patch" "{" patch_op ("," patch_op)* "}"
+patch_op: "add" (site | path "=" property_value) | "remove" path | "update" path "=" property_value
+
+meta: "meta" "{" meta_entry ("," meta_entry)* "}"
+meta_entry: qname "=" (string | number | bool)
+
+// ---------------------------------------------------------------------
+// Shared types
+// ---------------------------------------------------------------------
+vec3: "(" number "," number "," number ")"
+vec3f: "(" number "," number "," number ")"
+vec3i: "(" int "," int "," int ")"
+
+length: number len_unit?
+angle: number ang_unit?
+temp: number temp_unit?
+pres: number pres_unit?
+disp: number disp_unit?
+
+frame: "fractional" | "cartesian"
+
+path_segment: ident ("[" int "]")?
+path: path_segment ("." path_segment)*
+
+qname: (ident ":")? ident
+
+len_unit: "angstrom" | "nm" | "pm" | "bohr"
+ang_unit: "degree" | "radian"
+temp_unit: "K"
+pres_unit: "Pa" | "kPa" | "bar" | "GPa"
+disp_unit: "angstrom^2"
+
+lat_type: "cubic" | "tetragonal" | "orthorhombic" | "hexagonal" | "rhombohedral" | "monoclinic" | "triclinic"
+space_group: int | string
+wyckoff: string
+element: "H"|"He"|"Li"|"Be"|"B"|"C"|"N"|"O"|"F"|"Ne"|"Na"|"Mg"|"Al"|"Si"|"P"|"S"|"Cl"|"Ar"|"K"|"Ca"|"Sc"|"Ti"|"V"|"Cr"|"Mn"|"Fe"|"Co"|"Ni"|"Cu"|"Zn"|"Ga"|"Ge"|"As"|"Se"|"Br"|"Kr"|"Rb"|"Sr"|"Y"|"Zr"|"Nb"|"Mo"|"Tc"|"Ru"|"Rh"|"Pd"|"Ag"|"Cd"|"In"|"Sn"|"Sb"|"Te"|"I"|"Xe"|"Cs"|"Ba"|"La"|"Ce"|"Pr"|"Nd"|"Pm"|"Sm"|"Eu"|"Gd"|"Tb"|"Dy"|"Ho"|"Er"|"Tm"|"Yb"|"Lu"|"Hf"|"Ta"|"W"|"Re"|"Os"|"Ir"|"Pt"|"Au"|"Hg"|"Tl"|"Pb"|"Bi"|"Po"|"At"|"Rn"|"Fr"|"Ra"|"Ac"|"Th"|"Pa"|"U"|"Np"|"Pu"|"Am"|"Cm"|"Bk"|"Cf"|"Es"|"Fm"|"Md"|"No"|"Lr"|"Rf"|"Db"|"Sg"|"Bh"|"Hs"|"Mt"|"Ds"|"Rg"|"Cn"|"Nh"|"Fl"|"Mc"|"Lv"|"Ts"|"Og"
+
+// ---------------------------------------------------------------------
+// Ignore
+// ---------------------------------------------------------------------
+%ignore WS
+%ignore COMMENT_LINE
+%ignore COMMENT_BLOCK

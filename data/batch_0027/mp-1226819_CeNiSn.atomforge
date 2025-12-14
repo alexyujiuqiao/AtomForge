@@ -1,0 +1,81 @@
+atom_spec "CeNiSn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6f7e23e6-7482-467c-bc6f-d374c41bbd78",
+    title = "Ce2Ni2Sn2",
+    created = "2025-12-07"
+  }
+  description = "CeNiSn from Materials Project (mp-1226819)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.241355,
+    b = 5.715888,
+    c = 6.094640,
+    alpha = 89.304241,
+    beta = 110.362451,
+    gamma = 111.778195
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.224019, 0.785042, 0.662995),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.775981, 0.214958, 0.337005),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.461051, 0.610848, 0.311254),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.538949, 0.389152, 0.688746),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.081300, 0.252106, 0.910493),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.918700, 0.747894, 0.089507),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5284761716666667
+  }
+}

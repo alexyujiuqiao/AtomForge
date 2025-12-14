@@ -1,0 +1,81 @@
+atom_spec "ErZnGa" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f625265f-b511-4831-82b4-fbefe9ccd610",
+    title = "Er2Ga2Zn2",
+    created = "2025-12-07"
+  }
+  description = "ErZnGa from Materials Project (mp-1018694)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.403020,
+    b = 4.403020,
+    c = 7.062408,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Er {
+      description = "Er site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.499658),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Er {
+      description = "Er site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.999658),
+      frame = fractional,
+      species = ({ element = "Er", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.280662),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.780662),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.713480),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.213480),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5812493174999999
+  }
+}

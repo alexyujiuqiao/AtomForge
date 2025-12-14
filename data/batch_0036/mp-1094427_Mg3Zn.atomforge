@@ -1,0 +1,95 @@
+atom_spec "Mg3Zn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "36e80c07-730f-4acb-b8f5-1a96e7b04324",
+    title = "Mg6Zn2",
+    created = "2025-12-07"
+  }
+  description = "Mg3Zn from Materials Project (mp-1094427)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.131104,
+    b = 5.224076,
+    c = 10.002810,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 44,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.654672, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.154672, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.004510, 0.241620),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.004510, 0.758381),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.504510, 0.258381),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.504510, 0.741619),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.669641, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.169641, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0009533699999999
+  }
+}

@@ -1,0 +1,74 @@
+atom_spec "Ca2RuN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5c873918-f294-42bd-a037-369e658a7cfa",
+    title = "Ca2N2Ru",
+    created = "2025-12-07"
+  }
+  description = "Ca2RuN2 from Materials Project (mp-1245773)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.577801,
+    b = 3.669964,
+    c = 6.686201,
+    alpha = 105.928832,
+    beta = 105.518591,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.148338, 0.648336, 0.796674),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.851662, 0.351664, 0.203326),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.350004, 0.850004, 0.200008),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.649996, 0.149996, 0.799992),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in triclinic structure",
+      wyckoff = "1h",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6953788910000007
+  }
+}

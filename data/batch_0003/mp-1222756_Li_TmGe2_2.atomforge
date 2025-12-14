@@ -1,0 +1,88 @@
+atom_spec "Li(TmGe2)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "dc73b052-19d3-405d-974a-6b49bbe33b32",
+    title = "Ge4LiTm2",
+    created = "2025-12-07"
+  }
+  description = "Li(TmGe2)2 from Materials Project (mp-1222756)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.048868,
+    b = 3.986508,
+    c = 8.645184,
+    alpha = 90.000000,
+    beta = 103.376610,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.051429, 0.000000, 0.608802),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.743895, 0.000000, 0.979125),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.219763, 0.500000, 0.972243),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.957378, 0.500000, 0.420291),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.800962, 0.500000, 0.140791),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.387757, 0.000000, 0.288092),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.598815, 0.500000, 0.710656),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5588063852380952
+  }
+}

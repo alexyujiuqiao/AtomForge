@@ -1,0 +1,67 @@
+atom_spec "DyAgTe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a35b06ef-3525-4fe8-8de2-3b17ed1dfa07",
+    title = "AgDyTe2",
+    created = "2025-12-07"
+  }
+  description = "DyAgTe2 from Materials Project (mp-1225301)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.504434,
+    b = 4.504434,
+    c = 7.341981,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.612577),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.013840),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.234205),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.769379),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.0711999999999997
+    formation_energy = -1.1065318516666671
+  }
+}

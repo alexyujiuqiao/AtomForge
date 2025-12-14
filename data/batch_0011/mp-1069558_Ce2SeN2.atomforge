@@ -1,0 +1,74 @@
+atom_spec "Ce2SeN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ead48d98-afce-4658-855b-43607ac96d4b",
+    title = "Ce2N2Se",
+    created = "2025-12-07"
+  }
+  description = "Ce2SeN2 from Materials Project (mp-1069558)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.938383,
+    b = 3.938383,
+    c = 7.010322,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.296907),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.703093),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.624885),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.375115),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.9467
+    formation_energy = -1.9090503744687493
+  }
+}

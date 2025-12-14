@@ -1,0 +1,95 @@
+atom_spec "AlCr6Si" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2829e7bc-ab94-4126-86e4-883351b0bf27",
+    title = "AlCr6Si",
+    created = "2025-12-07"
+  }
+  description = "AlCr6Si from Materials Project (mp-1228922)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.558871,
+    b = 4.558871,
+    c = 4.558871,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 200,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in cubic structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "6f",
+      position = (0.000000, 0.500000, 0.245689),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "6f",
+      position = (0.000000, 0.500000, 0.754311),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "6f",
+      position = (0.245689, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.245689, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.754311, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in cubic structure",
+      wyckoff = "6f",
+      position = (0.754311, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2006391274999988
+  }
+}

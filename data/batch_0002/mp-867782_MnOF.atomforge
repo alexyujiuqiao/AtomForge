@@ -1,0 +1,81 @@
+atom_spec "MnOF" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0583fc15-ecf1-4c15-a006-8c8d9627acfa",
+    title = "F2Mn2O2",
+    created = "2025-12-07"
+  }
+  description = "MnOF from Materials Project (mp-867782)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.791689,
+    b = 4.351394,
+    c = 5.529841,
+    alpha = 110.998431,
+    beta = 109.367157,
+    gamma = 90.923721
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.055921, 0.813258, 0.641689),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.944079, 0.186742, 0.358311),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.136832, 0.382908, 0.768566),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.863168, 0.617092, 0.231434),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.331839, 0.630295, 0.164137),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.668161, 0.369705, 0.835863),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.4109
+    formation_energy = -2.3390895434770123
+  }
+}

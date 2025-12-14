@@ -1,0 +1,81 @@
+atom_spec "PbS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "84bb5255-9b06-48d9-986c-de75b90eda8c",
+    title = "Pb3S3",
+    created = "2025-12-07"
+  }
+  description = "PbS from Materials Project (mp-1057015)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.244696,
+    b = 4.244696,
+    c = 10.452414,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 160,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pb {
+      description = "Pb site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.015345),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.682012),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.348678),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.529055),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.195722),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.862388),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.0371999999999997
+    formation_energy = -0.7831656715625002
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "Zr2CoCuSn2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0217ece9-e128-4c52-9cc2-860e05e201ab",
+    title = "CoCuSn2Zr2",
+    created = "2025-12-07"
+  }
+  description = "Zr2CoCuSn2 from Materials Project (mp-1215719)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.390362,
+    b = 4.390391,
+    c = 6.835844,
+    alpha = 90.002463,
+    beta = 90.000081,
+    gamma = 119.999600
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666667, 0.164444),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.676807),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666667, 0.773942),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.264226),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000010, 0.000019, 0.503118),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999991, 0.999986, 0.021462),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4618605241666659
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "InSn3Se4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a3be6b30-a622-4475-90a6-71ed7aa8ed50",
+    title = "InSe4Sn3",
+    created = "2025-12-07"
+  }
+  description = "InSn3Se4 from Materials Project (mp-1223673)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.581003,
+    b = 4.106149,
+    c = 11.764005,
+    alpha = 90.000000,
+    beta = 91.451885,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.396897, 0.000000, 0.381582),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.010415, 0.000000, 0.649134),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.493343, 0.000000, 0.146242),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.512589, 0.500000, 0.850395),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.985235, 0.500000, 0.356411),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.105324, 0.000000, 0.882675),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.599507, 0.500000, 0.615270),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.896689, 0.500000, 0.118291),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6122680967968752
+  }
+}

@@ -1,0 +1,67 @@
+atom_spec "TbCuSe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "60c0bf8f-6775-4d33-a235-5147591fc3d5",
+    title = "CuSe2Tb",
+    created = "2025-12-07"
+  }
+  description = "TbCuSe2 from Materials Project (mp-1173121)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.102715,
+    b = 4.102715,
+    c = 6.439926,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.186156),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.073184),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.563972),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.802689),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1193999999999995
+    formation_energy = -1.4494962911718745
+  }
+}

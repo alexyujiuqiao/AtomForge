@@ -1,0 +1,123 @@
+atom_spec "NdSiGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "083d5c45-de7e-44c1-9393-441d8fe39924",
+    title = "Ge4Nd4Si4",
+    created = "2025-12-07"
+  }
+  description = "NdSiGe from Materials Project (mp-1077182)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.133816,
+    b = 4.150886,
+    c = 15.359258,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 74,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.250000, 0.799549),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.750000, 0.200451),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.250000, 0.700451),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.750000, 0.299549),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.250000, 0.379484),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.750000, 0.620516),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.250000, 0.120516),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.750000, 0.879484),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.250000, 0.963531),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.750000, 0.036469),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.250000, 0.536469),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.750000, 0.463531),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5731326416666663
+  }
+}

@@ -1,0 +1,102 @@
+atom_spec "Te4Mo3Se2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "48f6b876-ec19-4280-a7da-8dcd60793efd",
+    title = "Mo3Se2Te4",
+    created = "2025-12-07"
+  }
+  description = "Te4Mo3Se2 from Materials Project (mp-1025685)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.478690,
+    b = 3.478690,
+    c = 31.987182,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "1c",
+      position = (0.333333, 0.666667, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.231333),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.768667),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.050788),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.949212),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.173801),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.288846),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.711154),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in hexagonal structure",
+      wyckoff = "2h",
+      position = (0.333333, 0.666667, 0.826199),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.5415000000000001
+    formation_energy = -0.6751355682986104
+  }
+}

@@ -1,0 +1,109 @@
+atom_spec "TiMoS3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "414dc2c3-ebb5-4637-a5d8-246e85d67192",
+    title = "Mo2S6Ti2",
+    created = "2025-12-07"
+  }
+  description = "TiMoS3 from Materials Project (mp-1216784)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.157155,
+    b = 3.276855,
+    c = 8.748227,
+    alpha = 90.000000,
+    beta = 105.241686,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mo {
+      description = "Mo site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.118072, 0.750000, 0.625024),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.881928, 0.250000, 0.374976),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.020870, 0.250000, 0.829769),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.275385, 0.250000, 0.487277),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.496115, 0.250000, 0.177527),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.503885, 0.750000, 0.822473),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.724615, 0.750000, 0.512723),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.979130, 0.750000, 0.170231),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.263470, 0.750000, 0.005699),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.736530, 0.250000, 0.994301),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.3687983745416663
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "CeSmO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3dd8b89d-9b73-4422-afaf-10c8e5d0f9d5",
+    title = "Ce2O4Sm2",
+    created = "2025-12-07"
+  }
+  description = "CeSmO2 from Materials Project (mp-755070)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.973515,
+    b = 4.983852,
+    c = 6.095567,
+    alpha = 114.121744,
+    beta = 114.073119,
+    gamma = 89.990079
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.503417, 0.499380, 0.002157),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.753723, 0.251669, 0.501461),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.004201, 0.500559, 0.002687),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.254708, 0.250781, 0.501127),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.501458, 0.996217, 0.999520),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.754923, 0.759591, 0.508314),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.003012, 0.999603, 0.002280),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.251687, 0.751812, 0.501707),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -3.1660100374999995
+  }
+}

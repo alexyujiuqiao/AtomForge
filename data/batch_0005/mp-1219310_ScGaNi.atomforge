@@ -1,0 +1,81 @@
+atom_spec "ScGaNi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "be52b15d-2793-4281-91cc-3dc06afc8515",
+    title = "Ga2Ni2Sc2",
+    created = "2025-12-07"
+  }
+  description = "ScGaNi from Materials Project (mp-1219310)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.128419,
+    b = 5.108655,
+    c = 5.442878,
+    alpha = 88.672793,
+    beta = 112.287206,
+    gamma = 113.832307
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.433783, 0.260269, 0.607297),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.566217, 0.739731, 0.392703),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.034774, 0.875501, 0.194047),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.965226, 0.124499, 0.805953),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.253886, 0.700988, 0.806783),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.746114, 0.299012, 0.193217),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6076799808333332
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "MnHg2S3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "691074f5-d941-45bc-8815-69a4bbeb602a",
+    title = "Hg2MnS3",
+    created = "2025-12-07"
+  }
+  description = "MnHg2S3 from Materials Project (mp-1221581)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.164472,
+    b = 4.164472,
+    c = 10.126695,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.995127),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.342709),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.663377),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.249155),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.900086),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.599547),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5039500745510063
+  }
+}

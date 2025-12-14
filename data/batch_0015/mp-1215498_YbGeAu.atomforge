@@ -1,0 +1,60 @@
+atom_spec "YbGeAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "131fb957-5f2f-4639-acc9-b243cebfbd89",
+    title = "AuGeYb",
+    created = "2025-12-07"
+  }
+  description = "YbGeAu from Materials Project (mp-1215498)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.574622,
+    b = 3.472747,
+    c = 4.579962,
+    alpha = 90.000000,
+    beta = 119.949626,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666460, 0.500000, 0.332702),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.333554, 0.500000, 0.667127),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000086, 0.000000, 0.000171),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.7912808049999995
+  }
+}

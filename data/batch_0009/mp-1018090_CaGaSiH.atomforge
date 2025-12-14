@@ -1,0 +1,67 @@
+atom_spec "CaGaSiH" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b14fea78-0d5d-4a55-938c-fd07109947d8",
+    title = "CaGaHSi",
+    created = "2025-12-07"
+  }
+  description = "CaGaSiH from Materials Project (mp-1018090)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.091100,
+    b = 4.091100,
+    c = 4.762800,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.556800),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.925000),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.433700),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.2627999999999995
+    formation_energy = -0.3976846531250002
+  }
+}

@@ -1,0 +1,67 @@
+atom_spec "MgIr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0c404af0-9bce-4be4-8fb0-3bb0dd3fcaeb",
+    title = "Ir2Mg2",
+    created = "2025-12-07"
+  }
+  description = "MgIr from Materials Project (mp-1185890)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.414035,
+    b = 3.120437,
+    c = 4.414186,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 10,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ir {
+      description = "Ir site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.250001, 0.000000, 0.732282),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.749999, 0.000000, 0.267718),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.250001, 0.500000, 0.234250),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.749999, 0.500000, 0.765750),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2776696449999996
+  }
+}

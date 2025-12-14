@@ -1,0 +1,123 @@
+atom_spec "SnPtSe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a2fc9ea9-633e-4493-a66f-1450cf2a45cf",
+    title = "Pt4Se4Sn4",
+    created = "2025-12-07"
+  }
+  description = "SnPtSe from Materials Project (mp-1218926)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 6.379574,
+    b = 6.379574,
+    c = 6.379574,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pt {
+      description = "Pt site in cubic structure",
+      wyckoff = "4a",
+      position = (0.002918, 0.002918, 0.002918),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in cubic structure",
+      wyckoff = "4a",
+      position = (0.497082, 0.997082, 0.502918),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in cubic structure",
+      wyckoff = "4a",
+      position = (0.502918, 0.497082, 0.997082),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in cubic structure",
+      wyckoff = "4a",
+      position = (0.997082, 0.502918, 0.497082),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in cubic structure",
+      wyckoff = "4a",
+      position = (0.123104, 0.876896, 0.376896),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in cubic structure",
+      wyckoff = "4a",
+      position = (0.376896, 0.123104, 0.876896),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in cubic structure",
+      wyckoff = "4a",
+      position = (0.623104, 0.623104, 0.623104),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in cubic structure",
+      wyckoff = "4a",
+      position = (0.876896, 0.376896, 0.123104),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in cubic structure",
+      wyckoff = "4a",
+      position = (0.121064, 0.621064, 0.878936),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in cubic structure",
+      wyckoff = "4a",
+      position = (0.378936, 0.378936, 0.378936),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in cubic structure",
+      wyckoff = "4a",
+      position = (0.621064, 0.878936, 0.121064),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in cubic structure",
+      wyckoff = "4a",
+      position = (0.878936, 0.121064, 0.621064),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.5961999999999996
+    formation_energy = -0.7174024324479161
+  }
+}

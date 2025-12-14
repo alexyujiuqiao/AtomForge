@@ -1,0 +1,74 @@
+atom_spec "BaHfS3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f25f48f6-d481-428e-b8e6-779565d452de",
+    title = "BaHfS3",
+    created = "2025-12-07"
+  }
+  description = "BaHfS3 from Materials Project (mp-998352)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.009601,
+    b = 5.011652,
+    c = 5.012407,
+    alpha = 89.995941,
+    beta = 89.956287,
+    gamma = 89.993180
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ba {
+      description = "Ba site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.991372, 0.002625, 0.005950),
+      frame = fractional,
+      species = ({ element = "Ba", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.487502, 0.501989, 0.504913),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.485634, 0.999836, 0.502657),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.488205, 0.500147, 0.001624),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.987287, 0.495404, 0.494860),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.8438999999999997
+    formation_energy = -2.111992303875
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "SrHg3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "90bd9f25-0fd6-48ba-ae6b-6da53cd5895c",
+    title = "Hg6Sr2",
+    created = "2025-12-07"
+  }
+  description = "SrHg3 from Materials Project (mp-982376)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 5.514026,
+    b = 5.830686,
+    c = 7.056331,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.808927, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.191073, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.336796, 0.254200),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.336796, 0.745800),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.663204, 0.245800),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.663204, 0.754200),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.845200, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.154800, 0.500000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4090485854166668
+  }
+}

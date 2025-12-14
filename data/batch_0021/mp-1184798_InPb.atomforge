@@ -1,0 +1,67 @@
+atom_spec "InPb" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c3a25994-4483-4ac4-8ca5-70249609e393",
+    title = "In2Pb2",
+    created = "2025-12-07"
+  }
+  description = "InPb from Materials Project (mp-1184798)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.952140,
+    b = 3.425214,
+    c = 5.954196,
+    alpha = 90.000000,
+    beta = 97.936115,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 8,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.332024, 0.000000, 0.248412),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.832024, 0.500000, 0.248412),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.167984, 0.500000, 0.751587),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    },
+    site Pb {
+      description = "Pb site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.667984, 0.000000, 0.751587),
+      frame = fractional,
+      species = ({ element = "Pb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.042548285
+  }
+}

@@ -1,0 +1,67 @@
+atom_spec "HfAg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "38e12185-d0ed-4f1c-a6fd-5b6df3eb040e",
+    title = "Ag2Hf2",
+    created = "2025-12-07"
+  }
+  description = "HfAg from Materials Project (mp-13156)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.445155,
+    b = 3.445155,
+    c = 6.657615,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.382944),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.617056),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.859966),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.140034),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1151133758333333
+  }
+}

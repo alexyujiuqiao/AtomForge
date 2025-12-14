@@ -1,0 +1,60 @@
+atom_spec "YbTlCd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b25b6a1e-f773-468e-b895-a50f5b45230e",
+    title = "CdTlYb",
+    created = "2025-12-07"
+  }
+  description = "YbTlCd from Materials Project (mp-1215457)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.082729,
+    b = 3.610720,
+    c = 5.082804,
+    alpha = 90.000000,
+    beta = 119.992890,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666667, 0.500000, 0.333368),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.333427, 0.500000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.999910, 0.000000, 0.999888),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3422479411111109
+  }
+}

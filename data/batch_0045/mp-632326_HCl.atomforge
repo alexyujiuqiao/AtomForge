@@ -1,0 +1,95 @@
+atom_spec "HCl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c8d4bf79-34a0-4af1-8e8f-ed54c5278769",
+    title = "Cl4H4",
+    created = "2025-12-07"
+  }
+  description = "HCl from Materials Project (mp-632326)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 5.313982,
+    b = 6.973692,
+    c = 5.368192,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 36,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.220752, 0.000000, 0.009205),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.279248, 0.500000, 0.509205),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.720752, 0.500000, 0.009205),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.779248, 0.000000, 0.509205),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.065838, 0.000000, 0.820795),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.434162, 0.500000, 0.320795),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.565838, 0.500000, 0.820795),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.934162, 0.000000, 0.320795),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 5.9709
+    formation_energy = -0.8157151600000003
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "NbRh" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b71f0862-fbd7-4a5b-aa8c-82f4cb299418",
+    title = "Nb3Rh3",
+    created = "2025-12-07"
+  }
+  description = "NbRh from Materials Project (mp-567345)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.901976,
+    b = 2.866996,
+    c = 7.088753,
+    alpha = 90.000000,
+    beta = 103.691189,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 10,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Nb {
+      description = "Nb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.253993, 0.000000, 0.667020),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in monoclinic structure",
+      wyckoff = "2m",
+      position = (0.746007, 0.000000, 0.332980),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in monoclinic structure",
+      wyckoff = "1e",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.255878, 0.500000, 0.334711),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in monoclinic structure",
+      wyckoff = "2n",
+      position = (0.744122, 0.500000, 0.665289),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3857052833333334
+  }
+}

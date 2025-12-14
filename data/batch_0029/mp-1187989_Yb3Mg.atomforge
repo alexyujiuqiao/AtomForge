@@ -1,0 +1,95 @@
+atom_spec "Yb3Mg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "eecf850c-57fb-4590-8619-7c02baad89dd",
+    title = "Mg2Yb6",
+    created = "2025-12-07"
+  }
+  description = "Yb3Mg from Materials Project (mp-1187989)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.348314,
+    b = 7.348314,
+    c = 6.006067,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.750000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in hexagonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.250000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.169957, 0.339914, 0.250000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.169957, 0.830043, 0.250000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.339914, 0.169957, 0.750000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.660086, 0.830043, 0.250000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.830043, 0.169957, 0.750000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    },
+    site Yb {
+      description = "Yb site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.830043, 0.660086, 0.750000),
+      frame = fractional,
+      species = ({ element = "Yb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 4.504500000024336e-05
+  }
+}

@@ -1,0 +1,88 @@
+atom_spec "Al2ZnS4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "01c3ea84-6075-45c4-b09b-8d8e78c7fd09",
+    title = "Al2S4Zn",
+    created = "2025-12-07"
+  }
+  description = "Al2ZnS4 from Materials Project (mp-1228438)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.164727,
+    b = 3.681018,
+    c = 6.636450,
+    alpha = 90.000000,
+    beta = 90.329715,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.025348, 0.500000, 0.848631),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.480489, 0.500000, 0.169995),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.110468, 0.000000, 0.657146),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.630453, 0.000000, 0.327195),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.125296, 0.500000, 0.163634),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.637673, 0.500000, 0.844788),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.490273, 0.000000, 0.655261),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.7538999999999998
+    formation_energy = -1.2411137503571428
+  }
+}

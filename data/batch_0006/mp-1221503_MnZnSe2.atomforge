@@ -1,0 +1,67 @@
+atom_spec "MnZnSe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8d05aae9-9895-4312-971b-bf0512207153",
+    title = "MnSe2Zn",
+    created = "2025-12-07"
+  }
+  description = "MnZnSe2 from Materials Project (mp-1221503)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.124683,
+    b = 4.124683,
+    c = 6.737047,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mn {
+      description = "Mn site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.498725),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.120009),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.630114),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.999152),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.2658999999999998
+    formation_energy = -0.7752595681546328
+  }
+}

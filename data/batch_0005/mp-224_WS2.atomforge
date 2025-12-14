@@ -1,0 +1,81 @@
+atom_spec "WS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "264d8385-686c-47a1-b2f2-bec1ae9180e0",
+    title = "S4W2",
+    created = "2025-12-07"
+  }
+  description = "WS2 from Materials Project (mp-224)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.190731,
+    b = 3.190731,
+    c = 14.202402,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.639241),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.860759),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.139241),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.360759),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.5656999999999996
+    formation_energy = -1.1537445770833337
+  }
+}

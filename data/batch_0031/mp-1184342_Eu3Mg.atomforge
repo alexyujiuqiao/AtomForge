@@ -1,0 +1,95 @@
+atom_spec "Eu3Mg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0db58adc-71b3-43bd-a353-7d25df5cd067",
+    title = "Eu6Mg2",
+    created = "2025-12-07"
+  }
+  description = "Eu3Mg from Materials Project (mp-1184342)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.158618,
+    b = 5.922308,
+    c = 12.033486,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 44,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.588996, 0.500000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.088996, 0.000000),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.075813, 0.272243),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.075813, 0.727757),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.575813, 0.227757),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.575813, 0.772243),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.592705, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.092705, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0032457862499999
+  }
+}

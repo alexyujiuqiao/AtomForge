@@ -1,0 +1,81 @@
+atom_spec "CeGaSi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7e0053a3-4d92-4b23-9436-eeb5c2bdedc5",
+    title = "Ce2Ga2Si2",
+    created = "2025-12-07"
+  }
+  description = "CeGaSi from Materials Project (mp-1226572)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.102440,
+    b = 4.262915,
+    c = 7.777396,
+    alpha = 105.905880,
+    beta = 105.292170,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ce {
+      description = "Ce site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.134052, 0.384053, 0.268105),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.865948, 0.615947, 0.731895),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.458764, 0.208763, 0.917527),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.541236, 0.791237, 0.082473),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.291346, 0.041346, 0.582692),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.708654, 0.958654, 0.417308),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6227871491666654
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "HgBr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "39084fe3-04ae-46ba-87a7-22e024d165f1",
+    title = "Br4Hg4",
+    created = "2025-12-07"
+  }
+  description = "HgBr from Materials Project (mp-23177)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.960586,
+    b = 4.960586,
+    c = 11.336508,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.343196),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.656804),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.156804),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.843196),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.115945),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.884055),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.384055),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.615945),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.4641
+    formation_energy = -0.6920993337499999
+  }
+}

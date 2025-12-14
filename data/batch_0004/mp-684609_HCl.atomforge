@@ -1,0 +1,67 @@
+atom_spec "HCl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5bfffcd3-3f45-491c-9025-4f3d77b2e8b6",
+    title = "Cl2H2",
+    created = "2025-12-07"
+  }
+  description = "HCl from Materials Project (mp-684609)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.250738,
+    b = 4.343808,
+    c = 5.748362,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 44,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.981476, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.481476, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.686524, 0.000000),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.186524, 0.500000),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 5.1812000000000005
+    formation_energy = -0.7621484375
+  }
+}

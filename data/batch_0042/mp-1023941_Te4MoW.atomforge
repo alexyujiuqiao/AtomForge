@@ -1,0 +1,81 @@
+atom_spec "Te4MoW" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b53cc280-2a3b-48fc-b44f-ef7beb112d94",
+    title = "MoTe4W",
+    created = "2025-12-07"
+  }
+  description = "Te4MoW from Materials Project (mp-1023941)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.552322,
+    b = 3.552322,
+    c = 25.048577,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mo {
+      description = "Mo site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.451412),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.077938),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.223011),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.333333, 0.666667, 0.378945),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.333333, 0.666667, 0.523852),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.333333, 0.666667, 0.150446),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.2009
+    formation_energy = -0.4584314666666671
+  }
+}

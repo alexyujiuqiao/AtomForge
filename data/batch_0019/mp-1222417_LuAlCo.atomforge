@@ -1,0 +1,123 @@
+atom_spec "LuAlCo" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1a685726-169d-45e3-8474-aeedb4d51d05",
+    title = "Al4Co4Lu4",
+    created = "2025-12-07"
+  }
+  description = "LuAlCo from Materials Project (mp-1222417)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.253741,
+    b = 8.330753,
+    c = 5.254370,
+    alpha = 90.000000,
+    beta = 119.058452,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.165893, 0.000000, 0.340199),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.659763, 0.000000, 0.834106),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.004306, 0.271222, 0.995801),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.004306, 0.728778, 0.995801),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.166655, 0.000000, 0.833314),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.356947, 0.500000, 0.175229),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.824759, 0.500000, 0.643064),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.825047, 0.500000, 0.174962),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.329564, 0.324828, 0.670401),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.329564, 0.675172, 0.670401),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.666597, 0.203039, 0.333333),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.666597, 0.796961, 0.333333),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.430642465
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "Cs2O2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f5712c98-df66-46b8-9c51-a84676806119",
+    title = "Cs4O4",
+    created = "2025-12-07"
+  }
+  description = "Cs2O2 from Materials Project (mp-7896)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.394694,
+    b = 6.578358,
+    c = 7.642050,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 71,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in orthorhombic structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.000000, 0.256276),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in orthorhombic structure",
+      wyckoff = "4i",
+      position = (0.000000, 0.000000, 0.743724),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in orthorhombic structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.500000, 0.243724),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in orthorhombic structure",
+      wyckoff = "4i",
+      position = (0.500000, 0.500000, 0.756276),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.384649, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.000000, 0.615351, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.115351, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "4g",
+      position = (0.500000, 0.884649, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.7111000000000005
+    formation_energy = -1.2305101689655171
+  }
+}

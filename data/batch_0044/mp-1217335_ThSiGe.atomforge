@@ -1,0 +1,123 @@
+atom_spec "ThSiGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9f97f113-73b6-4405-91c5-cc28202f615d",
+    title = "Ge4Si4Th4",
+    created = "2025-12-07"
+  }
+  description = "ThSiGe from Materials Project (mp-1217335)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.059113,
+    b = 4.114965,
+    c = 15.802494,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 74,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.250000, 0.301738),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.750000, 0.698262),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.250000, 0.198262),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.750000, 0.801738),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.250000, 0.462855),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.750000, 0.537146),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.250000, 0.037145),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.750000, 0.962855),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.250000, 0.881798),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.750000, 0.118202),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.250000, 0.618202),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.750000, 0.381798),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5687098716666673
+  }
+}

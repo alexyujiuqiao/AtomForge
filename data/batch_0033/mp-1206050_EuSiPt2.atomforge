@@ -1,0 +1,95 @@
+atom_spec "EuSiPt2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "945c4dd9-b318-4847-af21-1b921142c38e",
+    title = "Eu2Pt4Si2",
+    created = "2025-12-07"
+  }
+  description = "EuSiPt2 from Materials Project (mp-1206050)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.138602,
+    b = 4.172207,
+    c = 9.358712,
+    alpha = 90.000000,
+    beta = 102.774207,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Eu {
+      description = "Eu site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.401165, 0.750000, 0.802331),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.598835, 0.250000, 0.197669),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.047131, 0.750000, 0.094262),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.251066, 0.250000, 0.502131),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.748934, 0.750000, 0.497869),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.952869, 0.250000, 0.905738),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.176011, 0.750000, 0.352022),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.823989, 0.250000, 0.647978),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.0199819524999991
+  }
+}

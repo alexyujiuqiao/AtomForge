@@ -1,0 +1,67 @@
+atom_spec "NaN3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "dbf3899a-791a-4a2c-906f-2e61160eb9bf",
+    title = "N3Na",
+    created = "2025-12-07"
+  }
+  description = "NaN3 from Materials Project (mp-1064952)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.696006,
+    b = 3.703908,
+    c = 5.483932,
+    alpha = 72.628651,
+    beta = 71.046961,
+    gamma = 60.195131
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.437641, 0.527375, 0.730452),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.500445, 0.629850, 0.500091),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.563085, 0.730600, 0.269466),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.998830, 0.112174, 0.999992),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.0425
+    formation_energy = -0.3709414028879303
+  }
+}

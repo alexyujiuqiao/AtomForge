@@ -1,0 +1,60 @@
+atom_spec "ZrTe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "aeb4e59a-ff8c-4c74-9de2-d7fc1e5ce1f1",
+    title = "Te2Zr",
+    created = "2025-12-07"
+  }
+  description = "ZrTe2 from Materials Project (mp-1018107)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.984200,
+    b = 3.984200,
+    c = 6.995566,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.256718),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.743282),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.1620816233333346
+  }
+}

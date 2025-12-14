@@ -1,0 +1,123 @@
+atom_spec "FeSbTe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "0d6c381e-ce06-4c48-98be-4bb5c67cdf2d",
+    title = "Fe4Sb4Te4",
+    created = "2025-12-07"
+  }
+  description = "FeSbTe from Materials Project (mp-1102580)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 6.381351,
+    b = 6.542305,
+    c = 6.564392,
+    alpha = 114.883631,
+    beta = 89.999705,
+    gamma = 90.000856
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.000007, 0.722967, 0.712440),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.499998, 0.277039, 0.787567),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.500002, 0.722961, 0.212433),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.999993, 0.277033, 0.287560),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.143891, 0.861704, 0.123961),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.356113, 0.861707, 0.623959),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.643887, 0.138293, 0.376041),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.856109, 0.138296, 0.876039),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.142760, 0.349224, 0.667472),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.357246, 0.349228, 0.167467),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.642754, 0.650772, 0.832533),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.857240, 0.650776, 0.332528),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.4487999999999985
+    formation_energy = -0.3392000958333335
+  }
+}

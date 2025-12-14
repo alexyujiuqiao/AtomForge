@@ -1,0 +1,81 @@
+atom_spec "Th2HN3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "62010bc8-29fd-41fc-b7e3-f691659b9f8e",
+    title = "HN3Th2",
+    created = "2025-12-07"
+  }
+  description = "Th2HN3 from Materials Project (mp-1019323)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.022466,
+    b = 4.022466,
+    c = 6.163369,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.849288),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.017322),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.354711),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.649177),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.729141),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.250371),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.5488
+    formation_energy = -1.480459375
+  }
+}

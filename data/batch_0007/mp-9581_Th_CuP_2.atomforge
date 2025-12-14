@@ -1,0 +1,74 @@
+atom_spec "Th(CuP)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c22840d6-7934-449c-af23-79ada19e1545",
+    title = "Cu2P2Th",
+    created = "2025-12-07"
+  }
+  description = "Th(CuP)2 from Materials Project (mp-9581)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.017728,
+    b = 4.017728,
+    c = 6.486052,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.637700),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.362300),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.267539),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.732461),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.1654999999999997
+    formation_energy = -0.771774211333333
+  }
+}

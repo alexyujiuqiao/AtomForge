@@ -1,0 +1,95 @@
+atom_spec "TaCo3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "af4de537-548d-40e9-afab-b2bdf19867ec",
+    title = "Co6Ta2",
+    created = "2025-12-07"
+  }
+  description = "TaCo3 from Materials Project (mp-1095124)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 5.188089,
+    b = 5.188089,
+    c = 4.178252,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.158292, 0.316584, 0.750000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.158292, 0.841708, 0.750000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.316584, 0.158292, 0.250000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.683416, 0.841708, 0.750000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.841708, 0.158292, 0.250000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in hexagonal structure",
+      wyckoff = "6h",
+      position = (0.841708, 0.683416, 0.250000),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2333357774999989
+  }
+}

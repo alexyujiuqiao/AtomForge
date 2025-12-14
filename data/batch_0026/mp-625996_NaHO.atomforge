@@ -1,0 +1,81 @@
+atom_spec "NaHO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ee945367-e91a-4f31-8ddf-6d3e63cdd90c",
+    title = "H2Na2O2",
+    created = "2025-12-07"
+  }
+  description = "NaHO from Materials Project (mp-625996)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 3.380496,
+    b = 3.643134,
+    c = 5.649198,
+    alpha = 90.000000,
+    beta = 100.185143,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.454521, 0.000000, 0.888884),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.476887, 0.500000, 0.378241),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.083532, 0.000000, 0.308984),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.897812, 0.500000, 0.734070),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.380576, 0.000000, 0.714733),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.649366, 0.500000, 0.257761),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.9046000000000003
+    formation_energy = -1.4813323171839077
+  }
+}

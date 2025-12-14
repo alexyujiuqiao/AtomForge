@@ -1,0 +1,95 @@
+atom_spec "CsTlO2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9517612e-c45d-4426-acd6-991fbdf83c9a",
+    title = "Cs2O4Tl2",
+    created = "2025-12-07"
+  }
+  description = "CsTlO2 from Materials Project (mp-1178388)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.605757,
+    b = 3.605777,
+    c = 13.503180,
+    alpha = 90.001324,
+    beta = 89.999352,
+    gamma = 119.999212
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666505, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666727, 0.333183, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666622, 0.086843),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.666720, 0.413161),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333238, 0.913143),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.586862),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000012, 0.000142, 0.999983),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000268, 0.500009),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.9780999999999996
+    formation_energy = -1.252732527816092
+  }
+}

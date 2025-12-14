@@ -1,0 +1,109 @@
+atom_spec "La2Os2I" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "db271c7e-c5d1-4efa-a1f8-839c4ca3cab2",
+    title = "I2La4Os4",
+    created = "2025-12-07"
+  }
+  description = "La2Os2I from Materials Project (mp-1205536)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.341091,
+    b = 4.341091,
+    c = 18.100552,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.108429),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.391571),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.608429),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.891571),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.506087),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.333333, 0.666667, 0.993913),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.006087),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    },
+    site Os {
+      description = "Os site in hexagonal structure",
+      wyckoff = "4f",
+      position = (0.666667, 0.333333, 0.493913),
+      frame = fractional,
+      species = ({ element = "Os", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6734633369999997
+  }
+}

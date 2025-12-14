@@ -1,0 +1,95 @@
+atom_spec "Al3GaN4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6d50d57f-b018-4349-974d-a68b634d93c5",
+    title = "Al3GaN4",
+    created = "2025-12-07"
+  }
+  description = "Al3GaN4 from Materials Project (mp-1228436)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.077681,
+    b = 3.148585,
+    c = 5.451586,
+    alpha = 90.000000,
+    beta = 90.033947,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.999273, 0.000000, 0.668559),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.500211, 0.500000, 0.832708),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.999143, 0.500000, 0.164936),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.500063, 0.000000, 0.333683),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.376693, 0.000000, 0.674560),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.889475, 0.000000, 0.333781),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.374142, 0.500000, 0.158923),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.877399, 0.500000, 0.832849),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.4096
+    formation_energy = -1.3473677584374997
+  }
+}

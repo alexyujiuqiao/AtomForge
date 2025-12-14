@@ -1,0 +1,109 @@
+atom_spec "Nb3Au2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7c9c952b-3eb6-41ad-826c-382a8ca0b98b",
+    title = "Au4Nb6",
+    created = "2025-12-07"
+  }
+  description = "Nb3Au2 from Materials Project (mp-2123)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.427288,
+    b = 3.427288,
+    c = 15.421420,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.199168),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.800832),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.300832),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.699168),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in tetragonal structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.400887),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.599113),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.099113),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in tetragonal structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.500000, 0.900887),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1474880560000002
+  }
+}

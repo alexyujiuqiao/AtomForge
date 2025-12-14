@@ -1,0 +1,95 @@
+atom_spec "Pu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "32fb08f1-196b-4a3c-b9b6-1c50432dffb3",
+    title = "Pu8",
+    created = "2025-12-07"
+  }
+  description = "Pu from Materials Project (mp-1179962)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.604051,
+    b = 6.354518,
+    c = 6.897401,
+    alpha = 106.229141,
+    beta = 89.972121,
+    gamma = 90.221157
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pu {
+      description = "Pu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.116745, 0.074332, 0.171858),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.126984, 0.442285, 0.140092),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.372892, 0.442421, 0.640632),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.383462, 0.073857, 0.671702),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.615847, 0.926150, 0.328119),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.627728, 0.557582, 0.359454),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.873694, 0.557612, 0.859881),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.882648, 0.925761, 0.828261),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0001386687499991
+  }
+}

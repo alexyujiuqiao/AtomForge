@@ -1,0 +1,74 @@
+atom_spec "Nd2Ge3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "782a9e35-c7e9-4bb2-bf23-5e33f33dd9ad",
+    title = "Ge3Nd2",
+    created = "2025-12-07"
+  }
+  description = "Nd2Ge3 from Materials Project (mp-1220290)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.139853,
+    b = 4.197201,
+    c = 7.798558,
+    alpha = 105.610780,
+    beta = 105.392160,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.423332, 0.423332, 0.846664),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.595954, 0.595954, 0.191908),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.816653, 0.316653, 0.633305),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.251184, 0.751184, 0.502367),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    },
+    site Nd {
+      description = "Nd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.997878, 0.997878, 0.995757),
+      frame = fractional,
+      species = ({ element = "Nd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.685646269
+  }
+}

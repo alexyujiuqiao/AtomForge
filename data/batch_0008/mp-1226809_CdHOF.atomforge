@@ -1,0 +1,95 @@
+atom_spec "CdHOF" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "091cbbc5-f813-4721-9379-9d482baba43d",
+    title = "Cd2F2H2O2",
+    created = "2025-12-07"
+  }
+  description = "CdHOF from Materials Project (mp-1226809)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 3.534359,
+    b = 4.844687,
+    c = 5.627960,
+    alpha = 90.000000,
+    beta = 90.083109,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 4,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.252244, 0.245468, 0.266631),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.747756, 0.745468, 0.733369),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.248874, 0.020252, 0.894198),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.751126, 0.520252, 0.105802),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.250301, 0.315833, 0.727596),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.749699, 0.815833, 0.272404),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.248159, 0.478447, 0.619692),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.751841, 0.978447, 0.380308),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.8626
+    formation_energy = -1.801497528125
+  }
+}

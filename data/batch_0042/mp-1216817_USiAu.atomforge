@@ -1,0 +1,123 @@
+atom_spec "USiAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "37ef5818-1da7-46a4-83f7-0ad4ebd4a6cf",
+    title = "Au4Si4U4",
+    created = "2025-12-07"
+  }
+  description = "USiAu from Materials Project (mp-1216817)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 10.381390,
+    b = 4.306936,
+    c = 6.920749,
+    alpha = 90.000000,
+    beta = 129.675893,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.171544, 0.000000, 0.598787),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.328456, 0.500000, 0.401213),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.671543, 0.500000, 0.598787),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.828457, 0.000000, 0.401213),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.149011, 0.000000, 0.180930),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.350989, 0.500000, 0.819070),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.649011, 0.500000, 0.180930),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.850989, 0.000000, 0.819070),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.056521, 0.500000, 0.804800),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.443479, 0.000000, 0.195200),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.556521, 0.000000, 0.804800),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    },
+    site U {
+      description = "U site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.943479, 0.500000, 0.195200),
+      frame = fractional,
+      species = ({ element = "U", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2264843683333322
+  }
+}

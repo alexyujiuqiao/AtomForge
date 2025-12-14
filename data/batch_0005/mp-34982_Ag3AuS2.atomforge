@@ -1,0 +1,81 @@
+atom_spec "Ag3AuS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c6b4d993-b6e9-45cd-bc75-12342121f0e5",
+    title = "Ag3AuS2",
+    created = "2025-12-07"
+  }
+  description = "Ag3AuS2 from Materials Project (mp-34982)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.737184,
+    b = 4.872112,
+    c = 5.844960,
+    alpha = 88.532420,
+    beta = 84.993927,
+    gamma = 80.959589
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.011717, 0.283947, 0.602534),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.437588, 0.985143, 0.268457),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.816351, 0.544508, 0.043537),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.302150, 0.734042, 0.740635),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.015264, 0.011173, 0.023582),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.541931, 0.441187, 0.446256),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.4101999999999997
+    formation_energy = -0.191589441041667
+  }
+}

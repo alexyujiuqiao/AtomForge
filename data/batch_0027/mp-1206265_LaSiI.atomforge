@@ -1,0 +1,81 @@
+atom_spec "LaSiI" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "649a2c91-d632-49d1-8467-ae447babb06b",
+    title = "I2La2Si2",
+    created = "2025-12-07"
+  }
+  description = "LaSiI from Materials Project (mp-1206265)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.216118,
+    b = 4.216118,
+    c = 12.164758,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.649325),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.350675),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.170497),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in trigonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.829503),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.006673),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.993327),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.2447619666666665
+  }
+}

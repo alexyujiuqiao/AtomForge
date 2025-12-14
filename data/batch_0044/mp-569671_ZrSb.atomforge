@@ -1,0 +1,95 @@
+atom_spec "ZrSb" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e104c3e7-12d9-4477-b1ee-2bdb12d19662",
+    title = "Sb4Zr4",
+    created = "2025-12-07"
+  }
+  description = "ZrSb from Materials Project (mp-569671)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.691970,
+    b = 5.691970,
+    c = 5.691970,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Sb {
+      description = "Sb site in cubic structure",
+      wyckoff = "4a",
+      position = (0.156792, 0.343208, 0.656792),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in cubic structure",
+      wyckoff = "4a",
+      position = (0.343208, 0.656792, 0.156792),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in cubic structure",
+      wyckoff = "4a",
+      position = (0.656792, 0.156792, 0.343208),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in cubic structure",
+      wyckoff = "4a",
+      position = (0.843208, 0.843208, 0.843208),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in cubic structure",
+      wyckoff = "4a",
+      position = (0.143343, 0.143343, 0.143343),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in cubic structure",
+      wyckoff = "4a",
+      position = (0.356657, 0.856657, 0.643343),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in cubic structure",
+      wyckoff = "4a",
+      position = (0.643343, 0.356657, 0.856657),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in cubic structure",
+      wyckoff = "4a",
+      position = (0.856657, 0.643343, 0.356657),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.8084696787500008
+  }
+}

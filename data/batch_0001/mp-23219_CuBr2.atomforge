@@ -1,0 +1,81 @@
+atom_spec "CuBr2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4b97db8c-8fc2-4411-bb1f-070768bffc10",
+    title = "Br4Cu2",
+    created = "2025-12-07"
+  }
+  description = "CuBr2 from Materials Project (mp-23219)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 7.691766,
+    b = 3.492558,
+    c = 7.060666,
+    alpha = 90.000000,
+    beta = 118.683991,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.009374, 0.500000, 0.241999),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.490626, 0.000000, 0.758001),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.509374, 0.000000, 0.241999),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.990626, 0.500000, 0.758001),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6638177249999998
+  }
+}

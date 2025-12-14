@@ -1,0 +1,60 @@
+atom_spec "CaZnSi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "253df9f4-5029-42d7-aff2-8243199af8dc",
+    title = "CaSiZn",
+    created = "2025-12-07"
+  }
+  description = "CaZnSi from Materials Project (mp-1227003)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.158646,
+    b = 4.341395,
+    c = 4.158723,
+    alpha = 90.000000,
+    beta = 119.998934,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.999998, 0.000000, 0.999982),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.500000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666667, 0.500000, 0.333297),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3920139899999994
+  }
+}

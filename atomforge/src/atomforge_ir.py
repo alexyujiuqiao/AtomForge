@@ -6,8 +6,20 @@ import sys
 import os
 
 # Add core to path for inheritance
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
-from core.dataclass import DSLProgram
+core_path = os.path.join(os.path.dirname(__file__), '..', '..', 'core')
+if core_path not in sys.path:
+    sys.path.append(core_path)
+
+try:
+    from dataclass import DSLProgram
+except ImportError:
+    # Fallback: create a simple base class if core module not available
+    class DSLProgram:
+        def __init__(self, **kwargs):
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        def validate(self):
+            pass
 
 """
 AtomForge DSL v2.1 Intermediate Representation (IR)
@@ -129,7 +141,14 @@ class Units:
     pressure: str
 
     def validate(self) -> None:
-        valid_systems = ["crystallography_default", "SI", "atomic", "custom"]
+        # Accept both legacy and current spellings for crystallography units.
+        valid_systems = [
+            "crystallography_default",
+            "crystallographic_default",
+            "SI",
+            "atomic",
+            "custom",
+        ]
         if self.system not in valid_systems:
             raise ValueError(f"Invalid unit system: {self.system}")
 
@@ -639,6 +658,7 @@ class Environment:
     temperature: Optional[Temperature] = None
     pressure: Optional[Pressure] = None
     e_field: Optional[Tuple[float, float, float]] = None
+    e_grad: Optional[List[List[float]]] = None  # 3x3 matrix
     b_field: Optional[Tuple[float, float, float]] = None
 
 @dataclass

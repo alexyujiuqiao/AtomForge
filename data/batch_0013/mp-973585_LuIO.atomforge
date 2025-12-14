@@ -1,0 +1,81 @@
+atom_spec "LuIO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "341a025d-38a8-4e5d-a0fa-fd353187d40a",
+    title = "I2Lu2O2",
+    created = "2025-12-07"
+  }
+  description = "LuIO from Materials Project (mp-973585)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.860167,
+    b = 3.860167,
+    c = 9.894241,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 129,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site I {
+      description = "I site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.801352),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.198648),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.393447),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site Lu {
+      description = "Lu site in tetragonal structure",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.606553),
+      frame = fractional,
+      species = ({ element = "Lu", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in tetragonal structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.3021000000000003
+    formation_energy = -3.0935924099999994
+  }
+}

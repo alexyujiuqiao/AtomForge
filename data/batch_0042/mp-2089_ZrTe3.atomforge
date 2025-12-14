@@ -1,0 +1,95 @@
+atom_spec "ZrTe3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7918bcc9-99aa-4e09-8cbe-990e6398fe2d",
+    title = "Te6Zr2",
+    created = "2025-12-07"
+  }
+  description = "ZrTe3 from Materials Project (mp-2089)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.986970,
+    b = 3.950031,
+    c = 10.427139,
+    alpha = 90.000000,
+    beta = 96.850788,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.082112, 0.250000, 0.827571),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.237835, 0.250000, 0.444970),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.443418, 0.750000, 0.174931),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.556582, 0.250000, 0.825069),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.762165, 0.750000, 0.555030),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.917888, 0.750000, 0.172429),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.283436, 0.750000, 0.662825),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.716564, 0.250000, 0.337175),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.0331436912500005
+  }
+}

@@ -1,0 +1,74 @@
+atom_spec "Gd(FeGe)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "13bbb624-56bc-40fa-8519-cb6b11d5dc27",
+    title = "Fe2GdGe2",
+    created = "2025-12-07"
+  }
+  description = "Gd(FeGe)2 from Materials Project (mp-637965)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.975058,
+    b = 3.985269,
+    c = 6.024011,
+    alpha = 108.849698,
+    beta = 109.139472,
+    gamma = 90.034568
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.240012, 0.756789, 0.500173),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Fe {
+      description = "Fe site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.745469, 0.239437, 0.499319),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.991957, 0.997289, 0.999258),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.375656, 0.384447, 0.762967),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.609524, 0.611448, 0.236557),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4481991260000001
+  }
+}

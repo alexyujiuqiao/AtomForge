@@ -1,0 +1,60 @@
+atom_spec "VI2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "03b32e63-92f4-444e-ad77-f720677ebbde",
+    title = "I2V",
+    created = "2025-12-07"
+  }
+  description = "VI2 from Materials Project (mp-1018138)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.112689,
+    b = 4.112689,
+    c = 7.142424,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.220126),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.779874),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1073000000000004
+    formation_energy = -0.7411640466666665
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "SiTc" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b2014244-e343-4bd0-9da2-639c3a1076a8",
+    title = "Si4Tc4",
+    created = "2025-12-07"
+  }
+  description = "SiTc from Materials Project (mp-1079910)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.785109,
+    b = 4.785109,
+    c = 4.785109,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 198,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "4a",
+      position = (0.155194, 0.344806, 0.655194),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "4a",
+      position = (0.344806, 0.655194, 0.155194),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "4a",
+      position = (0.655194, 0.155194, 0.344806),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "4a",
+      position = (0.844806, 0.844806, 0.844806),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Tc {
+      description = "Tc site in cubic structure",
+      wyckoff = "4a",
+      position = (0.135055, 0.135055, 0.135055),
+      frame = fractional,
+      species = ({ element = "Tc", occupancy = 1.000000 })
+    },
+    site Tc {
+      description = "Tc site in cubic structure",
+      wyckoff = "4a",
+      position = (0.364945, 0.864945, 0.635055),
+      frame = fractional,
+      species = ({ element = "Tc", occupancy = 1.000000 })
+    },
+    site Tc {
+      description = "Tc site in cubic structure",
+      wyckoff = "4a",
+      position = (0.635055, 0.364945, 0.864945),
+      frame = fractional,
+      species = ({ element = "Tc", occupancy = 1.000000 })
+    },
+    site Tc {
+      description = "Tc site in cubic structure",
+      wyckoff = "4a",
+      position = (0.864945, 0.635055, 0.364945),
+      frame = fractional,
+      species = ({ element = "Tc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4884003599999991
+  }
+}

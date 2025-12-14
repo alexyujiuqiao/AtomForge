@@ -1,0 +1,74 @@
+atom_spec "TlGeF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "59bb27d2-3eba-4792-9043-f608bf08a2fa",
+    title = "F3GeTl",
+    created = "2025-12-07"
+  }
+  description = "TlGeF3 from Materials Project (mp-998712)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.720373,
+    b = 4.731781,
+    c = 4.859761,
+    alpha = 101.855647,
+    beta = 93.830990,
+    gamma = 90.370638
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.477935, 0.537093, 0.886558),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.479715, 0.907560, 0.545182),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.919565, 0.533056, 0.551512),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.518156, 0.498888, 0.494567),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.104629, 0.033400, 0.962179),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.2618
+    formation_energy = -2.281011303166667
+  }
+}

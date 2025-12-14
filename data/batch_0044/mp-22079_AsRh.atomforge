@@ -1,0 +1,95 @@
+atom_spec "AsRh" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1aff1ebf-1ca7-45be-af51-b69659fec6ec",
+    title = "As4Rh4",
+    created = "2025-12-07"
+  }
+  description = "AsRh from Materials Project (mp-22079)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.642531,
+    b = 5.724228,
+    c = 6.159774,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site As {
+      description = "As site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.195347, 0.585146),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.695347, 0.914854),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.304653, 0.085146),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site As {
+      description = "As site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.804653, 0.414854),
+      frame = fractional,
+      species = ({ element = "As", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.002927, 0.194382),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.250000, 0.502927, 0.305618),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.497073, 0.694382),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    },
+    site Rh {
+      description = "Rh site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.750000, 0.997073, 0.805618),
+      frame = fractional,
+      species = ({ element = "Rh", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4769586162500001
+  }
+}

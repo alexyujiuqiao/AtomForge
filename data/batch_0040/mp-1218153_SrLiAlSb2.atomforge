@@ -1,0 +1,74 @@
+atom_spec "SrLiAlSb2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "975e9240-2419-4774-9144-a0ed2161be1c",
+    title = "AlLiSb2Sr",
+    created = "2025-12-07"
+  }
+  description = "SrLiAlSb2 from Materials Project (mp-1218153)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.600206,
+    b = 4.600206,
+    c = 7.831278,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.603317),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.366661),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.266913),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sb {
+      description = "Sb site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.736880),
+      frame = fractional,
+      species = ({ element = "Sb", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.026229),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6845963439999998
+  }
+}

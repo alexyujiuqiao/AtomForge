@@ -1,0 +1,67 @@
+atom_spec "Bi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "65967382-107b-47a5-af60-d8371ed8c918",
+    title = "Bi4",
+    created = "2025-12-07"
+  }
+  description = "Bi from Materials Project (mp-23157)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.977196,
+    b = 6.265156,
+    c = 3.358926,
+    alpha = 90.000000,
+    beta = 112.036046,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 12,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.246939, 0.000000, 0.142618),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.253061, 0.500000, 0.857382),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.746939, 0.500000, 0.142618),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "4i",
+      position = (0.753061, 0.000000, 0.857382),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0503002249999999
+  }
+}

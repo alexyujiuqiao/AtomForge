@@ -1,0 +1,67 @@
+atom_spec "P" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3452d9c7-2603-4f99-a26d-91780afe1487",
+    title = "P4",
+    created = "2025-12-07"
+  }
+  description = "P from Materials Project (mp-1014013)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.299918,
+    b = 4.600926,
+    c = 35.235589,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 53,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.000000, 0.411443, 0.970112),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.000000, 0.588557, 0.029888),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.500000, 0.088557, 0.970112),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    },
+    site P {
+      description = "P site in orthorhombic structure",
+      wyckoff = "4h",
+      position = (0.500000, 0.911443, 0.029888),
+      frame = fractional,
+      species = ({ element = "P", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.8924000000000003
+    formation_energy = 0.0450431941666664
+  }
+}

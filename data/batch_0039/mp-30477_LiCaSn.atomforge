@@ -1,0 +1,102 @@
+atom_spec "LiCaSn" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "74ff2c1d-2f99-4f19-9144-1736be144c72",
+    title = "Ca3Li3Sn3",
+    created = "2025-12-07"
+  }
+  description = "LiCaSn from Materials Project (mp-30477)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.929899,
+    b = 4.929899,
+    c = 10.778904,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.328468),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.663305),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.996141),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.194448),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.801444),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.480569),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.496178),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.148224),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.847224),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5611635127777777
+  }
+}

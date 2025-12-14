@@ -1,0 +1,67 @@
+atom_spec "YCuTe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "587649a7-3463-40bf-b871-165f225c73e9",
+    title = "CuTe2Y",
+    created = "2025-12-07"
+  }
+  description = "YCuTe2 from Materials Project (mp-1100868)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.358066,
+    b = 4.358159,
+    c = 6.900569,
+    alpha = 89.997723,
+    beta = 89.997988,
+    gamma = 60.002071
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.333333, 0.634674),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.333280, 0.254861),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.666667, 0.735026),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.999988, 0.999995, 0.009439),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.6041999999999996
+    formation_energy = -1.1024219191666669
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "ZrCl3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ba1c6c8b-931b-45b0-b2da-dd9839ef12a1",
+    title = "Cl6Zr2",
+    created = "2025-12-07"
+  }
+  description = "ZrCl3 from Materials Project (mp-1100795)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 6.278204,
+    b = 6.291112,
+    c = 7.572110,
+    alpha = 89.931770,
+    beta = 114.142737,
+    gamma = 118.287411
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.005605, 0.427221, 0.787598),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.323295, 0.239416, 0.250359),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.354536, 0.074645, 0.785138),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.645464, 0.925355, 0.214862),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.676705, 0.760584, 0.749641),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.994395, 0.572779, 0.212402),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.142997, 0.857851, 0.999968),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr {
+      description = "Zr site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.857003, 0.142149, 0.000032),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.3713999999999999
+    formation_energy = -2.1779850087499995
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "Zn2CuAu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "61cc6fc1-4897-4f25-9baf-9ba3ed88e7cc",
+    title = "Au2Cu2Zn4",
+    created = "2025-12-07"
+  }
+  description = "Zn2CuAu from Materials Project (mp-12759)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 4.502811,
+    b = 4.697271,
+    c = 5.561087,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.322075, 0.000000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.677925, 0.500000),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.313975, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.686025, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.818820, 0.249618),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.818820, 0.750382),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.181180, 0.250382),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn {
+      description = "Zn site in orthorhombic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.181180, 0.749618),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1558269525000004
+  }
+}

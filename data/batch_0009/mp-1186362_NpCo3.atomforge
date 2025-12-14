@@ -1,0 +1,95 @@
+atom_spec "NpCo3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "164707fd-5a05-43a0-b6f8-78b811c06a68",
+    title = "Co6Np2",
+    created = "2025-12-07"
+  }
+  description = "NpCo3 from Materials Project (mp-1186362)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.212199,
+    b = 4.368551,
+    c = 5.214813,
+    alpha = 90.000000,
+    beta = 119.923625,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.324493, 0.000000, 0.162259),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.837745, 0.000000, 0.675490),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.837775, 0.000000, 0.162250),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.162200, 0.500000, 0.837785),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.162202, 0.500000, 0.324356),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Co {
+      description = "Co site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.675601, 0.500000, 0.837767),
+      frame = fractional,
+      species = ({ element = "Co", occupancy = 1.000000 })
+    },
+    site Np {
+      description = "Np site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.000000, 0.666703),
+      frame = fractional,
+      species = ({ element = "Np", occupancy = 1.000000 })
+    },
+    site Np {
+      description = "Np site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666667, 0.500000, 0.333410),
+      frame = fractional,
+      species = ({ element = "Np", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0228870178124989
+  }
+}

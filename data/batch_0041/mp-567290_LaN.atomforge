@@ -1,0 +1,67 @@
+atom_spec "LaN" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c11f3dbc-8db6-48ea-92b1-d5f5826c1e6d",
+    title = "La2N2",
+    created = "2025-12-07"
+  }
+  description = "LaN from Materials Project (mp-567290)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.132865,
+    b = 4.132865,
+    c = 5.960067,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.998741),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site La {
+      description = "La site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.498741),
+      frame = fractional,
+      species = ({ element = "La", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.411259),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.911259),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1489000000000005
+    formation_energy = -1.5012699525000004
+  }
+}

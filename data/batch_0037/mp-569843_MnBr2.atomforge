@@ -1,0 +1,102 @@
+atom_spec "MnBr2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "748d7d4b-8bfa-445e-bef2-9d1c8ab456e7",
+    title = "Br6Mn3",
+    created = "2025-12-07"
+  }
+  description = "MnBr2 from Materials Project (mp-569843)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.878160,
+    b = 3.878160,
+    c = 20.147636,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 166,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.258131),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.000000, 0.000000, 0.741869),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.408536),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.333333, 0.666667, 0.924798),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.075202),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in trigonal structure",
+      wyckoff = "6c",
+      position = (0.666667, 0.333333, 0.591464),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.333333, 0.666667, 0.666667),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in trigonal structure",
+      wyckoff = "3a",
+      position = (0.666667, 0.333333, 0.333333),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.5366
+    formation_energy = -1.1667346343103453
+  }
+}

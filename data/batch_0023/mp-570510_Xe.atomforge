@@ -1,0 +1,53 @@
+atom_spec "Xe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2df16428-8cd6-473a-8804-b5e63ec62dab",
+    title = "Xe2",
+    created = "2025-12-07"
+  }
+  description = "Xe from Materials Project (mp-570510)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 4.944126,
+    b = 4.944126,
+    c = 7.889846,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 194,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Xe {
+      description = "Xe site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.333333, 0.666667, 0.250000),
+      frame = fractional,
+      species = ({ element = "Xe", occupancy = 1.000000 })
+    },
+    site Xe {
+      description = "Xe site in hexagonal structure",
+      wyckoff = "2c",
+      position = (0.666667, 0.333333, 0.750000),
+      frame = fractional,
+      species = ({ element = "Xe", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 6.1938
+    formation_energy = 0.0001577799999999
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "Tb2In3Cu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3d918b61-1179-4cd8-83bb-cdd751ea32a4",
+    title = "CuIn3Tb2",
+    created = "2025-12-07"
+  }
+  description = "Tb2In3Cu from Materials Project (mp-1217738)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.784945,
+    b = 3.611321,
+    c = 8.328801,
+    alpha = 90.000000,
+    beta = 90.005494,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.000067, 0.500000, 0.329733),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.000011, 0.500000, 0.646840),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.500035, 0.500000, 0.837043),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.500044, 0.500000, 0.182855),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000033, 0.000000, 0.007792),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    },
+    site Tb {
+      description = "Tb site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.500010, 0.000000, 0.495738),
+      frame = fractional,
+      species = ({ element = "Tb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3855921816666665
+  }
+}

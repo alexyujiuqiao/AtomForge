@@ -1,0 +1,95 @@
+atom_spec "ScAlCO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7f05a38b-5e36-49a5-81ab-962956d2063b",
+    title = "Al2C2O2Sc2",
+    created = "2025-12-07"
+  }
+  description = "ScAlCO from Materials Project (mp-1080747)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 3.263194,
+    b = 3.263194,
+    c = 10.236398,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.020012),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.520012),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.941914),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site C {
+      description = "C site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.441914),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.197254),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.697254),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.304139),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.804139),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.2547999999999997
+    formation_energy = -1.8839163825000007
+  }
+}

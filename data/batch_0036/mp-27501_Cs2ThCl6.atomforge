@@ -1,0 +1,102 @@
+atom_spec "Cs2ThCl6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6e2459a4-b64d-4318-afa0-45463ff18122",
+    title = "Cl6Cs2Th",
+    created = "2025-12-07"
+  }
+  description = "Cs2ThCl6 from Materials Project (mp-27501)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 7.791658,
+    b = 7.791658,
+    c = 6.237911,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.166948, 0.333896, 0.236774),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.166948, 0.833052, 0.236774),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.333896, 0.166948, 0.763226),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.666104, 0.833052, 0.236774),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.833052, 0.166948, 0.763226),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.833052, 0.666104, 0.763226),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.739492),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.260508),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Th {
+      description = "Th site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Th", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.6873000000000005
+    formation_energy = -2.5737680095402293
+  }
+}

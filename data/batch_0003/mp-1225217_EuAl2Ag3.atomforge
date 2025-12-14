@@ -1,0 +1,81 @@
+atom_spec "EuAl2Ag3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "64bbceb4-3d77-4e7b-ba74-aecc8f1ebaab",
+    title = "Ag3Al2Eu",
+    created = "2025-12-07"
+  }
+  description = "EuAl2Ag3 from Materials Project (mp-1225217)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.773417,
+    b = 4.388458,
+    c = 5.773418,
+    alpha = 90.000000,
+    beta = 119.934879,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.000010, 0.500000, 0.500003),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.499997, 0.500000, 0.499997),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.500003, 0.500000, 0.000010),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.333444, 0.000000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.666626, 0.000000, 0.333444),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Eu {
+      description = "Eu site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.000020, 0.000000, 0.000020),
+      frame = fractional,
+      species = ({ element = "Eu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2310086541666673
+  }
+}

@@ -1,0 +1,74 @@
+atom_spec "Tm2TeS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "aa1741cf-f37a-480e-ab5e-78422014fd71",
+    title = "S2TeTm2",
+    created = "2025-12-07"
+  }
+  description = "Tm2TeS2 from Materials Project (mp-1216554)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.137638,
+    b = 5.283846,
+    c = 7.470068,
+    alpha = 110.711824,
+    beta = 106.078125,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.296224, 0.296224, 0.592448),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.703776, 0.703776, 0.407552),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Te {
+      description = "Te site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Te", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.333300, 0.833333, 0.666633),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    },
+    site Tm {
+      description = "Tm site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.666700, 0.166667, 0.333367),
+      frame = fractional,
+      species = ({ element = "Tm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.8342
+    formation_energy = -2.1263761099166665
+  }
+}

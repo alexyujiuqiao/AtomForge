@@ -1,0 +1,88 @@
+atom_spec "PuB6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "31927b5c-db2b-41c9-8521-3bd8c1537b82",
+    title = "B6Pu",
+    created = "2025-12-07"
+  }
+  description = "PuB6 from Materials Project (mp-505534)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.111788,
+    b = 4.111788,
+    c = 4.111788,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.198706, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.198706, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.500000, 0.198706),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.500000, 0.801294),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.801294, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.801294, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Pu {
+      description = "Pu site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pu", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3869510592857129
+  }
+}

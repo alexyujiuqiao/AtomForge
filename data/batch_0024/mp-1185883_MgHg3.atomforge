@@ -1,0 +1,67 @@
+atom_spec "MgHg3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "80b45733-3c11-4795-b425-c6755174cab4",
+    title = "Hg3Mg",
+    created = "2025-12-07"
+  }
+  description = "MgHg3 from Materials Project (mp-1185883)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.249562,
+    b = 5.457538,
+    c = 6.369039,
+    alpha = 115.368757,
+    beta = 104.779865,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hg {
+      description = "Hg site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.027500, 0.007703, 0.055003),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.250002, 0.619910, 0.500001),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Hg {
+      description = "Hg site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.472500, 0.452702, 0.944998),
+      frame = fractional,
+      species = ({ element = "Hg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.750001, 0.086353, 0.500001),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0611789362499999
+  }
+}

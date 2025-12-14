@@ -1,0 +1,116 @@
+atom_spec "Mg(BH4)2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "5e00fd10-6130-4047-9820-dedb9fd46af3",
+    title = "B2H8Mg",
+    created = "2025-12-07"
+  }
+  description = "Mg(BH4)2 from Materials Project (mp-1103290)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.277024,
+    b = 4.277024,
+    c = 5.365883,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.204367),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.795633),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.977035),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.022965),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.180627, 0.361254, 0.291235),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.180627, 0.819373, 0.291235),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.361254, 0.180627, 0.708765),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.638746, 0.819373, 0.291235),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.819373, 0.180627, 0.708765),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "6i",
+      position = (0.819373, 0.638746, 0.708765),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 5.7238
+    formation_energy = -0.3063384316666664
+  }
+}

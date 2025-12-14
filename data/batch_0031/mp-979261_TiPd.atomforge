@@ -1,0 +1,67 @@
+atom_spec "TiPd" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "00e86e91-ed6d-438b-842d-cad819bf00ee",
+    title = "Pd2Ti2",
+    created = "2025-12-07"
+  }
+  description = "TiPd from Materials Project (mp-979261)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 2.809465,
+    b = 4.588963,
+    c = 4.915345,
+    alpha = 90.000000,
+    beta = 92.051647,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 11,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Pd {
+      description = "Pd site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.495563, 0.250000, 0.812490),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.504437, 0.750000, 0.187510),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.032098, 0.250000, 0.298231),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti {
+      description = "Ti site in monoclinic structure",
+      wyckoff = "2e",
+      position = (0.967902, 0.750000, 0.701769),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.544909866666667
+  }
+}

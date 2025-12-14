@@ -1,0 +1,109 @@
+atom_spec "KCaBr3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "247c161d-48c2-4249-a49f-af6316df5a30",
+    title = "Br6Ca2K2",
+    created = "2025-12-07"
+  }
+  description = "KCaBr3 from Materials Project (mp-998749)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 8.099558,
+    b = 8.083540,
+    c = 5.716307,
+    alpha = 90.000000,
+    beta = 90.143773,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 8,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.492063, 0.000000, 0.983841),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.992063, 0.500000, 0.983841),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.253356, 0.251088, 0.484841),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.253356, 0.748912, 0.484841),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.753356, 0.248913, 0.484841),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.753356, 0.751088, 0.484841),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.005206, 0.500000, 0.483119),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site Ca {
+      description = "Ca site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.505206, 0.000000, 0.483119),
+      frame = fractional,
+      species = ({ element = "Ca", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.002467, 0.000000, 0.000082),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.502467, 0.500000, 0.000082),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.9584
+    formation_energy = -2.2190715431
+  }
+}

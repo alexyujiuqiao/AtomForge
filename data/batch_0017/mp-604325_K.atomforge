@@ -1,0 +1,67 @@
+atom_spec "K" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "41a58406-12e4-4b6f-881f-0e67d429ebdc",
+    title = "K4",
+    created = "2025-12-07"
+  }
+  description = "K from Materials Project (mp-604325)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.227704,
+    b = 6.258782,
+    c = 8.439815,
+    alpha = 90.000000,
+    beta = 110.761668,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 15,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.363817, 0.750000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.000000, 0.636183, 0.250000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.136183, 0.250000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K {
+      description = "K site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.500000, 0.863817, 0.750000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0735411169999999
+  }
+}

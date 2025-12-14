@@ -1,0 +1,81 @@
+atom_spec "Dy2CuAg3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "91985470-88cf-40a6-b553-97a6b96a67eb",
+    title = "Ag3CuDy2",
+    created = "2025-12-07"
+  }
+  description = "Dy2CuAg3 from Materials Project (mp-1225292)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.713717,
+    b = 3.713717,
+    c = 9.052901,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 99,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.325762),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.670948),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.834178),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Cu {
+      description = "Cu site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.165811),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in tetragonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.009477),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    },
+    site Dy {
+      description = "Dy site in tetragonal structure",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.493824),
+      frame = fractional,
+      species = ({ element = "Dy", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.2691540999999997
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "InClO" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "3da796da-4a12-4caa-821a-14f7e206e178",
+    title = "Cl2In2O2",
+    created = "2025-12-07"
+  }
+  description = "InClO from Materials Project (mp-27702)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.577984,
+    b = 4.157983,
+    c = 8.662753,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 59,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.673112),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.326888),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.116477),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.883523),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.500000, 0.042711),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.000000, 0.957289),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.3707000000000003
+    formation_energy = -1.8170773583333333
+  }
+}

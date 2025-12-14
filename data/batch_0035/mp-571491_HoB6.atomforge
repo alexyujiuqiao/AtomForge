@@ -1,0 +1,88 @@
+atom_spec "HoB6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8de31a6f-d11f-43ba-be5c-8a8604940b3c",
+    title = "B6Ho",
+    created = "2025-12-07"
+  }
+  description = "HoB6 from Materials Project (mp-571491)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 4.090593,
+    b = 4.090593,
+    c = 4.090593,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 221,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.198783, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.198783, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.500000, 0.198783),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.500000, 0.801217),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.500000, 0.801217, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in cubic structure",
+      wyckoff = "6f",
+      position = (0.801217, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in cubic structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3834219978571421
+  }
+}

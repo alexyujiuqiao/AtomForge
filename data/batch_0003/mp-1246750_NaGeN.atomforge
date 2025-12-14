@@ -1,0 +1,123 @@
+atom_spec "NaGeN" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d2fce12e-ed6d-44b4-baee-62074f9da08a",
+    title = "Ge4N4Na4",
+    created = "2025-12-07"
+  }
+  description = "NaGeN from Materials Project (mp-1246750)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.105333,
+    b = 5.378592,
+    c = 10.521856,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 36,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000005, 0.499106),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.999995, 0.999106),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.499995, 0.999106),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500005, 0.499106),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.333333, 0.910041),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.666667, 0.410041),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.166667, 0.410041),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.833333, 0.910041),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.333333, 0.246213),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.666667, 0.746213),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.166667, 0.746213),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in orthorhombic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.833333, 0.246213),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.5042999999999995
+    formation_energy = -0.2562125655172416
+  }
+}

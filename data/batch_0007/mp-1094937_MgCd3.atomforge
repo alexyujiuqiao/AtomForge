@@ -1,0 +1,95 @@
+atom_spec "MgCd3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1bea8f79-5277-47bd-887b-61b8244fcba2",
+    title = "Cd6Mg2",
+    created = "2025-12-07"
+  }
+  description = "MgCd3 from Materials Project (mp-1094937)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.208676,
+    b = 5.289012,
+    c = 10.570870,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 44,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.331518, 0.500000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.831518, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.999551, 0.251604),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.000000, 0.999551, 0.748396),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.499551, 0.248396),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Cd {
+      description = "Cd site in orthorhombic structure",
+      wyckoff = "4d",
+      position = (0.500000, 0.499551, 0.751604),
+      frame = fractional,
+      species = ({ element = "Cd", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.336046, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.836046, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0253316474999998
+  }
+}

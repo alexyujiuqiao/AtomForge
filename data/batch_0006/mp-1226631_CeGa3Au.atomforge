@@ -1,0 +1,109 @@
+atom_spec "CeGa3Au" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d83c8db4-7f01-49d6-b1d6-575e52286a67",
+    title = "Au2Ce2Ga6",
+    created = "2025-12-07"
+  }
+  description = "CeGa3Au from Materials Project (mp-1226631)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.207987,
+    b = 6.207987,
+    c = 6.133294,
+    alpha = 90.000000,
+    beta = 120.403679,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 8,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.121419, 0.500000, 0.242837),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Au {
+      description = "Au site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.621419, 0.000000, 0.242837),
+      frame = fractional,
+      species = ({ element = "Au", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.491786, 0.500000, 0.983573),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ce {
+      description = "Ce site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.991786, 0.000000, 0.983573),
+      frame = fractional,
+      species = ({ element = "Ce", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.386273, 0.000000, 0.772547),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.886273, 0.500000, 0.772547),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.000261, 0.250000, 0.500522),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.000261, 0.750000, 0.500522),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.500261, 0.250000, 0.500522),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ga {
+      description = "Ga site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.500261, 0.750000, 0.500522),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.5582564994999991
+  }
+}

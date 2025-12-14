@@ -1,0 +1,60 @@
+atom_spec "VBr2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9aaf06b3-95b5-40ee-a47d-0247d64e9274",
+    title = "Br2V",
+    created = "2025-12-07"
+  }
+  description = "VBr2 from Materials Project (mp-971787)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.845395,
+    b = 3.845395,
+    c = 6.721105,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.215970),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.784030),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.1853000000000002
+    formation_energy = -1.2089157916666669
+  }
+}

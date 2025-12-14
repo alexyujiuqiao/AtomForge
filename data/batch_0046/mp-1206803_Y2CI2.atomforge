@@ -1,0 +1,74 @@
+atom_spec "Y2CI2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f7b70d54-5ac0-430b-9ad9-dfc4aa3c9d73",
+    title = "CI2Y2",
+    created = "2025-12-07"
+  }
+  description = "Y2CI2 from Materials Project (mp-1206803)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.878497,
+    b = 3.878497,
+    c = 11.138278,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 164,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.687001),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.312999),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.333333, 0.666667, 0.118233),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    },
+    site Y {
+      description = "Y site in trigonal structure",
+      wyckoff = "2d",
+      position = (0.666667, 0.333333, 0.881767),
+      frame = fractional,
+      species = ({ element = "Y", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.5638999999999998
+    formation_energy = -1.1368958286666662
+  }
+}

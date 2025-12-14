@@ -1,0 +1,67 @@
+atom_spec "SrGaGeH" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4654c27d-391f-4211-834c-a274b17a919c",
+    title = "GaGeHSr",
+    created = "2025-12-07"
+  }
+  description = "SrGaGeH from Materials Project (mp-978847)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.264740,
+    b = 4.264740,
+    c = 4.964212,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.557207),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.436186),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site H {
+      description = "H site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.914207),
+      frame = fractional,
+      species = ({ element = "H", occupancy = 1.000000 })
+    },
+    site Sr {
+      description = "Sr site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.998003),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.4257999999999997
+    formation_energy = -0.5208152185416668
+  }
+}

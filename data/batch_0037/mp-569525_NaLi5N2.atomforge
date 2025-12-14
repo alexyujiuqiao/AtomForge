@@ -1,0 +1,95 @@
+atom_spec "NaLi5N2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e42e7459-dd02-41e4-894e-ea3243850c13",
+    title = "Li5N2Na",
+    created = "2025-12-07"
+  }
+  description = "NaLi5N2 from Materials Project (mp-569525)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 3.863136,
+    b = 3.647717,
+    c = 7.344736,
+    alpha = 90.000000,
+    beta = 99.208432,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.087426, 0.000000, 0.649534),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.379353, 0.000000, 0.071059),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.524717, 0.000000, 0.362161),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.534669, 0.500000, 0.537093),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site Li {
+      description = "Li site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.971829, 0.500000, 0.243181),
+      frame = fractional,
+      species = ({ element = "Li", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.584851, 0.000000, 0.642040),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.457902, 0.500000, 0.201998),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.703252, 0.500000, 0.874934),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.3468
+    formation_energy = -0.3255159616522993
+  }
+}

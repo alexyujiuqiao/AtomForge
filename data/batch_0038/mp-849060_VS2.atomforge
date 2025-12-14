@@ -1,0 +1,60 @@
+atom_spec "VS2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6dd9e922-5ebc-4279-a3ea-21c316f451b7",
+    title = "S2V",
+    created = "2025-12-07"
+  }
+  description = "VS2 from Materials Project (mp-849060)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.190018,
+    b = 3.190710,
+    c = 11.458782,
+    alpha = 83.678255,
+    beta = 85.503236,
+    gamma = 60.046529
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.152187, 0.122739, 0.628816),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.847813, 0.877261, 0.371184),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site V {
+      description = "V site in triclinic structure",
+      wyckoff = "1h",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "V", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.1825171620833337
+  }
+}

@@ -1,0 +1,95 @@
+atom_spec "In3GaN4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "65b4c577-2713-4ead-b853-c119a6c8f6b9",
+    title = "GaIn3N4",
+    created = "2025-12-07"
+  }
+  description = "In3GaN4 from Materials Project (mp-1224009)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 3.492880,
+    b = 3.492880,
+    c = 11.354861,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ga {
+      description = "Ga site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.246741),
+      frame = fractional,
+      species = ({ element = "Ga", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.749555),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.008440),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.490524),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.074718),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.666667, 0.333333, 0.558100),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.296412),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.000000, 0.000000, 0.816308),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.1671814546875003
+  }
+}

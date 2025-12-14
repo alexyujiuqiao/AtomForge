@@ -50,12 +50,35 @@ try:
         Meta
     )
     
+    # Import Phase 1 components (Interop + Variant Pinning)
+    from .src.phase1_interop import (
+        VariantPolicy,
+        VariantInfo,
+        VariantSelectionResult,
+        DatabaseMatchResult,
+        CrystalDatabaseMatcher,
+        from_cif,
+        from_poscar,
+        match_database,
+        select_variant,
+        create_variant_card,
+        pin_variant
+    )
+    
+    from .src.phase1_ui import (
+        VariantCard,
+        VariantSelector,
+        SimpleVariantUI,
+        create_variant_selector,
+        run_variant_selection
+    )
+    
     __all__ = [
         # Parser
         "AtomForgeParser",
         "AtomForgeTransformer", 
-            "parse_atomforge",
-    "parse_atomforge_file",
+        "parse_atomforge",
+        "parse_atomforge_file",
         
         # Compiler
         "AtomForgeCompiler",
@@ -83,7 +106,25 @@ try:
         "Validation",
         "Simplification",
         "Provenance",
-        "Meta"
+        "Meta",
+        
+        # Phase 1: Interop + Variant Pinning
+        "VariantPolicy",
+        "VariantInfo", 
+        "VariantSelectionResult",
+        "DatabaseMatchResult",
+        "CrystalDatabaseMatcher",
+        "from_cif",
+        "from_poscar",
+        "match_database",
+        "select_variant",
+        "create_variant_card",
+        "pin_variant",
+        "VariantCard",
+        "VariantSelector",
+        "SimpleVariantUI",
+        "create_variant_selector",
+        "run_variant_selection"
     ]
     
 except ImportError as e:

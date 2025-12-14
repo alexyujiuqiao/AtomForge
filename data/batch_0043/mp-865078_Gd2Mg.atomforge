@@ -1,0 +1,81 @@
+atom_spec "Gd2Mg" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "27c10b59-3bb8-4d2f-94c6-4b1a77589d70",
+    title = "Gd4Mg2",
+    created = "2025-12-07"
+  }
+  description = "Gd2Mg from Materials Project (mp-865078)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 3.731024,
+    b = 5.564930,
+    c = 8.889476,
+    alpha = 90.000000,
+    beta = 102.113928,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Gd {
+      description = "Gd site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.019652, 0.000000, 0.039307),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.338115, 0.000000, 0.676233),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.202568, 0.500000, 0.405137),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Gd {
+      description = "Gd site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.884107, 0.500000, 0.768213),
+      frame = fractional,
+      species = ({ element = "Gd", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.677864, 0.000000, 0.355726),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.544359, 0.500000, 0.088718),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0543640766666667
+  }
+}

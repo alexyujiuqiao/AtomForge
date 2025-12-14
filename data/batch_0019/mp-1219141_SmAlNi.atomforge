@@ -1,0 +1,123 @@
+atom_spec "SmAlNi" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e5239087-64a7-41f0-a1ec-0603b7d9de54",
+    title = "Al4Ni4Sm4",
+    created = "2025-12-07"
+  }
+  description = "SmAlNi from Materials Project (mp-1219141)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.415907,
+    b = 8.519810,
+    c = 5.417479,
+    alpha = 90.000000,
+    beta = 119.328360,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.167095, 0.000000, 0.338110),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.661764, 0.000000, 0.832852),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.002815, 0.259821, 0.997175),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.002815, 0.740179, 0.997175),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.167660, 0.000000, 0.832507),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.331213, 0.500000, 0.164967),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.834962, 0.500000, 0.668792),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Ni {
+      description = "Ni site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.838175, 0.500000, 0.161845),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.329644, 0.323530, 0.670347),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.329644, 0.676470, 0.670347),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.667107, 0.207481, 0.332941),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    },
+    site Sm {
+      description = "Sm site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.667107, 0.792519, 0.332941),
+      frame = fractional,
+      species = ({ element = "Sm", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.4571866741666668
+  }
+}

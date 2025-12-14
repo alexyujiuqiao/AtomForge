@@ -1,0 +1,67 @@
+atom_spec "MoIr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "557bb6ba-c179-4a79-a2a2-338878409d2b",
+    title = "Ir2Mo2",
+    created = "2025-12-07"
+  }
+  description = "MoIr from Materials Project (mp-11481)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 2.775346,
+    b = 4.463059,
+    c = 4.861714,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 51,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ir {
+      description = "Ir site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.674259),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Ir {
+      description = "Ir site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.325741),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.250000, 0.170861),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site Mo {
+      description = "Mo site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.750000, 0.829139),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3292106624999995
+  }
+}

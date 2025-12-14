@@ -1,0 +1,95 @@
+atom_spec "HfAl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "20b3e652-4076-4484-a7f4-46f3254bb7b8",
+    title = "Al4Hf4",
+    created = "2025-12-07"
+  }
+  description = "HfAl from Materials Project (mp-249)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.252512,
+    b = 10.886542,
+    c = 4.300164,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.429808, 0.250000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.570192, 0.750000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.070192, 0.750000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Al {
+      description = "Al site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.929808, 0.250000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.163504, 0.250000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.000000, 0.836496, 0.750000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.336496, 0.750000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in orthorhombic structure",
+      wyckoff = "4c",
+      position = (0.500000, 0.663504, 0.250000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3955277175000002
+  }
+}

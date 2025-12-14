@@ -1,0 +1,60 @@
+atom_spec "WN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "17c22179-15b2-43aa-8d35-4d63d9f40e66",
+    title = "N2W",
+    created = "2025-12-07"
+  }
+  description = "WN2 from Materials Project (mp-999549)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 2.930860,
+    b = 2.930860,
+    c = 3.919142,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 187,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site N {
+      description = "N site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.181251),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in hexagonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.818749),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site W {
+      description = "W site in hexagonal structure",
+      wyckoff = "1f",
+      position = (0.666667, 0.333333, 0.500000),
+      frame = fractional,
+      species = ({ element = "W", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.532100000000001
+    formation_energy = -0.5083264933333341
+  }
+}

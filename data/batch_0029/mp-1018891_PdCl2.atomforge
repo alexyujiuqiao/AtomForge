@@ -1,0 +1,81 @@
+atom_spec "PdCl2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "ce8f160d-5a9d-4a77-a2e6-361aee1e618e",
+    title = "Cl4Pd2",
+    created = "2025-12-07"
+  }
+  description = "PdCl2 from Materials Project (mp-1018891)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.790063,
+    b = 4.280042,
+    c = 6.466781,
+    alpha = 90.000000,
+    beta = 106.965485,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 14,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.235220, 0.244227, 0.308988),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.235220, 0.255773, 0.808988),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.764780, 0.744227, 0.191012),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.764780, 0.755773, 0.691012),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    },
+    site Pd {
+      description = "Pd site in monoclinic structure",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Pd", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.7937
+    formation_energy = -0.8766710249999997
+  }
+}

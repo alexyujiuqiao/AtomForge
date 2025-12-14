@@ -1,0 +1,67 @@
+atom_spec "Kr" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "15064a5a-003c-4219-91a1-846f06f46267",
+    title = "Kr4",
+    created = "2025-12-07"
+  }
+  description = "Kr from Materials Project (mp-612118)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 6.496462,
+    b = 6.496462,
+    c = 6.496462,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 225,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Kr {
+      description = "Kr site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Kr", occupancy = 1.000000 })
+    },
+    site Kr {
+      description = "Kr site in cubic structure",
+      wyckoff = "4a",
+      position = (0.000000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Kr", occupancy = 1.000000 })
+    },
+    site Kr {
+      description = "Kr site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Kr", occupancy = 1.000000 })
+    },
+    site Kr {
+      description = "Kr site in cubic structure",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Kr", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 7.1828
+    formation_energy = 0.0
+  }
+}

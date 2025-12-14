@@ -1,0 +1,67 @@
+atom_spec "SnS" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9cfbab15-4693-4973-a896-e1c56c35e0fe",
+    title = "S2Sn2",
+    created = "2025-12-07"
+  }
+  description = "SnS from Materials Project (mp-1064497)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.105180,
+    b = 4.109192,
+    c = 11.041095,
+    alpha = 98.016798,
+    beta = 90.636774,
+    gamma = 90.007529
+  }
+  symmetry {
+    space_group = 2,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.247000, 0.212446, 0.399578),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S {
+      description = "S site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.753000, 0.787554, 0.600422),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.257767, 0.304195, 0.635199),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "2i",
+      position = (0.742233, 0.695805, 0.364801),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 1.4941
+    formation_energy = -0.6378929440625001
+  }
+}

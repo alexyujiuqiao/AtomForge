@@ -1,0 +1,67 @@
+atom_spec "NbPt" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8172e9d7-18a8-4ebc-8b3a-eacdc67f9fcf",
+    title = "Nb2Pt2",
+    created = "2025-12-07"
+  }
+  description = "NbPt from Materials Project (mp-999376)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 2.829741,
+    b = 4.648473,
+    c = 5.050609,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 51,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Nb {
+      description = "Nb site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.250000, 0.820310),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.750000, 0.179690),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.324984),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    },
+    site Pt {
+      description = "Pt site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.675016),
+      frame = fractional,
+      species = ({ element = "Pt", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.6122592175000001
+  }
+}

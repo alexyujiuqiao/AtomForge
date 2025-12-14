@@ -1,0 +1,95 @@
+atom_spec "MnReB2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4a9fb8b1-1afa-4017-bbe3-e9b0e07b6a01",
+    title = "B4Mn2Re2",
+    created = "2025-12-07"
+  }
+  description = "MnReB2 from Materials Project (mp-1221600)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.026787,
+    b = 4.320409,
+    c = 5.711090,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 26,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.339809, 0.030432),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.660191, 0.530432),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.123439, 0.963480),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site B {
+      description = "B site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.876561, 0.463480),
+      frame = fractional,
+      species = ({ element = "B", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.131643, 0.683579),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in orthorhombic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.868357, 0.183579),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.366559, 0.322509),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    },
+    site Re {
+      description = "Re site in orthorhombic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.633441, 0.822509),
+      frame = fractional,
+      species = ({ element = "Re", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3436607303160919
+  }
+}

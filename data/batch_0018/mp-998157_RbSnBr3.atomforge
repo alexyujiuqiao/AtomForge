@@ -1,0 +1,74 @@
+atom_spec "RbSnBr3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "55463154-5684-40b0-a018-37e67746a13e",
+    title = "Br3RbSn",
+    created = "2025-12-07"
+  }
+  description = "RbSnBr3 from Materials Project (mp-998157)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.864902,
+    b = 5.868142,
+    c = 5.870763,
+    alpha = 89.582451,
+    beta = 89.532114,
+    gamma = 89.853464
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.481927, 0.986008, 0.480806),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.498577, 0.493807, 0.981877),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.990177, 0.473073, 0.468018),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.005249, 0.007600, 0.014231),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.494069, 0.489511, 0.485067),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.2693000000000003
+    formation_energy = -1.512494211
+  }
+}

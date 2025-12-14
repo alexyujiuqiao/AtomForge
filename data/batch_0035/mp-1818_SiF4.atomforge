@@ -1,0 +1,109 @@
+atom_spec "SiF4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "51d04f35-d247-4a3b-8ac0-697653c32509",
+    title = "F8Si2",
+    created = "2025-12-07"
+  }
+  description = "SiF4 from Materials Project (mp-1818)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system",
+    type = cubic,
+    a = 5.592962,
+    b = 5.592962,
+    c = 5.592962,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 217,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in cubic structure",
+      wyckoff = "8c",
+      position = (0.163296, 0.163296, 0.836704),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in cubic structure",
+      wyckoff = "8c",
+      position = (0.163296, 0.836704, 0.163296),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in cubic structure",
+      wyckoff = "8c",
+      position = (0.336704, 0.336704, 0.336704),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in cubic structure",
+      wyckoff = "8c",
+      position = (0.336704, 0.663296, 0.663296),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in cubic structure",
+      wyckoff = "8c",
+      position = (0.663296, 0.336704, 0.663296),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in cubic structure",
+      wyckoff = "8c",
+      position = (0.663296, 0.663296, 0.336704),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in cubic structure",
+      wyckoff = "8c",
+      position = (0.836704, 0.163296, 0.163296),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in cubic structure",
+      wyckoff = "8c",
+      position = (0.836704, 0.836704, 0.836704),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in cubic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 7.939999999999999
+    formation_energy = -3.474476041999999
+  }
+}

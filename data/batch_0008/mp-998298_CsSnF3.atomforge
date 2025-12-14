@@ -1,0 +1,74 @@
+atom_spec "CsSnF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d65af876-73c5-482b-bd3e-d388e77c1824",
+    title = "CsF3Sn",
+    created = "2025-12-07"
+  }
+  description = "CsSnF3 from Materials Project (mp-998298)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.772341,
+    b = 4.915839,
+    c = 5.040520,
+    alpha = 94.566539,
+    beta = 92.352387,
+    gamma = 91.168914
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.005799, 0.001771, 0.985473),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.512783, 0.935575, 0.528383),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.514852, 0.525840, 0.908074),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.962259, 0.528132, 0.531340),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.504305, 0.498685, 0.486730),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 3.3417
+    formation_energy = -2.7566181740862064
+  }
+}

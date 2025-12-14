@@ -1,0 +1,74 @@
+atom_spec "TlAgF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b11be284-e4b7-4068-8edd-6e937130affe",
+    title = "AgF3Tl",
+    created = "2025-12-07"
+  }
+  description = "TlAgF3 from Materials Project (mp-998152)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.426805,
+    b = 4.428620,
+    c = 4.429410,
+    alpha = 89.895515,
+    beta = 89.169917,
+    gamma = 89.588288
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.502722, 0.500188, 0.513269),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.002769, 0.501284, 0.512130),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.494923, 0.495932, 0.013649),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.504903, 0.000144, 0.515838),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.004684, 0.002451, 0.005115),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.710767349499999
+  }
+}

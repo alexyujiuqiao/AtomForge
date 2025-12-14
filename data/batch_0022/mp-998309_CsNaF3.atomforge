@@ -1,0 +1,109 @@
+atom_spec "CsNaF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2155eb09-341c-4a35-9ec5-c7360c99b5da",
+    title = "Cs2F6Na2",
+    created = "2025-12-07"
+  }
+  description = "CsNaF3 from Materials Project (mp-998309)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 6.630872,
+    b = 6.358534,
+    c = 4.567737,
+    alpha = 90.000000,
+    beta = 94.919325,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 8,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cs {
+      description = "Cs site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.497673, 0.500000, 0.009458),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.997673, 0.000000, 0.009458),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.009800, 0.500000, 0.019336),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.509800, 0.000000, 0.019336),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.247029, 0.247726, 0.512788),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.247029, 0.752274, 0.512788),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.747029, 0.252274, 0.512788),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in monoclinic structure",
+      wyckoff = "4b",
+      position = (0.747029, 0.747726, 0.512788),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.497472, 0.000000, 0.516027),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na {
+      description = "Na site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.997472, 0.500000, 0.516027),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -2.3986263223965514
+  }
+}

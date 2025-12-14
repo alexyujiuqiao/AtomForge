@@ -1,0 +1,95 @@
+atom_spec "HfI3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "00400d83-fc0e-45b0-a131-cf41ea6b460c",
+    title = "Hf2I6",
+    created = "2025-12-07"
+  }
+  description = "HfI3 from Materials Project (mp-568002)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.820481,
+    b = 7.820481,
+    c = 6.492496,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 193,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site Hf {
+      description = "Hf site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Hf", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.000000, 0.307229, 0.250000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.000000, 0.692771, 0.750000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.307229, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.307229, 0.307229, 0.750000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.692771, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    },
+    site I {
+      description = "I site in hexagonal structure",
+      wyckoff = "6g",
+      position = (0.692771, 0.692771, 0.250000),
+      frame = fractional,
+      species = ({ element = "I", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.163775235
+  }
+}

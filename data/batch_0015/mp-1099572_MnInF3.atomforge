@@ -1,0 +1,74 @@
+atom_spec "MnInF3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7889ea9a-b56e-4828-b41f-f9bbc2dce286",
+    title = "F3InMn",
+    created = "2025-12-07"
+  }
+  description = "MnInF3 from Materials Project (mp-1099572)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 4.308034,
+    b = 4.308927,
+    c = 4.309700,
+    alpha = 89.898533,
+    beta = 89.721965,
+    gamma = 89.958207
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.482817, 0.999331, 0.499761),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.486656, 0.500476, 0.996621),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F {
+      description = "F site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.987352, 0.505279, 0.508084),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.994926, 0.996346, 0.990508),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.488249, 0.498562, 0.495029),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0010000000000003
+    formation_energy = -2.505715141086207
+  }
+}

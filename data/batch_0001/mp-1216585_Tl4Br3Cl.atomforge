@@ -1,0 +1,95 @@
+atom_spec "Tl4Br3Cl" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d129f38c-9bc5-4006-a1bc-0aa45c1efc7f",
+    title = "Br3ClTl4",
+    created = "2025-12-07"
+  }
+  description = "Tl4Br3Cl from Materials Project (mp-1216585)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 4.016142,
+    b = 4.016142,
+    c = 16.095544,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 123,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "1d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.249165),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in tetragonal structure",
+      wyckoff = "2h",
+      position = (0.500000, 0.500000, 0.750835),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Cl {
+      description = "Cl site in tetragonal structure",
+      wyckoff = "1c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.121640),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.374923),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.625077),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    },
+    site Tl {
+      description = "Tl site in tetragonal structure",
+      wyckoff = "2g",
+      position = (0.000000, 0.000000, 0.878360),
+      frame = fractional,
+      species = ({ element = "Tl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.0159
+    formation_energy = -1.1449828607291668
+  }
+}

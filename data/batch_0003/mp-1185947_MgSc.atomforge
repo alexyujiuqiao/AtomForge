@@ -1,0 +1,67 @@
+atom_spec "MgSc" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4da0512d-012e-4bf4-8ec9-11e6c1768a62",
+    title = "Mg2Sc2",
+    created = "2025-12-07"
+  }
+  description = "MgSc from Materials Project (mp-1185947)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 3.362799,
+    b = 5.198680,
+    c = 5.348914,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 51,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.250000, 0.194588),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Mg {
+      description = "Mg site in orthorhombic structure",
+      wyckoff = "2f",
+      position = (0.500000, 0.750000, 0.805412),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.250000, 0.695953),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    },
+    site Sc {
+      description = "Sc site in orthorhombic structure",
+      wyckoff = "2e",
+      position = (0.000000, 0.750000, 0.304047),
+      frame = fractional,
+      species = ({ element = "Sc", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.0230316024999996
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "Rb2O" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4a33ab82-1714-4f33-bd3e-88ee27ff50e8",
+    title = "O2Rb4",
+    created = "2025-12-07"
+  }
+  description = "Rb2O from Materials Project (mp-755459)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 4.370913,
+    b = 6.519047,
+    c = 7.728252,
+    alpha = 90.000000,
+    beta = 122.528355,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 14,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2d",
+      position = (0.500000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "2d",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.215198, 0.149161, 0.727145),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.215198, 0.350839, 0.227145),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.784802, 0.649161, 0.772855),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    },
+    site Rb {
+      description = "Rb site in monoclinic structure",
+      wyckoff = "4e",
+      position = (0.784802, 0.850839, 0.272855),
+      frame = fractional,
+      species = ({ element = "Rb", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.4128999999999999
+    formation_energy = -1.1150821099999997
+  }
+}

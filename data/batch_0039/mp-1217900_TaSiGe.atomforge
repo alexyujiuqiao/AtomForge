@@ -1,0 +1,102 @@
+atom_spec "TaSiGe" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "255e93ec-5bb1-4064-9a61-caaba803c2c9",
+    title = "Ge3Si3Ta3",
+    created = "2025-12-07"
+  }
+  description = "TaSiGe from Materials Project (mp-1217900)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.910631,
+    b = 4.910631,
+    c = 6.700639,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 153,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.171845, 0.343690, 0.833333),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.171845, 0.828155, 0.166667),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Ge {
+      description = "Ge site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.656310, 0.828155, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ge", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.008733, 0.504367, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.495634, 0.504367, 0.166667),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si {
+      description = "Si site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.495634, 0.991267, 0.833333),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.337048, 0.168524, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.831476, 0.168524, 0.166667),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    },
+    site Ta {
+      description = "Ta site in trigonal structure",
+      wyckoff = "3b",
+      position = (0.831476, 0.662952, 0.833333),
+      frame = fractional,
+      species = ({ element = "Ta", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3001240972222234
+  }
+}

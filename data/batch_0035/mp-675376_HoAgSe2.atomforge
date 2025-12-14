@@ -1,0 +1,95 @@
+atom_spec "HoAgSe2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "975d5fff-3253-4eb7-b08b-7d99c1c18e97",
+    title = "Ag2Ho2Se4",
+    created = "2025-12-07"
+  }
+  description = "HoAgSe2 from Materials Project (mp-675376)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 5.704417,
+    b = 5.707845,
+    c = 7.268783,
+    alpha = 113.096056,
+    beta = 113.061231,
+    gamma = 89.994681
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.502557, 0.508080, 0.002917),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ag {
+      description = "Ag site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.744521, 0.246658, 0.499558),
+      frame = fractional,
+      species = ({ element = "Ag", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.249878, 0.742954, 0.498473),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.998449, 0.993392, 0.999031),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.014265, 0.508239, 0.026031),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.232271, 0.230087, 0.471676),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.485597, 0.987896, 0.971896),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site Se {
+      description = "Se site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.762953, 0.758828, 0.526739),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.7128000000000001
+    formation_energy = -1.3993528178385408
+  }
+}

@@ -1,0 +1,109 @@
+atom_spec "CsCrBr3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bd1e1be9-4699-4a63-ad03-826fdf27fb6f",
+    title = "Br6Cr2Cs2",
+    created = "2025-12-07"
+  }
+  description = "CsCrBr3 from Materials Project (mp-27179)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Hexagonal crystal system",
+    type = hexagonal,
+    a = 7.759908,
+    b = 7.759908,
+    c = 6.492639,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 186,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Br {
+      description = "Br site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.157545, 0.315089, 0.263367),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.157545, 0.842456, 0.263367),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.315089, 0.157545, 0.763367),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.684911, 0.842456, 0.263367),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.842456, 0.157545, 0.763367),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Br {
+      description = "Br site in hexagonal structure",
+      wyckoff = "6c",
+      position = (0.842456, 0.684911, 0.763367),
+      frame = fractional,
+      species = ({ element = "Br", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.013926),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cr {
+      description = "Cr site in hexagonal structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.513926),
+      frame = fractional,
+      species = ({ element = "Cr", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.333333, 0.666667, 0.755874),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    },
+    site Cs {
+      description = "Cs site in hexagonal structure",
+      wyckoff = "2b",
+      position = (0.666667, 0.333333, 0.255874),
+      frame = fractional,
+      species = ({ element = "Cs", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -1.452650368086207
+  }
+}

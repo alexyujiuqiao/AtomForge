@@ -1,0 +1,81 @@
+atom_spec "Ho2In3Cu" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "67a0aa5d-530c-427b-ad22-d01a1340cf55",
+    title = "CuHo2In3",
+    created = "2025-12-07"
+  }
+  description = "Ho2In3Cu from Materials Project (mp-1223982)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Trigonal crystal system",
+    type = trigonal,
+    a = 4.721632,
+    b = 4.721632,
+    c = 7.475196,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 120.000000
+  }
+  symmetry {
+    space_group = 156,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Cu {
+      description = "Cu site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.543765),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.263720),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site Ho {
+      description = "Ho site in trigonal structure",
+      wyckoff = "1b",
+      position = (0.333333, 0.666667, 0.722706),
+      frame = fractional,
+      species = ({ element = "Ho", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.935568),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.050836),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    },
+    site In {
+      description = "In site in trigonal structure",
+      wyckoff = "1c",
+      position = (0.666667, 0.333333, 0.483404),
+      frame = fractional,
+      species = ({ element = "In", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.3857754716666666
+  }
+}

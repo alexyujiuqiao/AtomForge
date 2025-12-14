@@ -1,0 +1,123 @@
+atom_spec "NbBiO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "aca59bbb-8f09-4785-86fc-e8021a2c31c7",
+    title = "Bi2Nb2O8",
+    created = "2025-12-07"
+  }
+  description = "NbBiO4 from Materials Project (mp-863076)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.989612,
+    b = 5.882034,
+    c = 6.055262,
+    alpha = 90.000000,
+    beta = 112.943975,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 5,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "2b",
+      position = (0.000000, 0.291876, 0.500000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Bi {
+      description = "Bi site in monoclinic structure",
+      wyckoff = "2b",
+      position = (0.500000, 0.791876, 0.500000),
+      frame = fractional,
+      species = ({ element = "Bi", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.000000, 0.946755, 0.000000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site Nb {
+      description = "Nb site in monoclinic structure",
+      wyckoff = "2a",
+      position = (0.500000, 0.446755, 0.000000),
+      frame = fractional,
+      species = ({ element = "Nb", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4c",
+      position = (0.149622, 0.014898, 0.348250),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4c",
+      position = (0.241805, 0.244892, 0.950615),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4c",
+      position = (0.258195, 0.744892, 0.049385),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4c",
+      position = (0.350378, 0.514898, 0.651750),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4c",
+      position = (0.649622, 0.514898, 0.348250),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4c",
+      position = (0.741805, 0.744892, 0.950615),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4c",
+      position = (0.758195, 0.244892, 0.049385),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O {
+      description = "O site in monoclinic structure",
+      wyckoff = "4c",
+      position = (0.850378, 0.014898, 0.651750),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 2.4174
+    formation_energy = -2.4523952966666656
+  }
+}

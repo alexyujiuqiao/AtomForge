@@ -1,0 +1,95 @@
+atom_spec "MnRu3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "38629b72-30b9-4e16-9f91-4d4b97464e19",
+    title = "Mn2Ru6",
+    created = "2025-12-07"
+  }
+  description = "MnRu3 from Materials Project (mp-865045)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Monoclinic crystal system",
+    type = monoclinic,
+    a = 5.385748,
+    b = 4.245482,
+    c = 5.385793,
+    alpha = 90.000000,
+    beta = 119.994628,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 6,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.333333, 0.000000, 0.666667),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Mn {
+      description = "Mn site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.666667, 0.500000, 0.333333),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.339545, 0.000000, 0.169782),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.830221, 0.000000, 0.660487),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in monoclinic structure",
+      wyckoff = "1a",
+      position = (0.830252, 0.000000, 0.169782),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.169738, 0.500000, 0.830235),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.169760, 0.500000, 0.339472),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site Ru {
+      description = "Ru site in monoclinic structure",
+      wyckoff = "1b",
+      position = (0.660497, 0.500000, 0.830244),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = -0.003996381982759
+  }
+}

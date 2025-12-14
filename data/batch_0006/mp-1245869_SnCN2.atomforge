@@ -1,0 +1,67 @@
+atom_spec "SnCN2" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6bc55045-cee7-4a15-84a7-530e5ce8d504",
+    title = "CN2Sn",
+    created = "2025-12-07"
+  }
+  description = "SnCN2 from Materials Project (mp-1245869)",
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Triclinic crystal system",
+    type = triclinic,
+    a = 3.903243,
+    b = 3.903257,
+    c = 5.546388,
+    alpha = 89.999905,
+    beta = 110.601243,
+    gamma = 119.999504
+  }
+  symmetry {
+    space_group = 1,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites",
+    site C {
+      description = "C site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000019, 0.500012, 0.500026),
+      frame = fractional,
+      species = ({ element = "C", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.163219, 0.581612, 0.744826),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site N {
+      description = "N site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.836816, 0.418413, 0.255219),
+      frame = fractional,
+      species = ({ element = "N", occupancy = 1.000000 })
+    },
+    site Sn {
+      description = "Sn site in triclinic structure",
+      wyckoff = "1a",
+      position = (0.000044, 0.000062, 0.000026),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0
+    formation_energy = 0.0282107987499999
+  }
+}
