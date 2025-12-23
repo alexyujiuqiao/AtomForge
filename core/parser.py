@@ -26,7 +26,15 @@ class DSLParser():
             grammar = f.read()
         
         # Initialize the Lark parser with the specified grammar and start symbol
-        self.parser = Lark(grammar, start=start_symbol, parser='lalr')
+        # Use 'earley' parser for grammars with many optional rules to avoid parse table explosion
+        # Use 'dynamic' lexer for complex grammars (only works with earley)
+        try:
+            self.parser = Lark(grammar, start=start_symbol, parser='earley', lexer='dynamic', 
+                             maybe_placeholders=False, propagate_positions=False, cache=False)
+        except Exception:
+            # Fallback to lalr with basic lexer if earley fails
+            self.parser = Lark(grammar, start=start_symbol, parser='lalr', lexer='basic', 
+                             maybe_placeholders=False, propagate_positions=False, cache=True)
 
     def parse(self, code: str):
         """
