@@ -108,9 +108,17 @@ PROMPT_TEMPLATE = (
     "\nUser input: {user_input}\n"
 )
 
+def _get_openai_client() -> openai.OpenAI:
+    """Build an OpenAI client using env var; fail fast if missing."""
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY is not set")
+    return openai.OpenAI(api_key=api_key)
+
+
 def to_atomforgeDSL(user_input: str, out_file: str = None, model: str = MODEL) -> str:
     prompt = PROMPT_TEMPLATE.format(user_input=user_input)
-    client = openai.OpenAI(api_key="OPENAI_API_KEY_REDACTED")
+    client = _get_openai_client()
     messages = [
         {"role": "system", "content": "You are an expert AtomForge DSL generator."},
         {"role": "user", "content": prompt}
@@ -145,7 +153,7 @@ def critic(user_input, model=MODEL):
         "Compilation Info:\n" + compilation_info + "\n"
         "If there are errors, suggest corrections. If not, confirm the DSL is valid."
     )
-    client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY", "OPENAI_API_KEY_REDACTED"))
+    client = _get_openai_client()
     messages = [
         {"role": "system", "content": "You are an expert AtomForge DSL critic."},
         {"role": "user", "content": critic_prompt}
@@ -177,7 +185,7 @@ def iterative_critic(user_input, model=MODEL, max_rounds=5):
             f"Compilation Info:\n{compilation_info}\n"
             f"Suggest corrections and regenerate the DSL if there are errors."
         )
-        client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY", "OPENAI_API_KEY_REDACTED"))
+        client = _get_openai_client()
         messages = [
             {"role": "system", "content": "You are an expert AtomForge DSL critic and generator."},
             {"role": "user", "content": critic_prompt}
