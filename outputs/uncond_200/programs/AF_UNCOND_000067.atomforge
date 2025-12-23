@@ -1,0 +1,63 @@
+atom_spec "Sr2IrO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c7a0cb9f-3f73-4d61-9c3e-04c61a1f8d25",
+    title = "Sr4Ir2O8 (K2NiF4-type, I4/mmm)",
+    created = "2025-12-23"
+  }
+  description = "Layered perovskite Sr2IrO4 in the K2NiF4 structure type (tetragonal, I4/mmm)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (layered perovskite archetype)",
+    type = tetragonal,
+    a = 3.890000,
+    b = 3.890000,
+    c = 12.900000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 2
+  }
+  basis {
+    description = "Minimal unique-site basis for K2NiF4-type (I4/mmm): A at 4e, B at 2a, O at 4c and 4e.",
+    site Sr1 {
+      description = "A-site Sr in rock-salt layer",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.360000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Ir1 {
+      description = "B-site Ir in perovskite layer",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ir", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.158000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "In-plane oxygen",
+      wyckoff = "4c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

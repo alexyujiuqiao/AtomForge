@@ -1,0 +1,66 @@
+atom_spec "SrZrO3_Pbnm" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8c4c2c7e-2f0f-4b0f-9a2f-7b4b6d7c4e19",
+    title = "Orthorhombic perovskite SrZrO3 (Pnma setting)",
+    created = "2025-12-23"
+  }
+  description = "SrZrO3 in distorted perovskite structure (Glazer tilt a^-b^+a^-), space group Pnma (No. 62)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system (perovskite, Pnma)",
+    type = orthorhombic,
+    a = 5.804200,
+    b = 8.196500,
+    c = 5.787900,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Symmetry-inequivalent sites for Pnma perovskite (unique site IDs, fractional coordinates).",
+    site Sr1 {
+      description = "A-site cation",
+      wyckoff = "4c",
+      position = (0.020000, 0.250000, 0.995000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Zr1 {
+      description = "B-site cation (octahedral center)",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen of ZrO6 octahedra",
+      wyckoff = "4c",
+      position = (0.495000, 0.250000, 0.075000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen of ZrO6 octahedra",
+      wyckoff = "8d",
+      position = (0.285000, 0.035000, 0.710000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    note = "Reference-like structural model; parameters chosen to be physically reasonable for SrZrO3 Pnma."
+  }
+}

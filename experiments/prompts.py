@@ -31,15 +31,19 @@ def get_generation_prompt(seed_programs: List[Tuple[str, str]]) -> str:
 
 CRITICAL REQUIREMENTS:
 1. Generate a COMPLETE, VALID AtomForge program following the exact grammar specification.
-2. DO NOT include any `ai_integration` block in your program.
-3. The program must include at minimum:
+2. The program must include at minimum:
    - header block (with dsl_version, title, created date, etc.)
    - units block
    - lattice block (with Bravais lattice parameters)
    - symmetry block (with space_group and origin_choice)
    - basis block (with at least one atomic site)
-4. Properties block is optional but encouraged.
-5. Coordinates must be numeric, typically fractional in [0,1).
+3. DO NOT include any `ai_integration` block in your program.
+4. Every basis site name (the identifier after `site`) MUST be unique within the program.
+   - Required naming convention: ElementSymbol + index (e.g., Ba1, Ti1, O1, O2, O3, Cl1, Cl2, ...).
+   - The alphabetic prefix MUST be a valid chemical element symbol (H, He, Li, ..., Og).
+   - The numeric suffix MUST be a positive integer (1, 2, 3, ...).
+   - Do NOT use bare element symbols as site IDs (for example, do not use `site "O"` or `site "Ti"`; use `O1`, `O2`, `Ti1`, etc.). 
+5. Coordinates must be numeric, typically fractional in [0,1). If `frame = fractional`, each coordinate in `position = (x, y, z)` MUST satisfy 0 ≤ value < 1.
 6. Lattice parameters (a, b, c) must be positive numbers > 0.
 7. Angles (alpha, beta, gamma) must be in a reasonable range (typically 60-120 degrees).
 8. Atom count should be between 2 and 20 sites (based on number of unique sites).

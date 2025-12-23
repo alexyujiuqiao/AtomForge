@@ -1,0 +1,70 @@
+atom_spec "SrTiO3_tetragonal_I4mcm" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c2b0c8f6-2a62-4c7a-90d7-2c5eddb5b0c6",
+    title = "Sr4Ti4O12 (tetragonal perovskite, I4/mcm)",
+    created = "2025-12-23"
+  }
+  description = "Tetragonal perovskite SrTiO3 in space group I4/mcm (a0a0c- tilt), conventional cell with 5 unique sites."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (conventional I-centered cell)",
+    type = tetragonal,
+    a = 5.523100,
+    b = 5.523100,
+    c = 7.810400,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 140,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique Wyckoff sites for I4/mcm SrTiO3 (tilt parameterized by O2 x).",
+    site Sr1 {
+      description = "A-site cation",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Ti1 {
+      description = "B-site cation",
+      wyckoff = "4c",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen (tilt-related internal parameter x)",
+      wyckoff = "8h",
+      position = (0.214000, 0.714000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "Symmetry-related equatorial oxygen representative (same Wyckoff family, listed as distinct site for explicitness)",
+      wyckoff = "8h",
+      position = (0.286000, 0.214000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

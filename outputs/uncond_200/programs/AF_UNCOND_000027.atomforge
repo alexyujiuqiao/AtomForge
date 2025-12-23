@@ -1,0 +1,80 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b6a1e8b4-1b7f-4b7c-8b5e-8a7d9b2b6d21",
+    title = "Sr2FeMoO6 (double perovskite, ordered)",
+    created = "2025-12-23"
+  }
+  description = "Ordered double perovskite Sr2FeMoO6 in tetragonal setting (I4/m), with distinct B-site ordering."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (double perovskite, slight tetragonal distortion)",
+    type = tetragonal,
+    a = 5.576200,
+    b = 5.576200,
+    c = 7.906400,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique sites for ordered B-site double perovskite in I4/m",
+    site Sr1 {
+      description = "A-site Sr",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr2 {
+      description = "A-site Sr (symmetry-distinct setting partner)",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site Fe (ordered)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B-site Mo (ordered)",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen in ab plane",
+      wyckoff = "8h",
+      position = (0.249300, 0.254700, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    notes = "Geometric parameters chosen to be physically reasonable for an ordered double perovskite; all positions are fractional in [0,1)."
+  }
+}

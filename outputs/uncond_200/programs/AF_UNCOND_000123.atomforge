@@ -1,0 +1,63 @@
+atom_spec "K2MnCl4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2a1b8d0d-0ddc-4be1-9c7b-76b0e0f4e4a9",
+    title = "K2MnCl4 (layered perovskite-like, K2NiF4 type)",
+    created = "2025-12-23"
+  }
+  description = "Hypothetical K2MnCl4 in tetragonal K2NiF4-type topology (I4/mmm), with MnCl6 octahedra and interlayer K."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 5.180000,
+    b = 5.180000,
+    c = 13.620000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 2
+  }
+  basis {
+    description = "Symmetry-distinct Wyckoff sites for an I4/mmm layered halide",
+    site K1 {
+      description = "Interlayer K at 4e",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.360000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Mn1 {
+      description = "B-site Mn at 2a (octahedral center)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Apical Cl along c at 4c",
+      wyckoff = "4c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl2 {
+      description = "Equatorial Cl in the MnCl2 layer at 4e",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.150000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+}

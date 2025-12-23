@@ -1,0 +1,70 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f7e3b2a4-0f6f-4a92-8c47-4c48a52b2c8f",
+    title = "Sr2FeMoO6 (double perovskite, tetragonal setting)",
+    created = "2025-12-23"
+  }
+  description = "A tetragonal double-perovskite-like ordering model for Sr2FeMoO6 in space group I4/m (No. 87)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (I-centered setting)",
+    type = tetragonal,
+    a = 5.575000,
+    b = 5.575000,
+    c = 7.900000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites (fractional coordinates) consistent with an ordered A2BB'O6 perovskite framework",
+    site Sr1 {
+      description = "A-site Sr",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site Fe (ordered)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B'-site Mo (ordered)",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.245000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen in the ab plane",
+      wyckoff = "8h",
+      position = (0.250000, 0.290000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

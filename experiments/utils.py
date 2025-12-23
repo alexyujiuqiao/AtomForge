@@ -105,48 +105,110 @@ def canonicalize_text(text: str) -> str:
     return text.strip()
 
 
-def program_fingerprint(text_or_program: Any) -> str:
+def program_fingerprint(obj: Any) -> str:
     """
-    Generate a stable hash fingerprint for a program.
-    
+    Generate a stable, structure-based hash fingerprint for an AtomForge program.
+
+    The fingerprint is derived from the parsed IR and is **header-agnostic**:
+    - It ignores identifier, uuid, title, created, and description.
+    - It includes only structural information:
+      - Bravais lattice type and (a, b, c, alpha, beta, gamma) rounded to 1e-4.
+      - Symmetry space_group.
+      - Basis sites as a sorted list of:
+        - position (rounded to 1e-4),
+        - frame ("fractional" or "cartesian"),
+        - species list of (element, occupancy) pairs sorted by element then occupancy.
+
+    If a parsed program object is not available (e.g., parsing failed), this function
+    falls back to a canonicalized text-based fingerprint.
+
     Args:
-        text_or_program: Either a string (program text) or parsed AtomForgeProgram object
-        
+        obj: A parsed AtomForge program object (preferred) or a raw text string.
+
     Returns:
-        Hexadecimal hash string
+        Hexadecimal SHA-256 hash string (first 16 hex characters).
     """
-    if isinstance(text_or_program, str):
-        canonical = canonicalize_text(text_or_program)
-    else:
-        # If it's a parsed program object, convert to canonical string representation
-        # For now, we'll use a simple approach: hash the identifier + lattice + symmetry + basis
+    # Structure-based path: any object that looks like an AtomForgeProgram
+    if not isinstance(obj, str) and hasattr(obj, "basis") and hasattr(obj, "lattice"):
         try:
-            parts = []
-            if hasattr(text_or_program, 'identifier'):
-                parts.append(str(text_or_program.identifier))
-            if hasattr(text_or_program, 'lattice') and text_or_program.lattice:
-                if hasattr(text_or_program.lattice, 'bravais') and text_or_program.lattice.bravais:
-                    bravais = text_or_program.lattice.bravais
-                    # Handle Length objects (access .value) or direct floats
-                    def get_value(obj):
-                        if hasattr(obj, 'value'):
-                            return obj.value
-                        return float(obj)
-                    a_val = get_value(bravais.a) if hasattr(bravais, 'a') else 0
-                    b_val = get_value(bravais.b) if hasattr(bravais, 'b') else 0
-                    c_val = get_value(bravais.c) if hasattr(bravais, 'c') else 0
-                    parts.append(f"{bravais.type}_{a_val:.6f}_{b_val:.6f}_{c_val:.6f}")
-            if hasattr(text_or_program, 'symmetry') and text_or_program.symmetry:
-                parts.append(f"sg{text_or_program.symmetry.space_group}")
-            if hasattr(text_or_program, 'basis') and text_or_program.basis:
-                site_count = len(text_or_program.basis.sites) if hasattr(text_or_program.basis, 'sites') else 0
-                parts.append(f"sites{site_count}")
-            canonical = '|'.join(parts)
+            prog = obj
+            signature: Dict[str, Any] = {}
+
+            # Bravais lattice
+            lattice = getattr(prog, "lattice", None)
+            bravais = getattr(lattice, "bravais", None)
+
+            def get_val(x: Any, default: float) -> float:
+                if x is None:
+                    return float(default)
+                if hasattr(x, "value"):
+                    return float(getattr(x, "value"))
+                return float(x)
+
+            if bravais is not None:
+                signature["bravais"] = {
+                    "type": str(getattr(bravais, "type", "")),
+                    "a": round(get_val(getattr(bravais, "a", 0.0), 0.0), 4),
+                    "b": round(get_val(getattr(bravais, "b", 0.0), 0.0), 4),
+                    "c": round(get_val(getattr(bravais, "c", 0.0), 0.0), 4),
+                    "alpha": round(get_val(getattr(bravais, "alpha", 90.0), 90.0), 4),
+                    "beta": round(get_val(getattr(bravais, "beta", 90.0), 90.0), 4),
+                    "gamma": round(get_val(getattr(bravais, "gamma", 90.0), 90.0), 4),
+                }
+
+            # Symmetry
+            symmetry = getattr(prog, "symmetry", None)
+            if symmetry is not None and hasattr(symmetry, "space_group"):
+                signature["space_group"] = symmetry.space_group
+
+            # Basis / sites
+            basis = getattr(prog, "basis", None)
+            sites_sig: List[Dict[str, Any]] = []
+            if basis is not None:
+                for site in getattr(basis, "sites", []):
+                    pos = getattr(site, "position", (0.0, 0.0, 0.0))
+                    frame = str(getattr(site, "frame", "fractional"))
+                    try:
+                        x, y, z = pos
+                    except Exception:
+                        x, y, z = (0.0, 0.0, 0.0)
+                    coords = (
+                        round(float(x), 4),
+                        round(float(y), 4),
+                        round(float(z), 4),
+                    )
+                    species_entries: List[Tuple[str, float]] = []
+                    for sp in getattr(site, "species", []):
+                        element = getattr(sp, "element", None)
+                        occ = getattr(sp, "occupancy", None)
+                        if element is None or occ is None:
+                            continue
+                        try:
+                            occ_val = float(occ)
+                        except (TypeError, ValueError):
+                            continue
+                        species_entries.append((str(element), round(occ_val, 4)))
+                    # Sort species within a site deterministically
+                    species_entries.sort(key=lambda t: (t[0], t[1]))
+                    sites_sig.append(
+                        {
+                            "position": coords,
+                            "frame": frame,
+                            "species": species_entries,
+                        }
+                    )
+            # Sort sites deterministically so ordering does not affect the fingerprint
+            sites_sig.sort(key=lambda s: (tuple(s["species"]), s["frame"], s["position"]))
+            signature["sites"] = sites_sig
+
+            canonical = json.dumps(signature, sort_keys=True, separators=(",", ":"))
         except Exception:
-            # Fallback: use string representation
-            canonical = str(text_or_program)
-    
-    # Generate SHA256 hash
+            # Fallback: use normalized text representation
+            canonical = canonicalize_text(str(obj))
+    else:
+        # Textual fallback (e.g., when parsing failed)
+        canonical = canonicalize_text(str(obj))
+
     return hashlib.sha256(canonical.encode('utf-8')).hexdigest()[:16]
 
 

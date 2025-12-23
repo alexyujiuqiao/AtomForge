@@ -1,0 +1,63 @@
+atom_spec "SrTiO3_P4mm" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "f8f7d0f2-8c3a-4b77-b5e0-1c97e6f3d9f2",
+    title = "Tetragonal perovskite SrTiO3 (polar setting)",
+    created = "2025-12-23"
+  }
+  description = "Tetragonal perovskite-like SrTiO3 in space group P4mm (No. 99), with slight polar displacements."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.905200,
+    b = 3.905200,
+    c = 4.060800,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 99,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique atomic sites for a tetragonal perovskite basis",
+    site Sr1 {
+      description = "A-site cation",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Ti1 {
+      description = "B-site cation (slightly off-center along c)",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.520000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c (split by polar distortion)",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.050000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen in ab-plane",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.560000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

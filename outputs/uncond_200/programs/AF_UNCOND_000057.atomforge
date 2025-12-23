@@ -1,0 +1,70 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "b4c1c6c7-6d25-4f8f-b1a2-9f2b7b7d2c31",
+    title = "Sr2FeMoO6 double perovskite (tetragonal setting)",
+    created = "2025-12-23"
+  }
+  description = "Rock-salt ordered double perovskite Sr2FeMoO6 in a tetragonal I4/m setting (approximate fractional coordinates)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal double-perovskite cell (a≈a_p*sqrt(2), c≈2a_p)",
+    type = tetragonal,
+    a = 5.580000,
+    b = 5.580000,
+    c = 7.900000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique representative sites (fractional coordinates within [0,1))",
+    site Sr1 {
+      description = "A-site Sr",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site Fe (ordered with Mo)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B'-site Mo (rock-salt order)",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Equatorial oxygen",
+      wyckoff = "4e",
+      position = (0.250000, 0.250000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Apical oxygen (z slightly shifted from ideal 0.25)",
+      wyckoff = "4f",
+      position = (0.000000, 0.250000, 0.245000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

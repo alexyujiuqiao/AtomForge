@@ -1,0 +1,70 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c2f3c3d8-1d8f-4b2a-8b0c-2c1c4bff6a0a",
+    title = "Double perovskite Sr2FeMoO6 (ordered)",
+    created = "2025-12-23"
+  }
+  description = "Ordered double-perovskite Sr2FeMoO6 in tetragonal I4/m setting (tilted perovskite variant)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (a=a!=c)",
+    type = tetragonal,
+    a = 5.570000,
+    b = 5.570000,
+    c = 7.900000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 2
+  }
+  basis {
+    description = "Symmetry-unique sites for an ordered B/B' double perovskite with octahedral tilting",
+    site Sr1 {
+      description = "A-site Sr",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site Fe (ordered with Mo)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B'-site Mo (ordered with Fe)",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.238000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen (tilt-distorted)",
+      wyckoff = "8h",
+      position = (0.265000, 0.235000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

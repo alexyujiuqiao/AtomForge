@@ -1,0 +1,95 @@
+atom_spec "Na2ZnSiO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c9d1f8d6-4e3a-4b7f-9f4d-4c5d5d7f1a2b",
+    title = "Na2ZnSiO4 (wurtzite-derived orthorhombic model)",
+    created = "2025-12-23"
+  }
+  description = "A compact orthorhombic model for a sodium zinc silicate framework with tetrahedral Zn/Si coordination (synthetic example)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system (Pna21 setting)",
+    type = orthorhombic,
+    a = 7.842300,
+    b = 6.312700,
+    c = 5.198400,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 33,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique atomic sites (fractional coordinates) consistent with a Pna21 framework-like topology",
+    site Na1 {
+      description = "Sodium in distorted channel site",
+      wyckoff = "4a",
+      position = (0.163400, 0.842100, 0.128600),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Na2 {
+      description = "Second sodium site",
+      wyckoff = "4a",
+      position = (0.675900, 0.318700, 0.612900),
+      frame = fractional,
+      species = ({ element = "Na", occupancy = 1.000000 })
+    },
+    site Zn1 {
+      description = "Tetrahedrally coordinated Zn site",
+      wyckoff = "4a",
+      position = (0.332500, 0.096800, 0.248700),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Si1 {
+      description = "Tetrahedrally coordinated Si site",
+      wyckoff = "4a",
+      position = (0.842700, 0.565400, 0.734100),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Framework oxygen site",
+      wyckoff = "4a",
+      position = (0.286100, 0.214500, 0.905300),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Framework oxygen site",
+      wyckoff = "4a",
+      position = (0.474600, 0.746200, 0.386700),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "Framework oxygen site",
+      wyckoff = "4a",
+      position = (0.941800, 0.401300, 0.192200),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O4 {
+      description = "Framework oxygen site",
+      wyckoff = "4a",
+      position = (0.739200, 0.932600, 0.667500),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 4.85,
+    formation_energy = -2.315
+  }
+}

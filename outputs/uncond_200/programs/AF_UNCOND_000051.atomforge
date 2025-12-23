@@ -1,0 +1,178 @@
+atom_spec "SrTiO3_tetragonal_I4mcm" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9c2c5f6e-0a6e-4f75-9d1a-2f4a4d9e3b6c",
+    title = "Sr4Ti4O12 (tetragonal perovskite, I4/mcm)",
+    created = "2025-12-23"
+  }
+  description = "Tetragonal perovskite SrTiO3 in I4/mcm (a0a0c- tilt), conventional setting with representative fractional coordinates."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (conventional cell for I4/mcm)",
+    type = tetragonal,
+    a = 5.520000,
+    b = 5.520000,
+    c = 7.820000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 140,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites (explicitly listed symmetry-equivalent positions for a conventional I4/mcm cell)",
+    site Sr1 {
+      description = "Sr on 4b (0,1/2,1/4)",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr2 {
+      description = "Sr on 4b symmetry mate",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr3 {
+      description = "Sr on 4b symmetry mate",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr4 {
+      description = "Sr on 4b symmetry mate",
+      wyckoff = "4b",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+
+    site Ti1 {
+      description = "Ti on 4c (0,0,0)",
+      wyckoff = "4c",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti2 {
+      description = "Ti on 4c symmetry mate",
+      wyckoff = "4c",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti3 {
+      description = "Ti on 4c symmetry mate",
+      wyckoff = "4c",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti4 {
+      description = "Ti on 4c symmetry mate",
+      wyckoff = "4c",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+
+    site O1 {
+      description = "Apical O on 4a (0,0,1/4)",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Apical O on 4a symmetry mate",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "Apical O on 4a symmetry mate",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O4 {
+      description = "Apical O on 4a symmetry mate",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+
+    site O5 {
+      description = "Equatorial O on 8h (x, x+1/2, 0) with x~0.214 (octahedral tilt)",
+      wyckoff = "8h",
+      position = (0.214000, 0.714000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O6 {
+      description = "Equatorial O on 8h symmetry mate",
+      wyckoff = "8h",
+      position = (0.786000, 0.286000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O7 {
+      description = "Equatorial O on 8h symmetry mate",
+      wyckoff = "8h",
+      position = (0.714000, 0.214000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O8 {
+      description = "Equatorial O on 8h symmetry mate",
+      wyckoff = "8h",
+      position = (0.286000, 0.786000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O9 {
+      description = "Equatorial O on 8h translated by c/2",
+      wyckoff = "8h",
+      position = (0.214000, 0.714000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O10 {
+      description = "Equatorial O on 8h translated by c/2",
+      wyckoff = "8h",
+      position = (0.786000, 0.286000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O11 {
+      description = "Equatorial O on 8h translated by c/2",
+      wyckoff = "8h",
+      position = (0.714000, 0.214000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O12 {
+      description = "Equatorial O on 8h translated by c/2",
+      wyckoff = "8h",
+      position = (0.286000, 0.786000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

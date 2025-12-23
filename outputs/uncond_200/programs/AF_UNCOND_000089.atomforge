@@ -1,0 +1,63 @@
+atom_spec "SrZrO3_Pnma_demo" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9f2b2f5b-9a30-4a4b-ae86-6f0a4a7b0c4d",
+    title = "SrZrO3 (orthorhombic perovskite, Pnma)",
+    created = "2025-12-23"
+  }
+  description = "Orthorhombic perovskite-type SrZrO3 in space group Pnma (No. 62), representative coordinates."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system (Pnma setting)",
+    type = orthorhombic,
+    a = 5.790200,
+    b = 8.191400,
+    c = 5.820600,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique sites approximating a tilted perovskite (ABO3) in Pnma"
+    site Sr1 {
+      description = "A-site cation",
+      wyckoff = "4c",
+      position = (0.015300, 0.250000, 0.997100),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Zr1 {
+      description = "B-site cation",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen",
+      wyckoff = "4c",
+      position = (0.476400, 0.250000, 0.092800),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen",
+      wyckoff = "8d",
+      position = (0.287900, 0.036500, 0.710600),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

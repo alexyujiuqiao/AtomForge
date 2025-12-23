@@ -1,0 +1,80 @@
+atom_spec "K2ZnCl4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c7d9d05b-31e7-4a41-a3c9-1d0f5f0e5d41",
+    title = "K4Cl8Zn2 (Pnma, orthorhombic)",
+    created = "2025-12-23"
+  }
+  description = "Synthetic K2ZnCl4-type orthorhombic structure (space group Pnma, #62) with a tetrahedral ZnCl4 unit and K in interstitial sites."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 7.214000,
+    b = 10.482000,
+    c = 6.308000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Asymmetric-unit sites (unique IDs) compatible with Pnma Wyckoff sets"
+    site K1 {
+      description = "K at Wyckoff 4c",
+      wyckoff = "4c",
+      position = (0.150000, 0.250000, 0.610000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "K at Wyckoff 4c",
+      wyckoff = "4c",
+      position = (0.430000, 0.250000, 0.090000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Zn1 {
+      description = "Zn at Wyckoff 4c",
+      wyckoff = "4c",
+      position = (0.275000, 0.250000, 0.320000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Cl at Wyckoff 4c",
+      wyckoff = "4c",
+      position = (0.035000, 0.250000, 0.255000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl2 {
+      description = "Cl at Wyckoff 4c",
+      wyckoff = "4c",
+      position = (0.520000, 0.250000, 0.445000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl3 {
+      description = "Cl at Wyckoff 8d",
+      wyckoff = "8d",
+      position = (0.305000, 0.030000, 0.105000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    notes = "Programmatically generated example; parameters chosen to be physically reasonable for a halide salt in Pnma."
+  }
+}

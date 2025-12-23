@@ -1,0 +1,56 @@
+atom_spec "MgAl2O4_spinel_demo" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7f2a2d6c-6a7c-4b0a-9b8b-1d9b58e2e7b1",
+    title = "MgAl2O4 (spinel, conventional cell subset sites)",
+    created = "2025-12-23"
+  }
+  description = "Spinel-type MgAl2O4 in cubic Fd-3m setting (representative conventional-cell sites; coordinates fractional)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic spinel lattice (approximate room-temperature parameter)",
+    type = cubic,
+    a = 8.083000,
+    b = 8.083000,
+    c = 8.083000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 227,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites following spinel Wyckoff positions (subset listing; symmetry generates full structure).",
+    site Mg1 {
+      description = "Mg on tetrahedral A site",
+      wyckoff = "8a",
+      position = (0.125000, 0.125000, 0.125000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Al1 {
+      description = "Al on octahedral B site",
+      wyckoff = "16d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Oxygen framework, spinel anion parameter u ~ 0.262",
+      wyckoff = "32e",
+      position = (0.262000, 0.262000, 0.262000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

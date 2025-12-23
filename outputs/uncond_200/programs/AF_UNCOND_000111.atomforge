@@ -1,0 +1,59 @@
+atom_spec "K2SnCl6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7b0b8b8f-3b5a-4a9b-86a3-4aaf2f6a4d2b",
+    title = "K2SnCl6 (Vacancy-ordered double perovskite, antifluorite-like A-site)",
+    created = "2025-12-23"
+  }
+  description = "Cubic vacancy-ordered perovskite derivative (A2BX6), K2SnCl6, idealized Fm-3m setting."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic crystal system (idealized elpasolite-type A2BX6)",
+    type = cubic,
+    a = 10.360000,
+    b = 10.360000,
+    c = 10.360000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 225,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique sites in the conventional cubic cell; symmetry generates full atomic set.",
+    site K1 {
+      description = "K at Wyckoff 8c",
+      wyckoff = "8c",
+      position = (0.250000, 0.250000, 0.250000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Sn1 {
+      description = "Sn at Wyckoff 4a (octahedral center)",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Cl at Wyckoff 24e (octahedral vertex parameter x)",
+      wyckoff = "24e",
+      position = (0.000000, 0.000000, 0.238000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    notes = "Idealized K2SnCl6 model with a typical Cl positional parameter x~0.238; no relaxation implied."
+  }
+}

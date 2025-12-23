@@ -1,0 +1,63 @@
+atom_spec "Sr2RuO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e2b7e3d6-79d5-4a6e-b8e5-9a4c6dfd2b2a",
+    title = "Sr2RuO4 (K2NiF4-type, I4/mmm)",
+    created = "2025-12-23"
+  }
+  description = "Tetragonal layered perovskite (K2NiF4-type) model of Sr2RuO4 with idealized fractional coordinates."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 3.870000,
+    b = 3.870000,
+    c = 12.740000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites (asymmetric positions) for K2NiF4-type Sr2RuO4",
+    site Sr1 {
+      description = "Sr on 4e site",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.353000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Ru1 {
+      description = "Ru on 2a site (octahedral center)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ru", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen on 4c site",
+      wyckoff = "4c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "In-plane oxygen on 4e site",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.158000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

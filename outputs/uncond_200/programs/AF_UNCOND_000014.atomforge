@@ -1,0 +1,66 @@
+atom_spec "SrTiO3_tetragonal_I4mcm" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c4f6c1b2-0b45-4f4a-a84d-3b3b9e97c4a1",
+    title = "Sr4Ti4O12 (tetragonal perovskite, I4/mcm)",
+    created = "2025-12-23"
+  }
+  description = "Tetragonal perovskite SrTiO3 in space group I4/mcm (No. 140), with octahedral tilt pattern a0a0c-; positions given as a representative conventional setting."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (conventional cell)",
+    type = tetragonal,
+    a = 5.520000,
+    b = 5.520000,
+    c = 7.820000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 140,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites (fractional coordinates) consistent with I4/mcm Wyckoff sets"
+    site Sr1 {
+      description = "A-site cation (4b)",
+      wyckoff = "4b",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Ti1 {
+      description = "B-site cation (4c)",
+      wyckoff = "4c",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c (4a)",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen (8h), displaced in-plane by tilt parameter x",
+      wyckoff = "8h",
+      position = (0.214000, 0.714000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    notes = "Prototype-like structural description; lattice and internal parameter x chosen as physically reasonable representative values."
+  }
+}

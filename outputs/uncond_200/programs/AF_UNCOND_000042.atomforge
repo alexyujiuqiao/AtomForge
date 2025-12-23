@@ -1,0 +1,70 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "4c6e8f1a-6d1f-4c1d-9a4a-2d9d8f0d6c3b",
+    title = "Double perovskite Sr2FeMoO6 (tetragonal setting)",
+    created = "2025-12-23"
+  }
+  description = "A tetragonal double-perovskite-like model structure for Sr2FeMoO6 in space group I4/m (No. 87)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (I-centered setting)",
+    type = tetragonal,
+    a = 5.570000,
+    b = 5.570000,
+    c = 7.900000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites consistent with a double-perovskite motif (fractional coordinates).",
+    site Sr1 {
+      description = "A-site Sr (Wyckoff 4d)",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site Fe (Wyckoff 2a)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B'-site Mo (Wyckoff 2b)",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Equatorial oxygen (Wyckoff 4e)",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.250000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Apical oxygen (Wyckoff 8h) with slight octahedral rotation/distortion parameter x",
+      wyckoff = "8h",
+      position = (0.255000, 0.745000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

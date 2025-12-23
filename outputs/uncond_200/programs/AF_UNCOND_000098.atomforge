@@ -1,0 +1,73 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c0f7c1a6-4c2c-4f6d-8b84-8f0d0d8a2f4a",
+    title = "Sr4Fe2Mo2O12 (ordered double perovskite, conventional cell)",
+    created = "2025-12-23"
+  }
+  description = "Ordered double perovskite Sr2FeMoO6 in tetragonal I4/m setting (approximate geometry)"
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (a=a, c distinct)",
+    type = tetragonal,
+    a = 5.572000,
+    b = 5.572000,
+    c = 7.904000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites for an I4/m ordered double perovskite (conventional cell)"
+    site Sr1 {
+      description = "A-site Sr at 4d",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site Fe at 2a (rock-salt ordered with Mo)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B'-site Mo at 2b (rock-salt ordered with Fe)",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c at 4e",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.255000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen in the ab plane at 8h",
+      wyckoff = "8h",
+      position = (0.250000, 0.035000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    notes = "Stoichiometry per conventional cell: Sr4Fe2Mo2O12; divide by 2 gives Sr2FeMoO6. Coordinates are representative for an ordered double perovskite in I4/m."
+  }
+}

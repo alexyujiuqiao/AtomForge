@@ -1,0 +1,88 @@
+atom_spec "K2ZnCl4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "1d8c65a5-4dcf-4f83-9f4f-0a7b2c0e9a9f",
+    title = "K2ZnCl4 (Pnma) prototype-like",
+    created = "2025-12-23"
+  }
+  description = "Orthorhombic K2ZnCl4-type structure with tetrahedral ZnCl4 units and interstitial K."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 7.480000,
+    b = 10.620000,
+    c = 7.120000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique fractional sites (representative asymmetric positions; symmetry generates full structure).",
+    site K1 {
+      description = "Potassium on general position",
+      wyckoff = "4c",
+      position = (0.180000, 0.250000, 0.580000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "Second potassium on general position",
+      wyckoff = "4c",
+      position = (0.430000, 0.250000, 0.120000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Zn1 {
+      description = "Zinc tetrahedrally coordinated by chloride",
+      wyckoff = "4c",
+      position = (0.000000, 0.250000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Chloride site 1 around Zn",
+      wyckoff = "4c",
+      position = (0.120000, 0.250000, 0.280000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl2 {
+      description = "Chloride site 2 around Zn",
+      wyckoff = "4c",
+      position = (0.860000, 0.250000, 0.740000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl3 {
+      description = "Chloride site 3 around Zn",
+      wyckoff = "8d",
+      position = (0.310000, 0.040000, 0.560000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl4 {
+      description = "Chloride site 4 around Zn",
+      wyckoff = "8d",
+      position = (0.690000, 0.460000, 0.440000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 5.6000,
+    formation_energy = -2.1500
+  }
+}

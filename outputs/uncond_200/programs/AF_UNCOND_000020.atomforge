@@ -1,0 +1,175 @@
+atom_spec "SrZrO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6b2c1c9a-1e28-4f8f-9f7b-0c6f9f1a8c3d",
+    title = "Sr4O12Zr4 (Pnma perovskite setting)",
+    created = "2025-12-23"
+  }
+  description = "Orthorhombic perovskite SrZrO3 in space group Pnma (No. 62), conventional setting with tilted octahedra."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system (distorted perovskite, GdFeO3-type)",
+    type = orthorhombic,
+    a = 5.790000,
+    b = 8.180000,
+    c = 5.820000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites for Pnma perovskite: A on 4c, B on 4a, O on 4c + 8d (listed as explicit unique positions within the conventional cell).",
+    site Sr1 {
+      description = "Sr on Wyckoff 4c (A-site)",
+      wyckoff = "4c",
+      position = (0.020000, 0.250000, 0.990000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr2 {
+      description = "Sr symmetry mate (explicit listing)",
+      wyckoff = "4c",
+      position = (0.480000, 0.750000, 0.510000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr3 {
+      description = "Sr symmetry mate (explicit listing)",
+      wyckoff = "4c",
+      position = (0.980000, 0.750000, 0.010000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr4 {
+      description = "Sr symmetry mate (explicit listing)",
+      wyckoff = "4c",
+      position = (0.520000, 0.250000, 0.490000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Zr1 {
+      description = "Zr on Wyckoff 4a (B-site)",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr2 {
+      description = "Zr symmetry mate (explicit listing)",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr3 {
+      description = "Zr symmetry mate (explicit listing)",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site Zr4 {
+      description = "Zr symmetry mate (explicit listing)",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "O on Wyckoff 4c (apical oxygen)",
+      wyckoff = "4c",
+      position = (0.490000, 0.250000, 0.070000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "4c",
+      position = (0.010000, 0.750000, 0.570000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "4c",
+      position = (0.990000, 0.750000, 0.930000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O4 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "4c",
+      position = (0.510000, 0.250000, 0.430000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O5 {
+      description = "O on Wyckoff 8d (equatorial oxygen)",
+      wyckoff = "8d",
+      position = (0.280000, 0.040000, 0.720000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O6 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "8d",
+      position = (0.720000, 0.460000, 0.220000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O7 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "8d",
+      position = (0.780000, 0.960000, 0.280000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O8 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "8d",
+      position = (0.220000, 0.540000, 0.780000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O9 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "8d",
+      position = (0.720000, 0.040000, 0.780000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O10 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "8d",
+      position = (0.280000, 0.460000, 0.280000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O11 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "8d",
+      position = (0.220000, 0.960000, 0.220000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O12 {
+      description = "O symmetry mate (explicit listing)",
+      wyckoff = "8d",
+      position = (0.780000, 0.540000, 0.720000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

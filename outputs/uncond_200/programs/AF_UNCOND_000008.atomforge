@@ -1,0 +1,70 @@
+atom_spec "Cu2ZnSnS4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "9b6c2b8f-5d7b-4e33-8f4f-8a6b2b3e1d2a",
+    title = "Kesterite Cu2ZnSnS4 (primitive setting)",
+    created = "2025-12-23"
+  }
+  description = "Kesterite-type Cu2ZnSnS4 (CZTS), tetragonal I-4 (No. 82), origin choice 2."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (kesterite-derived parameters)",
+    type = tetragonal,
+    a = 5.427800,
+    b = 5.427800,
+    c = 10.848600,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 82,
+    origin_choice = 2
+  }
+  basis {
+    description = "Symmetry-inequivalent sites for kesterite Cu2ZnSnS4",
+    site Cu1 {
+      description = "Cu on 2a site",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Cu2 {
+      description = "Cu on 2c site",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cu", occupancy = 1.000000 })
+    },
+    site Zn1 {
+      description = "Zn on 2b site",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Sn1 {
+      description = "Sn on 2d site",
+      wyckoff = "2d",
+      position = (0.000000, 0.500000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sn", occupancy = 1.000000 })
+    },
+    site S1 {
+      description = "S on general 8g site (internal parameter u ~ 0.26)",
+      wyckoff = "8g",
+      position = (0.250000, 0.250000, 0.260000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+}

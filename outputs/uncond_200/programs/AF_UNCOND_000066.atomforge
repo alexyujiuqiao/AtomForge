@@ -1,0 +1,175 @@
+atom_spec "SrTiO3_Pnma_variant" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d7b3f60d-7c3e-4f4d-a7e6-9d5d1b2e7c4f",
+    title = "Sr4Ti4O12 (Pnma perovskite setting)",
+    created = "2025-12-23"
+  }
+  description = "Orthorhombic perovskite-like SrTiO3 in Pnma setting with tilted octahedra (representative coordinates)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system (GdFeO3-type perovskite setting)",
+    type = orthorhombic,
+    a = 5.540200,
+    b = 7.842900,
+    c = 5.573600,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites (expanded to keep all coordinates explicit and within [0,1))",
+    site Sr1 {
+      description = "A-site Sr (4c representative)",
+      wyckoff = "4c",
+      position = (0.012300, 0.250000, 0.996700),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr2 {
+      description = "A-site Sr symmetry mate (4c)",
+      wyckoff = "4c",
+      position = (0.987700, 0.750000, 0.003300),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr3 {
+      description = "A-site Sr symmetry mate (4c)",
+      wyckoff = "4c",
+      position = (0.512300, 0.750000, 0.503300),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr4 {
+      description = "A-site Sr symmetry mate (4c)",
+      wyckoff = "4c",
+      position = (0.487700, 0.250000, 0.496700),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Ti1 {
+      description = "B-site Ti (4a representative)",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti2 {
+      description = "B-site Ti symmetry mate (4a)",
+      wyckoff = "4a",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti3 {
+      description = "B-site Ti symmetry mate (4a)",
+      wyckoff = "4a",
+      position = (0.500000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site Ti4 {
+      description = "B-site Ti symmetry mate (4a)",
+      wyckoff = "4a",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "O(1) apical oxygen (4c representative)",
+      wyckoff = "4c",
+      position = (0.084100, 0.250000, 0.455600),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "O(1) symmetry mate (4c)",
+      wyckoff = "4c",
+      position = (0.915900, 0.750000, 0.544400),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "O(1) symmetry mate (4c)",
+      wyckoff = "4c",
+      position = (0.584100, 0.750000, 0.044400),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O4 {
+      description = "O(1) symmetry mate (4c)",
+      wyckoff = "4c",
+      position = (0.415900, 0.250000, 0.955600),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O5 {
+      description = "O(2) equatorial oxygen (8d representative #1)",
+      wyckoff = "8d",
+      position = (0.708300, 0.032400, 0.289700),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O6 {
+      description = "O(2) equatorial oxygen (8d representative #2)",
+      wyckoff = "8d",
+      position = (0.291700, 0.467600, 0.710300),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O7 {
+      description = "O(2) equatorial oxygen (8d representative #3)",
+      wyckoff = "8d",
+      position = (0.208300, 0.532400, 0.789700),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O8 {
+      description = "O(2) equatorial oxygen (8d representative #4)",
+      wyckoff = "8d",
+      position = (0.791700, 0.967600, 0.210300),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O9 {
+      description = "O(2) equatorial oxygen (8d representative #5)",
+      wyckoff = "8d",
+      position = (0.208300, 0.032400, 0.710300),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O10 {
+      description = "O(2) equatorial oxygen (8d representative #6)",
+      wyckoff = "8d",
+      position = (0.791700, 0.467600, 0.289700),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O11 {
+      description = "O(2) equatorial oxygen (8d representative #7)",
+      wyckoff = "8d",
+      position = (0.708300, 0.532400, 0.210300),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O12 {
+      description = "O(2) equatorial oxygen (8d representative #8)",
+      wyckoff = "8d",
+      position = (0.291700, 0.967600, 0.789700),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

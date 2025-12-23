@@ -1,0 +1,70 @@
+atom_spec "SrTiO3_tetragonal_P4mm" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "8c8c5e7a-59a7-4f8b-86a8-1a3d9a5b4f2c",
+    title = "SrTiO3 (tetragonal, polar perovskite setting)",
+    created = "2025-12-23"
+  }
+  description = "A tetragonal perovskite-like SrTiO3 variant in space group P4mm (No. 99) with slight polar displacements."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (polar perovskite setting)",
+    type = tetragonal,
+    a = 3.905200,
+    b = 3.905200,
+    c = 4.010800,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 99,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique atomic sites in a simple tetragonal perovskite-like basis",
+    site Sr1 {
+      description = "A-site cation",
+      wyckoff = "1a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Ti1 {
+      description = "B-site cation with small off-centering along c",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.515000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c (slightly shifted)",
+      wyckoff = "1b",
+      position = (0.500000, 0.500000, 0.040000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen in the ab-plane",
+      wyckoff = "2c",
+      position = (0.500000, 0.000000, 0.540000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "Equatorial oxygen in the ab-plane (symmetry-related partner explicitly listed)",
+      wyckoff = "2c",
+      position = (0.000000, 0.500000, 0.540000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

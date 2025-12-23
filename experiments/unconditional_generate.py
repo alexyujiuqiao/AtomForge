@@ -26,6 +26,7 @@ import sys
 import argparse
 import json
 import random
+import re
 import time
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
@@ -184,7 +185,8 @@ class ProgramValidator:
     def validate(
         self,
         program_text: str,
-        check_duplicates: bool = True
+        raw_text: Optional[str] = None,
+        check_duplicates: bool = True,
     ) -> Tuple[bool, Optional[str], Optional[str]]:
         """
         Validate an AtomForge program.
@@ -199,76 +201,158 @@ class ProgramValidator:
             - error_message: None if valid, error description if invalid
             - fingerprint: Program fingerprint hash
         """
-        # Extract clean program text
-        program_text = extract_program_from_response(program_text)
-        
-        # Check for ai_integration block (should not be present)
-        if 'ai_integration' in program_text.lower():
-            return False, "Program contains ai_integration block (not allowed)", None
-        
-        # Generate fingerprint
-        fingerprint = program_fingerprint(program_text)
-        
-        # Check duplicates
-        if check_duplicates and fingerprint in self.seen_fingerprints:
-            return False, "Duplicate program (fingerprint match)", fingerprint
-        
+        # Extract clean program text (strip code fences and extra prose)
+        cleaned_text = extract_program_from_response(program_text)
+
         # Try parsing
         try:
-            program = self.parser.parse_and_transform(program_text)
+            program = self.parser.parse_and_transform(cleaned_text)
         except Exception as e:
-            return False, f"Parse error: {str(e)}", fingerprint
-        
-        # Try validation
+            return False, f"Parse error: {str(e)}", None
+
+        # Core IR validation
         try:
             program.validate()
         except Exception as e:
-            return False, f"Validation error: {str(e)}", fingerprint
-        
-        # Additional checks
-        # Check that required blocks are present
+            return False, f"Validation error: {str(e)}", None
+
+        # Additional semantic checks
+        errors: List[str] = []
+
+        # 1) Reject if raw output contains ai_integration (case-insensitive)
+        raw_to_check = raw_text if raw_text is not None else cleaned_text
+        if "ai_integration" in raw_to_check.lower():
+            errors.append("Program contains forbidden 'ai_integration' block")
+
+        # 2) Required blocks present
         if not program.header:
-            return False, "Missing required header block", fingerprint
+            errors.append("Missing required header block")
         if not program.lattice:
-            return False, "Missing required lattice block", fingerprint
+            errors.append("Missing required lattice block")
         if not program.symmetry:
-            return False, "Missing required symmetry block", fingerprint
+            errors.append("Missing required symmetry block")
         if not program.basis or not program.basis.sites:
-            return False, "Missing required basis block with sites", fingerprint
-        
-        # Check atom count (roughly 2-20 sites)
+            errors.append("Missing required basis block with sites")
+
+        # If basis is missing, abort early
+        if errors:
+            return False, "; ".join(errors), None
+
+        # 3) Atom count in [2, 20]
         site_count = len(program.basis.sites)
         if site_count < 2 or site_count > 20:
-            return False, f"Site count {site_count} outside reasonable range [2, 20]", fingerprint
-        
-        # Check lattice parameters
-        if program.lattice.bravais:
+            errors.append(f"Site count {site_count} outside reasonable range [2, 20]")
+
+        # 4) Lattice parameters sanity
+        if program.lattice and program.lattice.bravais:
             bravais = program.lattice.bravais
-            # Handle Length and Angle objects (access .value) or direct floats
-            def get_value(obj):
-                if hasattr(obj, 'value'):
-                    return obj.value
+
+            def get_value(obj: Any) -> float:
+                if hasattr(obj, "value"):
+                    return float(getattr(obj, "value"))
                 return float(obj)
-            
+
             a_val = get_value(bravais.a)
             b_val = get_value(bravais.b)
             c_val = get_value(bravais.c)
             alpha_val = get_value(bravais.alpha)
             beta_val = get_value(bravais.beta)
             gamma_val = get_value(bravais.gamma)
-            
+
             if a_val <= 0 or b_val <= 0 or c_val <= 0:
-                return False, "Lattice parameters must be positive", fingerprint
-            # Check angles are reasonable (60-120 degrees typically)
+                errors.append("Lattice parameters a, b, c must be positive")
+            # Check angles are reasonable (60–120 degrees typically)
             if not (60 <= alpha_val <= 120) or not (60 <= beta_val <= 120) or not (60 <= gamma_val <= 120):
-                # Allow some flexibility, but warn if very extreme
                 if alpha_val < 30 or alpha_val > 150:
-                    return False, f"Lattice angle alpha={alpha_val} outside reasonable range", fingerprint
-        
-        # Mark as seen
+                    errors.append(f"Lattice angle alpha={alpha_val} outside reasonable range")
+
+        # 5) Basis site-level checks (names, species, occupancies, coordinates)
+        seen_names: Dict[str, int] = {}
+        duplicate_names: List[str] = []
+        invalid_name_sites: List[str] = []
+
+        name_pattern = re.compile(r"^[A-Z][a-z]?\d+$")
+
+        for site in program.basis.sites:
+            name = getattr(site, "name", None)
+            if isinstance(name, str):
+                # Track duplicates
+                seen_names[name] = seen_names.get(name, 0) + 1
+                if seen_names[name] == 2:
+                    duplicate_names.append(name)
+
+                # Enforce ElementSymbol+index naming convention
+                if not name_pattern.match(name):
+                    invalid_name_sites.append(name)
+
+            # Species checks
+            species_list = getattr(site, "species", []) or []
+            if not species_list:
+                errors.append(f"Site '{name}' has no species entries")
+            else:
+                occ_sum = 0.0
+                for sp in species_list:
+                    occ = getattr(sp, "occupancy", None)
+                    if occ is None:
+                        errors.append(f"Site '{name}' has species with missing occupancy")
+                        continue
+                    try:
+                        occ_val = float(occ)
+                    except (TypeError, ValueError):
+                        errors.append(f"Site '{name}' has non-numeric occupancy '{occ}'")
+                        continue
+                    if not (0.0 < occ_val <= 1.0):
+                        errors.append(f"Site '{name}' has occupancy {occ_val} outside (0, 1]")
+                    occ_sum += occ_val
+                if abs(occ_sum - 1.0) > 1e-3:
+                    errors.append(f"Site '{name}' has species occupancies summing to {occ_sum:.4f} (expected ~1.0)")
+
+            # Fractional coordinate checks
+            frame = getattr(site, "frame", "fractional")
+            if frame == "fractional":
+                pos = getattr(site, "position", None)
+                try:
+                    x, y, z = pos  # type: ignore[misc]
+                    coords = (x, y, z)
+                except Exception:
+                    errors.append(f"Site '{name}' has invalid fractional position '{pos}'")
+                    coords = None
+                if coords is not None:
+                    for idx, coord in enumerate(coords):
+                        axis = "xyz"[idx]
+                        try:
+                            val = float(coord)
+                        except (TypeError, ValueError):
+                            errors.append(f"Site '{name}' has non-numeric fractional coordinate {axis}={coord}")
+                            continue
+                        if not (0.0 <= val < 1.0):
+                            errors.append(
+                                f"Site '{name}' has fractional coordinate {axis}={val} outside [0, 1)"
+                            )
+
+        if duplicate_names:
+            errors.append(
+                f"Duplicate site names detected: {', '.join(sorted(set(duplicate_names)))}"
+            )
+        if invalid_name_sites:
+            errors.append(
+                "Site names must follow ElementSymbol+index pattern (e.g., O1, Ti1). "
+                f"Invalid names: {', '.join(sorted(set(invalid_name_sites)))}"
+            )
+
+        if errors:
+            return False, "; ".join(errors), None
+
+        # At this point the program is structurally valid – compute structural fingerprint
+        fingerprint = program_fingerprint(program)
+
+        # Duplicate structure detection
+        if check_duplicates and fingerprint in self.seen_fingerprints:
+            return False, "Duplicate program (structure fingerprint match)", fingerprint
+
         if check_duplicates:
             self.seen_fingerprints.add(fingerprint)
-        
+
         return True, None, fingerprint
 
 
@@ -287,15 +371,15 @@ def generate_unconditional_programs(
     Main pipeline for generating unconditional AtomForge programs.
     
     Args:
-        data_dir: Directory containing seed programs
-        out_dir: Output directory for generated programs
-        n_samples: Number of programs to generate
-        seed_k: Number of seed programs to include in few-shot context
-        max_retries: Maximum repair attempts per program
-        model: LLM model name
-        temperature: Sampling temperature
-        top_p: Top-p sampling parameter
-        dry_run: If True, don't call API (just validate existing files)
+        data_dir: Directory containing seed programs.
+        out_dir: Output directory for generated programs.
+        n_samples: Number of successful programs to generate.
+        seed_k: Number of seed programs to include in few-shot context.
+        max_retries: Maximum repair attempts per program.
+        model: LLM model name.
+        temperature: Sampling temperature.
+        top_p: Top-p sampling parameter.
+        dry_run: If True, don't call the LLM API (just validate existing files).
     """
     # Set random seed for reproducibility
     random.seed(42)
@@ -344,7 +428,8 @@ def generate_unconditional_programs(
     
     while successful_count < n_samples:
         attempt_count += 1
-        program_id = f"AF_UNCOND_{attempt_count:06d}"
+        # Use a deterministic, compact ID sequence for successful programs
+        program_id = f"AF_UNCOND_{successful_count + 1:06d}"
         
         logger.info(f"\n[{attempt_count}] Generating program {program_id}...")
         
@@ -362,7 +447,9 @@ def generate_unconditional_programs(
             program_text = extract_program_from_response(response_text)
             
             # Validate
-            is_valid, error_msg, fingerprint = validator.validate(program_text, check_duplicates=True)
+            is_valid, error_msg, fingerprint = validator.validate(
+                program_text, raw_text=response_text, check_duplicates=True
+            )
             
             # Repair loop if needed
             repair_attempts = 0
@@ -372,7 +459,9 @@ def generate_unconditional_programs(
                     repair_prompt = get_repair_prompt(program_text, error_msg)
                     repair_response, _ = llm_client.generate(repair_prompt)
                     program_text = extract_program_from_response(repair_response)
-                    is_valid, error_msg, fingerprint = validator.validate(program_text, check_duplicates=True)
+                    is_valid, error_msg, fingerprint = validator.validate(
+                        program_text, raw_text=repair_response, check_duplicates=True
+                    )
                     repair_attempts += 1
                 else:
                     # Not a repairable error (duplicate, etc.)
@@ -490,14 +579,14 @@ def main():
     parser.add_argument(
         '--out_dir',
         type=str,
-        default='outputs/uncond',
+        default='outputs/uncond_200',
         help='Output directory for generated programs and metrics'
     )
     
     parser.add_argument(
         '--n_samples',
         type=int,
-        default=500,
+        default=200,
         help='Number of programs to generate'
     )
     
@@ -518,7 +607,7 @@ def main():
     parser.add_argument(
         '--model',
         type=str,
-        default='gpt-5.1-thinking',
+        default='gpt-5.2',
         help='LLM model name'
     )
     

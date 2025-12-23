@@ -1,0 +1,87 @@
+atom_spec "K2MnSiO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c9e6a61f-4e2d-4b8a-9a7c-6d0d6c1e9f2a",
+    title = "K2MnSiO4 (olivine-type, conventional setting)",
+    created = "2025-12-23"
+  }
+  description = "Synthetic olivine-type K2MnSiO4 in orthorhombic Pnma setting (representative coordinates)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system (Pnma)",
+    type = orthorhombic,
+    a = 10.214300,
+    b = 6.012800,
+    c = 4.793600,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Distinct sites (unique identifiers) for an olivine-like framework",
+    site K1 {
+      description = "K in M1-type channel site",
+      wyckoff = "4c",
+      position = (0.985200, 0.250000, 0.071300),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "K in M2-type channel site",
+      wyckoff = "4c",
+      position = (0.276400, 0.250000, 0.448900),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Mn1 {
+      description = "Mn in octahedral site",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Si1 {
+      description = "Si in tetrahedral site",
+      wyckoff = "4c",
+      position = (0.425600, 0.250000, 0.782200),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Framework oxygen",
+      wyckoff = "4c",
+      position = (0.761900, 0.250000, 0.420500),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Framework oxygen",
+      wyckoff = "4c",
+      position = (0.201400, 0.250000, 0.918300),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "Framework oxygen (general position representative)",
+      wyckoff = "8d",
+      position = (0.307700, 0.032600, 0.279400),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    notes = "Representative Pnma olivine-type coordinates; suitable for testing symmetry/basis parsing."
+  }
+}

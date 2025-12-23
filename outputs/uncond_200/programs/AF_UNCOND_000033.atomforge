@@ -1,0 +1,63 @@
+atom_spec "K2MnCl4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c1e1e0d8-5c22-4b37-9a5e-0df5d6d02e5e",
+    title = "K4Cl8Mn2 (layered perovskite-type, K2NiF4 prototype)",
+    created = "2025-12-23"
+  }
+  description = "Synthetic layered halide in the K2NiF4 (Ruddlesden–Popper n=1) structure type; example composition K2MnCl4"
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (K2NiF4-type layered perovskite)",
+    type = tetragonal,
+    a = 5.020000,
+    b = 5.020000,
+    c = 12.580000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique crystallographic sites (fractional coordinates) for I4/mmm K2MnCl4",
+    site K1 {
+      description = "A-site cation in rocksalt layer",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.360000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Mn1 {
+      description = "B-site cation in perovskite slab",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Apical halide along c",
+      wyckoff = "4c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl2 {
+      description = "Equatorial halide in perovskite plane",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.155000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+}

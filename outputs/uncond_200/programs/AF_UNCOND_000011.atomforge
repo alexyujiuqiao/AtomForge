@@ -1,0 +1,80 @@
+atom_spec "K2SeO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c7a2fd3a-7f74-4a0f-8b3d-2c0b5b8f7e3a",
+    title = "K4O8Se2 (orthorhombic Pnma)",
+    created = "2025-12-23"
+  }
+  description = "Orthorhombic K2SeO4-type structure (Pnma) with distinct Wyckoff sites"
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 7.215300,
+    b = 5.624100,
+    c = 9.842600,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique fractional sites consistent with Pnma special/ general positions",
+    site K1 {
+      description = "K on 4c site",
+      wyckoff = "4c",
+      position = (0.268400, 0.250000, 0.084700),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "K on 4c site (second distinct potassium environment)",
+      wyckoff = "4c",
+      position = (0.012900, 0.250000, 0.642300),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Se1 {
+      description = "Se on 4c site (tetrahedral SeO4 group center)",
+      wyckoff = "4c",
+      position = (0.152600, 0.250000, 0.402800),
+      frame = fractional,
+      species = ({ element = "Se", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "O on 4c site (apical oxygen)",
+      wyckoff = "4c",
+      position = (0.286900, 0.250000, 0.517400),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "O on 4c site (second distinct oxygen)",
+      wyckoff = "4c",
+      position = (0.031700, 0.250000, 0.302100),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "O on 8d general site",
+      wyckoff = "8d",
+      position = (0.173200, 0.028900, 0.358600),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    notes = "Stoichiometry per conventional cell implied by Wyckoff multiplicities: K(4c)+K(4c)+Se(4c)+O(4c)+O(4c)+O(8d) -> K8Se4O16 = 4*(K2SeO4)."
+  }
+}

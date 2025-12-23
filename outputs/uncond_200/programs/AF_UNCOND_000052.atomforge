@@ -1,0 +1,95 @@
+atom_spec "K2MnSi3O8" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "6e0f4a0c-1b22-4f8e-a5b4-9f5a8f6e2c3d",
+    title = "K2MnSi3O8 (tetragonal, P4/n)",
+    created = "2025-12-23"
+  }
+  description = "Hypothetical tetragonal framework silicate with alkali channels; constructed with reasonable Wyckoff sites in P4/n (No. 85)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.842600,
+    b = 7.842600,
+    c = 5.176400,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 85,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique atomic sites (fractional coordinates) consistent with tetragonal symmetry; occupancies set to 1.",
+    site K1 {
+      description = "K in channel site",
+      wyckoff = "4d",
+      position = (0.250000, 0.750000, 0.500000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Mn1 {
+      description = "Mn framework node",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mn", occupancy = 1.000000 })
+    },
+    site Si1 {
+      description = "Si tetrahedral site",
+      wyckoff = "4e",
+      position = (0.145300, 0.356900, 0.250000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si2 {
+      description = "Si tetrahedral site (symmetry-related set distinct by coordinate choice)",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Bridging oxygen in framework",
+      wyckoff = "8g",
+      position = (0.182400, 0.087600, 0.318900),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Bridging oxygen in framework",
+      wyckoff = "8g",
+      position = (0.413700, 0.271500, 0.118600),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "Oxygen on special position",
+      wyckoff = "4f",
+      position = (0.250000, 0.250000, 0.146200),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O4 {
+      description = "Oxygen on special position (complements O3 along c)",
+      wyckoff = "4f",
+      position = (0.250000, 0.250000, 0.646200),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 0.0,
+    formation_energy = -2.135400
+  }
+}

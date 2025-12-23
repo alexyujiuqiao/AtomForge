@@ -1,0 +1,91 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c4b6a8c1-5c27-4d7d-9f2d-9d1c8d2a0b7e",
+    title = "Sr2FeMoO6 (double perovskite, ordered)",
+    created = "2025-12-23"
+  }
+  description = "Ordered double-perovskite Sr2FeMoO6 in tetragonal I4/m setting (representative structural model)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (double perovskite superstructure)",
+    type = tetragonal,
+    a = 5.570000,
+    b = 5.570000,
+    c = 7.900000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique atomic sites (fractional coordinates) consistent with I4/m double-perovskite topology",
+    site Sr1 {
+      description = "A-site cation",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr2 {
+      description = "A-site cation symmetry mate listed as independent site for explicit basis",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site cation (Fe) in rock-salt order with Mo",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B'-site cation (Mo) in rock-salt order with Fe",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Equatorial oxygen around B/B' octahedra",
+      wyckoff = "4e",
+      position = (0.250000, 0.250000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen around B/B' octahedra (z=1/2 layer)",
+      wyckoff = "4e",
+      position = (0.250000, 0.250000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "Apical oxygen with slight tetragonal distortion",
+      wyckoff = "8h",
+      position = (0.000000, 0.250000, 0.245000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O4 {
+      description = "Apical oxygen counterpart (shifted z)",
+      wyckoff = "8h",
+      position = (0.000000, 0.250000, 0.755000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

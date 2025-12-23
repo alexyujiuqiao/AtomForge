@@ -1,0 +1,91 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "d2f1865b-0d5b-4f13-8bff-5c2e6f0a6e2c",
+    title = "Double perovskite Sr2FeMoO6 (tetragonal model)",
+    created = "2025-12-23"
+  }
+  description = "Tetragonal double-perovskite style model for Sr2FeMoO6 (ordered B-sites), space group I4/m (No. 87)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (body-centered setting typical for ordered double perovskites)",
+    type = tetragonal,
+    a = 5.567200,
+    b = 5.567200,
+    c = 7.905400,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 2
+  }
+  basis {
+    description = "Unique sites consistent with an ordered double-perovskite topology (fractional coordinates)",
+    site Sr1 {
+      description = "A-site cation",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Sr2 {
+      description = "A-site cation (symmetry-related position listed explicitly as unique site)",
+      wyckoff = "4d",
+      position = (0.500000, 0.000000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site cation (Fe) in ordered rock-salt arrangement with Mo",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B'-site cation (Mo) ordered with Fe",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.245000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Apical oxygen counterpart (listed explicitly)",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.755000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "Equatorial oxygen in the ab plane (octahedral framework)",
+      wyckoff = "8h",
+      position = (0.250000, 0.250000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O4 {
+      description = "Equatorial oxygen in the ab plane at z=1/2 (listed explicitly)",
+      wyckoff = "8h",
+      position = (0.250000, 0.250000, 0.500000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}
