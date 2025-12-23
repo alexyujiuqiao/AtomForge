@@ -188,32 +188,40 @@ class AtomForgeTransformer(DSLTransformer):
     
     def header(self, args):
         """Transform header block"""
-        # Under the simplified core grammar, header is always:
-        # header {
-        #   dsl_version = "2.1",
-        #   content_schema_version = "...",
-        #   uuid = "...",
-        #   title = "...",
-        #   created = "YYYY-MM-DD"
-        #   [ , modified = "YYYY-MM-DD" ]
-        # }
-        # Lark passes all literal names and values as Tokens in order.
-        # We only care about the string values, so we extract them positionally.
+        # Grammar order:
+        # dsl_version,
+        # [content_schema_version],
+        # [uuid],
+        # title,
+        # created,
+        # [modified]
         string_values = [a for a in args if isinstance(a, str)]
 
-        header_data = {}
-        if len(string_values) >= 1:
-            header_data["dsl_version"] = string_values[0]
-        if len(string_values) >= 2:
-            header_data["content_schema_version"] = string_values[1]
-        if len(string_values) >= 3:
-            header_data["uuid"] = string_values[2]
-        if len(string_values) >= 4:
-            header_data["title"] = string_values[3]
-        if len(string_values) >= 5:
-            header_data["created"] = string_values[4]
+        if not string_values:
+            raise ValueError("header requires at least dsl_version, title, created")
+
+        dsl_version = string_values[0]
+        title = string_values[-2] if len(string_values) >= 3 else None
+        created = string_values[-1] if len(string_values) >= 2 else None
+
+        content_schema_version = None
+        uuid_val = None
+        # Remaining middle values (if any) map to content_schema_version and uuid in order
+        middle = string_values[1:-2] if len(string_values) > 3 else []
+        if middle:
+            content_schema_version = middle[0]
+        if len(middle) >= 2:
+            uuid_val = middle[1]
+
+        header_data = {
+            "dsl_version": dsl_version,
+            "title": title,
+            "created": created,
+            "content_schema_version": content_schema_version,
+            "uuid": uuid_val,
+        }
         if len(string_values) >= 6:
-            header_data["modified"] = string_values[5]
+            header_data["modified"] = string_values[-1]
 
         return {"header": Header(**header_data)}
     
@@ -1342,31 +1350,18 @@ class AtomForgeTransformer(DSLTransformer):
     
     def provenance(self, args):
         """Transform provenance block (minimal core)."""
-        # Core grammar / minimal generator emit:
-        #   source = string,
-        #   method = string,
-        #   doi = string
-        #   ("," url = string)?
-        scalar_values = [v for v in args if isinstance(v, str)]
+        # Collect values by position (source, method, doi, url) and extensions
+        string_values = [v for v in args if isinstance(v, str)]
 
         provenance_data = {
-            "source": "unknown",
-            "method": "crystal_v1.1_pipeline",
-            "doi": "",
-            "url": None,
-            "extensions": {}
+            "source": string_values[0] if len(string_values) >= 1 else "unknown",
+            "method": string_values[1] if len(string_values) >= 2 else "method_unknown",
+            "doi": string_values[2] if len(string_values) >= 3 else "",
+            "url": string_values[3] if len(string_values) >= 4 else None,
+            "extensions": {},
         }
 
-        if len(scalar_values) >= 1:
-            provenance_data["source"] = scalar_values[0]
-        if len(scalar_values) >= 2:
-            provenance_data["method"] = scalar_values[1]
-        if len(scalar_values) >= 3:
-            provenance_data["doi"] = scalar_values[2]
-        if len(scalar_values) >= 4:
-            provenance_data["url"] = scalar_values[3]
-        
-        # Handle provenance extensions
+        # Collect extensions
         for arg in args:
             if isinstance(arg, dict) and "provenance_extension" in arg:
                 ext = arg["provenance_extension"]
@@ -1392,21 +1387,73 @@ class AtomForgeTransformer(DSLTransformer):
     
     def patch_op(self, args):
         """Transform patch operation"""
-        if len(args) >= 1:
-            op_type = args[0]
-            if op_type == "add" or op_type == "add_site":
-                if len(args) >= 2:
-                    if isinstance(args[1], dict) and "site" in args[1]:
-                        return {"patch_op": PatchOperation(type="add", site=args[1]["site"])}
-                    else:
-                        return {"patch_op": PatchOperation(type="add", path=args[1], value=args[2] if len(args) > 2 else None)}
-            elif op_type == "remove":
-                if len(args) >= 2:
-                    return {"patch_op": PatchOperation(type="remove", path=args[1])}
-            elif op_type == "update":
-                if len(args) >= 3:
-                    return {"patch_op": PatchOperation(type="update", path=args[1], value=args[2])}
-        
+        if not args:
+            return {"patch_op": PatchOperation(type="unknown")}
+
+        # Pass-through if child rules already produced a patch_op dict
+        if len(args) == 1 and isinstance(args[0], dict) and "patch_op" in args[0]:
+            return args[0]
+
+        op_type = None
+        site_obj = None
+        path = None
+        value = None
+
+        for arg in args:
+            if isinstance(arg, str) and arg in ("add", "add_site", "remove", "update"):
+                op_type = arg
+                continue
+            if isinstance(arg, dict) and "site" in arg:
+                site_obj = arg["site"]
+                continue
+            if path is None and isinstance(arg, str):
+                path = arg
+                continue
+            if value is None:
+                value = arg
+
+        # Default op_type for add-site if not explicitly captured
+        if op_type is None and site_obj is not None:
+            op_type = "add"
+
+        if op_type in ("add", "add_site") and site_obj is not None:
+            return {"patch_op": PatchOperation(type="add", site=site_obj)}
+
+        if op_type == "add" and path is not None:
+            return {"patch_op": PatchOperation(type="add", path=path, value=value)}
+
+        if op_type == "remove" and path is not None:
+            return {"patch_op": PatchOperation(type="remove", path=path)}
+
+        if op_type == "update" and path is not None:
+            return {"patch_op": PatchOperation(type="update", path=path, value=value)}
+
+        return {"patch_op": PatchOperation(type="unknown")}
+
+    # Explicit handlers for patch sub-rules to ensure correct mapping
+    def patch_add_site(self, args):
+        """add site ..."""
+        for arg in args:
+            if isinstance(arg, dict) and "site" in arg:
+                return {"patch_op": PatchOperation(type="add", site=arg["site"])}
+        return {"patch_op": PatchOperation(type="unknown")}
+
+    def patch_add_value(self, args):
+        """add path = value"""
+        if len(args) >= 2:
+            return {"patch_op": PatchOperation(type="add", path=args[0], value=args[1])}
+        return {"patch_op": PatchOperation(type="unknown")}
+
+    def patch_remove(self, args):
+        """remove path"""
+        if args:
+            return {"patch_op": PatchOperation(type="remove", path=args[0])}
+        return {"patch_op": PatchOperation(type="unknown")}
+
+    def patch_update(self, args):
+        """update path = value"""
+        if len(args) >= 2:
+            return {"patch_op": PatchOperation(type="update", path=args[0], value=args[1])}
         return {"patch_op": PatchOperation(type="unknown")}
     
     def path(self, args):

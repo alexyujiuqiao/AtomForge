@@ -561,6 +561,12 @@ class PatchOperation:
         valid_types = ["add", "remove", "update"]
         if self.type not in valid_types:
             raise ValueError(f"Invalid patch operation type: {self.type}")
+        if self.type == "add" and not (self.site or self.path):
+            raise ValueError("Add operation must provide a site or a path/value")
+        if self.type == "remove" and not self.path:
+            raise ValueError("Remove operation requires a path")
+        if self.type == "update" and not self.path:
+            raise ValueError("Update operation requires a path")
 
 # ============================================================================
 # SUPPORTING DATA TYPES
@@ -691,6 +697,14 @@ class Provenance:
     doi: str
     url: Optional[str] = None
     extensions: Dict[str, Any] = field(default_factory=dict)
+
+    def validate(self) -> None:
+        if not self.source:
+            raise ValueError("Provenance source is required")
+        if not self.method:
+            raise ValueError("Provenance method is required")
+        if not self.doi:
+            raise ValueError("Provenance doi is required")
 
 @dataclass
 class Meta:

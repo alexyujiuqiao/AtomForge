@@ -177,14 +177,18 @@ complexity_level: ("beginner" | "intermediate" | "expert" | "domain_specific") |
 simplification_option: "hide_advanced_features" "=" feature_list | "template_suggestions" "=" bool | "domain" "=" string | "templates" "=" feature_list | "required_properties" "=" feature_list | qname "=" (string | bool | feature_list)
 
 // Provenance and data lineage
-provenance: "provenance" "{" "source" "=" string "," "method" "=" string ("," "doi" "=" string)? ("," "url" "=" string)? ("," (provenance_extension | (qname "=" (string | number | bool))))* "}"
+provenance: "provenance" "{" "source" "=" string "," "method" "=" string "," "doi" "=" string ("," "url" "=" string)? ("," (provenance_extension | (qname "=" (string | number | bool))))* "}"
 provenance_extension: qname "=" (string | number | bool)
 
 // Revolutionary patching system
 path_segment: ident ("[" int "]")?
 path: path_segment ("." path_segment)*
 patch: "patch" "{" patch_op ("," patch_op)* "}"
-patch_op: "add_site" site | "add" path "=" property_value | "remove" path | "update" path "=" property_value
+patch_op: patch_add_site | patch_add_value | patch_remove | patch_update
+patch_add_site: ("add_site" | "add") site
+patch_add_value: "add" path "=" property_value
+patch_remove: "remove" path
+patch_update: "update" path "=" property_value
 
 // Extensible metadata
 meta: "meta" "{" meta_entry ("," meta_entry)* "}"
