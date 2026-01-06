@@ -47,9 +47,10 @@ CRITICAL REQUIREMENTS:
 6. Lattice parameters (a, b, c) must be positive numbers > 0.
 7. Angles (alpha, beta, gamma) must be in a reasonable range (typically 60-120 degrees).
 8. Atom count should be between 2 and 20 sites (based on number of unique sites).
-9. Encourage diversity: vary crystal systems (cubic, tetragonal, orthorhombic, hexagonal, etc.) and space groups.
-10. Use valid chemical elements and reasonable Wyckoff positions.
-11. Ensure all numeric values are physically reasonable.
+9. The symmetry block MUST set origin_choice = 1.
+10. Encourage diversity: vary crystal systems (cubic, tetragonal, orthorhombic, hexagonal, etc.) and space groups.
+11. Use valid chemical elements and reasonable Wyckoff positions.
+12. Ensure all numeric values are physically reasonable.
 
 OUTPUT FORMAT:
 - Output ONLY the AtomForge program code.
@@ -162,4 +163,3 @@ def extract_program_from_response(response: str) -> str:
     text = re.sub(r'\n\s*(Note|Note:|This|The program|Here|Output):.*$', '', text, flags=re.IGNORECASE | re.MULTILINE)
     
     return text.strip()
-
