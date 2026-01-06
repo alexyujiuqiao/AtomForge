@@ -1,126 +1,174 @@
 #!/usr/bin/env python3
 """
-Evaluate Unconditional AtomForge Generation
+Unconditional Generation Evaluation (structure-level)
 
-This script computes structure-level evaluation metrics on compiled AtomForge programs:
+Evaluates generated AtomForge programs directly from .atomforge files:
+- Parse - IR - pymatgen Structure (with symmetry expansion)
 - Validity: min interatomic distance, charge neutrality
-- Uniqueness: structure-based fingerprinting
-- Novelty: comparison against reference dataset
-- Distribution matching: density, element counts
+- Uniqueness: StructureMatcher-based dedupe
+- Novelty: fingerprints vs reference set
+- Distribution matching: density & unique-element histograms + Wasserstein
 
 Usage:
-    python -m experiments.eval_uncond --compiled_dir outputs/uncond_200/compiled --reference_dir data
-
-Output:
-    - outputs/uncond_200/eval/metrics.jsonl (per-structure metrics)
-    - outputs/uncond_200/eval/summary.json (aggregated statistics)
-    - outputs/uncond_200/eval/plots/*.png (distribution plots)
+    python -m experiments.eval_uncond \
+        --gen_dir outputs/uncond/programs \
+        --ref_dir data \
+        --out_dir outputs/uncond/eval \
+        --max_gen 200 \
+        --max_ref 5000 \
+        --symprec 0.2
 """
 
-import os
-import sys
-import json
 import argparse
-import numpy as np
-from pathlib import Path
-from typing import Dict, List, Optional, Any, Set, Tuple
-from datetime import datetime
+import csv
+import json
 import logging
+import sys
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Sequence, Set, Tuple
 
-# Add project root to path
-project_root = Path(__file__).parent.parent
-sys.path.insert(0, str(project_root))
+import numpy as np
 
-# Import pymatgen
+# Project root
+PROJECT_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
+# Pymatgen
 try:
-    from pymatgen.core import Structure
-    from pymatgen.analysis.structure_analyzer import StructureAnalyzer
+    from pymatgen.core import Lattice as PmgLattice, Structure
     from pymatgen.analysis.structure_matcher import StructureMatcher
-    PYMAGEN_AVAILABLE = True
-except ImportError:
-    PYMAGEN_AVAILABLE = False
-    print("Warning: pymatgen not available. Install with: pip install pymatgen")
+    PYMATGEN_AVAILABLE = True
+except ImportError:  # pragma: no cover
+    PYMATGEN_AVAILABLE = False
 
-# Import scipy for Wasserstein distance
+# SciPy for Wasserstein
 try:
     from scipy.stats import wasserstein_distance
     SCIPY_AVAILABLE = True
-except ImportError:
+except ImportError:  # pragma: no cover
     SCIPY_AVAILABLE = False
-    print("Warning: scipy not available. Install with: pip install scipy")
 
-# Import matplotlib for plotting
+# Matplotlib for simple plots
 try:
     import matplotlib
-    matplotlib.use('Agg')  # Non-interactive backend
+    matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     MATPLOTLIB_AVAILABLE = True
-except ImportError:
+except ImportError:  # pragma: no cover
     MATPLOTLIB_AVAILABLE = False
-    print("Warning: matplotlib not available. Install with: pip install matplotlib")
 
-# Import local utilities
-from experiments.utils import program_fingerprint, load_seed_programs
-from experiments.compile_generated import atomforge_to_structure, get_value
-
-# Import AtomForge components for fingerprinting
+# AtomForge parser/IR
 try:
     from atomforge.src.atomforge_parser import AtomForgeParser
-except ImportError:
-    sys.path.insert(0, str(project_root / "atomforge" / "src"))
+    from atomforge.src.atomforge_ir import Length, Angle
+except ImportError:  # pragma: no cover
+    sys.path.insert(0, str(PROJECT_ROOT / "atomforge" / "src"))
     from atomforge_parser import AtomForgeParser
+    from atomforge_ir import Length, Angle
 
-# Configure logging
+
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("eval_uncond")
 
 
-def compute_min_distance(structure: Structure) -> float:
-    """Compute minimum interatomic distance in Angstrom."""
-    distances = structure.distance_matrix
-    # Exclude diagonal (self-distances)
-    mask = np.eye(len(distances), dtype=bool)
-    distances_masked = np.ma.masked_array(distances, mask=mask)
-    return float(np.min(distances_masked))
+# -----------------------
+# Helpers
+# -----------------------
+
+def get_val(x: Any) -> float:
+    if isinstance(x, (Length, Angle)):
+        return float(x.value)
+    return float(x)
 
 
-def check_charge_neutrality(structure: Structure) -> Tuple[bool, Optional[float], str]:
-    """
-    Check charge neutrality using pymatgen oxidation state guessing.
-    
-    Returns:
-        Tuple of (is_neutral, net_charge, status)
-        status: "neutral", "charged", "unknown_charge"
-    """
+def parse_program(path: Path, parser: AtomForgeParser) -> Tuple[bool, Any]:
     try:
-        # Try to guess oxidation states
-        structure.add_oxidation_state_by_guess()
-        total_charge = sum(site.specie.oxi_state for site in structure)
-        
-        if abs(total_charge) < 0.01:
-            return True, 0.0, "neutral"
-        else:
-            return False, total_charge, "charged"
+        text = path.read_text()
+        program = parser.parse_and_transform(text)
+        program.validate()
+        return True, program
+    except Exception as e:  # pragma: no cover - logging-only
+        return False, str(e)
+
+
+def site_to_species_and_coords(site, lattice: PmgLattice) -> Tuple[List[Any], List[Tuple[float, float, float]]]:
+    species: List[Any] = []
+    coords: List[Tuple[float, float, float]] = []
+    pos = site.position
+    try:
+        x, y, z = float(pos[0]), float(pos[1]), float(pos[2])
     except Exception:
-        # Oxidation state guessing failed
-        return False, None, "unknown_charge"
+        raise ValueError(f"Invalid position for site {site.name}: {pos}")
+
+    if site.frame == "cartesian":
+        fx, fy, fz = lattice.get_fractional_coords([x, y, z])
+    else:
+        fx, fy, fz = x, y, z
+
+    if not site.species:
+        raise ValueError(f"Site {site.name} has no species")
+
+    if len(site.species) == 1 and abs(site.species[0].occupancy - 1.0) < 1e-6:
+        species.append(site.species[0].element)
+        coords.append((fx, fy, fz))
+    else:
+        for sp in site.species:
+            occ = float(sp.occupancy)
+            if occ <= 0:
+                continue
+            species.append({sp.element: occ})
+            coords.append((fx, fy, fz))
+    return species, coords
+
+
+def program_to_structure(program, symprec: float) -> Structure:
+    if not PYMATGEN_AVAILABLE:
+        raise ImportError("pymatgen is required for structure conversion")
+
+    lat = program.lattice.bravais if program.lattice else None
+    if lat is None:
+        raise ValueError("Missing lattice bravais parameters")
+
+    lattice = PmgLattice.from_parameters(
+        get_val(lat.a),
+        get_val(lat.b),
+        get_val(lat.c),
+        get_val(lat.alpha),
+        get_val(lat.beta),
+        get_val(lat.gamma),
+    )
+
+    species_all: List[Any] = []
+    coords_all: List[Tuple[float, float, float]] = []
+    if not program.basis or not program.basis.sites:
+        raise ValueError("Missing basis sites")
+    for site in program.basis.sites:
+        sps, crds = site_to_species_and_coords(site, lattice)
+        species_all.extend(sps)
+        coords_all.extend(crds)
+
+    sg = program.symmetry.space_group if program.symmetry else None
+    if sg is None:
+        raise ValueError("Missing symmetry space_group")
+
+    structure = Structure.from_spacegroup(
+        sg,
+        lattice,
+        species_all,
+        coords_all,
+    )
+    return structure
 
 
 def structure_fingerprint(structure: Structure) -> str:
-    """
-    Generate a structure-based fingerprint from a pymatgen Structure.
-    
-    This is similar to program_fingerprint but works from the compiled structure.
-    """
-    # Get lattice parameters
     lattice = structure.lattice
     a, b, c = lattice.abc
     alpha, beta, gamma = lattice.angles
-    
-    signature: Dict[str, Any] = {
+    sig: Dict[str, Any] = {
         "bravais": {
             "a": round(a, 4),
             "b": round(b, 4),
@@ -129,377 +177,293 @@ def structure_fingerprint(structure: Structure) -> str:
             "beta": round(beta, 4),
             "gamma": round(gamma, 4),
         },
-        "sites": []
+        "sites": [],
     }
-    
-    # Extract sites
     for site in structure:
         coords = tuple(round(x, 4) for x in site.frac_coords)
-        
-        # Extract species and occupancies
         species_entries: List[Tuple[str, float]] = []
-        if hasattr(site.specie, 'elements'):
-            # Disordered site
+        if hasattr(site.specie, "items"):
             for elem, occ in site.specie.items():
-                species_entries.append((str(elem), round(occ, 4)))
+                species_entries.append((str(elem), round(float(occ), 4)))
         else:
-            # Ordered site
             species_entries.append((str(site.specie), 1.0))
-        
         species_entries.sort(key=lambda t: (t[0], t[1]))
-        
-        signature["sites"].append({
-            "position": coords,
-            "species": species_entries,
-        })
-    
-    # Sort sites deterministically
-    signature["sites"].sort(key=lambda s: (tuple(s["species"]), s["position"]))
-    
-    # Hash
+        sig["sites"].append({"position": coords, "species": species_entries})
+    sig["sites"].sort(key=lambda s: (tuple(s["species"]), s["position"]))
     import hashlib
-    canonical = json.dumps(signature, sort_keys=True, separators=(",", ":"))
+
+    canonical = json.dumps(sig, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:16]
 
 
-def evaluate_structure(
-    cif_path: Path,
-    reference_fingerprints: Set[str],
-    parser: Optional[AtomForgeParser] = None
-) -> Dict[str, Any]:
-    """
-    Evaluate a single structure.
-    
-    Args:
-        cif_path: Path to CIF file
-        reference_fingerprints: Set of reference structure fingerprints
-        parser: Optional parser for computing program-based fingerprint
-        
-    Returns:
-        Dictionary of evaluation metrics
-    """
-    metrics: Dict[str, Any] = {
-        'structure_id': cif_path.stem,
-        'cif_file': str(cif_path),
-    }
-    
+def min_interatomic_distance(structure: Structure) -> float:
+    dmat = structure.distance_matrix
+    mask = np.eye(len(dmat), dtype=bool)
+    masked = np.ma.masked_array(dmat, mask=mask)
+    return float(np.min(masked))
+
+
+def check_charge_neutrality(structure: Structure) -> Tuple[str, Optional[float]]:
     try:
-        # Load structure from CIF
-        structure = Structure.from_file(str(cif_path))
-        
-        # A) Validity checks
-        min_dist = compute_min_distance(structure)
-        metrics['min_interatomic_distance'] = min_dist
-        metrics['valid_min_distance'] = min_dist > 0.5
-        
-        is_neutral, net_charge, charge_status = check_charge_neutrality(structure)
-        metrics['charge_status'] = charge_status
-        metrics['net_charge'] = net_charge
-        metrics['charge_neutral'] = is_neutral
-        
-        # B) Uniqueness (structure fingerprint)
-        struct_fp = structure_fingerprint(structure)
-        metrics['structure_fingerprint'] = struct_fp
-        
-        # C) Novelty (check against reference)
-        metrics['novel'] = struct_fp not in reference_fingerprints
-        
-        # D) Distribution metrics
-        metrics['density'] = structure.density
-        metrics['num_elements'] = len(structure.composition.elements)
-        metrics['num_sites'] = len(structure)
-        metrics['formula'] = structure.formula
-        
-        metrics['status'] = 'success'
-        
-    except Exception as e:
-        metrics['status'] = 'error'
-        metrics['error_message'] = str(e)
-    
-    return metrics
+        structure.add_oxidation_state_by_guess()
+        total = sum(site.specie.oxi_state for site in structure)
+        if abs(total) < 1e-2:
+            return "neutral", 0.0
+        return "charged", total
+    except Exception:
+        return "unknown_charge", None
 
 
-def load_reference_fingerprints(
-    reference_dir: str,
-    max_samples: Optional[int] = None,
-    parser: AtomForgeParser
-) -> Set[str]:
-    """
-    Load and fingerprint reference structures from the dataset.
-    
-    Args:
-        reference_dir: Directory containing reference .atomforge files
-        max_samples: Maximum number of reference files to process (None = all)
-        parser: AtomForgeParser instance
-        
-    Returns:
-        Set of structure fingerprints
-    """
-    logger.info(f"Loading reference fingerprints from {reference_dir}...")
-    
-    # Load seed programs
-    seed_programs = load_seed_programs(reference_dir, limit=max_samples or 10000)
-    
-    fingerprints: Set[str] = set()
-    
-    for file_path, program_text in seed_programs:
-        try:
-            program = parser.parse_and_transform(program_text)
-            program.validate()
-            
-            # Convert to structure and fingerprint
-            if PYMAGEN_AVAILABLE:
-                struct = atomforge_to_structure(program)
-                fp = structure_fingerprint(struct)
-                fingerprints.add(fp)
-        except Exception as e:
-            logger.debug(f"Failed to process reference {file_path}: {e}")
+def dedupe_structures(structures: List[Structure], symprec: float) -> List[int]:
+    matcher = StructureMatcher(primitive_cell=False, scale=True, attempt_supercell=False, stol=symprec)
+    unique_indices: List[int] = []
+    for i, s in enumerate(structures):
+        matched = False
+        for ui in unique_indices:
+            if matcher.fit(structures[ui], s):
+                matched = True
+                break
+        if not matched:
+            unique_indices.append(i)
+    return unique_indices
+
+
+def load_reference_structures(ref_dir: Path, max_ref: int, symprec: float) -> Tuple[List[Structure], Set[str]]:
+    parser = AtomForgeParser()
+    files = sorted(ref_dir.glob("batch_*/*.atomforge"))
+    if not files:
+        raise ValueError(f"No reference .atomforge files found under {ref_dir}")
+    if max_ref:
+        files = files[:max_ref]
+
+    ref_structs: List[Structure] = []
+    ref_fps: Set[str] = set()
+    for f in files:
+        ok, res = parse_program(f, parser)
+        if not ok:
             continue
-    
-    logger.info(f"Loaded {len(fingerprints)} unique reference fingerprints")
-    return fingerprints
+        try:
+            struct = program_to_structure(res, symprec)
+            ref_structs.append(struct)
+            ref_fps.add(structure_fingerprint(struct))
+        except Exception:
+            continue
+    return ref_structs, ref_fps
 
 
-def plot_distributions(
-    generated_metrics: List[Dict[str, Any]],
-    reference_metrics: List[Dict[str, Any]],
-    out_dir: Path
-) -> None:
-    """Generate distribution comparison plots."""
-    if not MATPLOTLIB_AVAILABLE:
-        logger.warning("matplotlib not available, skipping plots")
-        return
-    
-    plots_dir = out_dir / "plots"
-    plots_dir.mkdir(exist_ok=True)
-    
-    # Extract densities
-    gen_densities = [m.get('density', 0) for m in generated_metrics if m.get('status') == 'success' and 'density' in m]
-    ref_densities = [m.get('density', 0) for m in reference_metrics if 'density' in m]
-    
-    # Extract element counts
-    gen_elements = [m.get('num_elements', 0) for m in generated_metrics if m.get('status') == 'success' and 'num_elements' in m]
-    ref_elements = [m.get('num_elements', 0) for m in reference_metrics if 'num_elements' in m]
-    
-    # Plot density distribution
-    if gen_densities and ref_densities:
-        plt.figure(figsize=(10, 6))
-        plt.hist(gen_densities, bins=30, alpha=0.5, label='Generated', density=True)
-        plt.hist(ref_densities, bins=30, alpha=0.5, label='Reference', density=True)
-        plt.xlabel('Density (g/cm³)')
-        plt.ylabel('Probability Density')
-        plt.title('Density Distribution Comparison')
-        plt.legend()
-        plt.tight_layout()
-        plt.savefig(plots_dir / 'density_distribution.png', dpi=150)
-        plt.close()
-    
-    # Plot element count distribution
-    if gen_elements and ref_elements:
-        plt.figure(figsize=(10, 6))
-        bins = range(min(min(gen_elements, default=1), min(ref_elements, default=1)),
-                     max(max(gen_elements, default=10), max(ref_elements, default=10)) + 2)
-        plt.hist(gen_elements, bins=bins, alpha=0.5, label='Generated', align='left')
-        plt.hist(ref_elements, bins=bins, alpha=0.5, label='Reference', align='left')
-        plt.xlabel('Number of Unique Elements')
-        plt.ylabel('Count')
-        plt.title('Element Count Distribution Comparison')
-        plt.legend()
-        plt.tight_layout()
-        plt.savefig(plots_dir / 'element_count_distribution.png', dpi=150)
-        plt.close()
-    
-    logger.info(f"Plots saved to {plots_dir}")
+def compute_distribution_metrics(values: Sequence[float]) -> Dict[str, float]:
+    if not values:
+        return {}
+    arr = np.array(values, dtype=float)
+    return {
+        "mean": float(np.mean(arr)),
+        "std": float(np.std(arr)),
+        "min": float(np.min(arr)),
+        "max": float(np.max(arr)),
+    }
+
+
+def write_report(out_dir: Path, summary: Dict[str, Any]) -> None:
+    report_path = out_dir / "report.md"
+    lines = []
+    lines.append("# Unconditional Generation Evaluation\n")
+    lines.append(f"Date: {datetime.now().isoformat()}\n")
+    lines.append("## Summary\n")
+    for k, v in summary.items():
+        if isinstance(v, dict):
+            lines.append(f"- {k}:")
+            for kk, vv in v.items():
+                lines.append(f"  - {kk}: {vv}")
+        else:
+            lines.append(f"- {k}: {v}")
+    lines.append("\n## How to reproduce\n")
+    lines.append("```bash")
+    lines.append("python -m experiments.eval_uncond \\")
+    lines.append("  --gen_dir outputs/uncond/programs \\")
+    lines.append("  --ref_dir data \\")
+    lines.append("  --out_dir outputs/uncond/eval \\")
+    lines.append("  --max_gen 200 \\")
+    lines.append("  --max_ref 5000 \\")
+    lines.append("  --symprec 0.2")
+    lines.append("```")
+    lines.append("\n## What to do next\n- Run same evaluation on MatExpert generations (if available) or MP-20 baseline.\n- Add stability metrics (e.g., M3GNet hull) as optional module.\n")
+    report_path.write_text("\n".join(lines))
 
 
 def main() -> None:
-    """Main entry point."""
-    parser = argparse.ArgumentParser(
-        description="Evaluate unconditional AtomForge generation",
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter
-    )
-    
-    parser.add_argument(
-        '--compiled_dir',
-        type=str,
-        default='outputs/uncond_200/compiled',
-        help='Directory containing compiled CIF files'
-    )
-    
-    parser.add_argument(
-        '--reference_dir',
-        type=str,
-        default='data',
-        help='Directory containing reference .atomforge files'
-    )
-    
-    parser.add_argument(
-        '--max_reference',
-        type=int,
-        default=None,
-        help='Maximum number of reference structures to load (None = all)'
-    )
-    
-    parser.add_argument(
-        '--out_dir',
-        type=str,
-        default=None,
-        help='Output directory for evaluation results (default: parent of compiled_dir + /eval)'
-    )
-    
+    parser = argparse.ArgumentParser(description="Evaluate unconditional AtomForge generations")
+    parser.add_argument("--gen_dir", type=str, default="outputs/uncond/programs", help="Directory with generated .atomforge files")
+    parser.add_argument("--ref_dir", type=str, default="data", help="Directory containing reference .atomforge files")
+    parser.add_argument("--out_dir", type=str, default="outputs/uncond/eval", help="Output directory for eval results")
+    parser.add_argument("--max_gen", type=int, default=200, help="Max generated samples to evaluate (None=all)")
+    parser.add_argument("--max_ref", type=int, default=5000, help="Max reference samples")
+    parser.add_argument("--symprec", type=float, default=0.2, help="Symmetry tolerance for StructureMatcher/spacegroup")
     args = parser.parse_args()
-    
-    compiled_path = Path(args.compiled_dir)
-    if not compiled_path.exists():
-        raise ValueError(f"Compiled directory does not exist: {compiled_path}")
-    
-    # Determine output directory
-    if args.out_dir:
-        out_path = Path(args.out_dir)
-    else:
-        out_path = compiled_path.parent / "eval"
+
+    if not PYMATGEN_AVAILABLE:
+        raise ImportError("pymatgen is required; please install it")
+
+    gen_path = Path(args.gen_dir)
+    if not gen_path.exists():
+        raise ValueError(f"Generation directory not found: {gen_path}")
+    out_path = Path(args.out_dir)
     out_path.mkdir(parents=True, exist_ok=True)
-    
-    # Find CIF files
-    cif_files = sorted(compiled_path.glob("*.cif"))
-    if not cif_files:
-        logger.warning(f"No CIF files found in {compiled_path}")
-        return
-    
-    logger.info(f"Found {len(cif_files)} CIF files to evaluate")
-    
-    # Load reference fingerprints
-    atomforge_parser = AtomForgeParser()
-    reference_fps = load_reference_fingerprints(
-        args.reference_dir,
-        max_samples=args.max_reference,
-        parser=atomforge_parser
-    )
-    
-    # Evaluate each structure
-    metrics_file = out_path / "metrics.jsonl"
-    all_metrics: List[Dict[str, Any]] = []
-    
-    for i, cif_file in enumerate(cif_files, 1):
-        logger.info(f"[{i}/{len(cif_files)}] Evaluating {cif_file.name}...")
-        
-        metrics = evaluate_structure(cif_file, reference_fps, atomforge_parser)
-        all_metrics.append(metrics)
-        
-        # Log to JSONL
-        with open(metrics_file, 'a', encoding='utf-8') as f:
-            json.dump(metrics, f, default=str)
-            f.write('\n')
-    
-    # Compute summary statistics
-    successful = [m for m in all_metrics if m.get('status') == 'success']
-    
+
+    ref_path = Path(args.ref_dir)
+    if not ref_path.exists():
+        raise ValueError(f"Reference directory not found: {ref_path}")
+
+    logger.info("Loading reference structures...")
+    ref_structs, ref_fps = load_reference_structures(ref_path, args.max_ref, args.symprec)
+    logger.info(f"Reference structures loaded: {len(ref_structs)}")
+
+    files = sorted(gen_path.glob("*.atomforge"))
+    if args.max_gen:
+        files = files[: args.max_gen]
+    logger.info(f"Found {len(files)} generated programs to evaluate")
+
+    parser_af = AtomForgeParser()
+    per_sample: List[Dict[str, Any]] = []
+    structures: List[Structure] = []
+    fingerprints: List[str] = []
+    parse_ok = struct_ok = comp_ok = 0
+
+    for f in files:
+        row: Dict[str, Any] = {"id": f.stem, "file": str(f)}
+        ok, res = parse_program(f, parser_af)
+        if not ok:
+            row.update({"parse_ok": False, "error": res})
+            per_sample.append(row)
+            continue
+        parse_ok += 1
+        row["parse_ok"] = True
+        try:
+            struct = program_to_structure(res, args.symprec)
+            structures.append(struct)
+            fp = structure_fingerprint(struct)
+            fingerprints.append(fp)
+            row.update({
+                "struct_ok": True,
+                "spacegroup": str(res.symmetry.space_group) if res.symmetry else None,
+                "natoms": len(struct),
+                "density": struct.density,
+                "nel": len(struct.composition.elements),
+                "formula": struct.composition.reduced_formula,
+            })
+            mind = min_interatomic_distance(struct)
+            row["min_dist"] = mind
+            row["valid_min_dist"] = mind > 0.5
+            charge_status, net_charge = check_charge_neutrality(struct)
+            row["charge_status"] = charge_status
+            row["net_charge"] = net_charge
+            row["comp_ok"] = charge_status == "neutral"
+            struct_ok += 1
+            if row["comp_ok"]:
+                comp_ok += 1
+        except Exception as e:
+            row.update({"struct_ok": False, "error": str(e)})
+        per_sample.append(row)
+
+    unique_indices = dedupe_structures(structures, args.symprec) if structures else []
+    unique_fps = {fingerprints[i] for i in unique_indices} if fingerprints else set()
+    novel_flags = [fp not in ref_fps for fp in fingerprints]
+
+    densities = [r["density"] for r in per_sample if r.get("struct_ok")]
+    nels = [r["nel"] for r in per_sample if r.get("struct_ok")]
+
     summary: Dict[str, Any] = {
-        'timestamp': datetime.now().isoformat(),
-        'total_structures': len(all_metrics),
-        'successful_evaluations': len(successful),
-        'validity': {
-            'min_distance_valid': sum(1 for m in successful if m.get('valid_min_distance', False)),
-            'min_distance_valid_rate': sum(1 for m in successful if m.get('valid_min_distance', False)) / max(len(successful), 1),
-            'charge_neutral': sum(1 for m in successful if m.get('charge_neutral', False)),
-            'charge_neutral_rate': sum(1 for m in successful if m.get('charge_neutral', False)) / max(len(successful), 1),
-            'unknown_charge_count': sum(1 for m in successful if m.get('charge_status') == 'unknown_charge'),
+        "timestamp": datetime.now().isoformat(),
+        "settings": {
+            "gen_dir": str(gen_path),
+            "ref_dir": str(ref_path),
+            "max_gen": args.max_gen,
+            "max_ref": args.max_ref,
+            "symprec": args.symprec,
         },
-        'uniqueness': {
-            'unique_fingerprints': len(set(m.get('structure_fingerprint') for m in successful if 'structure_fingerprint' in m)),
-            'unique_rate': len(set(m.get('structure_fingerprint') for m in successful if 'structure_fingerprint' in m)) / max(len(successful), 1),
+        "counts": {
+            "total": len(files),
+            "parse_ok": parse_ok,
+            "struct_ok": struct_ok,
+            "comp_ok": comp_ok,
         },
-        'novelty': {
-            'novel_structures': sum(1 for m in successful if m.get('novel', False)),
-            'novelty_rate': sum(1 for m in successful if m.get('novel', False)) / max(len(successful), 1),
+        "uniqueness": {
+            "unique_structures": len(unique_indices),
+            "unique_rate": len(unique_indices) / max(1, struct_ok),
         },
-        'distribution': {},
+        "novelty": {
+            "novel_structures": sum(novel_flags),
+            "novel_rate": sum(novel_flags) / max(1, len(novel_flags)),
+        },
+        "validity": {
+            "min_dist_pass": sum(1 for r in per_sample if r.get("valid_min_dist")),
+            "min_dist_rate": sum(1 for r in per_sample if r.get("valid_min_dist")) / max(1, len(per_sample)),
+            "charge_neutral": sum(1 for r in per_sample if r.get("charge_status") == "neutral"),
+            "charge_neutral_rate": sum(1 for r in per_sample if r.get("charge_status") == "neutral") / max(1, len(per_sample)),
+            "unknown_charge": sum(1 for r in per_sample if r.get("charge_status") == "unknown_charge"),
+        },
+        "distribution": {
+            "density": compute_distribution_metrics(densities),
+            "nel": compute_distribution_metrics(nels),
+        },
     }
-    
-    # Distribution statistics
-    if successful:
-        gen_densities = [m.get('density', 0) for m in successful if 'density' in m]
-        gen_elements = [m.get('num_elements', 0) for m in successful if 'num_elements' in m]
-        
-        if gen_densities:
-            summary['distribution']['density'] = {
-                'mean': float(np.mean(gen_densities)),
-                'std': float(np.std(gen_densities)),
-                'min': float(np.min(gen_densities)),
-                'max': float(np.max(gen_densities)),
-            }
-        
-        if gen_elements:
-            summary['distribution']['num_elements'] = {
-                'mean': float(np.mean(gen_elements)),
-                'std': float(np.std(gen_elements)),
-                'min': int(np.min(gen_elements)),
-                'max': int(np.max(gen_elements)),
-            }
-    
-    # Save summary
-    summary_file = out_path / "summary.json"
-    with open(summary_file, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, indent=2, default=str)
-    
-    # Load reference metrics for distribution comparison
-    reference_metrics: List[Dict[str, Any]] = []
-    if args.reference_dir and PYMAGEN_AVAILABLE:
-        logger.info("Computing reference distribution metrics...")
-        ref_files = sorted(Path(args.reference_dir).glob("batch_*/*.atomforge"))
-        if args.max_reference:
-            ref_files = ref_files[:args.max_reference]
-        
-        for ref_file in ref_files[:min(1000, len(ref_files))]:  # Limit for speed
-            try:
-                with open(ref_file, 'r', encoding='utf-8') as f:
-                    program_text = f.read()
-                program = atomforge_parser.parse_and_transform(program_text)
-                program.validate()
-                struct = atomforge_to_structure(program)
-                reference_metrics.append({
-                    'density': struct.density,
-                    'num_elements': len(struct.composition.elements),
-                })
-            except Exception:
-                continue
-    
-    # Generate plots
-    plot_distributions(all_metrics, reference_metrics, out_path)
-    
-    # Compute Wasserstein distances if scipy available
-    if SCIPY_AVAILABLE and successful and reference_metrics:
-        gen_densities = [m.get('density', 0) for m in successful if 'density' in m]
-        ref_densities = [m.get('density', 0) for m in reference_metrics if 'density' in m]
-        
-        if gen_densities and ref_densities:
-            wasserstein_density = wasserstein_distance(gen_densities, ref_densities)
-            summary['distribution']['wasserstein_density'] = float(wasserstein_density)
-            
-            gen_elements = [m.get('num_elements', 0) for m in successful if 'num_elements' in m]
-            ref_elements = [m.get('num_elements', 0) for m in reference_metrics if 'num_elements' in m]
-            if gen_elements and ref_elements:
-                wasserstein_elements = wasserstein_distance(gen_elements, ref_elements)
-                summary['distribution']['wasserstein_num_elements'] = float(wasserstein_elements)
-        
-        # Re-save summary with Wasserstein distances
-        with open(summary_file, 'w', encoding='utf-8') as f:
-            json.dump(summary, f, indent=2, default=str)
-    
-    # Print summary
-    logger.info("\n" + "="*60)
-    logger.info("EVALUATION SUMMARY")
-    logger.info("="*60)
-    logger.info(f"Total structures: {summary['total_structures']}")
-    logger.info(f"Successful evaluations: {summary['successful_evaluations']}")
-    logger.info(f"Min distance valid: {summary['validity']['min_distance_valid']} ({summary['validity']['min_distance_valid_rate']:.1%})")
-    logger.info(f"Charge neutral: {summary['validity']['charge_neutral']} ({summary['validity']['charge_neutral_rate']:.1%})")
-    logger.info(f"Unique structures: {summary['uniqueness']['unique_fingerprints']} ({summary['uniqueness']['unique_rate']:.1%})")
-    logger.info(f"Novel structures: {summary['novelty']['novel_structures']} ({summary['novelty']['novelty_rate']:.1%})")
-    logger.info(f"Summary saved to: {summary_file}")
-    logger.info("="*60)
+
+    if SCIPY_AVAILABLE and densities and ref_structs:
+        ref_dens = [s.density for s in ref_structs]
+        summary["distribution"]["wasserstein_density"] = float(wasserstein_distance(densities, ref_dens))
+        ref_nels = [len(s.composition.elements) for s in ref_structs]
+        if nels and ref_nels:
+            summary["distribution"]["wasserstein_nel"] = float(wasserstein_distance(nels, ref_nels))
+
+    out_path.mkdir(parents=True, exist_ok=True)
+    (out_path / "summary.json").write_text(json.dumps(summary, indent=2))
+
+    metrics_jsonl = out_path / "metrics.jsonl"
+    with open(metrics_jsonl, "w", encoding="utf-8") as f:
+        for row in per_sample:
+            f.write(json.dumps(row, default=str) + "\n")
+
+    csv_path = out_path / "per_sample.csv"
+    if per_sample:
+        fieldnames = sorted({k for r in per_sample for k in r.keys()})
+        with open(csv_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(per_sample)
+
+    if MATPLOTLIB_AVAILABLE:
+        plots_dir = out_path / "plots"
+        plots_dir.mkdir(exist_ok=True)
+        if densities:
+            plt.figure(figsize=(8, 5))
+            plt.hist(densities, bins=30, alpha=0.7)
+            plt.xlabel("Density (g/cc)")
+            plt.ylabel("Count")
+            plt.title("Generated Density Distribution")
+            plt.tight_layout()
+            plt.savefig(plots_dir / "density.png", dpi=150)
+            plt.close()
+        if nels:
+            plt.figure(figsize=(8, 5))
+            plt.hist(nels, bins=range(1, max(nels) + 2), alpha=0.7, align="left")
+            plt.xlabel("Number of unique elements")
+            plt.ylabel("Count")
+            plt.title("Generated Unique Elements Distribution")
+            plt.tight_layout()
+            plt.savefig(plots_dir / "nel.png", dpi=150)
+            plt.close()
+
+    write_report(out_path, summary)
+
+    logger.info("\n=== EVAL SUMMARY ===")
+    logger.info(f"Total: {summary['counts']['total']}")
+    logger.info(f"Parse OK: {summary['counts']['parse_ok']}")
+    logger.info(f"Struct OK: {summary['counts']['struct_ok']}")
+    logger.info(f"Charge neutral: {summary['validity']['charge_neutral']}")
+    logger.info(f"Unique structures: {summary['uniqueness']['unique_structures']}")
+    logger.info(f"Novel structures: {summary['novelty']['novel_structures']}")
+    logger.info(f"Summary saved to: {out_path / 'summary.json'}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
