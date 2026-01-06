@@ -79,9 +79,63 @@ logger = logging.getLogger("eval_uncond")
 # Helpers
 # -----------------------
 
-def get_val(x: Any) -> float:
-    if isinstance(x, (Length, Angle)):
-        return float(x.value)
+def get_val(x: Any, length_unit: Optional[str] = None, angle_unit: Optional[str] = None) -> float:
+    """
+    Extract value from Length/Angle objects with unit conversion.
+    
+    Args:
+        x: Value to extract (Length, Angle, or numeric)
+        length_unit: Unit for length conversion (from program.units.length or Length.unit)
+        angle_unit: Unit for angle conversion (from program.units.angle or Angle.unit)
+    
+    Returns:
+        Converted value in Angstroms (for Length) or degrees (for Angle)
+    """
+    # Unit conversion factors to Angstroms
+    LENGTH_CONVERSIONS = {
+        "angstrom": 1.0,
+        "nm": 10.0,
+        "pm": 0.01,
+        "bohr": 0.529177,
+        "a0": 0.529177,  # Bohr radius
+    }
+    
+    # Unit conversion factors to degrees
+    ANGLE_CONVERSIONS = {
+        "degree": 1.0,
+        "deg": 1.0,
+        "radian": 57.29577951308232,  # 180/pi
+        "rad": 57.29577951308232,
+    }
+    
+    if isinstance(x, Length):
+        value = float(x.value)
+        # Check if Length object has its own unit
+        unit = getattr(x, "unit", None) or length_unit
+        if unit:
+            unit_lower = unit.lower()
+            if unit_lower in LENGTH_CONVERSIONS:
+                return value * LENGTH_CONVERSIONS[unit_lower]
+            else:
+                logger.warning(f"Unknown length unit '{unit}', assuming Angstroms")
+                return value
+        else:
+            # No unit specified, assume Angstroms (pymatgen default)
+            return value
+    elif isinstance(x, Angle):
+        value = float(x.value)
+        # Check if Angle object has its own unit
+        unit = getattr(x, "unit", None) or angle_unit
+        if unit:
+            unit_lower = unit.lower()
+            if unit_lower in ANGLE_CONVERSIONS:
+                return value * ANGLE_CONVERSIONS[unit_lower]
+            else:
+                logger.warning(f"Unknown angle unit '{unit}', assuming degrees")
+                return value
+        else:
+            # No unit specified, assume degrees (pymatgen default)
+            return value
     return float(x)
 
 
@@ -132,14 +186,21 @@ def program_to_structure(program, symprec: float) -> Structure:
     lat = program.lattice.bravais if program.lattice else None
     if lat is None:
         raise ValueError("Missing lattice bravais parameters")
+    
+    # Get units from program if available
+    length_unit = None
+    angle_unit = None
+    if program.units:
+        length_unit = getattr(program.units, "length", None)
+        angle_unit = getattr(program.units, "angle", None)
 
     lattice = PmgLattice.from_parameters(
-        get_val(lat.a),
-        get_val(lat.b),
-        get_val(lat.c),
-        get_val(lat.alpha),
-        get_val(lat.beta),
-        get_val(lat.gamma),
+        get_val(lat.a, length_unit=length_unit),
+        get_val(lat.b, length_unit=length_unit),
+        get_val(lat.c, length_unit=length_unit),
+        get_val(lat.alpha, angle_unit=angle_unit),
+        get_val(lat.beta, angle_unit=angle_unit),
+        get_val(lat.gamma, angle_unit=angle_unit),
     )
 
     species_all: List[Any] = []
@@ -160,6 +221,7 @@ def program_to_structure(program, symprec: float) -> Structure:
         lattice,
         species_all,
         coords_all,
+        symprec = symprec,
     )
     return structure
 

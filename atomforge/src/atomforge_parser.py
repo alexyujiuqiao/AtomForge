@@ -398,7 +398,7 @@ class AtomForgeTransformer(DSLTransformer):
         
         return {"lattice": Lattice(**lattice_data)}
     
-    def bravais(self, args):
+     def bravais(self, args):
         """Transform Bravais lattice parameters (minimal core)."""
         # The core grammar emits the sequence:
         #   type, a, b, c, alpha, beta, gamma
@@ -406,6 +406,26 @@ class AtomForgeTransformer(DSLTransformer):
         # We extract numeric / string values positionally and
         # fall back to safe defaults if anything is missing.
         scalar_values = [v for v in args if isinstance(v, (str, int, float))]
+        # Preserve Length/Angle objects to avoid falling back
+        # to default values when units are present.
+        values = [v for v in args if not isinstance(v, dict)]
+
+        def coerce_length(value: Any, fallback: Length) -> Length:
+            if isinstance(value, Length):
+                return value
+            if isinstance(value, (int, float)):
+                return Length(value=float(value), unit=None)
+            return fallback
+
+        def coerce_angle(value: Any, fallback: Angle) -> Angle:
+            if isinstance(value, Angle):
+                return value
+            if isinstance(value, (int, float)):
+                return Angle(value=float(value), unit=None)
+            return fallback
+
+        while len(values) < 7:
+            values.append(None)
 
         bravais_data = {
             "type": "triclinic",
@@ -415,6 +435,13 @@ class AtomForgeTransformer(DSLTransformer):
             "alpha": 90.0,
             "beta": 90.0,
             "gamma": 90.0,
+            "type": str(values[0]) if values[0] is not None else "triclinic",
+            "a": coerce_length(values[1], Length(1.0, None)),
+            "b": coerce_length(values[2], Length(1.0, None)),
+            "c": coerce_length(values[3], Length(1.0, None)),
+            "alpha": coerce_angle(values[4], Angle(90.0, None)),
+            "beta": coerce_angle(values[5], Angle(90.0, None)),
+            "gamma": coerce_angle(values[6], Angle(90.0, None)),
         }
 
         if len(scalar_values) >= 1:

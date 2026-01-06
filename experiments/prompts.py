@@ -35,21 +35,22 @@ CRITICAL REQUIREMENTS:
    - header block (with dsl_version, title, created date, etc.)
    - units block
    - lattice block (with Bravais lattice parameters)
-   - symmetry block (with space_group and origin_choice)
+   - symmetry block (with space_group and origin_choice = 1)
    - basis block (with at least one atomic site)
-3. DO NOT include any `ai_integration` block in your program.
-4. Every basis site name (the identifier after `site`) MUST be unique within the program.
+3. The symmetry block MUST explicitly set origin_choice = 1. This is mandatory and non-negotiable.
+4. DO NOT include any `ai_integration` block in your program.
+5. Every basis site name (the identifier after `site`) MUST be unique within the program.
    - Required naming convention: ElementSymbol + index (e.g., Ba1, Ti1, O1, O2, O3, Cl1, Cl2, ...).
    - The alphabetic prefix MUST be a valid chemical element symbol (H, He, Li, ..., Og).
    - The numeric suffix MUST be a positive integer (1, 2, 3, ...).
    - Do NOT use bare element symbols as site IDs (for example, do not use `site "O"` or `site "Ti"`; use `O1`, `O2`, `Ti1`, etc.). 
-5. Coordinates must be numeric, typically fractional in [0,1). If `frame = fractional`, each coordinate in `position = (x, y, z)` MUST satisfy 0 ≤ value < 1.
-6. Lattice parameters (a, b, c) must be positive numbers > 0.
-7. Angles (alpha, beta, gamma) must be in a reasonable range (typically 60-120 degrees).
-8. Atom count should be between 2 and 20 sites (based on number of unique sites).
-9. Encourage diversity: vary crystal systems (cubic, tetragonal, orthorhombic, hexagonal, etc.) and space groups.
-10. Use valid chemical elements and reasonable Wyckoff positions.
-11. Ensure all numeric values are physically reasonable.
+6. Coordinates must be numeric, typically fractional in [0,1). If `frame = fractional`, each coordinate in `position = (x, y, z)` MUST satisfy 0 ≤ value < 1.
+7. Lattice parameters (a, b, c) must be positive numbers > 0.
+8. Angles (alpha, beta, gamma) must be in a reasonable range (typically 60-120 degrees).
+9. Atom count should be between 2 and 20 sites (based on number of unique sites).
+10. Encourage diversity: vary crystal systems (cubic, tetragonal, orthorhombic, hexagonal, etc.) and space groups.
+11. Use valid chemical elements and reasonable Wyckoff positions.
+12. Ensure all numeric values are physically reasonable.
 
 OUTPUT FORMAT:
 - Output ONLY the AtomForge program code.
@@ -96,9 +97,10 @@ REQUIREMENTS:
 2. DO NOT change parts of the program that are already correct.
 3. DO NOT add any `ai_integration` block.
 4. Ensure the program follows the AtomForge DSL v2.1 grammar exactly.
-5. Maintain the same structure and intent as the original program.
-6. Output ONLY the corrected AtomForge code - no markdown, no explanations, no code fences.
-7. Start with `atom_spec` and end with the closing brace.
+5. Ensure the symmetry block has origin_choice = 1 (if it doesn't, set it to 1).
+6. Maintain the same structure and intent as the original program.
+7. Output ONLY the corrected AtomForge code - no markdown, no explanations, no code fences.
+8. Start with `atom_spec` and end with the closing brace.
 
 Return the fixed program:
 """
