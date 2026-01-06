@@ -402,35 +402,36 @@ class AtomForgeTransformer(DSLTransformer):
         """Transform Bravais lattice parameters (minimal core)."""
         # The core grammar emits the sequence:
         #   type, a, b, c, alpha, beta, gamma
-        # possibly interleaved with commas and field names.
-        # We extract numeric / string values positionally and
-        # fall back to safe defaults if anything is missing.
-        scalar_values = [v for v in args if isinstance(v, (str, int, float))]
+        # Preserve Length/Angle objects to avoid falling back
+        # to default values when units are present.
+        values = [v for v in args if not isinstance(v, dict)]
+
+        def coerce_length(value: Any, fallback: Length) -> Length:
+            if isinstance(value, Length):
+                return value
+            if isinstance(value, (int, float)):
+                return Length(value=float(value), unit=None)
+            return fallback
+
+        def coerce_angle(value: Any, fallback: Angle) -> Angle:
+            if isinstance(value, Angle):
+                return value
+            if isinstance(value, (int, float)):
+                return Angle(value=float(value), unit=None)
+            return fallback
+
+        while len(values) < 7:
+            values.append(None)
 
         bravais_data = {
-            "type": "triclinic",
-            "a": 1.0,
-            "b": 1.0,
-            "c": 1.0,
-            "alpha": 90.0,
-            "beta": 90.0,
-            "gamma": 90.0,
+            "type": str(values[0]) if values[0] is not None else "triclinic",
+            "a": coerce_length(values[1], Length(1.0, None)),
+            "b": coerce_length(values[2], Length(1.0, None)),
+            "c": coerce_length(values[3], Length(1.0, None)),
+            "alpha": coerce_angle(values[4], Angle(90.0, None)),
+            "beta": coerce_angle(values[5], Angle(90.0, None)),
+            "gamma": coerce_angle(values[6], Angle(90.0, None)),
         }
-
-        if len(scalar_values) >= 1:
-            bravais_data["type"] = scalar_values[0]
-        if len(scalar_values) >= 2:
-            bravais_data["a"] = float(scalar_values[1])
-        if len(scalar_values) >= 3:
-            bravais_data["b"] = float(scalar_values[2])
-        if len(scalar_values) >= 4:
-            bravais_data["c"] = float(scalar_values[3])
-        if len(scalar_values) >= 5:
-            bravais_data["alpha"] = float(scalar_values[4])
-        if len(scalar_values) >= 6:
-            bravais_data["beta"] = float(scalar_values[5])
-        if len(scalar_values) >= 7:
-            bravais_data["gamma"] = float(scalar_values[6])
 
         return {"bravais": Bravais(**bravais_data)}
     

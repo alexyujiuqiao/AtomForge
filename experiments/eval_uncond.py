@@ -160,6 +160,7 @@ def program_to_structure(program, symprec: float) -> Structure:
         lattice,
         species_all,
         coords_all,
+        symprec=symprec,
     )
     return structure
 
@@ -466,4 +467,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
