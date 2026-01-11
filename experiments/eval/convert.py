@@ -165,26 +165,12 @@ def atomforge_to_structure(program, expand_symmetry: bool = True, symprec: float
         sites_to_use = program.basis.sites
         logger.warning(f"Auto-skipping symmetry expansion: n_sites={n_input_sites}, weighted_sites={total_weighted_sites:.1f}")
     else:
-        # Expand: deduplicate by Wyckoff position
+        # Expand: use all sites in the asymmetric unit
+        # Note: Wyckoff labels are metadata, not deduplication keys.
+        # Multiple sites can have the same Wyckoff label but be distinct sites.
+        # Structure.from_spacegroup will expand each site correctly.
         actually_expand = True
-        # Group sites by Wyckoff position
-        wyckoff_groups = {}
-        for site in program.basis.sites:
-            wyckoff = getattr(site, "wyckoff", None)
-            if wyckoff:
-                if wyckoff not in wyckoff_groups:
-                    wyckoff_groups[wyckoff] = []
-                wyckoff_groups[wyckoff].append(site)
-        
-        # If we have multiple sites with the same Wyckoff label, they're symmetry mates
-        # Use only the first one for expansion
-        if wyckoff_groups and any(len(sites) > 1 for sites in wyckoff_groups.values()):
-            sites_to_use = []
-            for wyckoff, sites in wyckoff_groups.items():
-                sites_to_use.append(sites[0])  # Use first site of each Wyckoff group
-        else:
-            # All sites have unique Wyckoff positions (or no Wyckoff labels)
-            sites_to_use = program.basis.sites
+        sites_to_use = program.basis.sites
     
     for site in sites_to_use:
         pos = site.position

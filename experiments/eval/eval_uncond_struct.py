@@ -9,10 +9,11 @@ import argparse
 import csv
 import json
 import logging
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any, List, Set
+from typing import Dict, Any, List, Set, Optional
 
 import numpy as np
 
@@ -36,6 +37,13 @@ try:
     PYMATGEN_AVAILABLE = True
 except ImportError:
     PYMATGEN_AVAILABLE = False
+
+# Generative metrics (optional)
+try:
+    from experiments.gen_metrics import GenCrystal, compute_gen_metrics, load_gt_crystals, aggregate_results
+    GEN_METRICS_AVAILABLE = True
+except ImportError:  # pragma: no cover
+    GEN_METRICS_AVAILABLE = False
 
 try:
     import matplotlib
@@ -79,6 +87,36 @@ def structure_fingerprint(structure: Structure) -> str:
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:16]
 
 
+def extract_formula_from_program(file_path: Path) -> Optional[str]:
+    """Extract formula from program file (atom_spec name or title)."""
+    try:
+        text = file_path.read_text()
+        
+        # Try to extract from atom_spec name first (e.g., atom_spec "ZnAl2O4_Spinel")
+        atom_spec_match = re.search(r'atom_spec\s+"([^"]+)"', text)
+        if atom_spec_match:
+            name = atom_spec_match.group(1)
+            # Remove suffixes like "_Spinel", "_Perovskite", etc.
+            formula = re.sub(r'_[A-Z][a-z]*$', '', name)
+            # Remove common suffixes
+            formula = re.sub(r'_(Spinel|Perovskite|Feldspathoid|Melilite|Hypothetical)$', '', formula, flags=re.IGNORECASE)
+            if formula:
+                return formula
+        
+        # Fallback to title (e.g., title = "ZnAl2O4 (normal spinel)")
+        title_match = re.search(r'title\s*=\s*"([^"]+)"', text)
+        if title_match:
+            title = title_match.group(1)
+            # Extract formula before parentheses
+            formula_match = re.match(r'([A-Za-z0-9]+)', title)
+            if formula_match:
+                return formula_match.group(1)
+        
+        return None
+    except Exception:
+        return None
+
+
 def load_reference_fingerprints(ref_dir: Path, max_ref: int) -> Set[str]:
     """Load reference structure fingerprints."""
     logger.info(f"Loading reference fingerprints from {ref_dir}...")
@@ -113,13 +151,27 @@ def evaluate_directory(
     max_gen: int,
     max_ref: int,
     expand_symmetry: bool = True,
-    symprec: float = 0.2
+    symprec: float = 0.2,
+    skip_novelty_uniqueness: bool = True,
+    enable_gen_metrics: bool = False,
+    eval_model_name: str = "mp20",
+    cov_ref_dir: Optional[Path] = None,
+    nov_ref_dir: Optional[Path] = None,
+    n_samples: int = 1000,
+    min_dist_cutoff: float = 0.5,
+    min_volume_cutoff: float = 0.1,
+    results_csv: Optional[Path] = None,
+    model_name: Optional[str] = None
 ) -> None:
     """Evaluate all structures in generation directory."""
     out_dir.mkdir(parents=True, exist_ok=True)
     
-    # Load reference
-    ref_fps = load_reference_fingerprints(ref_dir, max_ref)
+    # Load reference (skip if not needed)
+    if skip_novelty_uniqueness:
+        ref_fps = set()
+        logger.info("Skipping reference fingerprint loading (novelty/uniqueness disabled)")
+    else:
+        ref_fps = load_reference_fingerprints(ref_dir, max_ref)
     
     # Find generated files
     files = sorted(gen_dir.glob("*.atomforge"))
@@ -160,7 +212,7 @@ def evaluate_directory(
                 
                 # Sanity checks: prevent density explosions
                 natoms = len(struct)
-                density = struct.density
+                density = float(struct.density) if hasattr(struct.density, '__float__') else struct.density
                 volume = struct.volume
                 
                 if natoms > 2000 or density > 50.0:
@@ -188,7 +240,7 @@ def evaluate_directory(
             try:
                 struct = cif_to_structure(f)
                 natoms = len(struct)
-                density = struct.density
+                density = float(struct.density) if hasattr(struct.density, '__float__') else struct.density
                 if natoms > 2000 or density > 50.0:
                     row["parse_ok"] = True
                     row["struct_ok"] = False
@@ -212,7 +264,7 @@ def evaluate_directory(
             try:
                 struct = poscar_to_structure(f)
                 natoms = len(struct)
-                density = struct.density
+                density = float(struct.density) if hasattr(struct.density, '__float__') else struct.density
                 if natoms > 2000 or density > 50.0:
                     row["parse_ok"] = True
                     row["struct_ok"] = False
@@ -252,13 +304,23 @@ def evaluate_directory(
             except:
                 pass
         
+        # Extract formula from program file if available, otherwise use structure's reduced formula
+        formula = None
+        if f.suffix == ".atomforge" and f.exists():
+            formula = extract_formula_from_program(f)
+        if formula is None:
+            formula = struct.composition.reduced_formula
+        
         # Update row with structure metrics (volume may already be set)
+        # Convert density to float (pymatgen returns FloatWithUnit)
+        density_val = float(struct.density) if hasattr(struct.density, '__float__') else struct.density
+        
         row.update({
             "spacegroup": spacegroup,
             "natoms": len(struct),
-            "density": struct.density,
+            "density": density_val,
             "nel": len(struct.composition.elements),
-            "formula": struct.composition.reduced_formula,
+            "formula": formula,
         })
         if "volume" not in row:
             row["volume"] = struct.volume
@@ -275,7 +337,11 @@ def evaluate_directory(
         row["charge_neutral"] = charge_status == "neutral"
         
         row["fingerprint"] = fp
-        row["novel"] = fp not in ref_fps
+        # Skip novelty check if disabled
+        if skip_novelty_uniqueness:
+            row["novel"] = None
+        else:
+            row["novel"] = fp not in ref_fps
         
         # Failure mode
         failure_mode = categorize_failure(None, row)
@@ -283,18 +349,31 @@ def evaluate_directory(
         
         per_sample.append(row)
     
-    # Uniqueness
-    unique_indices, unique_rate = compute_uniqueness(structures, symprec=0.2)
-    for i in unique_indices:
-        if i < len(per_sample):
-            per_sample[i]["unique"] = True
-    for i, row in enumerate(per_sample):
-        if "unique" not in row:
-            row["unique"] = False
+    # Uniqueness (skip if disabled)
+    if skip_novelty_uniqueness:
+        logger.info("Skipping uniqueness calculation")
+        unique_indices = []
+        unique_rate = 0.0
+        for i, row in enumerate(per_sample):
+            row["unique"] = None
+    else:
+        unique_indices, unique_rate = compute_uniqueness(structures, symprec=symprec)
+        for i in unique_indices:
+            if i < len(per_sample):
+                per_sample[i]["unique"] = True
+        for i, row in enumerate(per_sample):
+            if "unique" not in row:
+                row["unique"] = False
     
     # Summary
     successful = [r for r in per_sample if r.get("struct_ok")]
-    novel_count, novelty_rate = compute_novelty(fingerprints, ref_fps)
+    # Novelty (skip if disabled)
+    if skip_novelty_uniqueness:
+        logger.info("Skipping novelty calculation")
+        novel_count = len(successful)  # Placeholder
+        novelty_rate = 1.0  # Placeholder
+    else:
+        novel_count, novelty_rate = compute_novelty(fingerprints, ref_fps)
     
     summary = {
         "timestamp": datetime.now().isoformat(),
@@ -318,18 +397,110 @@ def evaluate_directory(
             "charge_neutral_rate": sum(1 for r in successful if r.get("charge_neutral")) / max(len(successful), 1),
         },
         "uniqueness": {
-            "unique_structures": len(unique_indices),
-            "unique_rate": unique_rate,
+            "unique_structures": len(unique_indices) if not skip_novelty_uniqueness else None,
+            "unique_rate": unique_rate if not skip_novelty_uniqueness else None,
+            "skipped": skip_novelty_uniqueness,
         },
         "novelty": {
-            "novel_structures": novel_count,
-            "novelty_rate": novelty_rate,
+            "novel_structures": novel_count if not skip_novelty_uniqueness else None,
+            "novelty_rate": novelty_rate if not skip_novelty_uniqueness else None,
+            "skipped": skip_novelty_uniqueness,
         },
         "distribution": {
             "density": compute_distribution_stats([r.get("density", 0) for r in successful if "density" in r]),
             "nel": compute_distribution_stats([r.get("nel", 0) for r in successful if "nel" in r]),
         },
     }
+    
+    # Generative metrics (if enabled)
+    if enable_gen_metrics:
+        if not GEN_METRICS_AVAILABLE:
+            logger.error("Generative metrics requested but gen_metrics module not available")
+            logger.error("Please install required dependencies: pip install smact matminer scipy")
+            raise ImportError("gen_metrics module not available")
+        
+        logger.info("Computing generative metrics...")
+        
+        # Convert structures to GenCrystal objects
+        # Match structures to per_sample rows by index (structures[i] corresponds to successful[i])
+        struct_idx = 0
+        pred_crystals = []
+        
+        for row in per_sample:
+            if row.get("struct_ok") and struct_idx < len(structures):
+                struct = structures[struct_idx]
+                struct_idx += 1
+                try:
+                    crystal = GenCrystal(
+                        struct,
+                        min_dist_cutoff=min_dist_cutoff,
+                        min_volume_cutoff=min_volume_cutoff
+                    )
+                    pred_crystals.append(crystal)
+                    row["struct_valid"] = crystal.struct_valid
+                    row["comp_valid"] = crystal.comp_valid
+                    row["valid"] = crystal.valid
+                    row["invalid_reason"] = crystal.invalid_reason
+                except Exception as e:
+                    logger.warning(f"Failed to create GenCrystal for {row.get('id')}: {e}")
+                    pred_crystals.append(None)
+                    row["struct_valid"] = False
+                    row["comp_valid"] = False
+                    row["valid"] = False
+                    row["invalid_reason"] = f"gen_crystal_failed: {e}"
+            else:
+                # No structure available for this row
+                row["struct_valid"] = False
+                row["comp_valid"] = False
+                row["valid"] = False
+                row["invalid_reason"] = row.get("invalid_reason", "no_structure")
+        
+        # Load GT sets with caching
+        cov_ref_path = cov_ref_dir if cov_ref_dir else ref_dir
+        nov_ref_path = nov_ref_dir if nov_ref_dir else ref_dir
+        
+        cache_gt_cov_path = out_dir / "cache_gt_cov.pkl"
+        cache_gt_nov_path = out_dir / "cache_gt_nov.pkl"
+        
+        gt_cov = load_gt_crystals(
+            cov_ref_path,
+            max_ref,
+            min_dist_cutoff=min_dist_cutoff,
+            min_volume_cutoff=min_volume_cutoff,
+            cache_path=cache_gt_cov_path
+        )
+        
+        gt_nov = load_gt_crystals(
+            nov_ref_path,
+            max_ref,
+            min_dist_cutoff=min_dist_cutoff,
+            min_volume_cutoff=min_volume_cutoff,
+            cache_path=cache_gt_nov_path
+        )
+        
+        logger.info(f"Loaded {len(gt_cov)} GT crystals for coverage, {len(gt_nov)} for novelty")
+        
+        # Compute gen_metrics
+        valid_pred_crystals = [c for c in pred_crystals if c is not None and c.valid]
+        if valid_pred_crystals:
+            gen_metrics = compute_gen_metrics(
+                valid_pred_crystals,
+                gt_cov,
+                gt_nov,
+                eval_model_name=eval_model_name,
+                n_samples=n_samples
+            )
+            summary["gen_metrics"] = gen_metrics
+            logger.info("Generative metrics computed successfully")
+        else:
+            logger.warning("No valid crystals for generative metrics computation")
+            summary["gen_metrics"] = {"error": "no_valid_crystals"}
+        
+        # Results aggregation
+        if model_name and results_csv:
+            results_csv_path = Path(results_csv)
+            if "gen_metrics" in summary:
+                aggregate_results(results_csv_path, model_name, summary["gen_metrics"])
     
     # Save outputs
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2))
@@ -386,6 +557,17 @@ def main():
     parser.add_argument("--expand_symmetry", type=int, default=1, help="Expand symmetry (1) or not (0)")
     parser.add_argument("--symprec", type=float, default=0.2, help="Symmetry tolerance for expansion")
     
+    # Generative metrics flags
+    parser.add_argument("--enable_gen_metrics", action="store_true", help="Enable generative metrics suite")
+    parser.add_argument("--eval_model_name", type=str, default="mp20", help="Model name for cutoffs (e.g., mp20, atomforge)")
+    parser.add_argument("--cov_ref_dir", type=str, default=None, help="Reference directory for coverage (defaults to --ref_dir)")
+    parser.add_argument("--nov_ref_dir", type=str, default=None, help="Reference directory for novelty (defaults to --ref_dir)")
+    parser.add_argument("--n_samples", type=int, default=1000, help="Number of valid samples for diversity/Wasserstein")
+    parser.add_argument("--min_dist_cutoff", type=float, default=0.5, help="Minimum interatomic distance cutoff (Å)")
+    parser.add_argument("--min_volume_cutoff", type=float, default=0.1, help="Minimum volume cutoff (Å³)")
+    parser.add_argument("--results_csv", type=str, default=None, help="Aggregation CSV file")
+    parser.add_argument("--model_name", type=str, default=None, help="Model name for aggregation CSV")
+    
     args = parser.parse_args()
     
     if not PYMATGEN_AVAILABLE:
@@ -399,6 +581,10 @@ def main():
     if not ref_path.exists():
         logger.warning(f"Reference directory not found: {ref_path}")
     
+    cov_ref_path = Path(args.cov_ref_dir) if args.cov_ref_dir else None
+    nov_ref_path = Path(args.nov_ref_dir) if args.nov_ref_dir else None
+    results_csv_path = Path(args.results_csv) if args.results_csv else None
+    
     evaluate_directory(
         gen_path,
         ref_path,
@@ -406,7 +592,17 @@ def main():
         args.max_gen,
         args.max_ref,
         expand_symmetry=bool(args.expand_symmetry),
-        symprec=args.symprec
+        symprec=args.symprec,
+        skip_novelty_uniqueness=True,  # Disabled by default for faster evaluation
+        enable_gen_metrics=args.enable_gen_metrics,
+        eval_model_name=args.eval_model_name,
+        cov_ref_dir=cov_ref_path,
+        nov_ref_dir=nov_ref_path,
+        n_samples=args.n_samples,
+        min_dist_cutoff=args.min_dist_cutoff,
+        min_volume_cutoff=args.min_volume_cutoff,
+        results_csv=results_csv_path,
+        model_name=args.model_name
     )
 
 

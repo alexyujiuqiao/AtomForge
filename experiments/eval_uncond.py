@@ -67,6 +67,13 @@ except ImportError:  # pragma: no cover
     from atomforge_parser import AtomForgeParser
     from atomforge_ir import Length, Angle
 
+# Generative metrics (optional)
+try:
+    from experiments.gen_metrics import GenCrystal, compute_gen_metrics, load_gt_crystals, aggregate_results
+    GEN_METRICS_AVAILABLE = True
+except ImportError:  # pragma: no cover
+    GEN_METRICS_AVAILABLE = False
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -360,6 +367,19 @@ def main() -> None:
     parser.add_argument("--max_gen", type=int, default=200, help="Max generated samples to evaluate (None=all)")
     parser.add_argument("--max_ref", type=int, default=5000, help="Max reference samples")
     parser.add_argument("--symprec", type=float, default=0.2, help="Symmetry tolerance for StructureMatcher/spacegroup")
+    
+    # Generative metrics flags
+    parser.add_argument("--eval_suite", type=str, default="atomforge_basic", help="Evaluation suite (atomforge_basic or generative)")
+    parser.add_argument("--enable_gen_metrics", action="store_true", help="Enable generative metrics suite")
+    parser.add_argument("--eval_model_name", type=str, default="mp20", help="Model name for cutoffs (e.g., mp20)")
+    parser.add_argument("--cov_ref_dir", type=str, default=None, help="Reference directory for coverage (defaults to --ref_dir)")
+    parser.add_argument("--nov_ref_dir", type=str, default=None, help="Reference directory for novelty (defaults to --ref_dir)")
+    parser.add_argument("--n_samples", type=int, default=1000, help="Number of valid samples for diversity/Wasserstein")
+    parser.add_argument("--min_dist_cutoff", type=float, default=0.5, help="Minimum interatomic distance cutoff (Å)")
+    parser.add_argument("--min_volume_cutoff", type=float, default=0.1, help="Minimum volume cutoff (Å³)")
+    parser.add_argument("--results_csv", type=str, default="generative_model_results.csv", help="Aggregation CSV file")
+    parser.add_argument("--model_name", type=str, default=None, help="Model name for aggregation CSV")
+    
     args = parser.parse_args()
 
     if not PYMATGEN_AVAILABLE:
@@ -476,6 +496,97 @@ def main() -> None:
         if nels and ref_nels:
             summary["distribution"]["wasserstein_nel"] = float(wasserstein_distance(nels, ref_nels))
 
+    # Generative metrics (if enabled)
+    if args.enable_gen_metrics:
+        if not GEN_METRICS_AVAILABLE:
+            logger.error("Generative metrics requested but gen_metrics module not available")
+            logger.error("Please install required dependencies: pip install smact matminer scipy")
+            raise ImportError("gen_metrics module not available")
+        
+        logger.info("Computing generative metrics...")
+        
+        # Convert structures to GenCrystal objects
+        # Note: structures list only contains successful conversions, so we need to match by index
+        # structures[i] corresponds to per_sample[j] where j is the i-th struct_ok=True row
+        struct_idx = 0
+        pred_crystals = []
+        
+        for row in per_sample:
+            if row.get("struct_ok") and struct_idx < len(structures):
+                struct = structures[struct_idx]
+                struct_idx += 1
+                try:
+                    crystal = GenCrystal(
+                        struct,
+                        min_dist_cutoff=args.min_dist_cutoff,
+                        min_volume_cutoff=args.min_volume_cutoff
+                    )
+                    pred_crystals.append(crystal)
+                    row["struct_valid"] = crystal.struct_valid
+                    row["comp_valid"] = crystal.comp_valid
+                    row["valid"] = crystal.valid
+                    row["invalid_reason"] = crystal.invalid_reason
+                except Exception as e:
+                    logger.warning(f"Failed to create GenCrystal for {row.get('id')}: {e}")
+                    pred_crystals.append(None)
+                    row["struct_valid"] = False
+                    row["comp_valid"] = False
+                    row["valid"] = False
+                    row["invalid_reason"] = f"gen_crystal_failed: {e}"
+            else:
+                # No structure available for this row
+                row["struct_valid"] = False
+                row["comp_valid"] = False
+                row["valid"] = False
+                row["invalid_reason"] = row.get("invalid_reason", "no_structure")
+        
+        # Load GT sets with caching
+        cov_ref_dir = Path(args.cov_ref_dir) if args.cov_ref_dir else ref_path
+        nov_ref_dir = Path(args.nov_ref_dir) if args.nov_ref_dir else ref_path
+        
+        cache_gt_cov_path = out_path / "cache_gt_cov.pkl"
+        cache_gt_nov_path = out_path / "cache_gt_nov.pkl"
+        
+        gt_cov = load_gt_crystals(
+            cov_ref_dir,
+            args.max_ref,
+            min_dist_cutoff=args.min_dist_cutoff,
+            min_volume_cutoff=args.min_volume_cutoff,
+            cache_path=cache_gt_cov_path
+        )
+        
+        gt_nov = load_gt_crystals(
+            nov_ref_dir,
+            args.max_ref,
+            min_dist_cutoff=args.min_dist_cutoff,
+            min_volume_cutoff=args.min_volume_cutoff,
+            cache_path=cache_gt_nov_path
+        )
+        
+        logger.info(f"Loaded {len(gt_cov)} GT crystals for coverage, {len(gt_nov)} for novelty")
+        
+        # Compute gen_metrics
+        valid_pred_crystals = [c for c in pred_crystals if c is not None and c.valid]
+        if valid_pred_crystals:
+            gen_metrics = compute_gen_metrics(
+                valid_pred_crystals,
+                gt_cov,
+                gt_nov,
+                eval_model_name=args.eval_model_name,
+                n_samples=args.n_samples
+            )
+            summary["gen_metrics"] = gen_metrics
+            logger.info("Generative metrics computed successfully")
+        else:
+            logger.warning("No valid crystals for generative metrics computation")
+            summary["gen_metrics"] = {"error": "no_valid_crystals"}
+        
+        # Results aggregation
+        if args.model_name:
+            results_csv_path = Path(args.results_csv)
+            if "gen_metrics" in summary:
+                aggregate_results(results_csv_path, args.model_name, summary["gen_metrics"])
+    
     out_path.mkdir(parents=True, exist_ok=True)
     (out_path / "summary.json").write_text(json.dumps(summary, indent=2))
 
