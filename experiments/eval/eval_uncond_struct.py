@@ -96,7 +96,7 @@ def load_reference_fingerprints(ref_dir: Path, max_ref: int) -> Set[str]:
         if not ok:
             continue
         try:
-            struct = atomforge_to_structure(res, expand_symmetry=True)
+            struct, _ = atomforge_to_structure(res, expand_symmetry=True, auto_detect_expanded=True)
             fp = structure_fingerprint(struct)
             fingerprints.add(fp)
         except Exception:
@@ -112,7 +112,8 @@ def evaluate_directory(
     out_dir: Path,
     max_gen: int,
     max_ref: int,
-    expand_symmetry: bool = True
+    expand_symmetry: bool = True,
+    symprec: float = 0.2
 ) -> None:
     """Evaluate all structures in generation directory."""
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -150,8 +151,34 @@ def evaluate_directory(
             
             # Convert to structure
             try:
-                struct = atomforge_to_structure(res, expand_symmetry=expand_symmetry)
+                struct, conversion_metadata = atomforge_to_structure(
+                    res, 
+                    expand_symmetry=expand_symmetry,
+                    symprec=symprec,
+                    auto_detect_expanded=True
+                )
+                
+                # Sanity checks: prevent density explosions
+                natoms = len(struct)
+                density = struct.density
+                volume = struct.volume
+                
+                if natoms > 2000 or density > 50.0:
+                    row["struct_ok"] = False
+                    row["error"] = f"expansion_exploded: natoms={natoms}, density={density:.2f} g/cc"
+                    row["natoms"] = natoms
+                    row["density"] = density
+                    row["volume"] = volume
+                    row.update(conversion_metadata)
+                    per_sample.append(row)
+                    continue
+                
+                # Record conversion metadata
                 row["struct_ok"] = True
+                row["n_input_sites"] = conversion_metadata.get("n_input_sites", 0)
+                row["used_symmetry_expansion"] = conversion_metadata.get("used_symmetry_expansion", False)
+                row["auto_skipped"] = conversion_metadata.get("auto_skipped", False)
+                row["volume"] = volume
             except Exception as e:
                 row["struct_ok"] = False
                 row["error"] = str(e)
@@ -160,8 +187,21 @@ def evaluate_directory(
         elif f.suffix == ".cif":
             try:
                 struct = cif_to_structure(f)
+                natoms = len(struct)
+                density = struct.density
+                if natoms > 2000 or density > 50.0:
+                    row["parse_ok"] = True
+                    row["struct_ok"] = False
+                    row["error"] = f"expansion_exploded: natoms={natoms}, density={density:.2f} g/cc"
+                    row["natoms"] = natoms
+                    row["density"] = density
+                    row["volume"] = struct.volume
+                    row["used_symmetry_expansion"] = False
+                    per_sample.append(row)
+                    continue
                 row["parse_ok"] = True
                 row["struct_ok"] = True
+                row["used_symmetry_expansion"] = False
             except Exception as e:
                 row["parse_ok"] = False
                 row["struct_ok"] = False
@@ -171,8 +211,21 @@ def evaluate_directory(
         elif "POSCAR" in f.name:
             try:
                 struct = poscar_to_structure(f)
+                natoms = len(struct)
+                density = struct.density
+                if natoms > 2000 or density > 50.0:
+                    row["parse_ok"] = True
+                    row["struct_ok"] = False
+                    row["error"] = f"expansion_exploded: natoms={natoms}, density={density:.2f} g/cc"
+                    row["natoms"] = natoms
+                    row["density"] = density
+                    row["volume"] = struct.volume
+                    row["used_symmetry_expansion"] = False
+                    per_sample.append(row)
+                    continue
                 row["parse_ok"] = True
                 row["struct_ok"] = True
+                row["used_symmetry_expansion"] = False
             except Exception as e:
                 row["parse_ok"] = False
                 row["struct_ok"] = False
@@ -199,6 +252,7 @@ def evaluate_directory(
             except:
                 pass
         
+        # Update row with structure metrics (volume may already be set)
         row.update({
             "spacegroup": spacegroup,
             "natoms": len(struct),
@@ -206,6 +260,10 @@ def evaluate_directory(
             "nel": len(struct.composition.elements),
             "formula": struct.composition.reduced_formula,
         })
+        if "volume" not in row:
+            row["volume"] = struct.volume
+        if "used_symmetry_expansion" not in row:
+            row["used_symmetry_expansion"] = False
         
         min_dist = compute_min_interatomic_distance(struct)
         row["min_dist"] = min_dist
@@ -246,6 +304,7 @@ def evaluate_directory(
             "max_gen": max_gen,
             "max_ref": max_ref,
             "expand_symmetry": expand_symmetry,
+            "symprec": symprec,
         },
         "counts": {
             "total": len(files),
@@ -325,6 +384,7 @@ def main():
     parser.add_argument("--max_gen", type=int, default=None, help="Max generated samples")
     parser.add_argument("--max_ref", type=int, default=5000, help="Max reference samples")
     parser.add_argument("--expand_symmetry", type=int, default=1, help="Expand symmetry (1) or not (0)")
+    parser.add_argument("--symprec", type=float, default=0.2, help="Symmetry tolerance for expansion")
     
     args = parser.parse_args()
     
@@ -345,7 +405,8 @@ def main():
         Path(args.out_dir),
         args.max_gen,
         args.max_ref,
-        expand_symmetry=bool(args.expand_symmetry)
+        expand_symmetry=bool(args.expand_symmetry),
+        symprec=args.symprec
     )
 
 

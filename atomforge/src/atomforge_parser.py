@@ -398,7 +398,7 @@ class AtomForgeTransformer(DSLTransformer):
         
         return {"lattice": Lattice(**lattice_data)}
     
-     def bravais(self, args):
+    def bravais(self, args):
         """Transform Bravais lattice parameters (minimal core)."""
         # The core grammar emits the sequence:
         #   type, a, b, c, alpha, beta, gamma

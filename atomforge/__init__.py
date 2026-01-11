@@ -50,28 +50,32 @@ try:
         Meta
     )
     
-    # Import Phase 1 components (Interop + Variant Pinning)
-    from .src.phase1_interop import (
-        VariantPolicy,
-        VariantInfo,
-        VariantSelectionResult,
-        DatabaseMatchResult,
-        CrystalDatabaseMatcher,
-        from_cif,
-        from_poscar,
-        match_database,
-        select_variant,
-        create_variant_card,
-        pin_variant
-    )
-    
-    from .src.phase1_ui import (
-        VariantCard,
-        VariantSelector,
-        SimpleVariantUI,
-        create_variant_selector,
-        run_variant_selection
-    )
+    # Import Phase 1 components (Interop + Variant Pinning) - optional
+    try:
+        from .src.phase1_interop import (
+            VariantPolicy,
+            VariantInfo,
+            VariantSelectionResult,
+            DatabaseMatchResult,
+            CrystalDatabaseMatcher,
+            from_cif,
+            from_poscar,
+            match_database,
+            select_variant,
+            create_variant_card,
+            pin_variant
+        )
+        
+        from .src.phase1_ui import (
+            VariantCard,
+            VariantSelector,
+            SimpleVariantUI,
+            create_variant_selector,
+            run_variant_selection
+        )
+        phase1_available = True
+    except ImportError:
+        phase1_available = False
     
     __all__ = [
         # Parser
@@ -107,28 +111,31 @@ try:
         "Simplification",
         "Provenance",
         "Meta",
-        
-        # Phase 1: Interop + Variant Pinning
-        "VariantPolicy",
-        "VariantInfo", 
-        "VariantSelectionResult",
-        "DatabaseMatchResult",
-        "CrystalDatabaseMatcher",
-        "from_cif",
-        "from_poscar",
-        "match_database",
-        "select_variant",
-        "create_variant_card",
-        "pin_variant",
-        "VariantCard",
-        "VariantSelector",
-        "SimpleVariantUI",
-        "create_variant_selector",
-        "run_variant_selection"
     ]
     
+    # Add Phase 1 components to __all__ if available
+    if phase1_available:
+        __all__.extend([
+            "VariantPolicy",
+            "VariantInfo", 
+            "VariantSelectionResult",
+            "DatabaseMatchResult",
+            "CrystalDatabaseMatcher",
+            "from_cif",
+            "from_poscar",
+            "match_database",
+            "select_variant",
+            "create_variant_card",
+            "pin_variant",
+            "VariantCard",
+            "VariantSelector",
+            "SimpleVariantUI",
+            "create_variant_selector",
+            "run_variant_selection"
+        ])
+    
 except ImportError as e:
-    print(f"Warning: Could not import AtomForge v2.1 components: {e}")
+    # Suppress warning - experiments code uses fallback imports that work
     __all__ = []
 
 # Legacy v1 components are now in the atomforge_mvp folder
