@@ -1,0 +1,91 @@
+atom_spec "K2ZnCl4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c2c5c4d0-1a4f-4a23-b2ad-52a7bd7c3c6a",
+    title = "K4Cl8Zn2",
+    created = "2026-01-06"
+  }
+  description = "Layered orthorhombic K2ZnCl4 (representative atomic arrangement; origin choice explicitly set)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 7.462000,
+    b = 10.318000,
+    c = 6.284000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites (fractional coordinates in [0,1))",
+    site K1 {
+      description = "K on general position",
+      wyckoff = "8g",
+      position = (0.134200, 0.312600, 0.083500),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "K on general position",
+      wyckoff = "8g",
+      position = (0.365800, 0.687400, 0.583500),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Zn1 {
+      description = "Zn on special position",
+      wyckoff = "4c",
+      position = (0.000000, 0.250000, 0.125000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Zn2 {
+      description = "Zn on special position",
+      wyckoff = "4c",
+      position = (0.500000, 0.750000, 0.625000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Cl on general position",
+      wyckoff = "8g",
+      position = (0.218700, 0.104900, 0.268300),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl2 {
+      description = "Cl on general position",
+      wyckoff = "8g",
+      position = (0.781300, 0.395100, 0.768300),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl3 {
+      description = "Cl on general position",
+      wyckoff = "8g",
+      position = (0.094600, 0.545200, 0.944100),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl4 {
+      description = "Cl on general position",
+      wyckoff = "8g",
+      position = (0.905400, 0.954800, 0.444100),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+}

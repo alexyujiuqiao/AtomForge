@@ -1,0 +1,84 @@
+atom_spec "K2ZnCl4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7cfe5e4f-6a4a-4f43-9f9c-6d3a5e5d9b2a",
+    title = "K2ZnCl4 (Pnma) prototype-like cell",
+    created = "2026-01-06"
+  }
+  description = "Hypothetical orthorhombic K2ZnCl4 in space group Pnma with a compact 7-site basis (symmetry generates full contents)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 8.214300,
+    b = 6.978500,
+    c = 9.563900,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique Wyckoff sites; all positions are fractional in [0,1).",
+    site K1 {
+      description = "Potassium on general special position",
+      wyckoff = "4c",
+      position = (0.165400, 0.250000, 0.084600),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "Second potassium site",
+      wyckoff = "4c",
+      position = (0.392700, 0.250000, 0.713900),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Zn1 {
+      description = "Zinc site",
+      wyckoff = "4c",
+      position = (0.012300, 0.250000, 0.521700),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Chlorine site 1",
+      wyckoff = "4c",
+      position = (0.281100, 0.250000, 0.423800),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl2 {
+      description = "Chlorine site 2",
+      wyckoff = "4c",
+      position = (0.087600, 0.250000, 0.870200),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl3 {
+      description = "Chlorine site 3",
+      wyckoff = "8d",
+      position = (0.214900, 0.031400, 0.205600),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl4 {
+      description = "Chlorine site 4",
+      wyckoff = "4c",
+      position = (0.463500, 0.250000, 0.548900),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+}

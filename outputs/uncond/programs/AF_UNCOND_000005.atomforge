@@ -1,0 +1,77 @@
+atom_spec "Sr2Al2SiO7" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "7b9c3d6a-4e66-4a4b-9a4f-7c7b7b4b2f3a",
+    title = "Sr2Al2SiO7 (melilite-type, hypothetical)",
+    created = "2026-01-06"
+  }
+  description = "Tetragonal melilite-like oxide with mixed Al/Si tetrahedral layers and interlayer Sr."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 7.842000,
+    b = 7.842000,
+    c = 5.032000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 113,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites (fractional coordinates)",
+    site Sr1 {
+      description = "Sr in interlayer site",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.365000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Al1 {
+      description = "Al in tetrahedral framework site",
+      wyckoff = "4f",
+      position = (0.000000, 0.500000, 0.120000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site Si1 {
+      description = "Si in tetrahedral framework site",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen linked to Si",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.785000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "In-plane oxygen in tetrahedral layer",
+      wyckoff = "8g",
+      position = (0.155000, 0.345000, 0.060000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "In-plane oxygen in tetrahedral layer (symmetry-distinct)",
+      wyckoff = "8g",
+      position = (0.365000, 0.155000, 0.195000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

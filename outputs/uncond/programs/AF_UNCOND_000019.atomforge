@@ -1,0 +1,63 @@
+atom_spec "SrZrO3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a0d1c9f2-6f15-4a84-9a9a-3b6c4b9f2c11",
+    title = "Sr4O12Zr4 (Pnma perovskite, conventional setting)",
+    created = "2026-01-06"
+  }
+  description = "Orthorhombic perovskite SrZrO3 in space group Pnma (No. 62), conventional cell with a≈5.80 Å, b≈8.20 Å, c≈5.78 Å."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system (Pnma perovskite conventional cell)",
+    type = orthorhombic,
+    a = 5.804000,
+    b = 8.214000,
+    c = 5.786000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique Wyckoff sites for Pnma ABO3 perovskite (Z=4); positions given in fractional coordinates",
+    site Sr1 {
+      description = "A-site cation (Sr) in 4c",
+      wyckoff = "4c",
+      position = (0.015000, 0.250000, 0.995000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Zr1 {
+      description = "B-site cation (Zr) in 4a",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen in 4c",
+      wyckoff = "4c",
+      position = (0.075000, 0.250000, 0.465000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen in 8d",
+      wyckoff = "8d",
+      position = (0.705000, 0.035000, 0.295000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

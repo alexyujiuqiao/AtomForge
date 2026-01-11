@@ -1,0 +1,56 @@
+atom_spec "ZnAl2O4_Spinel" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "a8b9c1d2-3e4f-4a6b-9c10-1d2e3f4a5b6c",
+    title = "ZnAl2O4 (normal spinel, conventional setting)",
+    created = "2026-01-06"
+  }
+  description = "Normal spinel ZnAl2O4 in space group Fd-3m (origin choice 1); representative lattice parameter and internal oxygen coordinate."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Cubic spinel lattice",
+    type = cubic,
+    a = 8.086000,
+    b = 8.086000,
+    c = 8.086000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 227,
+    origin_choice = 1
+  }
+  basis {
+    description = "Symmetry-unique Wyckoff sites for normal spinel",
+    site Zn1 {
+      description = "Tetrahedral A-site cation",
+      wyckoff = "8a",
+      position = (0.125000, 0.125000, 0.125000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Al1 {
+      description = "Octahedral B-site cation",
+      wyckoff = "16d",
+      position = (0.500000, 0.500000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Al", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Oxygen anion with internal parameter u ~ 0.262",
+      wyckoff = "32e",
+      position = (0.262000, 0.262000, 0.262000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

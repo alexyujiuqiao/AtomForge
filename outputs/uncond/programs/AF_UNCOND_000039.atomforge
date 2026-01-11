@@ -1,0 +1,63 @@
+atom_spec "Sr2TiO4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c8b9c0e8-1f2c-4b0e-9f52-6c0f0a4f3a0b",
+    title = "K2NiF4-type Sr2TiO4 (I4/mmm)",
+    created = "2026-01-06"
+  }
+  description = "Layered Ruddlesden–Popper oxide Sr2TiO4 in the K2NiF4 structure type (tetragonal I4/mmm, origin choice 1)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (layered perovskite-derived)",
+    type = tetragonal,
+    a = 3.884200,
+    b = 3.884200,
+    c = 12.600500,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique crystallographic sites for K2NiF4-type Sr2TiO4",
+    site Sr1 {
+      description = "A-site cation in rock-salt layer",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.356800),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Ti1 {
+      description = "B-site cation in perovskite slab",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ti", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c-axis",
+      wyckoff = "4c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen in perovskite plane",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.159200),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

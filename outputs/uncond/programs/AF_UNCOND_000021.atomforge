@@ -1,0 +1,70 @@
+atom_spec "Sr2FeMoO6" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "bcb6c1df-2d1c-4e18-a8c9-4ad0e247c7d0",
+    title = "Double perovskite Sr2FeMoO6 (tetragonal setting)",
+    created = "2026-01-06"
+  }
+  description = "Hypothetical ordered double-perovskite Sr2FeMoO6 in tetragonal I4/m (origin choice 1), with octahedral tilting captured by apical/equatorial oxygen sites."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (I-centered) typical of ordered double perovskites",
+    type = tetragonal,
+    a = 5.574000,
+    b = 5.574000,
+    c = 7.902000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 87,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique crystallographic sites (fractional coordinates in [0,1))",
+    site Sr1 {
+      description = "A-site Sr",
+      wyckoff = "4d",
+      position = (0.000000, 0.500000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Fe1 {
+      description = "B-site Fe (ordered)",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Fe", occupancy = 1.000000 })
+    },
+    site Mo1 {
+      description = "B'-site Mo (ordered)",
+      wyckoff = "2b",
+      position = (0.000000, 0.000000, 0.500000),
+      frame = fractional,
+      species = ({ element = "Mo", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "Apical oxygen along c (tilt/elongation parameter z)",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.241000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "Equatorial oxygen in ab plane (x parameter captures octahedral rotation/tilt)",
+      wyckoff = "8h",
+      position = (0.238000, 0.738000, 0.000000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

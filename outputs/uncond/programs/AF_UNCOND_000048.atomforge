@@ -1,0 +1,84 @@
+atom_spec "K2ZnCl4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c9d6b5a7-7b2b-4d6d-a5e7-0e7c8d1d4b2f",
+    title = "K4Cl8Zn2",
+    created = "2026-01-06"
+  }
+  description = "Layered orthorhombic K2ZnCl4 (model structure, Cmcm setting)"
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 7.240000,
+    b = 12.180000,
+    c = 6.130000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 63,
+    origin_choice = 1
+  }
+  basis {
+    description = "Atomic basis with unique sites (fractional coordinates within [0,1))",
+    site K1 {
+      description = "K in interlayer site",
+      wyckoff = "4c",
+      position = (0.000000, 0.214000, 0.250000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "K in interlayer site (symmetry-related setting)",
+      wyckoff = "4c",
+      position = (0.000000, 0.786000, 0.750000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Zn1 {
+      description = "Zn in octahedral coordination center",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Apical Cl around Zn",
+      wyckoff = "4c",
+      position = (0.000000, 0.372000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl2 {
+      description = "Apical Cl around Zn (symmetry-related setting)",
+      wyckoff = "4c",
+      position = (0.000000, 0.628000, 0.750000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl3 {
+      description = "Equatorial Cl around Zn (general position representative)",
+      wyckoff = "8f",
+      position = (0.238000, 0.108000, 0.040000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl4 {
+      description = "Equatorial Cl around Zn (paired general position representative)",
+      wyckoff = "8f",
+      position = (0.762000, 0.892000, 0.960000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+}

@@ -1,0 +1,81 @@
+atom_spec "K2ZnCl4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c5b1b2c3-7c7b-4d3b-b4e3-7c2b9e2b1f4a",
+    title = "K4Cl8Zn2 (Pnma)",
+    created = "2026-01-06"
+  }
+  description = "Model K2ZnCl4 in an orthorhombic Pnma setting (layered halide, origin choice 1)."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system",
+    type = orthorhombic,
+    a = 8.214000,
+    b = 6.732000,
+    c = 9.486000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Independent sites (fractional coordinates) consistent with Pnma special positions",
+    site K1 {
+      description = "K on 4c site",
+      wyckoff = "4c",
+      position = (0.160000, 0.250000, 0.575000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "K on 4c site",
+      wyckoff = "4c",
+      position = (0.455000, 0.250000, 0.125000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Zn1 {
+      description = "Zn on 4a site",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zn", occupancy = 1.000000 })
+    },
+    site Cl1 {
+      description = "Cl on 4c site",
+      wyckoff = "4c",
+      position = (0.300000, 0.250000, 0.030000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl2 {
+      description = "Cl on 4c site",
+      wyckoff = "4c",
+      position = (0.090000, 0.250000, 0.335000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    },
+    site Cl3 {
+      description = "Cl on 8d general site",
+      wyckoff = "8d",
+      position = (0.210000, 0.040000, 0.185000),
+      frame = fractional,
+      species = ({ element = "Cl", occupancy = 1.000000 })
+    }
+  }
+  properties {
+    band_gap = 5.2000,
+    formation_energy = -2.1500
+  }
+}

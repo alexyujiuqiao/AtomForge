@@ -1,0 +1,63 @@
+atom_spec "K2NiF4" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "c0a2d0c5-4b58-4b3d-9f3e-3b0b2b5a3e8a",
+    title = "K4F8Ni2 (K2NiF4-type, I4/mmm)",
+    created = "2026-01-06"
+  }
+  description = "Layered Ruddlesden–Popper K2NiF4-type structure (tetragonal, I4/mmm)"
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system (Ruddlesden–Popper n=1 archetype)",
+    type = tetragonal,
+    a = 4.120000,
+    b = 4.120000,
+    c = 13.280000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 139,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique Wyckoff sites for K2NiF4 (I4/mmm, origin choice 1)",
+    site K1 {
+      description = "A-site cation in rock-salt layer",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.360000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Ni1 {
+      description = "B-site cation in perovskite layer",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Ni", occupancy = 1.000000 })
+    },
+    site F1 {
+      description = "Apical anion along c axis",
+      wyckoff = "4c",
+      position = (0.000000, 0.500000, 0.000000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    },
+    site F2 {
+      description = "Equatorial anion in the perovskite plane",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.160000),
+      frame = fractional,
+      species = ({ element = "F", occupancy = 1.000000 })
+    }
+  }
+}

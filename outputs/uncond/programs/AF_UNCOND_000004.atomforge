@@ -1,0 +1,112 @@
+atom_spec "K2MgSi3O8" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "e7a3c0d8-7c2b-4c6a-8c7a-9d1f3b2e4a10",
+    title = "K2MgSi3O8 (tetragonal feldspathoid-like framework)",
+    created = "2026-01-06"
+  }
+  description = "Hypothetical tetragonal framework silicate K2MgSi3O8 with mixed tetrahedral/octahedral sites"
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Tetragonal crystal system",
+    type = tetragonal,
+    a = 8.214300,
+    b = 8.214300,
+    c = 5.327800,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 113,
+    origin_choice = 1
+  }
+  basis {
+    description = "Asymmetric-unit sites (unique IDs) in fractional coordinates",
+    site K1 {
+      description = "Interstitial K in channel site",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.315000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site K2 {
+      description = "Second K site offset from channel center",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.815000),
+      frame = fractional,
+      species = ({ element = "K", occupancy = 1.000000 })
+    },
+    site Mg1 {
+      description = "Mg in octahedral-like framework node",
+      wyckoff = "2a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Mg", occupancy = 1.000000 })
+    },
+    site Si1 {
+      description = "Framework Si site 1",
+      wyckoff = "4f",
+      position = (0.250000, 0.250000, 0.120000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si2 {
+      description = "Framework Si site 2",
+      wyckoff = "4f",
+      position = (0.250000, 0.250000, 0.620000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site Si3 {
+      description = "Framework Si site 3 (general position representative)",
+      wyckoff = "8g",
+      position = (0.145000, 0.365000, 0.250000),
+      frame = fractional,
+      species = ({ element = "Si", occupancy = 1.000000 })
+    },
+    site O1 {
+      description = "O bridging framework (site near Si1)",
+      wyckoff = "8g",
+      position = (0.310000, 0.190000, 0.090000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O2 {
+      description = "O bridging framework (site near Si2)",
+      wyckoff = "8g",
+      position = (0.310000, 0.190000, 0.590000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O3 {
+      description = "O in framework ring (general position representative)",
+      wyckoff = "8g",
+      position = (0.080000, 0.420000, 0.330000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O4 {
+      description = "O coordinating Mg (apical-like)",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.205000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    },
+    site O5 {
+      description = "O coordinating Mg (opposite apical-like)",
+      wyckoff = "4e",
+      position = (0.000000, 0.000000, 0.705000),
+      frame = fractional,
+      species = ({ element = "O", occupancy = 1.000000 })
+    }
+  }
+}

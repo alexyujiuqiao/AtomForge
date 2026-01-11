@@ -1,0 +1,63 @@
+atom_spec "SrZrS3" {
+  header {
+    dsl_version = "2.1",
+    content_schema_version = "atomforge_crystal_v1.1",
+    uuid = "2d3c2d2c-3a4b-4f1b-9c77-3e2d0b9c4c5a",
+    title = "SrZrS3 (distorted perovskite, Pnma)",
+    created = "2026-01-06"
+  }
+  description = "SrZrS3 in an orthorhombic perovskite-derived (GdFeO3-type) setting with space group Pnma."
+  units {
+    system = "crystallography_default",
+    length = "angstrom",
+    angle = "degree",
+    disp = "angstrom^2",
+    temp = "K",
+    pressure = "GPa"
+  }
+  lattice {
+    description = "Orthorhombic crystal system (Pnma perovskite setting)",
+    type = orthorhombic,
+    a = 7.045000,
+    b = 9.865000,
+    c = 6.965000,
+    alpha = 90.000000,
+    beta = 90.000000,
+    gamma = 90.000000
+  }
+  symmetry {
+    space_group = 62,
+    origin_choice = 1
+  }
+  basis {
+    description = "Unique crystallographic sites for SrZrS3 (Pnma): A on 4c, B on 4a, anions on 4c and 8d.",
+    site Sr1 {
+      description = "A-site cation (Sr) on Wyckoff 4c",
+      wyckoff = "4c",
+      position = (0.012000, 0.250000, 0.990000),
+      frame = fractional,
+      species = ({ element = "Sr", occupancy = 1.000000 })
+    },
+    site Zr1 {
+      description = "B-site cation (Zr) on Wyckoff 4a",
+      wyckoff = "4a",
+      position = (0.000000, 0.000000, 0.000000),
+      frame = fractional,
+      species = ({ element = "Zr", occupancy = 1.000000 })
+    },
+    site S1 {
+      description = "Anion site S(1) on Wyckoff 4c",
+      wyckoff = "4c",
+      position = (0.485000, 0.250000, 0.065000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    },
+    site S2 {
+      description = "Anion site S(2) on Wyckoff 8d",
+      wyckoff = "8d",
+      position = (0.288000, 0.040000, 0.720000),
+      frame = fractional,
+      species = ({ element = "S", occupancy = 1.000000 })
+    }
+  }
+}
